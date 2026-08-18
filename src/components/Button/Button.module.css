@@ -1,6 +1,7 @@
 /*
  * Button — Figma node 12120:1260 ("Test Button")
  * Measured frame: 54 x 35 (10px padding + 34x15 label)
+ * Motion        : Figma node 12122:4
  */
 
 .root {
@@ -31,15 +32,44 @@
   margin: 0;
   appearance: none;
   cursor: pointer;
+
+  transition: background-color var(--tgds-button-transition-duration)
+    var(--tgds-button-transition-easing);
+}
+
+/*
+ * Hover surface — from the motion exported on node 12122:4.
+ *
+ * ASSUMPTION: the exported animation carries no trigger information (the Figma
+ * MCP only exposes the selected node, so the prototype reaction is not visible
+ * to us). It is applied to :hover because the motion is one-way into a darker
+ * shade of the default surface and then holds — the shape of a state change,
+ * not of a looping attention animation. If the source interaction is actually
+ * press/active, move this block to :active; nothing else needs to change.
+ *
+ * Excluded on :disabled — a control that cannot be activated should not react.
+ */
+.root:hover:not(:disabled) {
+  background-color: var(--tgds-button-surface-hover);
 }
 
 /*
  * Not in the design.
- * The Figma component has no state or variant axes yet (docs/B-component B2/B3
- * are 미착수), so there is no :hover / :active / disabled appearance to mirror.
- * Only the interaction affordance is adjusted, so a disabled control does not
- * look clickable. Revisit once the state model lands.
+ * Figma has no disabled appearance defined for this component yet
+ * (docs/B-component B3 State 모델 is 미착수), so only the interaction
+ * affordance is adjusted — no colour or opacity change is invented here.
  */
 .root:disabled {
   cursor: not-allowed;
+}
+
+/*
+ * 601ms is long enough to be felt. Honour the OS-level reduced-motion setting
+ * by snapping to the end colour instead of animating to it — the state change
+ * still reads, the movement does not.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .root {
+    transition-duration: 1ms;
+  }
 }

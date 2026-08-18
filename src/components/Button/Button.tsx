@@ -7,12 +7,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 /**
- * Button — implements Figma node 12120:1260 ("Test Button").
+ * Button — implements Figma node 12120:1260 ("Test Button"),
+ * with the motion exported on node 12122:4.
  *
  * The Figma component currently exposes no variant, size, or state properties,
  * so this component intentionally has no `variant`/`size` prop. Adding one here
  * would put the code ahead of the design system's own definition
  * (see docs/B-component — B2 Property·Variant 모델, B3 State 모델).
+ *
+ * The hover surface transition lives entirely in CSS, so it needs no prop and
+ * no runtime state. See Button.module.css for how the exported keyframes were
+ * read.
  *
  * `className` is merged rather than replaced so consumers can position the
  * button without losing its appearance.
