@@ -1,0 +1,45 @@
+/*
+ * Button — Figma node 12120:1260 ("Test Button")
+ * Measured frame: 54 x 35 (10px padding + 34x15 label)
+ */
+
+.root {
+  /* layout — flex/center/padding come straight from the Figma frame */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tgds-button-padding);
+
+  /* surface */
+  background-color: var(--tgds-button-surface-default);
+
+  /* label */
+  color: var(--tgds-button-label-color);
+  font-family: var(--tgds-font-family-base);
+  font-size: var(--tgds-button-font-size);
+  font-weight: var(--tgds-button-font-weight);
+  line-height: var(--tgds-button-line-height);
+  letter-spacing: var(--tgds-button-letter-spacing);
+  white-space: nowrap;
+  word-break: break-word;
+
+  /* The Figma node is a frame, not a native control. These resets keep a real
+     <button> visually identical to it instead of inheriting UA styles.
+     Note: the design specifies no border radius and no border. */
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+/*
+ * Not in the design.
+ * The Figma component has no state or variant axes yet (docs/B-component B2/B3
+ * are 미착수), so there is no :hover / :active / disabled appearance to mirror.
+ * Only the interaction affordance is adjusted, so a disabled control does not
+ * look clickable. Revisit once the state model lands.
+ */
+.root:disabled {
+  cursor: not-allowed;
+}
