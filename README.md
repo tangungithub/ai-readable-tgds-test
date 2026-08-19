@@ -25,7 +25,7 @@
 
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [A1 Foundation](docs/A-token/A1-foundation.md) | 🟡 | ✅ | 🟡 | 🟡 | 🟡 | ⬜ |
+| [A1 Foundation](docs/A-token/token-system.md) | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 | [A2 Semantic — Theme](docs/A-token/A2-semantic-theme.md) | 🟡 | 🟡 | 🟡 | ⬜ | 🟡 | ⬜ |
 | [A3 Semantic — Responsive](docs/A-token/A3-semantic-responsive.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | [A4 Component Token](docs/A-token/A4-component-token.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -109,7 +109,7 @@
 ```
 docs/
 ├── 00-overview/      정의 · 구현 축 · 5요소 대조 · 로드맵
-├── A-token/          A1~A5 (단위별 파일 분리)
+├── A-token/          token-system.md (Foundation 규범) · A2~A5
 ├── B-component/      B1~B5
 ├── C-layout/         C1~C3
 ├── D-naming/         D1~D3

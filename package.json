@@ -5,10 +5,11 @@
   "type": "module",
   "description": "AI Readable Design System (TGDS) — pilot component implementation",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --build && vite build",
+    "dev": "npm run tokens:build && vite",
+    "build": "npm run tokens:build && tsc --build && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --build --force"
+    "typecheck": "tsc --build --force",
+    "tokens:build": "node scripts/generate-tokens.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
