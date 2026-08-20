@@ -118,8 +118,8 @@ export const foundation = {
       "800": 800
     },
     "fontFamily": {
-      "Sans": "Suit Variable",
-      "Serif": "Noto Serif KR"
+      "sans": "SUIT Variable",
+      "serif": "Noto Serif KR"
     }
   },
   "layout": {
@@ -347,8 +347,8 @@ export const foundationOrder = {
       "800"
     ],
     "fontFamily": [
-      "Sans",
-      "Serif"
+      "sans",
+      "serif"
     ]
   },
   "layout": {

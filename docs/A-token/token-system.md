@@ -43,7 +43,7 @@ Option   = Set의 kind에 따라 결정 (아래 표 참조)
 | ordinal | 4자리 스텝 번호 | `Layout/Space/0400` = 8px | 스텝 번호는 순서만 보장. 실제 값은 스키마의 매핑 테이블로 확정 |
 | value-anchored | 값 그 자체인 숫자 | `Typography/Font Weight/700` | 스텝 번호가 곧 실제 값(또는 표준 규격 값) |
 | nominal | 이름(명사) | `Typography/Font Family/Sans` | 순서 없음. 열거된 이름만 사용 |
-| composite | 규칙으로 조합된 문자열 | `Typography/Line Height/300-150` | 구성 요소별 유효성 규칙을 따름 (1.4.2 참조) |
+| composite | 규칙으로 조합된 문자열 | `Typography/Line Height/0300-150` | 구성 요소별 유효성 규칙을 따름 (1.4.2 참조) |
 
 ### 13단계 스케일링과 예외 표기 (ordinal Set)
 
@@ -95,7 +95,7 @@ Font Size Step     : Font Size Set에 존재하는 스텝(등록된 예외 스�
 Line Height Number : { 100, 120, 140, 150 } 만 사용 (폰트 크기 대비 %)
 ```
 
-- 예: `Typography/Line Height/300-150` = Font Size 0300(14px) × 150% = 21px
+- 예: `Typography/Line Height/0300-150` = Font Size 0300(14px) × 150% = 21px
 - 유효성: 첫 요소가 Font Size에 없는 스텝이면 위반이다 (예: `0250-140`은 Font Size에 0250이 등록되어 있지 않으므로 무효)
 
 **Font Weight** — value-anchored, 예외 불가
@@ -108,7 +108,7 @@ Option ∈ { 300, 400, 500, 600, 700, 800 }   (숫자가 곧 CSS font-weight 값
 
 | Option | 값 |
 |---|---|
-| `Sans` | Suit Variable |
+| `Sans` | SUIT Variable |
 | `Serif` | Noto Serif KR |
 
 - 등록된 서체는 위 2종뿐이다. Option 이름은 역할 중립적 분류(Sans/Serif)를 사용하고, 실제 서체명은 값으로만 존재한다. (서체 교체 시 토큰 이름이 불변)
@@ -215,7 +215,7 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
     },
     "Typography/Font Family": {
       "kind": "nominal",
-      "options": { "Sans": "Suit Variable", "Serif": "Noto Serif KR" },
+      "options": { "Sans": "SUIT Variable", "Serif": "Noto Serif KR" },
       "exceptions": { "allowed": false }
     },
     "Layout/Space": {

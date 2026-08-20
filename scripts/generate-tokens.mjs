@@ -136,11 +136,14 @@ function collect(schema) {
         options: set.options.map((v) => [String(v), v]),
       });
     } else if (set.kind === 'nominal') {
+      // FND-08: a segment's inner words become camelCase, so the Option
+      // segment `Sans` is addressed as `.sans`. Numeric options are exempt —
+      // they keep bracket notation.
       out.push({
         category,
         setName,
         unit: null,
-        options: Object.entries(set.options),
+        options: Object.entries(set.options).map(([k, v]) => [camel(k), v]),
       });
     } else if (set.kind === 'composite') {
       // Typography/Line Height: {Font Size Step}-{Line Height Number}
