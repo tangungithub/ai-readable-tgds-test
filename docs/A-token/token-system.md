@@ -4,7 +4,7 @@
 > 사람이 읽는 규칙 본문과 기계가 읽는 스키마(JSON)를 병행 표기하며, 모든 규칙에는 규칙 ID를 부여한다.
 > 계층 구조: **Foundation → Semantic(Theme / Responsive) → Component**, 참조는 단방향(상위 계층 → 하위 계층)만 허용한다.
 
-- 문서 버전: v0.1 (2026-08-18)
+- 문서 버전: v0.2 (2026-08-20)
 - 작성 범위: **1. Foundation Token** (Semantic / Component 파트는 작성 예정)
 
 ---
@@ -27,6 +27,9 @@ Foundation Token은 시스템의 모든 시각 값의 **원천(primitive)** 을 
 | FND-08 | 이름의 정본(canonical form)은 Figma 표기(단어를 띄어쓰기로 구분, 예: `Font Size`)이다. 코드 변환은 선언된 변환 규칙(세그먼트 경계는 중첩으로 보존, 세그먼트 내부는 camelCase)으로만 수행한다. |
 | FND-09 | 스텝 번호의 의미(값과의 관계·매핑 함수)는 Set별 스키마에 선언한다. 스텝 번호를 임의로 해석하지 않는다. |
 | FND-10 | Foundation Token은 어떤 토큰도 참조하지 않는 말단(leaf)이다. Foundation을 참조할 수 있는 것은 Semantic·Component 계층뿐이다. |
+| FND-11 | **역변환은 조회(lookup)로 수행한다.** 코드명에서 정본 이름을 복원할 때 문자열 파싱을 사용하는 것을 금지한다. 정본 이름과 코드명을 함께 기록한 매핑 테이블이 단일 소스이며, 라운드트립은 변환 규칙의 재적용이 아니라 테이블 조회여야 한다. |
+| FND-12 | 매핑 테이블에 접근할 수 없는 경우(코드베이스만 주어진 상황 등)에 한해 파싱을 허용한다. 이때 코드명은 **등록된 Set 목록(kebab 변환형)과 최장 일치**로 Set을 먼저 분리하고, 나머지를 Option으로 본다. 이 경로는 보조 수단이며 FND-L09를 만족하는 레지스트리에서만 결정적이다. |
+| FND-13 | CSS 커스텀 프로퍼티 이름은 `--{Category}-{Set}-{Option}` 으로 하고 각 세그먼트를 kebab 변환한다. CSS에는 중첩이 없어 FND-08의 경계 보존을 적용할 수 없으므로, **Category를 생략하지 않는 것**으로 경계 모호성을 막는다. |
 
 ## 1.2 네이밍 문법
 
@@ -185,7 +188,14 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
     "codeTransform": {
       "segmentBoundary": "object nesting",
       "withinSegment": "camelCase",
-      "numericOption": "bracket notation"
+      "numericOption": "bracket notation",
+      "cssCustomProperty": "--{Category}-{Set}-{Option}, each segment kebab-cased (FND-13)",
+      "reverse": {
+        "primary": "lookup in the generated mapping table (FND-11)",
+        "prohibited": "reconstructing the canonical name by parsing the code name",
+        "fallback": "longest match against the kebab form of every key in `sets`, remainder is the Option (FND-12)",
+        "precondition": "nominal options must be single kebab words (FND-L09)"
+      }
     }
   },
   "categories": ["Color", "Typography", "Layout", "Shape", "Effect", "Motion"],
@@ -271,6 +281,7 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
 | FND-L06 | ordinal Set의 값은 스텝 오름차순으로 단조 증가해야 한다 (스키마 무결성 검사) |
 | FND-L07 | Foundation 토큰은 alias(참조)를 가질 수 없다 — 원시값만 허용 (FND-10) |
 | FND-L08 | 코드 변환 결과는 케이스 폴딩 후에도 전역 유일해야 한다 (예: `Gmarket Sans` vs `GMarket sans` 동시 등록 금지) |
+| FND-L09 | nominal Set의 Option 이름은 kebab 변환 후 **단일 단어**여야 한다 (하이픈 불가). 하이픈이 있으면 FND-12의 최장 일치가 Set 경계를 넘어 삼켜 조용히 오파싱된다 — ordinal·value-anchored Option 은 숫자뿐이라 이 문제가 없으므로 nominal 에만 적용된다 |
 
 ## 1.8 검토 노트 (Open Issues)
 

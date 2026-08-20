@@ -3,10 +3,9 @@
  * Source: docs/A-token/token-system.md section 1.6
  * Regenerate: npm run tokens:build
  *
- * Custom property naming: --{category}-{set}-{option}, kebab-cased.
- * NOTE: the spec (FND-08) declares a code transform for object nesting but
- * says nothing about CSS custom properties. This flattening is a local
- * convention and should be confirmed into the spec.
+ * Naming per FND-13: --{Category}-{Set}-{Option}, each segment kebab-cased.
+ * Category is not omitted — it is what keeps the segment split unambiguous
+ * when the name has to be read back without the mapping table (FND-12).
  *
  * Not emitted (unresolved in the spec):
  *   - Color (status: TBD)
