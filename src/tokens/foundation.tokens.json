@@ -68,7 +68,7 @@
             "setKind": "ordinal",
             "rawValue": 60,
             "unit": "px",
-            "isRegisteredException": true
+            "isRegisteredException": false
           }
         }
       },
@@ -128,7 +128,7 @@
             "setKind": "ordinal",
             "rawValue": 9,
             "unit": "px",
-            "isRegisteredException": true
+            "isRegisteredException": false
           }
         }
       },
@@ -168,7 +168,7 @@
             "setKind": "ordinal",
             "rawValue": 11,
             "unit": "px",
-            "isRegisteredException": true
+            "isRegisteredException": false
           }
         }
       },
@@ -288,7 +288,7 @@
             "setKind": "ordinal",
             "rawValue": 22,
             "unit": "px",
-            "isRegisteredException": true
+            "isRegisteredException": false
           }
         }
       },
@@ -368,7 +368,7 @@
             "setKind": "ordinal",
             "rawValue": 36,
             "unit": "px",
-            "isRegisteredException": true
+            "isRegisteredException": false
           }
         }
       }
@@ -1094,54 +1094,2357 @@
           }
         }
       },
-      "0700-100": { "$type": "dimension", "$value": "24px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0700-100", "codeSyntax": { "WEB": "var(--typography-line-height-0700-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0700-100", "tsPath": "foundation.typography.lineHeight['0700-100']", "setKind": "composite", "rawValue": 24, "unit": "px", "isRegisteredException": false } } },
-      "0700-120": { "$type": "dimension", "$value": "28.8px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0700-120", "codeSyntax": { "WEB": "var(--typography-line-height-0700-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0700-120", "tsPath": "foundation.typography.lineHeight['0700-120']", "setKind": "composite", "rawValue": 28.8, "unit": "px", "isRegisteredException": false } } },
-      "0700-140": { "$type": "dimension", "$value": "33.6px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0700-140", "codeSyntax": { "WEB": "var(--typography-line-height-0700-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0700-140", "tsPath": "foundation.typography.lineHeight['0700-140']", "setKind": "composite", "rawValue": 33.6, "unit": "px", "isRegisteredException": false } } },
-      "0700-150": { "$type": "dimension", "$value": "36px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0700-150", "codeSyntax": { "WEB": "var(--typography-line-height-0700-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0700-150", "tsPath": "foundation.typography.lineHeight['0700-150']", "setKind": "composite", "rawValue": 36, "unit": "px", "isRegisteredException": false } } },
-      "0800-100": { "$type": "dimension", "$value": "28px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0800-100", "codeSyntax": { "WEB": "var(--typography-line-height-0800-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0800-100", "tsPath": "foundation.typography.lineHeight['0800-100']", "setKind": "composite", "rawValue": 28, "unit": "px", "isRegisteredException": false } } },
-      "0800-120": { "$type": "dimension", "$value": "33.6px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0800-120", "codeSyntax": { "WEB": "var(--typography-line-height-0800-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0800-120", "tsPath": "foundation.typography.lineHeight['0800-120']", "setKind": "composite", "rawValue": 33.6, "unit": "px", "isRegisteredException": false } } },
-      "0800-140": { "$type": "dimension", "$value": "39.2px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0800-140", "codeSyntax": { "WEB": "var(--typography-line-height-0800-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0800-140", "tsPath": "foundation.typography.lineHeight['0800-140']", "setKind": "composite", "rawValue": 39.2, "unit": "px", "isRegisteredException": false } } },
-      "0800-150": { "$type": "dimension", "$value": "42px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0800-150", "codeSyntax": { "WEB": "var(--typography-line-height-0800-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0800-150", "tsPath": "foundation.typography.lineHeight['0800-150']", "setKind": "composite", "rawValue": 42, "unit": "px", "isRegisteredException": false } } },
-      "0900-100": { "$type": "dimension", "$value": "32px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0900-100", "codeSyntax": { "WEB": "var(--typography-line-height-0900-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0900-100", "tsPath": "foundation.typography.lineHeight['0900-100']", "setKind": "composite", "rawValue": 32, "unit": "px", "isRegisteredException": false } } },
-      "0900-120": { "$type": "dimension", "$value": "38.4px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0900-120", "codeSyntax": { "WEB": "var(--typography-line-height-0900-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0900-120", "tsPath": "foundation.typography.lineHeight['0900-120']", "setKind": "composite", "rawValue": 38.4, "unit": "px", "isRegisteredException": false } } },
-      "0900-140": { "$type": "dimension", "$value": "44.8px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0900-140", "codeSyntax": { "WEB": "var(--typography-line-height-0900-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0900-140", "tsPath": "foundation.typography.lineHeight['0900-140']", "setKind": "composite", "rawValue": 44.8, "unit": "px", "isRegisteredException": false } } },
-      "0900-150": { "$type": "dimension", "$value": "48px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0900-150", "codeSyntax": { "WEB": "var(--typography-line-height-0900-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0900-150", "tsPath": "foundation.typography.lineHeight['0900-150']", "setKind": "composite", "rawValue": 48, "unit": "px", "isRegisteredException": false } } },
-      "0950-100": { "$type": "dimension", "$value": "36px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0950-100", "codeSyntax": { "WEB": "var(--typography-line-height-0950-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0950-100", "tsPath": "foundation.typography.lineHeight['0950-100']", "setKind": "composite", "rawValue": 36, "unit": "px", "isRegisteredException": false } } },
-      "0950-120": { "$type": "dimension", "$value": "43.2px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0950-120", "codeSyntax": { "WEB": "var(--typography-line-height-0950-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0950-120", "tsPath": "foundation.typography.lineHeight['0950-120']", "setKind": "composite", "rawValue": 43.2, "unit": "px", "isRegisteredException": false } } },
-      "0950-140": { "$type": "dimension", "$value": "50.4px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0950-140", "codeSyntax": { "WEB": "var(--typography-line-height-0950-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0950-140", "tsPath": "foundation.typography.lineHeight['0950-140']", "setKind": "composite", "rawValue": 50.4, "unit": "px", "isRegisteredException": false } } },
-      "0950-150": { "$type": "dimension", "$value": "54px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/0950-150", "codeSyntax": { "WEB": "var(--typography-line-height-0950-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-0950-150", "tsPath": "foundation.typography.lineHeight['0950-150']", "setKind": "composite", "rawValue": 54, "unit": "px", "isRegisteredException": false } } },
-      "1000-100": { "$type": "dimension", "$value": "40px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1000-100", "codeSyntax": { "WEB": "var(--typography-line-height-1000-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1000-100", "tsPath": "foundation.typography.lineHeight['1000-100']", "setKind": "composite", "rawValue": 40, "unit": "px", "isRegisteredException": false } } },
-      "1000-120": { "$type": "dimension", "$value": "48px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1000-120", "codeSyntax": { "WEB": "var(--typography-line-height-1000-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1000-120", "tsPath": "foundation.typography.lineHeight['1000-120']", "setKind": "composite", "rawValue": 48, "unit": "px", "isRegisteredException": false } } },
-      "1000-140": { "$type": "dimension", "$value": "56px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1000-140", "codeSyntax": { "WEB": "var(--typography-line-height-1000-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1000-140", "tsPath": "foundation.typography.lineHeight['1000-140']", "setKind": "composite", "rawValue": 56, "unit": "px", "isRegisteredException": false } } },
-      "1000-150": { "$type": "dimension", "$value": "60px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1000-150", "codeSyntax": { "WEB": "var(--typography-line-height-1000-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1000-150", "tsPath": "foundation.typography.lineHeight['1000-150']", "setKind": "composite", "rawValue": 60, "unit": "px", "isRegisteredException": false } } },
-      "1100-100": { "$type": "dimension", "$value": "48px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1100-100", "codeSyntax": { "WEB": "var(--typography-line-height-1100-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1100-100", "tsPath": "foundation.typography.lineHeight['1100-100']", "setKind": "composite", "rawValue": 48, "unit": "px", "isRegisteredException": false } } },
-      "1100-120": { "$type": "dimension", "$value": "57.6px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1100-120", "codeSyntax": { "WEB": "var(--typography-line-height-1100-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1100-120", "tsPath": "foundation.typography.lineHeight['1100-120']", "setKind": "composite", "rawValue": 57.6, "unit": "px", "isRegisteredException": false } } },
-      "1100-140": { "$type": "dimension", "$value": "67.2px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1100-140", "codeSyntax": { "WEB": "var(--typography-line-height-1100-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1100-140", "tsPath": "foundation.typography.lineHeight['1100-140']", "setKind": "composite", "rawValue": 67.2, "unit": "px", "isRegisteredException": false } } },
-      "1100-150": { "$type": "dimension", "$value": "72px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1100-150", "codeSyntax": { "WEB": "var(--typography-line-height-1100-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1100-150", "tsPath": "foundation.typography.lineHeight['1100-150']", "setKind": "composite", "rawValue": 72, "unit": "px", "isRegisteredException": false } } },
-      "1150-100": { "$type": "dimension", "$value": "60px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1150-100", "codeSyntax": { "WEB": "var(--typography-line-height-1150-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1150-100", "tsPath": "foundation.typography.lineHeight['1150-100']", "setKind": "composite", "rawValue": 60, "unit": "px", "isRegisteredException": false } } },
-      "1150-120": { "$type": "dimension", "$value": "72px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1150-120", "codeSyntax": { "WEB": "var(--typography-line-height-1150-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1150-120", "tsPath": "foundation.typography.lineHeight['1150-120']", "setKind": "composite", "rawValue": 72, "unit": "px", "isRegisteredException": false } } },
-      "1150-140": { "$type": "dimension", "$value": "84px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1150-140", "codeSyntax": { "WEB": "var(--typography-line-height-1150-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1150-140", "tsPath": "foundation.typography.lineHeight['1150-140']", "setKind": "composite", "rawValue": 84, "unit": "px", "isRegisteredException": false } } },
-      "1150-150": { "$type": "dimension", "$value": "90px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1150-150", "codeSyntax": { "WEB": "var(--typography-line-height-1150-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1150-150", "tsPath": "foundation.typography.lineHeight['1150-150']", "setKind": "composite", "rawValue": 90, "unit": "px", "isRegisteredException": false } } },
-      "1200-100": { "$type": "dimension", "$value": "72px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1200-100", "codeSyntax": { "WEB": "var(--typography-line-height-1200-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1200-100", "tsPath": "foundation.typography.lineHeight['1200-100']", "setKind": "composite", "rawValue": 72, "unit": "px", "isRegisteredException": false } } },
-      "1200-120": { "$type": "dimension", "$value": "86.4px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1200-120", "codeSyntax": { "WEB": "var(--typography-line-height-1200-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1200-120", "tsPath": "foundation.typography.lineHeight['1200-120']", "setKind": "composite", "rawValue": 86.4, "unit": "px", "isRegisteredException": false } } },
-      "1200-140": { "$type": "dimension", "$value": "100.8px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1200-140", "codeSyntax": { "WEB": "var(--typography-line-height-1200-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1200-140", "tsPath": "foundation.typography.lineHeight['1200-140']", "setKind": "composite", "rawValue": 100.8, "unit": "px", "isRegisteredException": false } } },
-      "1200-150": { "$type": "dimension", "$value": "108px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1200-150", "codeSyntax": { "WEB": "var(--typography-line-height-1200-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1200-150", "tsPath": "foundation.typography.lineHeight['1200-150']", "setKind": "composite", "rawValue": 108, "unit": "px", "isRegisteredException": false } } },
-      "1300-100": { "$type": "dimension", "$value": "96px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1300-100", "codeSyntax": { "WEB": "var(--typography-line-height-1300-100)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1300-100", "tsPath": "foundation.typography.lineHeight['1300-100']", "setKind": "composite", "rawValue": 96, "unit": "px", "isRegisteredException": false } } },
-      "1300-120": { "$type": "dimension", "$value": "115.2px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1300-120", "codeSyntax": { "WEB": "var(--typography-line-height-1300-120)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1300-120", "tsPath": "foundation.typography.lineHeight['1300-120']", "setKind": "composite", "rawValue": 115.2, "unit": "px", "isRegisteredException": false } } },
-      "1300-140": { "$type": "dimension", "$value": "134.4px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1300-140", "codeSyntax": { "WEB": "var(--typography-line-height-1300-140)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1300-140", "tsPath": "foundation.typography.lineHeight['1300-140']", "setKind": "composite", "rawValue": 134.4, "unit": "px", "isRegisteredException": false } } },
-      "1300-150": { "$type": "dimension", "$value": "144px", "$extensions": { "com.figma": { "canonicalName": "Typography/Line Height/1300-150", "codeSyntax": { "WEB": "var(--typography-line-height-1300-150)" } }, "com.tgds": { "cssCustomProperty": "--typography-line-height-1300-150", "tsPath": "foundation.typography.lineHeight['1300-150']", "setKind": "composite", "rawValue": 144, "unit": "px", "isRegisteredException": false } } }
+      "0700-100": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0700-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0700-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0700-100",
+            "tsPath": "foundation.typography.lineHeight['0700-100']",
+            "setKind": "composite",
+            "rawValue": 24,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700-120": {
+        "$type": "dimension",
+        "$value": "28.8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0700-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0700-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0700-120",
+            "tsPath": "foundation.typography.lineHeight['0700-120']",
+            "setKind": "composite",
+            "rawValue": 28.8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700-140": {
+        "$type": "dimension",
+        "$value": "33.6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0700-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0700-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0700-140",
+            "tsPath": "foundation.typography.lineHeight['0700-140']",
+            "setKind": "composite",
+            "rawValue": 33.6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700-150": {
+        "$type": "dimension",
+        "$value": "36px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0700-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0700-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0700-150",
+            "tsPath": "foundation.typography.lineHeight['0700-150']",
+            "setKind": "composite",
+            "rawValue": 36,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800-100": {
+        "$type": "dimension",
+        "$value": "28px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0800-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0800-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0800-100",
+            "tsPath": "foundation.typography.lineHeight['0800-100']",
+            "setKind": "composite",
+            "rawValue": 28,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800-120": {
+        "$type": "dimension",
+        "$value": "33.6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0800-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0800-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0800-120",
+            "tsPath": "foundation.typography.lineHeight['0800-120']",
+            "setKind": "composite",
+            "rawValue": 33.6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800-140": {
+        "$type": "dimension",
+        "$value": "39.2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0800-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0800-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0800-140",
+            "tsPath": "foundation.typography.lineHeight['0800-140']",
+            "setKind": "composite",
+            "rawValue": 39.2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800-150": {
+        "$type": "dimension",
+        "$value": "42px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0800-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0800-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0800-150",
+            "tsPath": "foundation.typography.lineHeight['0800-150']",
+            "setKind": "composite",
+            "rawValue": 42,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900-100": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0900-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0900-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0900-100",
+            "tsPath": "foundation.typography.lineHeight['0900-100']",
+            "setKind": "composite",
+            "rawValue": 32,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900-120": {
+        "$type": "dimension",
+        "$value": "38.4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0900-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0900-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0900-120",
+            "tsPath": "foundation.typography.lineHeight['0900-120']",
+            "setKind": "composite",
+            "rawValue": 38.4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900-140": {
+        "$type": "dimension",
+        "$value": "44.8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0900-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0900-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0900-140",
+            "tsPath": "foundation.typography.lineHeight['0900-140']",
+            "setKind": "composite",
+            "rawValue": 44.8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900-150": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0900-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0900-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0900-150",
+            "tsPath": "foundation.typography.lineHeight['0900-150']",
+            "setKind": "composite",
+            "rawValue": 48,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0950-100": {
+        "$type": "dimension",
+        "$value": "36px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0950-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0950-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0950-100",
+            "tsPath": "foundation.typography.lineHeight['0950-100']",
+            "setKind": "composite",
+            "rawValue": 36,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0950-120": {
+        "$type": "dimension",
+        "$value": "43.2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0950-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0950-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0950-120",
+            "tsPath": "foundation.typography.lineHeight['0950-120']",
+            "setKind": "composite",
+            "rawValue": 43.2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0950-140": {
+        "$type": "dimension",
+        "$value": "50.4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0950-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0950-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0950-140",
+            "tsPath": "foundation.typography.lineHeight['0950-140']",
+            "setKind": "composite",
+            "rawValue": 50.4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0950-150": {
+        "$type": "dimension",
+        "$value": "54px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/0950-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-0950-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-0950-150",
+            "tsPath": "foundation.typography.lineHeight['0950-150']",
+            "setKind": "composite",
+            "rawValue": 54,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1000-100": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1000-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1000-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1000-100",
+            "tsPath": "foundation.typography.lineHeight['1000-100']",
+            "setKind": "composite",
+            "rawValue": 40,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1000-120": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1000-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1000-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1000-120",
+            "tsPath": "foundation.typography.lineHeight['1000-120']",
+            "setKind": "composite",
+            "rawValue": 48,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1000-140": {
+        "$type": "dimension",
+        "$value": "56px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1000-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1000-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1000-140",
+            "tsPath": "foundation.typography.lineHeight['1000-140']",
+            "setKind": "composite",
+            "rawValue": 56,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1000-150": {
+        "$type": "dimension",
+        "$value": "60px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1000-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1000-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1000-150",
+            "tsPath": "foundation.typography.lineHeight['1000-150']",
+            "setKind": "composite",
+            "rawValue": 60,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100-100": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1100-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1100-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1100-100",
+            "tsPath": "foundation.typography.lineHeight['1100-100']",
+            "setKind": "composite",
+            "rawValue": 48,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100-120": {
+        "$type": "dimension",
+        "$value": "57.6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1100-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1100-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1100-120",
+            "tsPath": "foundation.typography.lineHeight['1100-120']",
+            "setKind": "composite",
+            "rawValue": 57.6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100-140": {
+        "$type": "dimension",
+        "$value": "67.2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1100-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1100-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1100-140",
+            "tsPath": "foundation.typography.lineHeight['1100-140']",
+            "setKind": "composite",
+            "rawValue": 67.2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100-150": {
+        "$type": "dimension",
+        "$value": "72px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1100-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1100-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1100-150",
+            "tsPath": "foundation.typography.lineHeight['1100-150']",
+            "setKind": "composite",
+            "rawValue": 72,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1150-100": {
+        "$type": "dimension",
+        "$value": "60px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1150-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1150-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1150-100",
+            "tsPath": "foundation.typography.lineHeight['1150-100']",
+            "setKind": "composite",
+            "rawValue": 60,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1150-120": {
+        "$type": "dimension",
+        "$value": "72px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1150-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1150-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1150-120",
+            "tsPath": "foundation.typography.lineHeight['1150-120']",
+            "setKind": "composite",
+            "rawValue": 72,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1150-140": {
+        "$type": "dimension",
+        "$value": "84px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1150-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1150-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1150-140",
+            "tsPath": "foundation.typography.lineHeight['1150-140']",
+            "setKind": "composite",
+            "rawValue": 84,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1150-150": {
+        "$type": "dimension",
+        "$value": "90px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1150-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1150-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1150-150",
+            "tsPath": "foundation.typography.lineHeight['1150-150']",
+            "setKind": "composite",
+            "rawValue": 90,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200-100": {
+        "$type": "dimension",
+        "$value": "72px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1200-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1200-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1200-100",
+            "tsPath": "foundation.typography.lineHeight['1200-100']",
+            "setKind": "composite",
+            "rawValue": 72,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200-120": {
+        "$type": "dimension",
+        "$value": "86.4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1200-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1200-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1200-120",
+            "tsPath": "foundation.typography.lineHeight['1200-120']",
+            "setKind": "composite",
+            "rawValue": 86.4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200-140": {
+        "$type": "dimension",
+        "$value": "100.8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1200-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1200-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1200-140",
+            "tsPath": "foundation.typography.lineHeight['1200-140']",
+            "setKind": "composite",
+            "rawValue": 100.8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200-150": {
+        "$type": "dimension",
+        "$value": "108px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1200-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1200-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1200-150",
+            "tsPath": "foundation.typography.lineHeight['1200-150']",
+            "setKind": "composite",
+            "rawValue": 108,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300-100": {
+        "$type": "dimension",
+        "$value": "96px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1300-100",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1300-100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1300-100",
+            "tsPath": "foundation.typography.lineHeight['1300-100']",
+            "setKind": "composite",
+            "rawValue": 96,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300-120": {
+        "$type": "dimension",
+        "$value": "115.2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1300-120",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1300-120)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1300-120",
+            "tsPath": "foundation.typography.lineHeight['1300-120']",
+            "setKind": "composite",
+            "rawValue": 115.2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300-140": {
+        "$type": "dimension",
+        "$value": "134.4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1300-140",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1300-140)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1300-140",
+            "tsPath": "foundation.typography.lineHeight['1300-140']",
+            "setKind": "composite",
+            "rawValue": 134.4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300-150": {
+        "$type": "dimension",
+        "$value": "144px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Line Height/1300-150",
+            "codeSyntax": {
+              "WEB": "var(--typography-line-height-1300-150)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-line-height-1300-150",
+            "tsPath": "foundation.typography.lineHeight['1300-150']",
+            "setKind": "composite",
+            "rawValue": 144,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      }
     },
     "Font Weight": {
-      "300": { "$type": "fontWeight", "$value": "300", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/300", "codeSyntax": { "WEB": "var(--typography-font-weight-300)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-300", "tsPath": "foundation.typography.fontWeight['300']", "setKind": "value-anchored", "rawValue": 300, "unit": "css-font-weight", "isRegisteredException": false } } },
-      "400": { "$type": "fontWeight", "$value": "400", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/400", "codeSyntax": { "WEB": "var(--typography-font-weight-400)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-400", "tsPath": "foundation.typography.fontWeight['400']", "setKind": "value-anchored", "rawValue": 400, "unit": "css-font-weight", "isRegisteredException": false } } },
-      "500": { "$type": "fontWeight", "$value": "500", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/500", "codeSyntax": { "WEB": "var(--typography-font-weight-500)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-500", "tsPath": "foundation.typography.fontWeight['500']", "setKind": "value-anchored", "rawValue": 500, "unit": "css-font-weight", "isRegisteredException": false } } },
-      "600": { "$type": "fontWeight", "$value": "600", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/600", "codeSyntax": { "WEB": "var(--typography-font-weight-600)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-600", "tsPath": "foundation.typography.fontWeight['600']", "setKind": "value-anchored", "rawValue": 600, "unit": "css-font-weight", "isRegisteredException": false } } },
-      "700": { "$type": "fontWeight", "$value": "700", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/700", "codeSyntax": { "WEB": "var(--typography-font-weight-700)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-700", "tsPath": "foundation.typography.fontWeight['700']", "setKind": "value-anchored", "rawValue": 700, "unit": "css-font-weight", "isRegisteredException": false } } },
-      "800": { "$type": "fontWeight", "$value": "800", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Weight/800", "codeSyntax": { "WEB": "var(--typography-font-weight-800)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-weight-800", "tsPath": "foundation.typography.fontWeight['800']", "setKind": "value-anchored", "rawValue": 800, "unit": "css-font-weight", "isRegisteredException": false } } }
+      "300": {
+        "$type": "fontWeight",
+        "$value": "300",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/300",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-300",
+            "tsPath": "foundation.typography.fontWeight['300']",
+            "setKind": "value-anchored",
+            "rawValue": 300,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "400": {
+        "$type": "fontWeight",
+        "$value": "400",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/400",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-400",
+            "tsPath": "foundation.typography.fontWeight['400']",
+            "setKind": "value-anchored",
+            "rawValue": 400,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "500": {
+        "$type": "fontWeight",
+        "$value": "500",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/500",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-500",
+            "tsPath": "foundation.typography.fontWeight['500']",
+            "setKind": "value-anchored",
+            "rawValue": 500,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "600": {
+        "$type": "fontWeight",
+        "$value": "600",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/600",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-600",
+            "tsPath": "foundation.typography.fontWeight['600']",
+            "setKind": "value-anchored",
+            "rawValue": 600,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "700": {
+        "$type": "fontWeight",
+        "$value": "700",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/700",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-700",
+            "tsPath": "foundation.typography.fontWeight['700']",
+            "setKind": "value-anchored",
+            "rawValue": 700,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "800": {
+        "$type": "fontWeight",
+        "$value": "800",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Weight/800",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-weight-800)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-weight-800",
+            "tsPath": "foundation.typography.fontWeight['800']",
+            "setKind": "value-anchored",
+            "rawValue": 800,
+            "unit": "css-font-weight",
+            "isRegisteredException": false
+          }
+        }
+      }
     },
     "Font Family": {
-      "Sans": { "$type": "fontFamily", "$value": "SUIT Variable", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Family/Sans", "codeSyntax": { "WEB": "var(--typography-font-family-sans)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-family-sans", "tsPath": "foundation.typography.fontFamily.sans", "setKind": "nominal", "rawValue": "SUIT Variable", "unit": null, "isRegisteredException": false } } },
-      "Serif": { "$type": "fontFamily", "$value": "Noto Serif KR", "$extensions": { "com.figma": { "canonicalName": "Typography/Font Family/Serif", "codeSyntax": { "WEB": "var(--typography-font-family-serif)" } }, "com.tgds": { "cssCustomProperty": "--typography-font-family-serif", "tsPath": "foundation.typography.fontFamily.serif", "setKind": "nominal", "rawValue": "Noto Serif KR", "unit": null, "isRegisteredException": false } } }
+      "Sans": {
+        "$type": "fontFamily",
+        "$value": "SUIT Variable",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Family/Sans",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-family-sans)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-family-sans",
+            "tsPath": "foundation.typography.fontFamily.sans",
+            "setKind": "nominal",
+            "rawValue": "SUIT Variable",
+            "unit": null,
+            "isRegisteredException": false
+          }
+        }
+      },
+      "Serif": {
+        "$type": "fontFamily",
+        "$value": "Noto Serif KR",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Typography/Font Family/Serif",
+            "codeSyntax": {
+              "WEB": "var(--typography-font-family-serif)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--typography-font-family-serif",
+            "tsPath": "foundation.typography.fontFamily.serif",
+            "setKind": "nominal",
+            "rawValue": "Noto Serif KR",
+            "unit": null,
+            "isRegisteredException": false
+          }
+        }
+      }
+    }
+  },
+  "Layout": {
+    "Space": {
+      "1000": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/1000",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-1000)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-1000",
+            "tsPath": "foundation.layout.space['1000']",
+            "setKind": "ordinal",
+            "rawValue": 40,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/1100",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-1100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-1100",
+            "tsPath": "foundation.layout.space['1100']",
+            "setKind": "ordinal",
+            "rawValue": 48,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200": {
+        "$type": "dimension",
+        "$value": "72px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/1200",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-1200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-1200",
+            "tsPath": "foundation.layout.space['1200']",
+            "setKind": "ordinal",
+            "rawValue": 72,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300": {
+        "$type": "dimension",
+        "$value": "96px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/1300",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-1300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-1300",
+            "tsPath": "foundation.layout.space['1300']",
+            "setKind": "ordinal",
+            "rawValue": 96,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1350": {
+        "$type": "dimension",
+        "$value": "120px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/1350",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-1350)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-1350",
+            "tsPath": "foundation.layout.space['1350']",
+            "setKind": "ordinal",
+            "rawValue": 120,
+            "unit": "px",
+            "isRegisteredException": true
+          }
+        }
+      },
+      "0050": {
+        "$type": "dimension",
+        "$value": "1px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0050",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0050)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0050",
+            "tsPath": "foundation.layout.space['0050']",
+            "setKind": "ordinal",
+            "rawValue": 1,
+            "unit": "px",
+            "isRegisteredException": true
+          }
+        }
+      },
+      "0100": {
+        "$type": "dimension",
+        "$value": "2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0100",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0100",
+            "tsPath": "foundation.layout.space['0100']",
+            "setKind": "ordinal",
+            "rawValue": 2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0200",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0200",
+            "tsPath": "foundation.layout.space['0200']",
+            "setKind": "ordinal",
+            "rawValue": 4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "dimension",
+        "$value": "6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0300",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0300",
+            "tsPath": "foundation.layout.space['0300']",
+            "setKind": "ordinal",
+            "rawValue": 6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0400",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0400",
+            "tsPath": "foundation.layout.space['0400']",
+            "setKind": "ordinal",
+            "rawValue": 8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0500",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0500",
+            "tsPath": "foundation.layout.space['0500']",
+            "setKind": "ordinal",
+            "rawValue": 12,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0600",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0600",
+            "tsPath": "foundation.layout.space['0600']",
+            "setKind": "ordinal",
+            "rawValue": 16,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0700",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0700",
+            "tsPath": "foundation.layout.space['0700']",
+            "setKind": "ordinal",
+            "rawValue": 20,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0800",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0800)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0800",
+            "tsPath": "foundation.layout.space['0800']",
+            "setKind": "ordinal",
+            "rawValue": 24,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Space/0900",
+            "codeSyntax": {
+              "WEB": "var(--layout-space-0900)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-space-0900",
+            "tsPath": "foundation.layout.space['0900']",
+            "setKind": "ordinal",
+            "rawValue": 32,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      }
+    },
+    "Size": {
+      "1000": {
+        "$type": "dimension",
+        "$value": "64px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/1000",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-1000)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-1000",
+            "tsPath": "foundation.layout.size['1000']",
+            "setKind": "ordinal",
+            "rawValue": 64,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100": {
+        "$type": "dimension",
+        "$value": "80px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/1100",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-1100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-1100",
+            "tsPath": "foundation.layout.size['1100']",
+            "setKind": "ordinal",
+            "rawValue": 80,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200": {
+        "$type": "dimension",
+        "$value": "96px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/1200",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-1200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-1200",
+            "tsPath": "foundation.layout.size['1200']",
+            "setKind": "ordinal",
+            "rawValue": 96,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300": {
+        "$type": "dimension",
+        "$value": "128px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/1300",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-1300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-1300",
+            "tsPath": "foundation.layout.size['1300']",
+            "setKind": "ordinal",
+            "rawValue": 128,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0100": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0100",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0100",
+            "tsPath": "foundation.layout.size['0100']",
+            "setKind": "ordinal",
+            "rawValue": 4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0200",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0200",
+            "tsPath": "foundation.layout.size['0200']",
+            "setKind": "ordinal",
+            "rawValue": 8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0300",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0300",
+            "tsPath": "foundation.layout.size['0300']",
+            "setKind": "ordinal",
+            "rawValue": 12,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0400",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0400",
+            "tsPath": "foundation.layout.size['0400']",
+            "setKind": "ordinal",
+            "rawValue": 16,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0500",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0500",
+            "tsPath": "foundation.layout.size['0500']",
+            "setKind": "ordinal",
+            "rawValue": 20,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0600",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0600",
+            "tsPath": "foundation.layout.size['0600']",
+            "setKind": "ordinal",
+            "rawValue": 24,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0700",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0700",
+            "tsPath": "foundation.layout.size['0700']",
+            "setKind": "ordinal",
+            "rawValue": 32,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0800",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0800)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0800",
+            "tsPath": "foundation.layout.size['0800']",
+            "setKind": "ordinal",
+            "rawValue": 40,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Layout/Size/0900",
+            "codeSyntax": {
+              "WEB": "var(--layout-size-0900)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--layout-size-0900",
+            "tsPath": "foundation.layout.size['0900']",
+            "setKind": "ordinal",
+            "rawValue": 48,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      }
+    }
+  },
+  "Shape": {
+    "Radius": {
+      "1000": {
+        "$type": "dimension",
+        "$value": "24px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/1000",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-1000)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-1000",
+            "tsPath": "foundation.shape.radius['1000']",
+            "setKind": "ordinal",
+            "rawValue": 24,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1100": {
+        "$type": "dimension",
+        "$value": "32px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/1100",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-1100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-1100",
+            "tsPath": "foundation.shape.radius['1100']",
+            "setKind": "ordinal",
+            "rawValue": 32,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1200": {
+        "$type": "dimension",
+        "$value": "40px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/1200",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-1200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-1200",
+            "tsPath": "foundation.shape.radius['1200']",
+            "setKind": "ordinal",
+            "rawValue": 40,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "1300": {
+        "$type": "dimension",
+        "$value": "9999px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/1300",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-1300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-1300",
+            "tsPath": "foundation.shape.radius['1300']",
+            "setKind": "ordinal",
+            "rawValue": 9999,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0100": {
+        "$type": "dimension",
+        "$value": "0px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0100",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0100",
+            "tsPath": "foundation.shape.radius['0100']",
+            "setKind": "ordinal",
+            "rawValue": 0,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "dimension",
+        "$value": "2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0200",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0200",
+            "tsPath": "foundation.shape.radius['0200']",
+            "setKind": "ordinal",
+            "rawValue": 2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0300",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0300",
+            "tsPath": "foundation.shape.radius['0300']",
+            "setKind": "ordinal",
+            "rawValue": 4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "dimension",
+        "$value": "6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0400",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0400",
+            "tsPath": "foundation.shape.radius['0400']",
+            "setKind": "ordinal",
+            "rawValue": 6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0500",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0500",
+            "tsPath": "foundation.shape.radius['0500']",
+            "setKind": "ordinal",
+            "rawValue": 8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "dimension",
+        "$value": "10px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0600",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0600",
+            "tsPath": "foundation.shape.radius['0600']",
+            "setKind": "ordinal",
+            "rawValue": 10,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "dimension",
+        "$value": "12px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0700",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0700",
+            "tsPath": "foundation.shape.radius['0700']",
+            "setKind": "ordinal",
+            "rawValue": 12,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800": {
+        "$type": "dimension",
+        "$value": "16px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0800",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0800)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0800",
+            "tsPath": "foundation.shape.radius['0800']",
+            "setKind": "ordinal",
+            "rawValue": 16,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900": {
+        "$type": "dimension",
+        "$value": "20px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Radius/0900",
+            "codeSyntax": {
+              "WEB": "var(--shape-radius-0900)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-radius-0900",
+            "tsPath": "foundation.shape.radius['0900']",
+            "setKind": "ordinal",
+            "rawValue": 20,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      }
+    },
+    "Stroke": {
+      "0100": {
+        "$type": "dimension",
+        "$value": "0px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0100",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0100",
+            "tsPath": "foundation.shape.stroke['0100']",
+            "setKind": "ordinal",
+            "rawValue": 0,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "dimension",
+        "$value": "1px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0200",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0200",
+            "tsPath": "foundation.shape.stroke['0200']",
+            "setKind": "ordinal",
+            "rawValue": 1,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "dimension",
+        "$value": "2px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0300",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0300",
+            "tsPath": "foundation.shape.stroke['0300']",
+            "setKind": "ordinal",
+            "rawValue": 2,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "dimension",
+        "$value": "3px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0400",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0400",
+            "tsPath": "foundation.shape.stroke['0400']",
+            "setKind": "ordinal",
+            "rawValue": 3,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "dimension",
+        "$value": "4px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0500",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0500",
+            "tsPath": "foundation.shape.stroke['0500']",
+            "setKind": "ordinal",
+            "rawValue": 4,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "dimension",
+        "$value": "6px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0600",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0600",
+            "tsPath": "foundation.shape.stroke['0600']",
+            "setKind": "ordinal",
+            "rawValue": 6,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "dimension",
+        "$value": "8px",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Shape/Stroke/0700",
+            "codeSyntax": {
+              "WEB": "var(--shape-stroke-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--shape-stroke-0700",
+            "tsPath": "foundation.shape.stroke['0700']",
+            "setKind": "ordinal",
+            "rawValue": 8,
+            "unit": "px",
+            "isRegisteredException": false
+          }
+        }
+      }
+    }
+  },
+  "Effect": {
+    "Opacity": {
+      "1000": {
+        "$type": "number",
+        "$value": "100%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/1000",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-1000)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-1000",
+            "tsPath": "foundation.effect.opacity['1000']",
+            "setKind": "ordinal",
+            "rawValue": 100,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0000": {
+        "$type": "number",
+        "$value": "0%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0000",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0000)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0000",
+            "tsPath": "foundation.effect.opacity['0000']",
+            "setKind": "ordinal",
+            "rawValue": 0,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0100": {
+        "$type": "number",
+        "$value": "1%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0100",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0100",
+            "tsPath": "foundation.effect.opacity['0100']",
+            "setKind": "ordinal",
+            "rawValue": 1,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "number",
+        "$value": "4%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0200",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0200",
+            "tsPath": "foundation.effect.opacity['0200']",
+            "setKind": "ordinal",
+            "rawValue": 4,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "number",
+        "$value": "9%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0300",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0300",
+            "tsPath": "foundation.effect.opacity['0300']",
+            "setKind": "ordinal",
+            "rawValue": 9,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "number",
+        "$value": "16%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0400",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0400",
+            "tsPath": "foundation.effect.opacity['0400']",
+            "setKind": "ordinal",
+            "rawValue": 16,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "number",
+        "$value": "25%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0500",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0500",
+            "tsPath": "foundation.effect.opacity['0500']",
+            "setKind": "ordinal",
+            "rawValue": 25,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "number",
+        "$value": "36%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0600",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0600",
+            "tsPath": "foundation.effect.opacity['0600']",
+            "setKind": "ordinal",
+            "rawValue": 36,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "number",
+        "$value": "49%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0700",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0700",
+            "tsPath": "foundation.effect.opacity['0700']",
+            "setKind": "ordinal",
+            "rawValue": 49,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0800": {
+        "$type": "number",
+        "$value": "64%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0800",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0800)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0800",
+            "tsPath": "foundation.effect.opacity['0800']",
+            "setKind": "ordinal",
+            "rawValue": 64,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0900": {
+        "$type": "number",
+        "$value": "81%",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Effect/Opacity/0900",
+            "codeSyntax": {
+              "WEB": "var(--effect-opacity-0900)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--effect-opacity-0900",
+            "tsPath": "foundation.effect.opacity['0900']",
+            "setKind": "ordinal",
+            "rawValue": 81,
+            "unit": "%",
+            "isRegisteredException": false
+          }
+        }
+      }
+    }
+  },
+  "Color": {
+    "$description": "Color palette tokens. 8 hue groups × 13 luminance steps (0100–1300), plus White/Black (0000–1000).",
+    "Blue": {
+      "$description": "Primary accent hue, OKLCH-rescaled from key #0081FF at step 0700.",
+      "0100": { "$value": "#f7faff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0100" } } },
+      "0200": { "$value": "#dcebff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0200" } } },
+      "0300": { "$value": "#c2dcff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0300" } } },
+      "0400": { "$value": "#a7cdff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0400" } } },
+      "0500": { "$value": "#8bbdff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0500" } } },
+      "0600": { "$value": "#6fadff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0600" } } },
+      "0700": { "$value": "#0081ff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0700" } } },
+      "0800": { "$value": "#006cd8", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0800" } } },
+      "0900": { "$value": "#0459b1", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/0900" } } },
+      "1000": { "$value": "#08468b", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/1000" } } },
+      "1100": { "$value": "#0a3466", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/1100" } } },
+      "1200": { "$value": "#0a2342", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/1200" } } },
+      "1300": { "$value": "#071222", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Blue/1300" } } }
+    },
+    "Gray": {
+      "$description": "Neutral achromatic ramp for text, borders, and surfaces.",
+      "0100": { "$value": "#f3f3f3", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0100" } } },
+      "0200": { "$value": "#e7e7e8", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0200" } } },
+      "0300": { "$value": "#d4d5d7", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0300" } } },
+      "0400": { "$value": "#c1c1c6", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0400" } } },
+      "0500": { "$value": "#a9a9b0", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0500" } } },
+      "0600": { "$value": "#8d8d96", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0600" } } },
+      "0700": { "$value": "#71717a", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0700" } } },
+      "0800": { "$value": "#5a5a62", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0800" } } },
+      "0900": { "$value": "#47474d", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/0900" } } },
+      "1000": { "$value": "#343439", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/1000" } } },
+      "1100": { "$value": "#242427", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/1100" } } },
+      "1200": { "$value": "#19191b", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/1200" } } },
+      "1300": { "$value": "#111112", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Gray/1300" } } }
+    },
+    "Red": {
+      "$description": "Semantic hue for error, destructive actions, and alerts.",
+      "0100": { "$value": "#fdf1f0", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0100" } } },
+      "0200": { "$value": "#fce5e3", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0200" } } },
+      "0300": { "$value": "#ffcfca", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0300" } } },
+      "0400": { "$value": "#ffb7b0", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0400" } } },
+      "0500": { "$value": "#ff9990", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0500" } } },
+      "0600": { "$value": "#ff6d66", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0600" } } },
+      "0700": { "$value": "#ef4444", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0700" } } },
+      "0800": { "$value": "#c52a2e", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0800" } } },
+      "0900": { "$value": "#9e191f", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/0900" } } },
+      "1000": { "$value": "#721719", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/1000" } } },
+      "1100": { "$value": "#4d1312", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/1100" } } },
+      "1200": { "$value": "#330f0e", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/1200" } } },
+      "1300": { "$value": "#210b0a", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Red/1300" } } }
+    },
+    "Green": {
+      "$description": "Semantic hue for success, confirmation, and positive states.",
+      "0100": { "$value": "#f1f8f2", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0100" } } },
+      "0200": { "$value": "#e5f3e7", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0200" } } },
+      "0300": { "$value": "#cbeed1", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0300" } } },
+      "0400": { "$value": "#ace9b7", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0400" } } },
+      "0500": { "$value": "#83e298", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0500" } } },
+      "0600": { "$value": "#52d677", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0600" } } },
+      "0700": { "$value": "#22c55e", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0700" } } },
+      "0800": { "$value": "#009d45", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0800" } } },
+      "0900": { "$value": "#007a34", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/0900" } } },
+      "1000": { "$value": "#005823", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/1000" } } },
+      "1100": { "$value": "#063b18", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/1100" } } },
+      "1200": { "$value": "#092711", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/1200" } } },
+      "1300": { "$value": "#08180b", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Green/1300" } } }
+    },
+    "Yellow": {
+      "$description": "Semantic hue for warning and caution states.",
+      "0100": { "$value": "#faf8f0", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0100" } } },
+      "0200": { "$value": "#faf5e5", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0200" } } },
+      "0300": { "$value": "#fbefcb", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0300" } } },
+      "0400": { "$value": "#fde9aa", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0400" } } },
+      "0500": { "$value": "#ffe082", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0500" } } },
+      "0600": { "$value": "#ffd64d", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0600" } } },
+      "0700": { "$value": "#facc15", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0700" } } },
+      "0800": { "$value": "#c5a000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0800" } } },
+      "0900": { "$value": "#977a00", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/0900" } } },
+      "1000": { "$value": "#6c5600", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/1000" } } },
+      "1100": { "$value": "#483800", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/1100" } } },
+      "1200": { "$value": "#2d2404", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/1200" } } },
+      "1300": { "$value": "#1b1505", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Yellow/1300" } } }
+    },
+    "Sky": {
+      "$description": "Secondary cool-blue accent hue for informational contexts.",
+      "0100": { "$value": "#f0f6fa", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0100" } } },
+      "0200": { "$value": "#e3eff8", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0200" } } },
+      "0300": { "$value": "#c8e5f9", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0300" } } },
+      "0400": { "$value": "#a7dafc", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0400" } } },
+      "0500": { "$value": "#7cccff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0500" } } },
+      "0600": { "$value": "#49baf9", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0600" } } },
+      "0700": { "$value": "#0ea5e9", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0700" } } },
+      "0800": { "$value": "#0083bb", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0800" } } },
+      "0900": { "$value": "#006592", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/0900" } } },
+      "1000": { "$value": "#00496c", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/1000" } } },
+      "1100": { "$value": "#043249", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/1100" } } },
+      "1200": { "$value": "#08212f", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/1200" } } },
+      "1300": { "$value": "#07151e", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Sky/1300" } } }
+    },
+    "White": {
+      "$description": "Constant white across all steps — used for light-mode backgrounds and overlays.",
+      "0000": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0000" } } },
+      "0100": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0100" } } },
+      "0200": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0200" } } },
+      "0300": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0300" } } },
+      "0400": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0400" } } },
+      "0500": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0500" } } },
+      "0600": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0600" } } },
+      "0700": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0700" } } },
+      "0800": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0800" } } },
+      "0900": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/0900" } } },
+      "1000": { "$value": "#ffffff", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/White/1000" } } }
+    },
+    "Black": {
+      "$description": "Constant black across all steps — used for dark-mode backgrounds and high-contrast text.",
+      "0000": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0000" } } },
+      "0100": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0100" } } },
+      "0200": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0200" } } },
+      "0300": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0300" } } },
+      "0400": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0400" } } },
+      "0500": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0500" } } },
+      "0600": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0600" } } },
+      "0700": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0700" } } },
+      "0800": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0800" } } },
+      "0900": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/0900" } } },
+      "1000": { "$value": "#000000", "$type": "color", "$extensions": { "com.figma": { "canonicalName": "Color/Black/1000" } } }
+    }
+  },
+  "Motion": {
+    "Duration": {
+      "0100": {
+        "$type": "duration",
+        "$value": "0ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0100",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0100)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0100",
+            "tsPath": "foundation.motion.duration['0100']",
+            "setKind": "ordinal",
+            "rawValue": 0,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0200": {
+        "$type": "duration",
+        "$value": "100ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0200",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0200)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0200",
+            "tsPath": "foundation.motion.duration['0200']",
+            "setKind": "ordinal",
+            "rawValue": 100,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0300": {
+        "$type": "duration",
+        "$value": "150ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0300",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0300)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0300",
+            "tsPath": "foundation.motion.duration['0300']",
+            "setKind": "ordinal",
+            "rawValue": 150,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0400": {
+        "$type": "duration",
+        "$value": "250ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0400",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0400)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0400",
+            "tsPath": "foundation.motion.duration['0400']",
+            "setKind": "ordinal",
+            "rawValue": 250,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0500": {
+        "$type": "duration",
+        "$value": "350ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0500",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0500)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0500",
+            "tsPath": "foundation.motion.duration['0500']",
+            "setKind": "ordinal",
+            "rawValue": 350,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0600": {
+        "$type": "duration",
+        "$value": "500ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0600",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0600)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0600",
+            "tsPath": "foundation.motion.duration['0600']",
+            "setKind": "ordinal",
+            "rawValue": 500,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      },
+      "0700": {
+        "$type": "duration",
+        "$value": "700ms",
+        "$extensions": {
+          "com.figma": {
+            "canonicalName": "Motion/Duration/0700",
+            "codeSyntax": {
+              "WEB": "var(--motion-duration-0700)"
+            }
+          },
+          "com.tgds": {
+            "cssCustomProperty": "--motion-duration-0700",
+            "tsPath": "foundation.motion.duration['0700']",
+            "setKind": "ordinal",
+            "rawValue": 700,
+            "unit": "ms",
+            "isRegisteredException": false
+          }
+        }
+      }
     }
   }
 }
