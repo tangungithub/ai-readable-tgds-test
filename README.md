@@ -64,7 +64,7 @@
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | E1 컴포넌트 매핑 *(Code Connect)* | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| E2 토큰 동기화 파이프라인 | ⬜ | — | ⬜ | ⬜ | ⬜ | ⬜ |
+| [E2 토큰 동기화 파이프라인](docs/E-design-code/E2-token-sync.md) | ⬜ | — | ⬜ | ⬜ | ⬜ | ⬜ |
 | E3 도구 · AI 접근 경로 | ⬜ | — | ⬜ | ⬜ | ⬜ | ⬜ |
 
 ### [F. 검증 · 거버넌스](docs/F-governance/) — 1.0 / 21 ≈ **5%**
@@ -115,11 +115,12 @@ docs/
 ├── B-component/      B1~B5
 ├── C-layout/         C1~C3
 ├── D-naming/         D1~D3
-├── E-design-code/    E1~E3
+├── E-design-code/    E1~E3 (E2는 파일 분리됨)
 ├── F-governance/     F1~F5
 ├── 90-materials/     발표 · 제작 자료 (규범 아님)
 └── 99-reference/     근거 리서치
 
+CLAUDE.md             레포 작업 규약 (AI 에이전트용 지도)
 tokens/               모든 토큰 값의 정본 (DTCG 형식)
 scripts/              생성기
 src/tokens/           생성물 — 손으로 고치지 않는다
