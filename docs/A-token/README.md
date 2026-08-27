@@ -5,7 +5,19 @@
 
 원본 자료: Figma Design `3YWinWXfs4AjGlJ59i9BFE` node `8174:1739` — "Token System Principles" (Adobe Spectrum 기반)
 
-**Foundation 계층의 규범 문서는 [token-system.md](token-system.md) 다.** 문법·Set 정의·예외 등록 대장·스키마·린트 규칙이 모두 그쪽에 있으며, 본 문서와 어긋날 경우 token-system.md 를 기준으로 한다.
+## 이 영역의 두 가지 문서
+
+| 종류 | 파일 | 역할 |
+|---|---|---|
+| **규범 문서** | [token.md](token.md) · [foundation.md](foundation.md) · [semantic.md](semantic.md) · [component-token.md](component-token.md) | 규칙 그 자체. 파일명이 평문 슬러그다 |
+| **단위 트래커** | [A2](A2-semantic-theme.md) · [A3](A3-semantic-responsive.md) · [A4](A4-component-token.md) · [A5](A5-collection-structure.md) | 6개 구현 축의 진행 현황. 파일명이 `A#-` 접두다 |
+
+**규범 문서가 정본이다.** 트래커나 본 README와 어긋날 경우 규범 문서를 기준으로 한다.
+
+규범 문서의 진입점은 **[token.md](token.md)** — 문서 지도와 로드 트리거 표가 있어 어떤 작업에 무엇을 읽어야 하는지 알려준다.
+**값은 md에 없다.** 모든 원시값은 [`tokens/foundation.tokens.json`](../../tokens/foundation.tokens.json)이 정본이다(TKN-03).
+
+> ~~token-system.md~~ 는 v0.2에서 멈춘 구 스펙이다. 생성기 입력으로만 남아 있으며 규범이 아니다.
 
 ---
 
@@ -13,7 +25,7 @@
 
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [A1 Foundation](token-system.md) | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
+| [A1 Foundation](foundation.md) | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 | [A2 Semantic — Theme](A2-semantic-theme.md) | 🟡 | 🟡 | 🟡 | ⬜ | 🟡 | ⬜ |
 | [A3 Semantic — Responsive](A3-semantic-responsive.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | [A4 Component Token](A4-component-token.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |

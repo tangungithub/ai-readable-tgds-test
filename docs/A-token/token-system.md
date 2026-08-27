@@ -1,3 +1,14 @@
+> ## ⚠️ 이 문서는 대체되었습니다 (v0.2 → v0.4)
+>
+> Foundation 규범은 **[token.md](token.md) / [foundation.md](foundation.md) / [semantic.md](semantic.md) / [component-token.md](component-token.md)** 4개 파일로 분리되었고,
+> 모든 **값**은 [`tokens/foundation.tokens.json`](../../tokens/foundation.tokens.json)으로 이전되었습니다.
+>
+> **본 문서는 규범이 아닙니다.** `scripts/generate-tokens.mjs`가 §1.6의 JSON 블록을 입력으로 쓰고 있어
+> 빌드가 깨지지 않도록 남겨 둔 것뿐이며, 생성기를 `tokens/`로 재연결하는 즉시 삭제합니다.
+> 내용이 새 4개 파일과 어긋날 경우 **새 파일이 정본**입니다.
+
+---
+
 # Token System
 
 > 본 문서는 AI Readable Design System의 토큰 정의 문서이다.

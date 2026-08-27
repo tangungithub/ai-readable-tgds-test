@@ -5,7 +5,7 @@
 디자인 시스템 **원칙의 구현 체크리스트**입니다.
 **6개 영역 · 24개 단위 × 6개 구현 축 = 132칸.** 빈칸이 그대로 할 일 목록입니다.
 
-- **최종 업데이트**: 2026-08-14
+- **최종 업데이트**: 2026-08-26
 - **전체 진행률**: **11.0 / 132 ≈ 8%**
 
 | | |
@@ -14,6 +14,8 @@
 | 정의·목표 | [AI Readable 정의](docs/00-overview/definition.md) |
 | 5요소 대조 | [소개 세션 5요소 ↔ 원칙 영역](docs/00-overview/element-mapping.md) |
 | 진행 계획 | [로드맵](docs/00-overview/roadmap.md) |
+| 토큰 규범 | [토큰 문서 진입점](docs/A-token/token.md) — 문서 지도 · 로드 트리거 |
+| 토큰 값 | [값 등록부](tokens/) — 모든 토큰 값의 정본 |
 
 ---
 
@@ -25,7 +27,7 @@
 
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [A1 Foundation](docs/A-token/token-system.md) | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
+| [A1 Foundation](docs/A-token/foundation.md) | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 | [A2 Semantic — Theme](docs/A-token/A2-semantic-theme.md) | 🟡 | 🟡 | 🟡 | ⬜ | 🟡 | ⬜ |
 | [A3 Semantic — Responsive](docs/A-token/A3-semantic-responsive.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | [A4 Component Token](docs/A-token/A4-component-token.md) | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -109,14 +111,34 @@
 ```
 docs/
 ├── 00-overview/      정의 · 구현 축 · 5요소 대조 · 로드맵
-├── A-token/          token-system.md (Foundation 규범) · A2~A5
+├── A-token/          규범 문서(token/foundation/semantic/component-token) · 단위 트래커 A2~A5
 ├── B-component/      B1~B5
 ├── C-layout/         C1~C3
 ├── D-naming/         D1~D3
 ├── E-design-code/    E1~E3
 ├── F-governance/     F1~F5
+├── 90-materials/     발표 · 제작 자료 (규범 아님)
 └── 99-reference/     근거 리서치
+
+tokens/               모든 토큰 값의 정본 (DTCG 형식)
+scripts/              생성기
+src/tokens/           생성물 — 손으로 고치지 않는다
 ```
 
 > B~F는 아직 미착수 단위가 많아 영역당 한 파일로 묶어 두었습니다.
 > 작업이 시작되는 단위부터 A 영역처럼 파일을 분리합니다.
+
+### 문서의 세 종류
+
+| 종류 | 위치 | 정본 여부 |
+|---|---|---|
+| **규범** | `docs/A-token/token.md` 외 3개 | ✅ 규칙의 정본 |
+| **값 등록부** | `tokens/*.tokens.json` | ✅ **값의 정본** — md와 어긋나면 이쪽이 맞다 |
+| 트래커 · 리서치 · 발표 자료 | 그 외 전부 | ❌ 규범과 어긋나면 규범이 맞다 |
+
+**규칙은 md, 값은 json.** 색 하나를 바꾸는 데 문서를 열 필요가 없고, 규칙 하나를 바꾸는 데 값 파일을 열 필요가 없다.
+
+### ⚠️ 미결 — 생성기 재연결
+
+`scripts/generate-tokens.mjs`는 아직 구 스펙(`docs/A-token/token-system.md` §1.6)을 입력으로 삼고 있어
+`src/tokens/*` 생성물이 `tokens/foundation.tokens.json`과 어긋나 있습니다. 생성기를 `tokens/`로 재연결해야 합니다.
