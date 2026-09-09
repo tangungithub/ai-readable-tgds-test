@@ -1,14 +1,14 @@
 /**
- * Generates the Foundation token layer from the specification.
+ * Generates the Foundation token layer from the value registry.
  *
- * Source of truth is the JSON block in docs/A-token/token-system.md section 1.6
- * ("아래 JSON은 본 장의 단일 진실 원천이다"). The schema is read straight out of
- * the document rather than copied into a second file, so the two cannot drift.
+ * Source of truth is tokens/foundation.tokens.json (W3C DTCG shape). Rules live
+ * in docs/A-token/foundation.md; values live only in the registry (TKN-03 ·
+ * FND-12). What is not in the registry does not exist — there is no TBD state.
  *
  * Emits:
- *   src/tokens/foundation.css          — custom properties (FND-13 naming)
+ *   src/tokens/foundation.css          — custom properties, kebab-cased
  *   src/tokens/foundation.ts           — typed values, scale order, lookup table
- *   src/tokens/foundation.tokens.json  — DTCG mapping table (FND-11)
+ *   src/tokens/foundation.tokens.json  — mapping table (Figma name ↔ CSS var ↔ TS path)
  *
  * Run: npm run tokens:build
  */
@@ -18,11 +18,10 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SPEC = 'docs/A-token/token-system.md';
+const REGISTRY = 'tokens/foundation.tokens.json';
 
 // ------------------------------------------------------------------ helpers
 
-const pad = (step) => String(step).padStart(4, '0');
 const kebab = (s) => s.trim().toLowerCase().replace(/\s+/g, '-');
 const camel = (s) =>
   s
@@ -30,172 +29,177 @@ const camel = (s) =>
     .split(/\s+/)
     .map((w, i) => (i === 0 ? w[0].toLowerCase() + w.slice(1) : w[0].toUpperCase() + w.slice(1)))
     .join('');
+const pascal = (s) =>
+  s
+    .trim()
+    .split(/\s+/)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join('');
 const num = (n) => (Number.isInteger(n) ? String(n) : String(Number(n.toFixed(4))));
 
 const UNIT_SUFFIX = {
   px: (v) => `${num(v)}px`,
   ms: (v) => `${num(v)}ms`,
+  rem: (v) => `${num(v)}rem`,
   '%': (v) => `${num(v)}%`,
   'css-font-weight': (v) => num(v),
 };
 
-/** DTCG $type per Set. */
-const DTCG_TYPE = {
-  'Typography/Font Size': 'dimension',
-  'Typography/Line Height': 'dimension',
-  'Typography/Font Weight': 'fontWeight',
-  'Typography/Font Family': 'fontFamily',
-  'Layout/Space': 'dimension',
-  'Layout/Size': 'dimension',
-  'Shape/Radius': 'dimension',
-  'Shape/Stroke': 'dimension',
-  'Effect/Opacity': 'number',
-  'Motion/Duration': 'duration',
-};
+const dataKeys = (group) => Object.keys(group).filter((k) => !k.startsWith('$'));
 
-// -------------------------------------------------------------- read schema
+// ------------------------------------------------------------- read registry
 
-function readSchema() {
-  const md = readFileSync(resolve(root, SPEC), 'utf8');
-  const blocks = [...md.matchAll(/```json\n([\s\S]*?)\n```/g)];
-  if (blocks.length !== 1) {
-    throw new Error(
-      `Expected exactly 1 json block in ${SPEC}, found ${blocks.length}. ` +
-        `The generator keys off section 1.6 being the only one.`,
-    );
-  }
-  return JSON.parse(blocks[0][1]);
+function readRegistry() {
+  return JSON.parse(readFileSync(resolve(root, REGISTRY), 'utf8'));
 }
 
-function validFontSizeSteps(fontSizeSet) {
-  const merged = { ...fontSizeSet.steps, ...(fontSizeSet.exceptions?.registered ?? {}) };
-  return Object.entries(merged)
-    .sort((a, b) => Number(a[0]) - Number(b[0]))
-    .map(([step, px]) => [pad(step), px]);
+/**
+ * Set kind (FND-04) is recovered from the option-key shape, which the naming
+ * rules make unambiguous:
+ *   composite       — keys contain a hyphen ("0400-0300")
+ *   ordinal         — keys are 4-digit padded steps ("0100", FND-05)
+ *   value-anchored  — keys are bare numbers whose text IS the value ("400")
+ *   nominal         — anything else ("Sans")
+ */
+function detectKind(keys) {
+  if (keys.some((k) => k.includes('-'))) return 'composite';
+  if (keys.every((k) => /^\d{4}$/.test(k))) return 'ordinal';
+  if (keys.every((k) => /^\d+$/.test(k))) return 'value-anchored';
+  return 'nominal';
 }
 
-// ----------------------------------------------------------- integrity gate
-// Not the full FND-L01..L09 lint suite — just the checks that would silently
-// produce wrong output if violated. The full linter is a separate task.
-
-function assertIntegrity(schema) {
-  const problems = [];
-
-  for (const [name, set] of Object.entries(schema.sets)) {
-    // FND-L09: a hyphen in a nominal option lets FND-12's longest match swallow
-    // a Set boundary and misparse without erroring.
-    if (set.kind === 'nominal') {
-      for (const option of Object.keys(set.options)) {
-        if (kebab(option).includes('-')) {
-          problems.push(`${name}: nominal option "${option}" is not a single word (FND-L09)`);
-        }
-      }
-    }
-
-    if (set.kind !== 'ordinal') continue;
-    const registered = set.exceptions?.registered ?? {};
-
-    // FND-06: exception steps replace the tens digit with 5
-    for (const step of Object.keys(registered)) {
-      if (pad(step).at(-2) !== '5') {
-        problems.push(`${name}: exception step ${pad(step)} does not use tens digit 5 (FND-06)`);
-      }
-    }
-    // FND-07: no exceptions at all where the Set forbids them
-    if (set.exceptions?.allowed === false && Object.keys(registered).length > 0) {
-      problems.push(`${name}: exceptions.allowed is false but registered is non-empty (FND-07)`);
-    }
-
-    // FND-L06: values increase with step, exceptions included
-    const values = Object.entries({ ...set.steps, ...registered })
-      .sort((a, b) => Number(a[0]) - Number(b[0]))
-      .map(([, v]) => v);
-    if (values.every((v) => typeof v === 'number')) {
-      for (let i = 1; i < values.length; i += 1) {
-        if (values[i] <= values[i - 1]) {
-          problems.push(`${name}: not monotonic at index ${i} (${values[i - 1]} -> ${values[i]}) (FND-L06)`);
-        }
-      }
-    }
+/** Raw value + unit out of one DTCG token. */
+function tokenValue(token) {
+  if (token.$type === 'dimension') {
+    return { value: token.$value.value, unit: token.$value.unit };
   }
-
-  if (problems.length) {
-    throw new Error(`Schema integrity check failed:\n  - ${problems.join('\n  - ')}`);
-  }
+  return { value: token.$value, unit: token.$type === 'fontWeight' ? 'css-font-weight' : null };
 }
 
 // ------------------------------------------------------------------ collect
-// Each option carries BOTH names: `canonical` is the Figma form that appears in
-// the spec, `code` is the transformed form. Keeping them together is what makes
-// the mapping table possible (FND-11).
+// Each option carries BOTH names: `canonical` is the Figma form as it appears
+// in the registry (TKN-04 — the canonical form IS the Figma notation), `code`
+// is the transformed form. Keeping them together is what makes the mapping
+// table possible: the reverse transform is a lookup, never a parse.
 
-function collect(schema) {
+function collect(registry) {
   const sets = [];
-  const skipped = [];
 
-  for (const [fullName, set] of Object.entries(schema.sets)) {
-    if (set.status === 'TBD' || !fullName.includes('/')) {
-      skipped.push(`${fullName} (status: TBD)`);
-      continue;
-    }
-    const [category, setName] = fullName.split('/');
-    let options = null;
-    let inheritedUnit = null;
+  for (const [category, groups] of Object.entries(registry)) {
+    if (category.startsWith('$')) continue;
 
-    if (set.kind === 'ordinal') {
-      const merged = { ...set.steps, ...(set.exceptions?.registered ?? {}) };
-      const registered = new Set(Object.keys(set.exceptions?.registered ?? {}).map(pad));
-      const entries = Object.entries(merged).sort((a, b) => Number(a[0]) - Number(b[0]));
-      if (entries.some(([, v]) => typeof v !== 'number')) {
-        const n = entries.filter(([, v]) => typeof v !== 'number').length;
-        skipped.push(`${fullName} (${n}/${entries.length} steps are TBD)`);
-        continue;
+    for (const setName of dataKeys(groups)) {
+      const group = groups[setName];
+      const keys = dataKeys(group);
+      const kind = detectKind(keys);
+
+      // JSON.parse hoists integer-like keys ("1000") ahead of the rest, so the
+      // registry's file order cannot be trusted for numeric scales — re-sort.
+      if (kind === 'ordinal' || kind === 'value-anchored') {
+        keys.sort((a, b) => Number(a) - Number(b));
+      } else if (kind === 'composite') {
+        const parts = (k) => k.split('-').map(Number);
+        keys.sort((a, b) => {
+          const [a1, a2] = parts(a);
+          const [b1, b2] = parts(b);
+          return a1 - b1 || a2 - b2;
+        });
       }
-      options = entries.map(([step, value]) => ({
-        canonical: pad(step),
-        code: pad(step),
-        value,
-        isException: registered.has(pad(step)),
-      }));
-    } else if (set.kind === 'value-anchored') {
-      options = set.options.map((v) => ({ canonical: String(v), code: String(v), value: v, isException: false }));
-    } else if (set.kind === 'nominal') {
-      // FND-08: words inside a segment become camelCase, so `Sans` -> `sans`.
-      options = Object.entries(set.options).map(([name, value]) => ({
-        canonical: name,
-        code: camel(name),
-        value,
-        isException: false,
-      }));
-    } else if (set.kind === 'composite') {
-      const lhNumbers = [...set.pattern.matchAll(/(\d{3})(?=\||\))/g)].map((m) => Number(m[1]));
-      options = [];
-      for (const [step, px] of validFontSizeSteps(schema.sets['Typography/Font Size'])) {
-        for (const lh of lhNumbers) {
-          const key = `${step}-${lh}`;
-          options.push({ canonical: key, code: key, value: (px * lh) / 100, isException: false });
+
+      let unit = null;
+      let dtcgType = null;
+      const options = keys.map((key) => {
+        const token = group[key];
+        dtcgType ??= token.$type;
+        if (token.$type !== dtcgType) {
+          throw new Error(`${category}/${setName}: mixed $type (${dtcgType} vs ${token.$type})`);
         }
-      }
-      // The schema declares no `unit` on this Set. Its value is computed FROM
-      // Font Size, so the unit is inherited rather than assumed — if Font Size
-      // ever moves to rem, Line Height follows automatically.
-      inheritedUnit = schema.sets['Typography/Font Size'].unit;
-    }
+        const v = tokenValue(token);
+        if (v.unit !== null) {
+          if (unit !== null && unit !== v.unit) {
+            throw new Error(`${category}/${setName}: mixed units (${unit} vs ${v.unit})`);
+          }
+          unit = v.unit;
+        }
+        return {
+          canonical: key,
+          code: kind === 'nominal' ? camel(key) : key,
+          value: v.value,
+          // FND-06: registered exception steps replace the tens digit with 5.
+          isException: kind === 'ordinal' && key.at(-2) === '5',
+        };
+      });
 
-    if (options) {
-      sets.push({ fullName, category, setName, unit: set.unit ?? inheritedUnit, kind: set.kind, options });
+      sets.push({ fullName: `${category}/${setName}`, category, setName, unit, kind, dtcgType, options });
     }
   }
-  return { sets, skipped };
+  return sets;
 }
 
-/** FND-13: --{Category}-{Set}-{Option}, each segment kebab-cased. */
+// ----------------------------------------------------------- integrity gate
+// Not the full FND-L01..L11 lint suite — just the checks that would silently
+// produce wrong output if violated. The full linter is a separate task.
+
+function assertIntegrity(sets, registry) {
+  const problems = [];
+  const fontSizeSteps = new Set(dataKeys(registry.Typography?.['Font Size'] ?? {}));
+
+  for (const { fullName, category, kind, options, setName } of sets) {
+    if (kind === 'nominal') {
+      // A hyphen inside a nominal option would make the kebab-cased CSS name
+      // ambiguous against segment boundaries (FND-L09).
+      for (const o of options) {
+        if (kebab(o.canonical).includes('-')) {
+          problems.push(`${fullName}: nominal option "${o.canonical}" is not a single word (FND-L09)`);
+        }
+      }
+    }
+
+    if (kind === 'composite' && category === 'Typography' && fontSizeSteps.size) {
+      // Composite grammar is {Font Size Step}-{Set Step} (§1.4.1) — the first
+      // segment must be a registered Font Size step.
+      for (const o of options) {
+        const head = o.canonical.split('-')[0];
+        if (!fontSizeSteps.has(head)) {
+          problems.push(`${fullName}: "${o.canonical}" references unknown Font Size step ${head}`);
+        }
+      }
+    }
+
+    if (kind === 'ordinal') {
+      // FND-05: numeric ordinal scales ascend with the step, exceptions
+      // included. Color ramps carry hex strings and are exempt here; composite
+      // Letter Spacing descends by design (FND-09) and is not ordinal.
+      const values = options.map((o) => o.value);
+      if (values.every((v) => typeof v === 'number')) {
+        for (let i = 1; i < values.length; i += 1) {
+          if (values[i] <= values[i - 1]) {
+            problems.push(
+              `${fullName}: not monotonic at ${options[i].canonical} (${values[i - 1]} -> ${values[i]}) (FND-L06)`,
+            );
+          }
+        }
+      }
+    }
+
+    void setName;
+  }
+
+  if (problems.length) {
+    throw new Error(`Registry integrity check failed:\n  - ${problems.join('\n  - ')}`);
+  }
+}
+
+// ---------------------------------------------------------------- rendering
+
+/** CSS custom property: --{Category}-{Set}-{Option}, each segment kebab-cased. */
 const cssProperty = (category, setName, optionCode) =>
   `--${kebab(category)}-${kebab(setName)}-${kebab(String(optionCode))}`;
 
 /**
- * FND-08: segment boundaries become nesting; bracket notation is specified for
- * NUMERIC options only, so a nominal option is reached with a plain dot.
+ * TKN-04: segment boundaries become nesting, words inside a segment become
+ * camelCase. Bracket notation is used where the option is not a valid
+ * identifier (numeric steps, composite keys).
  */
 const tsPath = (category, setName, optionCode) => {
   const base = `foundation.${camel(category)}.${camel(setName)}`;
@@ -204,33 +208,34 @@ const tsPath = (category, setName, optionCode) => {
     : `${base}['${optionCode}']`;
 };
 
-const rendered = (value, unit) =>
-  typeof value === 'string' ? JSON.stringify(value) : (UNIT_SUFFIX[unit] ?? num)(value);
+const rendered = (value, unit, dtcgType) => {
+  if (dtcgType === 'color') return String(value);
+  if (Array.isArray(value)) return value.map((v) => JSON.stringify(v)).join(', ');
+  if (typeof value === 'string') return JSON.stringify(value);
+  return (UNIT_SUFFIX[unit] ?? num)(value);
+};
 
 // --------------------------------------------------------------------- emit
 
-function emitCss(sets, skipped) {
+function emitCss(sets) {
   const lines = [
     '/*',
     ' * GENERATED FILE — do not edit by hand.',
-    ` * Source: ${SPEC} section 1.6`,
+    ` * Source: ${REGISTRY}`,
     ' * Regenerate: npm run tokens:build',
     ' *',
-    ' * Naming per FND-13: --{Category}-{Set}-{Option}, each segment kebab-cased.',
+    ' * Naming: --{Category}-{Set}-{Option}, each segment kebab-cased.',
     ' * Category is not omitted — it is what keeps the segment split unambiguous',
-    ' * when the name has to be read back without the mapping table (FND-12).',
-    ...(skipped.length
-      ? [' *', ' * Not emitted (unresolved in the spec):', ...skipped.map((s) => ` *   - ${s}`)]
-      : []),
+    ' * when the name has to be read back without the mapping table.',
     ' */',
     '',
     ':root {',
   ];
 
-  for (const { category, setName, unit, options } of sets) {
+  for (const { category, setName, unit, dtcgType, options } of sets) {
     lines.push(`  /* ${category}/${setName}${unit ? ` — ${unit}` : ''} */`);
     for (const o of options) {
-      lines.push(`  ${cssProperty(category, setName, o.code)}: ${rendered(o.value, unit)};`);
+      lines.push(`  ${cssProperty(category, setName, o.code)}: ${rendered(o.value, unit, dtcgType)};`);
     }
     lines.push('');
   }
@@ -238,7 +243,7 @@ function emitCss(sets, skipped) {
   return lines.join('\n') + '\n';
 }
 
-function emitTs(sets, skipped) {
+function emitTs(sets) {
   const tree = {};
   const units = {};
   const order = {};
@@ -261,24 +266,34 @@ function emitTs(sets, skipped) {
     }
   }
 
+  // One exported key-type per Set: ordinal / value-anchored scales are Steps,
+  // nominal / composite vocabularies are Options.
+  const typeLines = [];
+  const seenTypeNames = new Set();
+  for (const { category, setName, kind } of sets) {
+    const name = `${pascal(setName)}${kind === 'nominal' || kind === 'composite' ? 'Option' : 'Step'}`;
+    if (seenTypeNames.has(name)) {
+      throw new Error(`Type name collision: ${name} (from ${category}/${setName})`);
+    }
+    seenTypeNames.add(name);
+    typeLines.push(`export type ${name} = keyof Foundation['${camel(category)}']['${camel(setName)}'];`);
+  }
+
   return [
     '/**',
     ' * GENERATED FILE — do not edit by hand.',
-    ` * Source: ${SPEC} section 1.6`,
+    ` * Source: ${REGISTRY}`,
     ' * Regenerate: npm run tokens:build',
     ' *',
-    ' * Shape follows FND-08: segment boundaries become object nesting, words',
+    ' * Shape follows TKN-04: segment boundaries become object nesting, words',
     ' * inside a segment become camelCase, numeric options stay bracket-accessed.',
     " *   Typography/Font Size/0400  ->  foundation.typography.fontSize['0400']",
-    ...(skipped.length
-      ? [' *', ' * Not emitted (unresolved in the spec):', ...skipped.map((s) => ` *   - ${s}`)]
-      : []),
     ' */',
     '',
     '/** Raw values. Units are carried separately in `foundationUnits`. */',
     `export const foundation = ${JSON.stringify(tree, null, 2)} as const;`,
     '',
-    '/** Unit for each Set, as declared in the schema. `null` = unitless (nominal). */',
+    '/** Unit for each Set. `null` = unitless (colors, ratios, nominal values). */',
     `export const foundationUnits = ${JSON.stringify(units, null, 2)} as const;`,
     '',
     '/**',
@@ -294,10 +309,10 @@ function emitTs(sets, skipped) {
     '/**',
     ' * Reverse mapping, CSS custom property -> canonical Figma name + TS path.',
     ' *',
-    ' * FND-11 forbids recovering the canonical name by parsing the code name:',
-    ' * a hyphen in `--typography-font-size-0400` could have come from a segment',
-    ' * boundary or from the space inside "Font Size", and the string alone cannot',
-    ' * tell you which. Look it up here instead of taking the name apart.',
+    ' * The reverse transform is a lookup, never a parse: a hyphen in',
+    ' * `--typography-font-size-0400` could have come from a segment boundary or',
+    ' * from the space inside "Font Size", and the string alone cannot tell you',
+    ' * which. Look it up here instead of taking the name apart.',
     ' */',
     `export const foundationLookup: Readonly<Record<string, { canonical: string; ts: string }>> = ${JSON.stringify(
       lookup,
@@ -308,42 +323,35 @@ function emitTs(sets, skipped) {
     'export type Foundation = typeof foundation;',
     'export type FoundationCategory = keyof Foundation;',
     '',
-    "export type FontSizeStep = keyof Foundation['typography']['fontSize'];",
-    "export type LineHeightOption = keyof Foundation['typography']['lineHeight'];",
-    "export type SpaceStep = keyof Foundation['layout']['space'];",
-    "export type SizeStep = keyof Foundation['layout']['size'];",
-    "export type RadiusStep = keyof Foundation['shape']['radius'];",
-    "export type StrokeStep = keyof Foundation['shape']['stroke'];",
-    "export type OpacityStep = keyof Foundation['effect']['opacity'];",
-    "export type DurationStep = keyof Foundation['motion']['duration'];",
+    ...typeLines,
     '',
   ].join('\n');
 }
 
-/** DTCG-shaped mapping table — the artifact FND-11 designates as the single source. */
-function emitTokensJson(sets, skipped) {
+/** Mapping table — Figma name ↔ CSS custom property ↔ TS path, DTCG-shaped. */
+function emitTokensJson(sets) {
   const doc = {
     $description:
-      'Foundation tokens for the AI Readable Design System (TGDS). ' +
-      `Generated from ${SPEC} section 1.6 — do not edit by hand.`,
+      'Foundation token mapping table for the AI Readable Design System (TGDS). ' +
+      `Generated from ${REGISTRY} — do not edit by hand. Values are authoritative ` +
+      'in the registry (TKN-03); this file adds the code-name mapping.',
     $extensions: {
       'com.tgds': {
-        specVersion: 'see the document header of ' + SPEC,
-        cssPropertyGrammar: '--{Category}-{Set}-{Option}, kebab-cased (FND-13)',
-        reverseTransform: 'lookup only; parsing the code name is prohibited (FND-11)',
-        notEmitted: skipped,
+        source: REGISTRY,
+        cssPropertyGrammar: '--{Category}-{Set}-{Option}, kebab-cased',
+        reverseTransform: 'lookup only; parsing the code name is prohibited',
       },
     },
   };
 
-  for (const { fullName, category, setName, unit, kind, options } of sets) {
+  for (const { category, setName, unit, kind, dtcgType, options } of sets) {
     doc[category] ??= {};
     const group = {};
     for (const o of options) {
       const css = cssProperty(category, setName, o.code);
       group[o.canonical] = {
-        $type: DTCG_TYPE[fullName] ?? 'other',
-        $value: typeof o.value === 'string' ? o.value : (UNIT_SUFFIX[unit] ?? num)(o.value),
+        $type: dtcgType,
+        $value: Array.isArray(o.value) || dtcgType === 'color' ? o.value : rendered(o.value, unit, dtcgType),
         $extensions: {
           // What Figma would carry on the variable itself once these exist there.
           'com.figma': {
@@ -368,29 +376,27 @@ function emitTokensJson(sets, skipped) {
 
 // ---------------------------------------------------------------------- main
 
-const schema = readSchema();
-assertIntegrity(schema);
-const { sets, skipped } = collect(schema);
+const registry = readRegistry();
+const sets = collect(registry);
+assertIntegrity(sets, registry);
 
 for (const s of sets) {
+  // `number`-typed Sets (Opacity) are unitless ratios by declaration; any other
+  // numeric Set without a unit would silently emit a bare number into CSS.
   const numeric = s.options.some((o) => typeof o.value === 'number');
-  if (numeric && !s.unit) {
+  if (numeric && !s.unit && s.dtcgType !== 'number') {
     throw new Error(
       `${s.fullName}: numeric values but no unit could be resolved. Emitting a bare ` +
-        `number is unsafe — CSS would read it as a unitless ratio. Declare "unit" ` +
-        `on the Set in ${SPEC}, or give it an inheritance rule in the generator.`,
+        `number is unsafe — CSS would read it as a unitless ratio. Declare the unit ` +
+        `on the $value objects in ${REGISTRY}.`,
     );
   }
 }
 
-writeFileSync(resolve(root, 'src/tokens/foundation.css'), emitCss(sets, skipped));
-writeFileSync(resolve(root, 'src/tokens/foundation.ts'), emitTs(sets, skipped));
-writeFileSync(resolve(root, 'src/tokens/foundation.tokens.json'), emitTokensJson(sets, skipped));
+writeFileSync(resolve(root, 'src/tokens/foundation.css'), emitCss(sets));
+writeFileSync(resolve(root, 'src/tokens/foundation.ts'), emitTs(sets));
+writeFileSync(resolve(root, 'src/tokens/foundation.tokens.json'), emitTokensJson(sets));
 
 const total = sets.reduce((n, s) => n + s.options.length, 0);
-console.log(`Generated ${total} tokens across ${sets.length} sets from ${SPEC}`);
+console.log(`Generated ${total} tokens across ${sets.length} sets from ${REGISTRY}`);
 for (const s of sets) console.log(`  ${s.category}/${s.setName}: ${s.options.length}`);
-if (skipped.length) {
-  console.log('Skipped (unresolved in spec):');
-  for (const s of skipped) console.log(`  - ${s}`);
-}
