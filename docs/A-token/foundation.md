@@ -27,7 +27,7 @@ Foundation Token은 시스템의 모든 시각 값의 **원천(primitive)** 을 
 | ~~FND-08~~ | **TKN-04로 승격** — 이름 정본과 코드 변환 규칙은 전 계층 공통이므로 `token.md`가 소유한다. |
 | FND-09 | 스텝 번호의 의미(값과의 관계·방향)는 §1.4 Set 선언에 명시한다. 스텝 번호를 임의로 해석하지 않는다. |
 | FND-10 | Foundation Token은 어떤 토큰도 참조하지 않는 말단(leaf)이다. Foundation을 참조할 수 있는 것은 Semantic·Component 계층뿐이다. |
-| FND-11 | **값 0이 "속성 미적용"을 의미하는 Set은 0 스텝을 정의하지 않는다.** 토큰의 부재가 곧 0이다(Radius·Stroke). 0이 유의미한 값인 Set만 0 스텝을 등록하며, 그 표기는 `0000`으로 통일한다(Opacity·Letter Spacing의 `0100`은 각 Set의 스케일 기준점으로 별도 선언한다). |
+| FND-11 | **값 0이 "속성 미적용"을 의미하는 Set은 0 스텝을 정의하지 않는다.** 토큰의 부재가 곧 0이다(Radius·Stroke). 0이 유의미한 값인 Set만 0 스텝을 등록하며, 그 표기는 `0000`으로 통일한다(Opacity·Letter Spacing의 `0100`은 각 Set의 스케일 기준점으로 별도 선언한다). `Color/Gray/0000`은 순백이라는 유의미한 값이므로 등록한다(FND-16). |
 
 ## 1.2 네이밍 문법
 
@@ -50,13 +50,13 @@ Option   = Set의 kind에 따라 결정 (아래 표 참조)
 
 - 표준 스텝: `0100 0200 0300 0400 0500 0600 0700 0800 0900 1000 1100 1200 1300` (13단계)
 - 예외 스텝: 십의 자리를 5로 치환 — `0050`(0100 아래), `0150`(0100~0200 사이), … `1350`(1300 위)
-- 예외는 FND-07에 따라 **등록된 것만** 유효하다. 스케일이 13단계가 아닌 Set(Stroke, Opacity, Color/White, Color/Black)은 §1.4에 자체 스텝 범위를 선언한다.
+- 예외는 FND-07에 따라 **등록된 것만** 유효하다. 스케일이 13단계가 아닌 Set(Stroke, Opacity, Color/Gray)은 §1.4에 자체 스텝 범위를 선언한다.
 
 ## 1.3 Category 목록
 
 | Category | 포함 Set | 비고 |
 |---|---|---|
-| Color | Blue, Gray, Red, Green, Yellow, Sky, White, Black | 색상 램프 6종(13단계) + 알파 2종(11단계) |
+| Color | Blue, Gray, Red, Green, Yellow, Sky | 색상 램프 6종(13단계). Gray만 순백·순흑 앵커 `0000`·`1300`을 더해 14단계(FND-16). **알파 Set은 두지 않는다** — 반투명은 Semantic이 `Effect/Opacity`와 조합한다(SEM-11) |
 | Typography | Font Size, Line Height, Letter Spacing, Font Weight, Font Family | |
 | Layout | Space, Size | |
 | Shape | Radius, Stroke | |
@@ -68,8 +68,8 @@ Option   = Set의 kind에 따라 결정 (아래 표 참조)
 
 | Set | kind | 스텝 | 예외 | 스텝 번호의 의미 (FND-09) |
 |---|---|---|---|---|
-| `Color/Blue` `Color/Gray` `Color/Red` `Color/Green` `Color/Yellow` `Color/Sky` | ordinal | 13 (`0100`~`1300`) | 불가 | hue 내 **명도 내림차순**(번호↑ = 어두움). OKLCH 명도 균등 |
-| `Color/White` `Color/Black` | ordinal | 11 (`0000`~`1000`) | 불가 | **불투명도 오름차순**. `Effect/Opacity`와 동일한 제곱 스케일 |
+| `Color/Blue` `Color/Red` `Color/Green` `Color/Yellow` `Color/Sky` | ordinal | 13 (`0100`~`1300`) | 불가 | hue 내 **명도 내림차순**(번호↑ = 어두움). OKLCH 명도 균등. `1200`·`1300`은 Semantic이 참조하지 않는다(SEM-T08) |
+| `Color/Gray` | ordinal | 14 (`0000`~`1300`) | 불가 | 명도 내림차순. `0100`~`1200`이 OKLCH 등간격 램프이고, `0000`=순백·`1300`=순흑은 램프 밖의 **고정 앵커**다(FND-16) |
 | `Typography/Font Size` | ordinal | 13 | **허용** | px 오름차순 |
 | `Typography/Line Height` | composite | — | — | §1.4.1 문법 |
 | `Typography/Letter Spacing` | composite | — | — | §1.4.1 문법 |
@@ -103,9 +103,10 @@ Typography/Letter Spacing/{Font Size Step}-{Letter Spacing Step}
 
 | 규칙 ID | 규칙 |
 |---|---|
-| FND-13 | 색 램프는 **OKLCH 명도(L)가 등간격**이 되도록 생성한다. 양 끝(`0100`·`1300`)의 L과 각 스텝의 색상·채도 특성은 보존하되, 중간 스텝은 L 등간격으로 재표본한다. |
+| FND-13 | 색 램프는 **OKLCH 명도(L)가 등간격**이 되도록 생성한다. 양 끝(`0100`·`1300`, Gray는 앵커를 제외한 `0100`·`1200`)의 L과 각 스텝의 색상·채도 특성은 보존하되, 중간 스텝은 L 등간격으로 재표본한다. |
 | FND-14 | **브랜드 코어 색을 특정 스텝 번호에 고정하지 않는다.** hue마다 코어 색의 명도가 다르므로 스텝 고정은 램프를 찌그러뜨린다. 코어 색이 놓이는 스텝은 hue마다 다르며, Semantic 매핑표(SEM-T03)가 이를 지정한다. |
 | FND-15 | **스텝 번호는 hue 내 순서만 보장한다. hue 간 동일 스텝의 명도·대비는 보장하지 않는다.** 교차 hue 일반화(예: "0800이면 어디서나 흰 글씨가 통과한다")를 금지한다. |
+| FND-16 | **Gray 앵커.** `Color/Gray/0000`(순백)과 `Color/Gray/1300`(순흑)은 재표본 대상이 아닌 고정 앵커이며, FND-13의 등간격과 FND-L11 검사는 `0100`~`1200`에만 적용한다. 앵커는 Gray에만 존재하고 유채 Set에는 두지 않는다. **Foundation에는 알파(반투명) 값이 없다.** 반투명이 필요한 토큰은 Semantic이 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). Foundation이 말단(FND-10)인 것은 변하지 않는다. |
 
 ## 1.5 예외 등록 대장 (Registered Exceptions)
 
@@ -144,7 +145,8 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
 | FND-L09 | Letter Spacing Option의 첫 요소는 Font Size의 유효 스텝(예외 포함)이어야 하고, 둘째 요소는 {0100, 0200, 0300, 0400, 0500}이어야 한다 |
 | FND-L10 | composite Set(Line Height·Letter Spacing)의 등록 값은 `valueRule`을 그대로 적용해 재계산한 값과 일치해야 한다 (Letter Spacing은 소수점 둘째 자리 반올림 후 비교) |
 | FND-L06 | ordinal Set의 값은 §1.4에 선언된 방향으로 단조여야 한다 (Color는 명도 내림차순, Letter Spacing은 자간 조임 오름차순, 그 외는 값 오름차순) |
-| FND-L11 | 색 램프의 인접 스텝 OKLCH 명도 차(ΔL)는 램프 내에서 균등해야 한다 — 최대/최소 비율 1.15 이내 (FND-13) |
+| FND-L11 | 색 램프의 인접 스텝 OKLCH 명도 차(ΔL)는 램프 내에서 균등해야 한다 — 최대/최소 비율 1.15 이내 (FND-13). Gray는 앵커 `0000`·`1300`을 제외한 `0100`~`1200` 구간만 검사한다 (FND-16) |
+| FND-L12 | `Color/Gray/0000`은 순백, `Color/Gray/1300`은 순흑이어야 하며, 유채 Set에 `0000` 스텝이 있으면 위반이다 (FND-16) |
 | FND-L07 | Foundation 토큰은 alias(참조)를 가질 수 없다 — 원시값만 허용 (FND-10) |
 | FND-L08 | 코드 변환 결과는 케이스 폴딩 후에도 전역 유일해야 한다 (예: `Gmarket Sans` vs `GMarket sans` 동시 등록 금지) |
 
@@ -157,5 +159,7 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
 3. **구 컬렉션 잔존** — Brand Guidelines 페이지가 구 컬렉션(`Brand/*` `Sky/*`, 3자리·`Color/` 접두 없음)을 참조하고 있다. 현재 검토 보류.
 4. **`Color/Sky` 이름 충돌** — 신·구 컬렉션 양쪽에 `Sky`가 존재한다. 구 컬렉션 정리 시 함께 처리한다.
 5. **`Effect/Shadow` Set 보류** — Semantic Theme의 `Shadow` Target과 함께 보류 상태다. 재개 시 composite 유형으로 정의하되, 색을 참조해야 하므로 FND-10(말단 원칙)과의 관계를 먼저 정리해야 한다.
+6. **Gray 구 `1300` 값의 소실** — 2026-09-09 순흑 앵커를 `1300`에 등록하면서(FND-16) 램프의 마지막 유채 없는 짙은 회색(구 `1300`)이 사라졌다. 램프 끝은 `1200`이다. 순백에서 순흑까지 등간격으로 재표본하는 대안은 `1100`부터 실질 검정이 되어 채택하지 않았고, 앵커를 붙이고 나머지를 유지하면 `1200`→`1300`의 ΔL이 다른 스텝의 약 4배라 FND-L11을 앵커 제외로 좁혔다. 다크 모드 캔버스는 `1200`으로 확정했다(SEM-T10). 앵커 `1300`은 캔버스로 쓰지 않는다. 구 값이 꼭 필요하면 Gray의 예외 허용 여부(현재 불가)를 다시 열어야 한다.
+7. **유채 램프의 `1200`·`1300` 존치 여부** — Semantic은 유채 Role의 매핑을 `1100` 이하로 제한한다(SEM-T08). 참조되지 않는 두 스텝을 Foundation에서 제거해 11단계로 줄일지는 FND-05(13단계 표준)와 충돌하므로 미결로 둔다.
 
 ---

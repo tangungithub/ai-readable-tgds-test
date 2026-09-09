@@ -18,7 +18,7 @@
 - [ ] **Theme / Responsive 분리 기준 명문화** — 어떤 속성이 Theme이고 어떤 것이 Responsive인가
 - [ ] **Duration · Easing · Shadow의 Semantic 정의 부재** ⚠️
       → Component가 참조할 상위가 없어 **참조 데드락**. A2 전체에서 가장 큰 구멍
-- [ ] Mode(Light/Dark 등) 축과 이 컬렉션의 관계
+- [x] Mode(Light/Dark 등) 축과 이 컬렉션의 관계 — Light/Dark 2모드. 반전 표면은 모드 스코핑이 아니라 `Inverse` Role로 표현한다(`SEM-T07`)
 
 ## 2. 네이밍 규칙 — 🟡
 
@@ -34,9 +34,9 @@
 ## 3. 사용 규칙 — 🟡
 
 - [x] 금지: Semantic 이름에 State 단어를 넣지 않는다
-- [ ] ⚠️ **Background 스텝 매핑 기준 불명** — Mode 기준인가 Role 기준인가
-- [ ] Surface vs Background 선택 기준
-- [ ] Text 계열 토큰의 대비(contrast) 보장 규칙
+- [x] **Background 스텝 매핑 기준** — Role별 등록표(`SEM-T03`)가 모드별로 명시. 솔리드 Fill의 Default는 On 전경 4.5:1 통과 스텝 중 코어 색에 가장 가까운 스텝(`SEM-T09`)
+- [x] Surface vs Background 선택 기준 — `Background`(캔버스, 2단계)와 `Fill`(요소의 면, 틴트/솔리드)로 분리(`SEM-T05`·`SEM-T10`)
+- [x] Text 계열 토큰의 대비(contrast) 보장 규칙 — 표면·전경 짝 규칙(`SEM-T05`) + 짝별 대비 기록(`SEM-T04`) + 린트 `SEM-L07`·`SEM-L12`
 - [ ] 유사 Role 간 선택 기준 (Accent vs Brand vs Primary가 공존한다면)
 - [ ] Do / Don't 예시
 

@@ -10,7 +10,7 @@ budget: 150 lines
 > 본 파일은 **라우터이자 헌법**이다. 어떤 파일을 읽어야 하는지와, 전 계층에 공통으로 적용되는 규칙만 담는다.
 > 계층별 규칙과 토큰 등록부는 각 파일이 소유한다. **필요한 파일만 읽는다.**
 
-- 문서 버전: v0.4 (2026-08-27)
+- 문서 버전: v0.5 (2026-09-09)
 - 변경 이력은 §5
 
 ---
@@ -59,7 +59,7 @@ budget: 150 lines
 
 | 영역 | 상태 | 비고 |
 |---|---|---|
-| Color | 정의됨 | 6 hue × 13단계 + White·Black 알파 11단계. 값은 `../../tokens/foundation.tokens.json` |
+| Color | 정의됨 | 6 hue × 13단계. Gray만 순백·순흑 앵커 `0000`·`1300`을 더해 14단계(FND-16). **알파 Set은 없다** — 반투명은 Semantic이 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). 값은 `../../tokens/foundation.tokens.json` |
 | Typography, Layout, Shape, Effect(Opacity) | 정의됨 | `foundation.md` §1.4 |
 | **Shadow / Blur** | **보류** | Semantic Theme의 `Shadow` Target도 함께 주석 처리 상태 |
 | **Motion (Duration · Easing)** | **범위 밖** | 인터랙션으로 확장할 때 Foundation Category와 함께 재도입한다. 근거 자료는 [easing-token-rule.md](../99-reference/easing-token-rule.md)에 보존 |
@@ -71,6 +71,7 @@ Figma 변수로 바인딩할 수 없는 속성(레이어 x·y 위치, 회전, �
 
 | 버전 | 날짜 | 변경 |
 |---|---|---|
+| v0.5 | 2026-09-09 | **On-color · Inverse · 불투명도 조합 확정** — Semantic Theme의 `Background`를 캔버스 전용으로 좁히고 `Fill` Target 신설, `On {Role}` 7종·`Inverse` Role 추가, 표면·전경 짝 규칙(SEM-T05), 유채 스텝 상한(SEM-T08), 솔리드 Fill 앵커(SEM-T09), 불투명도 조합(SEM-11), 린트 SEM-L07~L12. Foundation은 `Color/White`·`Color/Black` 알파 Set을 폐지하고 `Color/Gray`에 순백·순흑 앵커 `0000`·`1300`을 등록(FND-16). 근거: Figma 2026-09-03 변수 업데이트(색 변수의 불투명도를 number 변수로 alias) |
 | v0.4 | 2026-08-27 | **Component 네이밍 문법 작성** — ComponentToken §3.1 확정(가변 축 문법 CMP-N1~N8, 문법 스키마), §3.4 컴포넌트 파일 형식(축 선언·상태 분기 표·상태 비의존 표) 신설, 린트 CMP-L06~L11 추가. Element 판별 기준·상태 매핑 표 형식의 미결 해소 |
 | v0.4 | 2026-08-26 | **값 외부화** — 모든 원시값을 `../../tokens/foundation.tokens.json`으로 이전하고 foundation.md는 규칙만 보유(346→160줄). Color Set 확정(6 hue×13단계 + White·Black 11단계). **색 램프를 OKLCH 명도 등간격으로 재배치**(FND-13~15, FND-L11). SEM-T03·T04 신설 |
 | v0.3 | 2026-08-26 | **4파일 분리** — 본 파일을 라우터+헌법으로 축소하고 Foundation / Semantic / ComponentToken 분리. FND-08을 TKN-04로 승격. Radius·Stroke에서 0 스텝 제거(FND-11). Space vs Size 판별 기준 확정. Shadow Target 주석 처리 |

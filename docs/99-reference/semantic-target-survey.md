@@ -39,7 +39,7 @@ Semantic 토큰은 Figma 변수로 존재해야 하므로, **바인딩 불가능
 
 ### 1.2 바인딩 **불가능** (2026 기준) — Target 후보에서 제외
 
-`x` / `y` 위치, `rotation`(레이어·그라디언트), **그라디언트 스톱 위치**, fill/stroke 개별 opacity(레이어 opacity만 가능), 스트로크 대시 길이·간격·오프셋, 블렌드 모드, 제약(constraints)·비율 잠금, **컴포넌트 프로퍼티 정의**, 그리드 span·자식 배치, 텍스트 truncation·max-lines, 익스포트 설정, 코너 스무딩(squircle %).
+`x` / `y` 위치, `rotation`(레이어·그라디언트), **그라디언트 스톱 위치**, ~~fill/stroke 개별 opacity~~(2026-09-03 Figma 업데이트로 **색 변수의 불투명도를 number 변수로 alias 가능**해졌다 — 결합 지점은 노드가 아니라 Semantic 색 변수이며 규칙은 `semantic.md` SEM-11), 스트로크 대시 길이·간격·오프셋, 블렌드 모드, 제약(constraints)·비율 잠금, **컴포넌트 프로퍼티 정의**, 그리드 span·자식 배치, 텍스트 truncation·max-lines, 익스포트 설정, 코너 스무딩(squircle %).
 
 > **판정**: 위 목록은 Semantic Target에서 영구 제외한다. 문서에 "제외 목록"으로 명시해 두면 AI가 존재하지 않는 토큰을 만들어내는 것을 차단할 수 있다.
 
