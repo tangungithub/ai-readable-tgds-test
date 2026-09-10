@@ -5,7 +5,7 @@ import { foundation, foundationOrder, foundationUnits } from './tokens/foundatio
  * Foundation token specimen sheet.
  *
  * Renders every generated token so the scales can be checked against
- * docs/A-token/token-system.md by eye. Not part of the published surface.
+ * tokens/foundation.tokens.json by eye. Not part of the published surface.
  */
 
 type Options = Record<string, string | number>;
@@ -49,8 +49,21 @@ function preview(setPath: string, value: string | number): ReactNode {
     case 'shape/stroke':
       return <span style={{ display: 'inline-block', width: 48, height: 0, borderTop: `${n}px solid #111` }} />;
     case 'effect/opacity':
-      return <span style={{ display: 'inline-block', width: 32, height: 16, background: '#111', opacity: n / 100 }} />;
+      return <span style={{ display: 'inline-block', width: 32, height: 16, background: '#111', opacity: n }} />;
     default:
+      if (typeof value === 'string' && value.startsWith('#')) {
+        return (
+          <span
+            style={{
+              display: 'inline-block',
+              width: 32,
+              height: 16,
+              background: value,
+              border: '1px solid #e5e5e5',
+            }}
+          />
+        );
+      }
       return null;
   }
 }
@@ -109,12 +122,8 @@ export function App() {
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, color: '#111' }}>
       <h1 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px' }}>Foundation Tokens</h1>
-      <p style={{ fontSize: 12, color: '#666', margin: '0 0 8px' }}>
-        {total} tokens generated from <code>docs/A-token/token-system.md</code> §1.6
-      </p>
-      <p style={{ fontSize: 12, color: '#b45309', margin: '0 0 32px' }}>
-        Not emitted — unresolved in the spec: <strong>Color</strong> (status TBD),{' '}
-        <strong>Motion/Easing</strong> (all 5 curves TBD)
+      <p style={{ fontSize: 12, color: '#666', margin: '0 0 32px' }}>
+        {total} tokens generated from <code>tokens/foundation.tokens.json</code>
       </p>
 
       {Object.entries(tree).map(([category, sets]) =>

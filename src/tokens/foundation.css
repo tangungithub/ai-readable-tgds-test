@@ -1,16 +1,105 @@
 /*
  * GENERATED FILE — do not edit by hand.
- * Source: docs/A-token/token-system.md section 1.6
+ * Source: tokens/foundation.tokens.json
  * Regenerate: npm run tokens:build
  *
- * Naming per FND-13: --{Category}-{Set}-{Option}, each segment kebab-cased.
+ * Naming: --{Category}-{Set}-{Option}, each segment kebab-cased.
  * Category is not omitted — it is what keeps the segment split unambiguous
- * when the name has to be read back without the mapping table (FND-12).
- *
- * Not emitted (unresolved in the spec):
- *   - Motion/Easing (5/5 steps are TBD)
+ * when the name has to be read back without the mapping table.
  */
+
 :root {
+  /* Color/Blue */
+  --color-blue-0100: #f7faff;
+  --color-blue-0200: #d3e6ff;
+  --color-blue-0300: #aed1ff;
+  --color-blue-0400: #88bbff;
+  --color-blue-0500: #60a5ff;
+  --color-blue-0600: #308dff;
+  --color-blue-0700: #0077ed;
+  --color-blue-0800: #0264c8;
+  --color-blue-0900: #0653a4;
+  --color-blue-1000: #094181;
+  --color-blue-1100: #0a315f;
+  --color-blue-1200: #0a213f;
+  --color-blue-1300: #071222;
+
+  /* Color/Gray */
+  --color-gray-0000: #ffffff;
+  --color-gray-0100: #f3f3f3;
+  --color-gray-0200: #dddddf;
+  --color-gray-0300: #c7c8cc;
+  --color-gray-0400: #b3b3b9;
+  --color-gray-0500: #9e9ea6;
+  --color-gray-0600: #8a8a93;
+  --color-gray-0700: #777780;
+  --color-gray-0800: #64646c;
+  --color-gray-0900: #525259;
+  --color-gray-1000: #404046;
+  --color-gray-1100: #303034;
+  --color-gray-1200: #202022;
+  --color-gray-1300: #000000;
+
+  /* Color/Red */
+  --color-red-0100: #fdf1f0;
+  --color-red-0200: #ffd3ce;
+  --color-red-0300: #ffb3ac;
+  --color-red-0400: #ff9188;
+  --color-red-0500: #fe6a63;
+  --color-red-0600: #f04746;
+  --color-red-0700: #d53436;
+  --color-red-0800: #b82429;
+  --color-red-0900: #9a191f;
+  --color-red-1000: #7a181a;
+  --color-red-1100: #5a1515;
+  --color-red-1200: #3d1110;
+  --color-red-1300: #210b0a;
+
+  /* Color/Green */
+  --color-green-0100: #f1f8f2;
+  --color-green-0200: #c3edcb;
+  --color-green-0300: #8ae39d;
+  --color-green-0400: #4fd575;
+  --color-green-0500: #1fc15c;
+  --color-green-0600: #0eaa4d;
+  --color-green-0700: #009440;
+  --color-green-0800: #007d36;
+  --color-green-0900: #00682b;
+  --color-green-1000: #025321;
+  --color-green-1100: #063e19;
+  --color-green-1200: #092b12;
+  --color-green-1300: #08180b;
+
+  /* Color/Yellow */
+  --color-yellow-0100: #faf8f0;
+  --color-yellow-0200: #ffe083;
+  --color-yellow-0300: #f5c813;
+  --color-yellow-0400: #ddb409;
+  --color-yellow-0500: #c5a000;
+  --color-yellow-0600: #ad8c00;
+  --color-yellow-0700: #967a00;
+  --color-yellow-0800: #806700;
+  --color-yellow-0900: #6b5500;
+  --color-yellow-1000: #564400;
+  --color-yellow-1100: #413301;
+  --color-yellow-1200: #2d2404;
+  --color-yellow-1300: #1b1505;
+
+  /* Color/Sky */
+  --color-sky-0100: #f0f6fa;
+  --color-sky-0200: #c6e4f9;
+  --color-sky-0300: #93d3fe;
+  --color-sky-0400: #5ec1fb;
+  --color-sky-0500: #2badef;
+  --color-sky-0600: #0898d7;
+  --color-sky-0700: #0083bb;
+  --color-sky-0800: #006fa0;
+  --color-sky-0900: #005b85;
+  --color-sky-1000: #00486b;
+  --color-sky-1100: #033750;
+  --color-sky-1200: #072536;
+  --color-sky-1300: #07151e;
+
   /* Typography/Font Size — px */
   --typography-font-size-0050: 9px;
   --typography-font-size-0100: 10px;
@@ -31,80 +120,6 @@
   --typography-font-size-1200: 72px;
   --typography-font-size-1300: 96px;
 
-  /* Typography/Line Height — px */
-  --typography-line-height-0050-100: 9px;
-  --typography-line-height-0050-120: 10.8px;
-  --typography-line-height-0050-140: 12.6px;
-  --typography-line-height-0050-150: 13.5px;
-  --typography-line-height-0100-100: 10px;
-  --typography-line-height-0100-120: 12px;
-  --typography-line-height-0100-140: 14px;
-  --typography-line-height-0100-150: 15px;
-  --typography-line-height-0150-100: 11px;
-  --typography-line-height-0150-120: 13.2px;
-  --typography-line-height-0150-140: 15.4px;
-  --typography-line-height-0150-150: 16.5px;
-  --typography-line-height-0200-100: 12px;
-  --typography-line-height-0200-120: 14.4px;
-  --typography-line-height-0200-140: 16.8px;
-  --typography-line-height-0200-150: 18px;
-  --typography-line-height-0300-100: 14px;
-  --typography-line-height-0300-120: 16.8px;
-  --typography-line-height-0300-140: 19.6px;
-  --typography-line-height-0300-150: 21px;
-  --typography-line-height-0400-100: 16px;
-  --typography-line-height-0400-120: 19.2px;
-  --typography-line-height-0400-140: 22.4px;
-  --typography-line-height-0400-150: 24px;
-  --typography-line-height-0500-100: 18px;
-  --typography-line-height-0500-120: 21.6px;
-  --typography-line-height-0500-140: 25.2px;
-  --typography-line-height-0500-150: 27px;
-  --typography-line-height-0600-100: 20px;
-  --typography-line-height-0600-120: 24px;
-  --typography-line-height-0600-140: 28px;
-  --typography-line-height-0600-150: 30px;
-  --typography-line-height-0650-100: 22px;
-  --typography-line-height-0650-120: 26.4px;
-  --typography-line-height-0650-140: 30.8px;
-  --typography-line-height-0650-150: 33px;
-  --typography-line-height-0700-100: 24px;
-  --typography-line-height-0700-120: 28.8px;
-  --typography-line-height-0700-140: 33.6px;
-  --typography-line-height-0700-150: 36px;
-  --typography-line-height-0800-100: 28px;
-  --typography-line-height-0800-120: 33.6px;
-  --typography-line-height-0800-140: 39.2px;
-  --typography-line-height-0800-150: 42px;
-  --typography-line-height-0900-100: 32px;
-  --typography-line-height-0900-120: 38.4px;
-  --typography-line-height-0900-140: 44.8px;
-  --typography-line-height-0900-150: 48px;
-  --typography-line-height-0950-100: 36px;
-  --typography-line-height-0950-120: 43.2px;
-  --typography-line-height-0950-140: 50.4px;
-  --typography-line-height-0950-150: 54px;
-  --typography-line-height-1000-100: 40px;
-  --typography-line-height-1000-120: 48px;
-  --typography-line-height-1000-140: 56px;
-  --typography-line-height-1000-150: 60px;
-  --typography-line-height-1100-100: 48px;
-  --typography-line-height-1100-120: 57.6px;
-  --typography-line-height-1100-140: 67.2px;
-  --typography-line-height-1100-150: 72px;
-  --typography-line-height-1150-100: 60px;
-  --typography-line-height-1150-120: 72px;
-  --typography-line-height-1150-140: 84px;
-  --typography-line-height-1150-150: 90px;
-  --typography-line-height-1200-100: 72px;
-  --typography-line-height-1200-120: 86.4px;
-  --typography-line-height-1200-140: 100.8px;
-  --typography-line-height-1200-150: 108px;
-  --typography-line-height-1300-100: 96px;
-  --typography-line-height-1300-120: 115.2px;
-  --typography-line-height-1300-140: 134.4px;
-  --typography-line-height-1300-150: 144px;
-
   /* Typography/Font Weight — css-font-weight */
   --typography-font-weight-300: 300;
   --typography-font-weight-400: 400;
@@ -114,8 +129,174 @@
   --typography-font-weight-800: 800;
 
   /* Typography/Font Family */
-  --typography-font-family-sans: "SUIT Variable";
+  --typography-font-family-sans: "Suit Variable";
   --typography-font-family-serif: "Noto Serif KR";
+
+  /* Typography/Line Height — px */
+  --typography-line-height-0050-0100: 9px;
+  --typography-line-height-0050-0200: 10.8px;
+  --typography-line-height-0050-0300: 12.6px;
+  --typography-line-height-0050-0400: 13.5px;
+  --typography-line-height-0100-0100: 10px;
+  --typography-line-height-0100-0200: 12px;
+  --typography-line-height-0100-0300: 14px;
+  --typography-line-height-0100-0400: 15px;
+  --typography-line-height-0150-0100: 11px;
+  --typography-line-height-0150-0200: 13.2px;
+  --typography-line-height-0150-0300: 15.4px;
+  --typography-line-height-0150-0400: 16.5px;
+  --typography-line-height-0200-0100: 12px;
+  --typography-line-height-0200-0200: 14.4px;
+  --typography-line-height-0200-0300: 16.8px;
+  --typography-line-height-0200-0400: 18px;
+  --typography-line-height-0300-0100: 14px;
+  --typography-line-height-0300-0200: 16.8px;
+  --typography-line-height-0300-0300: 19.6px;
+  --typography-line-height-0300-0400: 21px;
+  --typography-line-height-0400-0100: 16px;
+  --typography-line-height-0400-0200: 19.2px;
+  --typography-line-height-0400-0300: 22.4px;
+  --typography-line-height-0400-0400: 24px;
+  --typography-line-height-0500-0100: 18px;
+  --typography-line-height-0500-0200: 21.6px;
+  --typography-line-height-0500-0300: 25.2px;
+  --typography-line-height-0500-0400: 27px;
+  --typography-line-height-0600-0100: 20px;
+  --typography-line-height-0600-0200: 24px;
+  --typography-line-height-0600-0300: 28px;
+  --typography-line-height-0600-0400: 30px;
+  --typography-line-height-0650-0100: 22px;
+  --typography-line-height-0650-0200: 26.4px;
+  --typography-line-height-0650-0300: 30.8px;
+  --typography-line-height-0650-0400: 33px;
+  --typography-line-height-0700-0100: 24px;
+  --typography-line-height-0700-0200: 28.8px;
+  --typography-line-height-0700-0300: 33.6px;
+  --typography-line-height-0700-0400: 36px;
+  --typography-line-height-0800-0100: 28px;
+  --typography-line-height-0800-0200: 33.6px;
+  --typography-line-height-0800-0300: 39.2px;
+  --typography-line-height-0800-0400: 42px;
+  --typography-line-height-0900-0100: 32px;
+  --typography-line-height-0900-0200: 38.4px;
+  --typography-line-height-0900-0300: 44.8px;
+  --typography-line-height-0900-0400: 48px;
+  --typography-line-height-0950-0100: 36px;
+  --typography-line-height-0950-0200: 43.2px;
+  --typography-line-height-0950-0300: 50.4px;
+  --typography-line-height-0950-0400: 54px;
+  --typography-line-height-1000-0100: 40px;
+  --typography-line-height-1000-0200: 48px;
+  --typography-line-height-1000-0300: 56px;
+  --typography-line-height-1000-0400: 60px;
+  --typography-line-height-1100-0100: 48px;
+  --typography-line-height-1100-0200: 57.6px;
+  --typography-line-height-1100-0300: 67.2px;
+  --typography-line-height-1100-0400: 72px;
+  --typography-line-height-1150-0100: 60px;
+  --typography-line-height-1150-0200: 72px;
+  --typography-line-height-1150-0300: 84px;
+  --typography-line-height-1150-0400: 90px;
+  --typography-line-height-1200-0100: 72px;
+  --typography-line-height-1200-0200: 86.4px;
+  --typography-line-height-1200-0300: 100.8px;
+  --typography-line-height-1200-0400: 108px;
+  --typography-line-height-1300-0100: 96px;
+  --typography-line-height-1300-0200: 115.2px;
+  --typography-line-height-1300-0300: 134.4px;
+  --typography-line-height-1300-0400: 144px;
+
+  /* Typography/Letter Spacing — px */
+  --typography-letter-spacing-0050-0100: 0px;
+  --typography-letter-spacing-0050-0200: -0.09px;
+  --typography-letter-spacing-0050-0300: -0.14px;
+  --typography-letter-spacing-0050-0400: -0.18px;
+  --typography-letter-spacing-0050-0500: -0.27px;
+  --typography-letter-spacing-0100-0100: 0px;
+  --typography-letter-spacing-0100-0200: -0.1px;
+  --typography-letter-spacing-0100-0300: -0.15px;
+  --typography-letter-spacing-0100-0400: -0.2px;
+  --typography-letter-spacing-0100-0500: -0.3px;
+  --typography-letter-spacing-0150-0100: 0px;
+  --typography-letter-spacing-0150-0200: -0.11px;
+  --typography-letter-spacing-0150-0300: -0.17px;
+  --typography-letter-spacing-0150-0400: -0.22px;
+  --typography-letter-spacing-0150-0500: -0.33px;
+  --typography-letter-spacing-0200-0100: 0px;
+  --typography-letter-spacing-0200-0200: -0.12px;
+  --typography-letter-spacing-0200-0300: -0.18px;
+  --typography-letter-spacing-0200-0400: -0.24px;
+  --typography-letter-spacing-0200-0500: -0.36px;
+  --typography-letter-spacing-0300-0100: 0px;
+  --typography-letter-spacing-0300-0200: -0.14px;
+  --typography-letter-spacing-0300-0300: -0.21px;
+  --typography-letter-spacing-0300-0400: -0.28px;
+  --typography-letter-spacing-0300-0500: -0.42px;
+  --typography-letter-spacing-0400-0100: 0px;
+  --typography-letter-spacing-0400-0200: -0.16px;
+  --typography-letter-spacing-0400-0300: -0.24px;
+  --typography-letter-spacing-0400-0400: -0.32px;
+  --typography-letter-spacing-0400-0500: -0.48px;
+  --typography-letter-spacing-0500-0100: 0px;
+  --typography-letter-spacing-0500-0200: -0.18px;
+  --typography-letter-spacing-0500-0300: -0.27px;
+  --typography-letter-spacing-0500-0400: -0.36px;
+  --typography-letter-spacing-0500-0500: -0.54px;
+  --typography-letter-spacing-0600-0100: 0px;
+  --typography-letter-spacing-0600-0200: -0.2px;
+  --typography-letter-spacing-0600-0300: -0.3px;
+  --typography-letter-spacing-0600-0400: -0.4px;
+  --typography-letter-spacing-0600-0500: -0.6px;
+  --typography-letter-spacing-0650-0100: 0px;
+  --typography-letter-spacing-0650-0200: -0.22px;
+  --typography-letter-spacing-0650-0300: -0.33px;
+  --typography-letter-spacing-0650-0400: -0.44px;
+  --typography-letter-spacing-0650-0500: -0.66px;
+  --typography-letter-spacing-0700-0100: 0px;
+  --typography-letter-spacing-0700-0200: -0.24px;
+  --typography-letter-spacing-0700-0300: -0.36px;
+  --typography-letter-spacing-0700-0400: -0.48px;
+  --typography-letter-spacing-0700-0500: -0.72px;
+  --typography-letter-spacing-0800-0100: 0px;
+  --typography-letter-spacing-0800-0200: -0.28px;
+  --typography-letter-spacing-0800-0300: -0.42px;
+  --typography-letter-spacing-0800-0400: -0.56px;
+  --typography-letter-spacing-0800-0500: -0.84px;
+  --typography-letter-spacing-0900-0100: 0px;
+  --typography-letter-spacing-0900-0200: -0.32px;
+  --typography-letter-spacing-0900-0300: -0.48px;
+  --typography-letter-spacing-0900-0400: -0.64px;
+  --typography-letter-spacing-0900-0500: -0.96px;
+  --typography-letter-spacing-0950-0100: 0px;
+  --typography-letter-spacing-0950-0200: -0.36px;
+  --typography-letter-spacing-0950-0300: -0.54px;
+  --typography-letter-spacing-0950-0400: -0.72px;
+  --typography-letter-spacing-0950-0500: -1.08px;
+  --typography-letter-spacing-1000-0100: 0px;
+  --typography-letter-spacing-1000-0200: -0.4px;
+  --typography-letter-spacing-1000-0300: -0.6px;
+  --typography-letter-spacing-1000-0400: -0.8px;
+  --typography-letter-spacing-1000-0500: -1.2px;
+  --typography-letter-spacing-1100-0100: 0px;
+  --typography-letter-spacing-1100-0200: -0.48px;
+  --typography-letter-spacing-1100-0300: -0.72px;
+  --typography-letter-spacing-1100-0400: -0.96px;
+  --typography-letter-spacing-1100-0500: -1.44px;
+  --typography-letter-spacing-1150-0100: 0px;
+  --typography-letter-spacing-1150-0200: -0.6px;
+  --typography-letter-spacing-1150-0300: -0.9px;
+  --typography-letter-spacing-1150-0400: -1.2px;
+  --typography-letter-spacing-1150-0500: -1.8px;
+  --typography-letter-spacing-1200-0100: 0px;
+  --typography-letter-spacing-1200-0200: -0.72px;
+  --typography-letter-spacing-1200-0300: -1.08px;
+  --typography-letter-spacing-1200-0400: -1.44px;
+  --typography-letter-spacing-1200-0500: -2.16px;
+  --typography-letter-spacing-1300-0100: 0px;
+  --typography-letter-spacing-1300-0200: -0.96px;
+  --typography-letter-spacing-1300-0300: -1.44px;
+  --typography-letter-spacing-1300-0400: -1.92px;
+  --typography-letter-spacing-1300-0500: -2.88px;
 
   /* Layout/Space — px */
   --layout-space-0050: 1px;
@@ -150,7 +331,7 @@
   --layout-size-1300: 128px;
 
   /* Shape/Radius — px */
-  --shape-radius-0100: 0px;
+  --shape-radius-0100: 1px;
   --shape-radius-0200: 2px;
   --shape-radius-0300: 4px;
   --shape-radius-0400: 6px;
@@ -165,149 +346,23 @@
   --shape-radius-1300: 9999px;
 
   /* Shape/Stroke — px */
-  --shape-stroke-0100: 0px;
-  --shape-stroke-0200: 1px;
-  --shape-stroke-0300: 2px;
-  --shape-stroke-0400: 3px;
-  --shape-stroke-0500: 4px;
-  --shape-stroke-0600: 6px;
-  --shape-stroke-0700: 8px;
+  --shape-stroke-0100: 1px;
+  --shape-stroke-0200: 2px;
+  --shape-stroke-0300: 3px;
+  --shape-stroke-0400: 4px;
+  --shape-stroke-0500: 6px;
+  --shape-stroke-0600: 8px;
 
-  /* Effect/Opacity — % */
-  --effect-opacity-0000: 0%;
-  --effect-opacity-0100: 1%;
-  --effect-opacity-0200: 4%;
-  --effect-opacity-0300: 9%;
-  --effect-opacity-0400: 16%;
-  --effect-opacity-0500: 25%;
-  --effect-opacity-0600: 36%;
-  --effect-opacity-0700: 49%;
-  --effect-opacity-0800: 64%;
-  --effect-opacity-0900: 81%;
-  --effect-opacity-1000: 100%;
-
-  /* Color/Blue */
-  --color-blue-0100: #f7faff;
-  --color-blue-0200: #dcebff;
-  --color-blue-0300: #c2dcff;
-  --color-blue-0400: #a7cdff;
-  --color-blue-0500: #8bbdff;
-  --color-blue-0600: #6fadff;
-  --color-blue-0700: #0081ff;
-  --color-blue-0800: #006cd8;
-  --color-blue-0900: #0459b1;
-  --color-blue-1000: #08468b;
-  --color-blue-1100: #0a3466;
-  --color-blue-1200: #0a2342;
-  --color-blue-1300: #071222;
-
-  /* Color/Gray */
-  --color-gray-0100: #f3f3f3;
-  --color-gray-0200: #e7e7e8;
-  --color-gray-0300: #d4d5d7;
-  --color-gray-0400: #c1c1c6;
-  --color-gray-0500: #a9a9b0;
-  --color-gray-0600: #8d8d96;
-  --color-gray-0700: #71717a;
-  --color-gray-0800: #5a5a62;
-  --color-gray-0900: #47474d;
-  --color-gray-1000: #343439;
-  --color-gray-1100: #242427;
-  --color-gray-1200: #19191b;
-  --color-gray-1300: #111112;
-
-  /* Color/Red */
-  --color-red-0100: #fdf1f0;
-  --color-red-0200: #fce5e3;
-  --color-red-0300: #ffcfca;
-  --color-red-0400: #ffb7b0;
-  --color-red-0500: #ff9990;
-  --color-red-0600: #ff6d66;
-  --color-red-0700: #ef4444;
-  --color-red-0800: #c52a2e;
-  --color-red-0900: #9e191f;
-  --color-red-1000: #721719;
-  --color-red-1100: #4d1312;
-  --color-red-1200: #330f0e;
-  --color-red-1300: #210b0a;
-
-  /* Color/Green */
-  --color-green-0100: #f1f8f2;
-  --color-green-0200: #e5f3e7;
-  --color-green-0300: #cbeed1;
-  --color-green-0400: #ace9b7;
-  --color-green-0500: #83e298;
-  --color-green-0600: #52d677;
-  --color-green-0700: #22c55e;
-  --color-green-0800: #009d45;
-  --color-green-0900: #007a34;
-  --color-green-1000: #005823;
-  --color-green-1100: #063b18;
-  --color-green-1200: #092711;
-  --color-green-1300: #08180b;
-
-  /* Color/Yellow */
-  --color-yellow-0100: #faf8f0;
-  --color-yellow-0200: #faf5e5;
-  --color-yellow-0300: #fbefcb;
-  --color-yellow-0400: #fde9aa;
-  --color-yellow-0500: #ffe082;
-  --color-yellow-0600: #ffd64d;
-  --color-yellow-0700: #facc15;
-  --color-yellow-0800: #c5a000;
-  --color-yellow-0900: #977a00;
-  --color-yellow-1000: #6c5600;
-  --color-yellow-1100: #483800;
-  --color-yellow-1200: #2d2404;
-  --color-yellow-1300: #1b1505;
-
-  /* Color/Sky */
-  --color-sky-0100: #f0f6fa;
-  --color-sky-0200: #e3eff8;
-  --color-sky-0300: #c8e5f9;
-  --color-sky-0400: #a7dafc;
-  --color-sky-0500: #7cccff;
-  --color-sky-0600: #49baf9;
-  --color-sky-0700: #0ea5e9;
-  --color-sky-0800: #0083bb;
-  --color-sky-0900: #006592;
-  --color-sky-1000: #00496c;
-  --color-sky-1100: #043249;
-  --color-sky-1200: #08212f;
-  --color-sky-1300: #07151e;
-
-  /* Color/White */
-  --color-white-0000: #ffffff;
-  --color-white-0100: #ffffff;
-  --color-white-0200: #ffffff;
-  --color-white-0300: #ffffff;
-  --color-white-0400: #ffffff;
-  --color-white-0500: #ffffff;
-  --color-white-0600: #ffffff;
-  --color-white-0700: #ffffff;
-  --color-white-0800: #ffffff;
-  --color-white-0900: #ffffff;
-  --color-white-1000: #ffffff;
-
-  /* Color/Black */
-  --color-black-0000: #000000;
-  --color-black-0100: #000000;
-  --color-black-0200: #000000;
-  --color-black-0300: #000000;
-  --color-black-0400: #000000;
-  --color-black-0500: #000000;
-  --color-black-0600: #000000;
-  --color-black-0700: #000000;
-  --color-black-0800: #000000;
-  --color-black-0900: #000000;
-  --color-black-1000: #000000;
-
-  /* Motion/Duration — ms */
-  --motion-duration-0100: 0ms;
-  --motion-duration-0200: 100ms;
-  --motion-duration-0300: 150ms;
-  --motion-duration-0400: 250ms;
-  --motion-duration-0500: 350ms;
-  --motion-duration-0600: 500ms;
-  --motion-duration-0700: 700ms;
+  /* Effect/Opacity */
+  --effect-opacity-0000: 0;
+  --effect-opacity-0100: 0.01;
+  --effect-opacity-0200: 0.04;
+  --effect-opacity-0300: 0.09;
+  --effect-opacity-0400: 0.16;
+  --effect-opacity-0500: 0.25;
+  --effect-opacity-0600: 0.36;
+  --effect-opacity-0700: 0.49;
+  --effect-opacity-0800: 0.64;
+  --effect-opacity-0900: 0.81;
+  --effect-opacity-1000: 1;
 }

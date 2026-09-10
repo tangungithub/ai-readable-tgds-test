@@ -91,7 +91,10 @@ Property  : 값이 꽂히는 속성 = 참조하는 Semantic 토큰의 Target과 
 
 | 계열 (State 제외) | Default | Hover | Pressed | Disabled |
 |---|---|---|---|---|
-| `Button/Primary/{State}/Background` | `Background/Accent/Default` | `Background/Accent/Strong` | `Background/Accent/Strongest` | `Background/Neutral/Subtle` |
+| `Button/Primary/{State}/Fill` | `Fill/Accent/Default` | `Fill/Accent/Strong` | `Fill/Accent/Strongest` | `Fill/Neutral/Subtle` |
+| `Button/Primary/{State}/Text` | `Text/On Accent/Default` | `Text/On Accent/Default` | `Text/On Accent/Default` | `Text/Neutral/Subtle` |
+
+> 전경 행은 같은 State 열의 Fill 행과 SEM-T05의 짝을 이뤄야 한다 — Fill이 솔리드(`Default` 이상)면 `On {Role}`, 틴트(`Subtle` 이하)면 기본 Role. 위 Disabled 열이 그 예다.
 
 **③ 상태 비의존 표** — State 축이 없는 토큰의 등록부. 행 = 토큰 이름, 열 = 참조 Semantic 토큰.
 
@@ -121,5 +124,5 @@ Property  : 값이 꽂히는 속성 = 참조하는 Semantic 토큰의 Target과 
 ## 3.6 검토 노트 (Open Issues)
 
 1. **복합 상태 미정** — `Hover+Selected`, `Focus+Disabled` 같은 상태 조합이 필요해질 때의 표기(State enum 확장 vs 조합 금지 선언)가 정해지지 않았다. 커버리지 테스트(Table 행 선택, Tab 등)에서 확정한다.
-2. **On-color 의존** — 상태 분기 표의 전경색 참조(예: Primary 버튼 위 텍스트)는 Semantic 검토 노트 2(On-color/Inverse 예외)의 확정에 의존한다.
+2. ~~**On-color 의존**~~ — 2026-09-09 종결. 전경색은 `Text·Icon·Border/On {Role}/*`을 참조하고, 어느 전경 계열을 쓸지는 짝이 되는 Fill의 Emphasis에서 기계적으로 결정된다(SEM-T05·T06). Property 어휘는 Semantic Target 합집합(CMP-N6)이므로 `Fill`이 자동으로 추가되고, 컴포넌트 면은 `.../Background`가 아니라 `.../Fill`로 명명한다. `Background` Property는 캔버스 역할의 컴포넌트(페이지·시트 등)에만 쓴다.
 3. **Size 축과 Scale Variant의 어휘 공유** — 컴포넌트 Size enum이 Semantic Scale의 Variant와 같은 어휘({Extra Small…Extra Large})를 쓴다. 티어가 달라 파싱 충돌은 없으나, 의도된 공유임을 여기 명시해 둔다(컴포넌트 Medium이 Scale의 Medium을 참조하리라는 보장은 없다 — 참조는 표로만 결정된다).

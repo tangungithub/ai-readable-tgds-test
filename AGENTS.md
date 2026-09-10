@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 > AI Readable Design System (TGDS) 레포에서 작업할 때 먼저 읽는다.
 > 이 파일은 **규칙이 아니라 지도**다. 규칙 자체는 `docs/A-token/`의 규범 문서에 있고, 이 파일과 어긋나면 **규범 문서가 정본**이다.

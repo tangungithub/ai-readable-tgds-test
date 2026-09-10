@@ -10,10 +10,10 @@ export type {
   FoundationCategory,
   FontSizeStep,
   LineHeightOption,
+  LetterSpacingOption,
   SpaceStep,
   SizeStep,
   RadiusStep,
   StrokeStep,
   OpacityStep,
-  DurationStep,
 } from './tokens/foundation';

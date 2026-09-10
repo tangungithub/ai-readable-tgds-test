@@ -17,7 +17,7 @@
 규범 문서의 진입점은 **[token.md](token.md)** — 문서 지도와 로드 트리거 표가 있어 어떤 작업에 무엇을 읽어야 하는지 알려준다.
 **값은 md에 없다.** 모든 원시값은 [`tokens/foundation.tokens.json`](../../tokens/foundation.tokens.json)이 정본이다(TKN-03).
 
-> ~~token-system.md~~ 는 v0.2에서 멈춘 구 스펙이다. 생성기 입력으로만 남아 있으며 규범이 아니다.
+> ~~token-system.md~~ 는 v0.2에서 멈춘 구 스펙이었다. 생성기가 `tokens/foundation.tokens.json`으로 재연결되면서 삭제되었다.
 
 ---
 
