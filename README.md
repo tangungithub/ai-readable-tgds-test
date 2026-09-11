@@ -15,7 +15,7 @@
 | 5요소 대조 | [소개 세션 5요소 ↔ 원칙 영역](docs/00-overview/element-mapping.md) |
 | 진행 계획 | [로드맵](docs/00-overview/roadmap.md) |
 | 토큰 규범 | [토큰 문서 진입점](docs/A-token/token.md) — 문서 지도 · 로드 트리거 |
-| 토큰 값 | [값 등록부](tokens/) — 모든 토큰 값의 정본 |
+| 토큰 값 | [값 등록부](token/) — 모든 토큰 값의 정본 |
 
 ---
 
@@ -86,7 +86,7 @@
 
 | # | 막고 있는 것 | 어디서 | 무엇이 막혀 있는가 |
 |---|---|---|---|
-| 1 | **Semantic 값 등록부 미작성** — 어휘는 닫혔으나 `tokens/semantic.tokens.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
+| 1 | **Semantic 값 등록부 미작성** — 어휘는 닫혔으나 `token/Semantic-theme.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
 | 2 | **커버리지 테스트 미실시** — Button · Input · Alert · Card · Table · Modal | [A4](docs/A-token/A4-component-token.md) | 컴포넌트 인덱스 0개 → A4 코드 동기화. 복합 State(B3)·Display/Subtext 존치·Warning On 기준색이 여기서 닫힌다 |
 | 3 | **DS 프로젝트 경계 미정의** | [D3](docs/D-naming/) | `DENY-03` — "외부에서 제작"을 판정하려면 외부가 어디인지 정의돼야 함 |
 | 4 | **Figma 컴포넌트 이름 ↔ 토큰 인덱스 일치 규칙 부재** — 토큰 측 기준 집합은 생겼다(`CMP-A5` 인덱스, `CMP-L06`). Figma 측 이름이 이를 따르는지 판정할 규칙이 없다 | [D2](docs/D-naming/) | `DENY-01`의 Figma 측 판정, B1 분류 체계 |
@@ -122,7 +122,7 @@ docs/
 └── 99-reference/     근거 리서치
 
 CLAUDE.md             레포 작업 규약 (AI 에이전트용 지도)
-tokens/               모든 토큰 값의 정본 (DTCG 형식)
+token/                모든 토큰 값의 정본 (DTCG 형식) — Figma 컬렉션당 1파일: Foundation · Semantic-theme · Semantic-scale · Semantic-constant · Component-token
 scripts/              생성기
 src/tokens/           생성물 — 손으로 고치지 않는다
 ```
@@ -136,12 +136,12 @@ src/tokens/           생성물 — 손으로 고치지 않는다
 | 종류 | 위치 | 정본 여부 |
 |---|---|---|
 | **규범** | `docs/A-token/token.md` 외 3개 | ✅ 규칙의 정본 |
-| **값 등록부** | `tokens/*.tokens.json` | ✅ **값의 정본** — md와 어긋나면 이쪽이 맞다 |
+| **값 등록부** | `token/*.json` | ✅ **값의 정본** — md와 어긋나면 이쪽이 맞다 |
 | 트래커 · 리서치 · 발표 자료 | 그 외 전부 | ❌ 규범과 어긋나면 규범이 맞다 |
 
 **규칙은 md, 값은 json.** 색 하나를 바꾸는 데 문서를 열 필요가 없고, 규칙 하나를 바꾸는 데 값 파일을 열 필요가 없다.
 
 ### 생성 파이프라인
 
-`scripts/generate-tokens.mjs`는 `tokens/foundation.tokens.json`을 입력으로 `src/tokens/*`를 생성합니다.
+`scripts/generate-tokens.mjs`는 `token/Foundation.json`을 입력으로 `src/tokens/*`를 생성합니다.
 구 스펙(`token-system.md`)은 생성기 재연결과 함께 삭제되었습니다.

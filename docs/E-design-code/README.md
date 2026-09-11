@@ -49,7 +49,7 @@ Figma의 **Code Connect**는 E1의 구현 수단, **Variable REST API**는 E2, *
 ## E2. 토큰 동기화 파이프라인
 
 **원칙 설계 — 🟡**
-- [x] **동기화 방향** — 등록부(`tokens/*.tokens.json`)가 원본, **코드 → Figma 단방향** ([E2](E2-token-sync.md) 작업 2). Figma 손수정은 다음 동기화에 덮인다
+- [x] **동기화 방향** — 등록부(`token/*.json`)가 원본, **코드 → Figma 단방향** ([E2](E2-token-sync.md) 작업 2). Figma 손수정은 다음 동기화에 덮인다
       *참고: zeroheight 2026 설문에서 양방향 동기화를 구현한 조직은 5%*
 - [ ] 동기화 단위 (컬렉션별? 전체?)
 - [ ] 동기화 주기 (수동 / PR 시 / 스케줄)

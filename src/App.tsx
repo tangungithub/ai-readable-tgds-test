@@ -5,7 +5,7 @@ import { foundation, foundationOrder, foundationUnits } from './tokens/foundatio
  * Foundation token specimen sheet.
  *
  * Renders every generated token so the scales can be checked against
- * tokens/foundation.tokens.json by eye. Not part of the published surface.
+ * token/Foundation.json by eye. Not part of the published surface.
  */
 
 type Options = Record<string, string | number>;
@@ -123,7 +123,7 @@ export function App() {
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, color: '#111' }}>
       <h1 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px' }}>Foundation Tokens</h1>
       <p style={{ fontSize: 12, color: '#666', margin: '0 0 32px' }}>
-        {total} tokens generated from <code>tokens/foundation.tokens.json</code>
+        {total} tokens generated from <code>token/Foundation.json</code>
       </p>
 
       {Object.entries(tree).map(([category, sets]) =>

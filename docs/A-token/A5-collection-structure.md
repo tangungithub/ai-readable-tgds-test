@@ -59,7 +59,7 @@
 
 - [x] codeSyntax 변환 규칙 — 세그먼트 경계는 중첩, 내부는 camelCase (`TKN-04`)
 - [x] 동기화 방향 — 등록부 → Figma 단방향 (→ [E2](../E-design-code/E2-token-sync.md))
-- [x] Foundation은 machine-readable 형식으로 존재하고 생성기가 읽는다 (`tokens/foundation.tokens.json`, `FND-12`)
-- [ ] Semantic·Component 컬렉션의 코드 표현 (네임스페이스? 파일 분리? 모드 스코프?)
+- [x] Foundation은 machine-readable 형식으로 존재하고 생성기가 읽는다 (`token/Foundation.json`, `FND-12`)
+- [x] Semantic·Component 컬렉션의 코드 표현 — **Figma 컬렉션당 json 파일 1개**(`TKN-09`), 루트 그룹 전역 유일(`TKN-10`), 모드는 파일 루트 선언 + 모드 키 객체 값(`TKN-11`). 컴포넌트는 `Component-token.json`의 최상위 그룹 (`CMP-A5`)
 - [ ] Variable REST API 추출·주입 스키마 (E2 작업 2)
 - [ ] **린트의 machine-readable 병행본** — `FND-L*` 12 · `SEM-L*` 12 · `CMP-L*` 11, 35개가 표로만 존재한다 (→ CLAUDE.md 미결 2)

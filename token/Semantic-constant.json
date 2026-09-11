@@ -1,0 +1,10 @@
+{
+  "$description": "Semantic constant collection — Figma variable collection 'Semantic constant' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.4. Empty until the registry is written.",
+  "$extensions": {
+    "tgds": {
+      "collection": "Semantic constant",
+      "tier": "semantic",
+      "modes": []
+    }
+  }
+}

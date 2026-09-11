@@ -73,6 +73,6 @@
 
 - [x] codeSyntax 변환 규칙 — `TKN-04`
 - [x] 동기화 방향 — 등록부(코드) → Figma 단방향 (→ [E2](../E-design-code/E2-token-sync.md))
-- [x] JSON 형식 — DTCG alias + `$extensions.tgds.opacity` 불투명도 참조, 모드별 값 (`SEM-11`, [tokens/README](../../tokens/README.md))
-- [ ] **`tokens/semantic.tokens.json` 미작성** — 형식은 정해졌으나 파일이 없다
+- [x] JSON 형식 — DTCG alias + `$extensions.tgds.opacity` 불투명도 참조, 모드별 값 (`SEM-11`, [token/README](../../token/README.md))
+- [ ] **`token/Semantic-theme.json` 미작성** — 형식은 정해졌으나 파일이 없다
 - [ ] Mode별 값의 코드 표현(CSS 변수 스코프 등)과 생성기 확장

@@ -1,8 +1,8 @@
 {
-  "$description": "Foundation token mapping table for the AI Readable Design System (TGDS). Generated from tokens/foundation.tokens.json — do not edit by hand. Values are authoritative in the registry (TKN-03); this file adds the code-name mapping.",
+  "$description": "Foundation token mapping table for the AI Readable Design System (TGDS). Generated from token/Foundation.json — do not edit by hand. Values are authoritative in the registry (TKN-03); this file adds the code-name mapping.",
   "$extensions": {
     "com.tgds": {
-      "source": "tokens/foundation.tokens.json",
+      "source": "token/Foundation.json",
       "cssPropertyGrammar": "--{Category}-{Set}-{Option}, kebab-cased",
       "reverseTransform": "lookup only; parsing the code name is prohibited"
     }

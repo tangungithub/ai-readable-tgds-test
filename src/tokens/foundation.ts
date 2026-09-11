@@ -1,6 +1,6 @@
 /**
  * GENERATED FILE — do not edit by hand.
- * Source: tokens/foundation.tokens.json
+ * Source: token/Foundation.json
  * Regenerate: npm run tokens:build
  *
  * Shape follows TKN-04: segment boundaries become object nesting, words

@@ -34,7 +34,7 @@
 - [ ] A3 값 매핑 규칙 전체 (현재 공백) — Scale·Constant의 Role×Variant → Foundation 등록표
 - [x] A4 상태 비의존 속성(Radius 등) 예외 규칙 — State 축 생략 (`CMP-N2`·`N5`)
 - [x] A4 Component Token **생성 조건** — 기본값 재선언 금지·3회 반복 시 승격 (`CMP-A2`·`A4`)
-- [ ] `tokens/semantic.tokens.json` · `component.tokens.json` 작성 + 커버리지 테스트 6종
+- [ ] `token/Semantic-theme.json` · `Component-token.json` 작성 + 커버리지 테스트 6종
 - [ ] A1~A5 확장 규칙 — AI가 따라 할 수 있는 형태로 작성
 - [ ] `_` 접두사의 지위 결정
 

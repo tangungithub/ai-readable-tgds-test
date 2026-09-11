@@ -63,7 +63,7 @@
 | ID | 위반 | 전제 조건 (없으면 판정 불가) |
 |---|---|---|
 | `DENY-01` | DS에 없는 Component Name을 사용한 신규 토큰 | 토큰 측 판정 ✅ — [A4](../A-token/A4-component-token.md) 인덱스 등록제 `CMP-A5` + `CMP-L06`. 남은 전제: [D2](../D-naming/README.md) Figma 컴포넌트 이름 ↔ 인덱스 일치 규칙 |
-| `DENY-02` | 토큰을 거치지 않은 RAW 색상 사용 | 판정 규칙 ✅ — `CMP-L02`·`SEM-L11`. 남은 전제: [A2](../A-token/A2-semantic-theme.md) 등록부(`tokens/semantic.tokens.json`) + 허용 예외 목록 |
+| `DENY-02` | 토큰을 거치지 않은 RAW 색상 사용 | 판정 규칙 ✅ — `CMP-L02`·`SEM-L11`. 남은 전제: [A2](../A-token/A2-semantic-theme.md) 등록부(`token/Semantic-theme.json`) + 허용 예외 목록 |
 | `DENY-03` | DS 프로젝트 외부에서 신규 컴포넌트를 제작한 커밋 | [D3](../D-naming/README.md) DS 프로젝트 **경계 정의** |
 
 > ⚠️ `DENY-01`·`DENY-02`는 토큰 측 판정 규칙이 생겼지만 판정 **대상**(등록부·Figma 이름 집합)이, `DENY-03`은 경계 정의가 비어 있습니다. 게이트웨이를 먼저 만들 수 없는 이유입니다.

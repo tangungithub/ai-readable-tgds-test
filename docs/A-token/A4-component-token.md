@@ -71,5 +71,5 @@
 
 - [x] 문법 스키마 — machine-readable JSON (§3.1)
 - [x] 동기화 방향 — 등록부 → Figma 단방향 (→ [E2](../E-design-code/E2-token-sync.md))
-- [ ] **`tokens/component.tokens.json` 미작성**, 등록된 컴포넌트 0개 (커버리지 테스트 미실시)
+- [ ] **`token/Component-token.json` 미작성**, 등록된 컴포넌트 0개 (커버리지 테스트 미실시)
 - [ ] 컴포넌트 코드의 prop ↔ Variant/State 슬롯 대응 (→ [E1](../E-design-code/README.md))

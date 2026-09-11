@@ -68,5 +68,5 @@
 - [x] codeSyntax 변환 규칙 — `TKN-04`
 - [x] 동기화 방향 — 등록부 → Figma 단방향 (→ [E2](../E-design-code/E2-token-sync.md))
 - [x] JSON 형식 — DTCG, 모드별 값 (`SEM-08`)
-- [ ] **`tokens/semantic.tokens.json` 미작성**
+- [ ] **`token/Semantic-theme.json` 미작성**
 - [ ] Breakpoint별 값의 코드 표현 — CSS 변수 + 미디어쿼리인가 컨테이너 쿼리인가 (→ C2)
