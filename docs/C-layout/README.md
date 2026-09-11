@@ -10,10 +10,10 @@
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | C1 Spacing · Grid | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| C2 Breakpoint · Responsive | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| C2 Breakpoint · Responsive | 🟡 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | C3 화면 구조 · 템플릿 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
-**진행률 0.5 / 18 ≈ 3%**
+**진행률 1.0 / 18 ≈ 6%** — 2026-09-10 재판정 (이전 0.5 / 18)
 
 ---
 
@@ -44,14 +44,14 @@
 ## C2. Breakpoint · Responsive
 
 **원칙 설계 — 🟡**
-- [x] Responsive를 별도 Semantic 컬렉션으로 분리 운용한다는 결정
-- [ ] ⚠️ **Breakpoint 목록과 각각의 정의** — 없으면 A3의 Mode 축이 정해지지 않음
+- [x] Responsive를 별도 Semantic 컬렉션(Scale)으로 분리 운용한다는 결정 (`SEM-01`)
+- [ ] ⚠️ **각 Breakpoint의 정의(px 경계)** — 이름은 확정됐으므로 A3의 Mode 축은 더 이상 막히지 않는다. 값이 없으면 A3 코드 동기화(미디어쿼리·컨테이너 쿼리)가 막힌다
 - [ ] Breakpoint 기준 — 뷰포트 폭인가 컨테이너 폭인가
 - [ ] 플랫폼 범위 — Web만인가, 앱도 포함인가
 
-**네이밍 규칙**
-- [ ] Breakpoint 이름 (SM/MD/LG? Mobile/Tablet/Desktop?)
-- [ ] A3 컬렉션의 Mode 이름과 일치시킬 것
+**네이밍 규칙 — 🟡**
+- [x] Breakpoint 이름 — `Mobile` / `Tablet` / `Desktop`. A3 Scale 컬렉션의 Mode 이름이 정본이다 ([semantic.md](../A-token/semantic.md) §2.1)
+- [ ] 각 이름의 px 경계값 표기 — 토큰 범위 밖(`TKN-07`)이므로 여기서 정한다
 
 **사용 규칙**
 - [ ] 어떤 속성이 Breakpoint에 따라 변하는가 / 변하지 않는가

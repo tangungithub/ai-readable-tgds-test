@@ -13,11 +13,11 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | B1 컴포넌트 분류 체계 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | B2 Property · Variant 모델 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| B3 State 모델 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| B3 State 모델 | 🟡 | 🟡 | ⬜ | ⬜ | 🟡 | ⬜ |
 | B4 구조 · 조합 규칙 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | B5 유연성 · 변형 수용 | 🟡 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 
-**진행률 1.0 / 30 ≈ 3%**
+**진행률 2.0 / 30 ≈ 7%** — 2026-09-10 재판정 (이전 1.0 / 30)
 
 ---
 
@@ -68,21 +68,25 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 
 ## B3. State 모델
 
-> State가 표현되는 유일한 티어는 A4 Component Token. 그렇다면 State의 **목록과 의미**는 여기서 정의되어야 한다.
+> State가 표현되는 유일한 티어는 A4 Component Token. State의 **목록**은 [component-token.md](../A-token/component-token.md) `CMP-N1`이 정본이고, 이 단위는 각 State의 **의미·조합·필수 여부**를 담당한다.
 
 **원칙 설계 — 🟡**
-- [x] State는 Semantic이 아니라 **Component 티어에서만** 표현한다 (A2 책임 경계에서 확정)
-- [ ] ⚠️ **State의 닫힌 목록** — Default / Hover / Pressed / Focused / Disabled / Selected / Loading / Error …?
-      → 이 목록이 없어서 A4 판별 테스트 Q3을 만들 수 없음
+- [x] State는 Semantic이 아니라 **Component 티어에서만** 표현한다 (`SEM-04`·`CMP-A6`)
+- [x] **State의 닫힌 목록** — `Default` `Hover` `Pressed` `Focus` `Selected` `Disabled` 6종 (`CMP-N1`). Loading·Error는 목록에 없다 — 필요해지면 enum 개정
 - [ ] 각 State의 정의 — 언제 이 상태인가
-- [ ] 조합 State 허용 여부 (Hover + Selected)
+- [ ] 조합 State 허용 여부 (Hover + Selected) — component-token.md 검토 노트 1, 커버리지 테스트에서 확정
 - [ ] 플랫폼별 차이 (Hover가 없는 터치 환경)
 
-**나머지 축**
-- [ ] State 이름 표기 규칙
+**네이밍 규칙 — 🟡**
+- [x] State 이름 표기 규칙 — Figma 표기 정본(`TKN-04`), `Default`는 State 전용 예약어(`CMP-N5`)
 - [ ] 어떤 컴포넌트에 어떤 State가 **필수**인가
+
+**판별 테스트 — 🟡**
+- [x] State 값이 enum 안에 있는가 / `Default`가 다른 축에 있는가 — `CMP-L06`·`CMP-L08`
+- [ ] "이 컴포넌트에 필수 State가 빠져 있는가"를 묻는 질문 세트
+
+**사용 규칙 / 확장 규칙 / 코드 동기화**
 - [ ] 신규 State 추가 시 전 컴포넌트 파급 확인 절차
-- [ ] 판별 질문 세트
 - [ ] 코드의 상태 표현과의 대응
 
 ---
