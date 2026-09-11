@@ -5,7 +5,7 @@ owns: CMP-*
 budget: 200 lines
 ---
 
-> 본 파일은 **규칙과 인덱스만** 담는다. 개별 컴포넌트 토큰은 `components/{Component}.md`에 컴포넌트당 한 파일로 둔다.
+> 본 파일은 **규칙과 인덱스만** 담는다. 개별 컴포넌트 토큰은 `token/Component-token.json`에 **컴포넌트당 최상위 그룹 하나**로 둔다(TKN-09).
 > 이 분리를 어기고 여기에 토큰을 나열하면 이 파일은 수천 줄이 되고, 문서 분리의 목적이 소멸한다.
 > 공통 헌법(TKN-*)은 `token.md`, 참조 대상인 의도 토큰은 `semantic.md`에 있다.
 
@@ -71,23 +71,27 @@ Property  : 값이 꽂히는 속성 = 참조하는 Semantic 토큰의 Target과 
 | CMP-A2 | **토큰의 부재는 시멘틱 기본값 사용을 의미한다.** 시멘틱 기본값과 동일한 값을 재선언하는 컴포넌트 토큰은 만들지 않는다. |
 | CMP-A3 | 컴포넌트 토큰은 **자기 컴포넌트 밖에서 사용을 금지**한다. |
 | CMP-A4 | 같은 결정이 **3개 이상 컴포넌트에서 반복되면 Semantic으로 승격**하고 컴포넌트 토큰을 폐기한다. |
-| CMP-A5 | 신규 컴포넌트 파일 생성은 **등록제**다. 3.3 인덱스 표에 없는 컴포넌트 파일은 존재하지 않는 것으로 취급한다. |
+| CMP-A5 | 신규 컴포넌트 그룹 생성은 **등록제**다. 컴포넌트는 `token/Component-token.json`의 최상위 그룹으로만 존재하며(파일을 늘리지 않는다), 3.3 인덱스 표에 없는 그룹은 존재하지 않는 것으로 취급한다. 그룹 이름은 TKN-10에 따라 Semantic Target·Foundation Category와 겹칠 수 없다. |
 | CMP-A6 | **상태(hover·pressed·focus·selected·disabled)는 이 계층에서만 분기한다.** 상태별로 어느 Semantic 단계를 참조하는지는 각 컴포넌트 파일의 상태 분기 표(3.4)로 표현한다. |
 | CMP-A7 | **모션은 정의하지 않는다.** Motion은 현 시스템 범위 밖이므로(TKN-07) 트랜지션·애니메이션 값을 컴포넌트 토큰으로 만들지 않으며, 이는 CMP-A1의 예외가 아니라 범위 밖 선언이다. |
 
 ## 3.3 컴포넌트 인덱스
 
-| 컴포넌트 | 파일 경로 | 설명 | 상태 |
+| 컴포넌트 | `Component-token.json` 그룹 | 설명 | 상태 |
 |---|---|---|---|
 | — | — | 아직 등록된 컴포넌트가 없다 | — |
 
-## 3.4 컴포넌트 파일 형식
+## 3.4 컴포넌트 그룹 형식
 
-`components/{Component}.md`는 아래 세 부분으로 구성한다. 형식을 통일해야 파일 간 기계 대조(CMP-L05 승격 후보 탐지)가 가능하다.
+`token/Component-token.json`의 최상위 그룹 `{Component}`는 아래 두 부분으로 구성한다. 형식을 통일해야 그룹 간 기계 대조(CMP-L05 승격 후보 탐지)가 가능하다. 예시 JSON은 `token/README.md`에 있다.
 
-**① 축 선언** — 3.1 스키마의 `perComponentDeclaration`을 그 컴포넌트의 값으로 채운 JSON 한 블록.
+**① 축 선언** — 그룹의 `$extensions.tgds.axes`에 3.1 스키마의 `perComponentDeclaration`을 그 컴포넌트의 값으로 채운다.
 
-**② 상태 분기 표** — State 축을 가진 토큰의 등록부. 행 = State를 제외한 축 조합 + Property, 열 = 그 컴포넌트가 쓰는 State(Default 열 필수), 셀 = 참조하는 Semantic 토큰. 빈 셀은 금지한다(그 상태에서 Default와 같다면 State 축이 판별 축이 아닌지 재검토 — CMP-L11).
+**② 토큰** — 이름의 세그먼트를 그대로 중첩 그룹으로 적고(`Button/Primary/Hover/Fill` → `Button` › `Primary` › `Hover` › `Fill`), leaf의 `$value`는 Semantic 토큰 alias 하나다(CMP-A1). Component 컬렉션은 모드가 없으므로 값은 단일값이다(TKN-11) — 모드 분기는 참조되는 Semantic 쪽에서 일어난다.
+
+아래 두 표는 md에 따로 적지 않고 JSON에서 **도출**되는 검토 뷰다. 린트와 문서 생성기가 만든다.
+
+**상태 분기 표** — State 축을 가진 계열. 행 = State를 제외한 축 조합 + Property, 열 = 그 컴포넌트가 쓰는 State(Default 열 필수), 셀 = 참조하는 Semantic 토큰. 빈 셀은 금지한다(그 상태에서 Default와 같다면 State 축이 판별 축이 아닌지 재검토 — CMP-L11).
 
 | 계열 (State 제외) | Default | Hover | Pressed | Disabled |
 |---|---|---|---|---|
@@ -96,7 +100,7 @@ Property  : 값이 꽂히는 속성 = 참조하는 Semantic 토큰의 Target과 
 
 > 전경 행은 같은 State 열의 Fill 행과 SEM-T05의 짝을 이뤄야 한다 — Fill이 솔리드(`Default` 이상)면 `On {Role}`, 틴트(`Subtle` 이하)면 기본 Role. 위 Disabled 열이 그 예다.
 
-**③ 상태 비의존 표** — State 축이 없는 토큰의 등록부. 행 = 토큰 이름, 열 = 참조 Semantic 토큰.
+**상태 비의존 표** — State 축이 없는 토큰. 행 = 토큰 이름, 열 = 참조 Semantic 토큰.
 
 | 토큰 | 참조 |
 |---|---|
@@ -112,14 +116,14 @@ Property  : 값이 꽂히는 속성 = 참조하는 Semantic 토큰의 Target과 
 | CMP-L01 | 컴포넌트 토큰의 참조 대상은 Semantic에 존재하는 유효한 토큰이어야 한다 (병합 JSON 교차 참조 검사) |
 | CMP-L02 | Foundation을 직접 참조하거나 원시값을 기입한 컴포넌트 토큰이 존재하면 위반이다 (CMP-A1) |
 | CMP-L03 | 참조하는 Semantic 토큰과 값이 동일한 컴포넌트 토큰이 존재하면 위반이다 (CMP-A2) |
-| CMP-L04 | 인덱스에 등록되지 않은 `components/*.md` 파일이 존재하면 위반이다 (CMP-A5) |
-| CMP-L05 | 동일한 Semantic 참조가 3개 이상 컴포넌트 파일에서 반복되면 경고한다 (CMP-A4 승격 후보) |
+| CMP-L04 | 인덱스에 등록되지 않은 최상위 그룹이 `token/Component-token.json`에 존재하면 위반이다. 그룹 이름이 Semantic Target·Foundation Category와 같아도 위반이다 (CMP-A5 · TKN-10) |
+| CMP-L05 | 동일한 Semantic 참조가 3개 이상 컴포넌트 그룹에서 반복되면 경고한다 (CMP-A4 승격 후보) |
 | CMP-L06 | 토큰 이름은 3.1 문법을 통과해야 한다: 첫 세그먼트 = 등록된 Component, 끝 세그먼트 = 유효 Property, 중간 세그먼트는 축 순서(CMP-N3)와 enum 소속(CMP-N4)을 만족 |
 | CMP-L07 | 한 컴포넌트의 Element·Variant·Size·State·Property 어휘에 교집합이 있으면 위반이다 (CMP-N4) |
 | CMP-L08 | `Default`가 State 외의 축 enum에 선언되어 있으면 위반이다 (CMP-N5) |
 | CMP-L09 | Element를 선언한 컴포넌트에 Element 세그먼트가 없는 토큰이 존재하면 위반이다 (CMP-N7) |
 | CMP-L10 | Property 세그먼트와 참조 Semantic 토큰의 Target이 다르면 위반이다 (CMP-N6) |
-| CMP-L11 | 토큰 이름의 축 집합은 축 선언(3.4 ①)의 해당 Property `axes`와 정확히 일치해야 한다. 또한 상태 분기 표에서 한 계열의 모든 State 셀이 같은 참조라면 State는 판별 축이 아니므로 경고한다 (CMP-N2) |
+| CMP-L11 | 토큰 이름의 축 집합은 축 선언(3.4 ①, 그룹의 `$extensions.tgds.axes`)의 해당 Property `axes`와 정확히 일치해야 한다. State 축을 가진 계열은 선언된 모든 State에 대해 토큰이 존재해야 한다. 또한 상태 분기 표에서 한 계열의 모든 State 셀이 같은 참조라면 State는 판별 축이 아니므로 경고한다 (CMP-N2) |
 
 ## 3.6 검토 노트 (Open Issues)
 

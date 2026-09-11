@@ -1,6 +1,6 @@
 ---
 name: component-token-naming
-description: TGDS 컴포넌트 토큰의 이름을 짓거나 검증할 때 사용. 컴포넌트 토큰 생성, 명명, 네이밍 검사, Element/Variant/Size/State 축 표기, components/*.md 파일 작성 요청 시 참조한다. 정본은 docs/A-token/component-token.md (CMP-*).
+description: TGDS 컴포넌트 토큰의 이름을 짓거나 검증할 때 사용. 컴포넌트 토큰 생성, 명명, 네이밍 검사, Element/Variant/Size/State 축 표기, token/Component-token.json의 컴포넌트 그룹 작성 요청 시 참조한다. 정본은 docs/A-token/component-token.md (CMP-*).
 ---
 
 # 컴포넌트 토큰 명명
@@ -32,7 +32,7 @@ description: TGDS 컴포넌트 토큰의 이름을 짓거나 검증할 때 사�
 |---|---|
 | Size | `Extra Small` `Small` `Medium` `Large` `Extra Large` |
 | State | `Default` `Hover` `Pressed` `Focus` `Selected` `Disabled` |
-| Element · Variant | 컴포넌트별 닫힌 집합 — `components/{Component}.md`의 축 선언 ①에 등록된 것만 |
+| Element · Variant | 컴포넌트별 닫힌 집합 — `token/Component-token.json` 컴포넌트 그룹의 `$extensions.tgds.axes`에 등록된 것만 |
 | Property | `semantic.md` Target 합집합 |
 
 본문과 스키마가 어긋나면 규범 문서 §3.1의 JSON 스키마가 정본이다 (TKN-03).
@@ -43,12 +43,12 @@ description: TGDS 컴포넌트 토큰의 이름을 짓거나 검증할 때 사�
 - **시멘틱 기본값과 같은 값은 만들지 않는다** (CMP-A2). 토큰의 부재 = 기본값 사용
 - 자기 컴포넌트 밖 사용 금지 (CMP-A3)
 - 같은 결정이 **3개 이상 컴포넌트**에서 반복되면 Semantic으로 승격하고 폐기 (CMP-A4)
-- 컴포넌트 파일은 **등록제** — 규범 문서 §3.3 인덱스에 없으면 존재하지 않는 것 (CMP-A5). 새 컴포넌트를 만들면 인덱스에 먼저 등록한다
+- 컴포넌트 그룹은 **등록제** — 규범 문서 §3.3 인덱스에 없으면 존재하지 않는 것 (CMP-A5). 새 컴포넌트를 만들면 인덱스에 먼저 등록한다. 그룹 이름은 Semantic Target·Foundation Category와 겹칠 수 없다 (TKN-10)
 - 상태 분기는 이 계층에서만 (CMP-A6). 모션은 범위 밖 — 정의하지 않는다 (CMP-A7)
 
 ## 산출물 형식
 
-개별 토큰은 `components/{Component}.md`에 컴포넌트당 한 파일. 구성은 규범 문서 §3.4:
-① 축 선언 JSON → ② 상태 분기 표 (State 축 토큰, 빈 셀 금지) → ③ 상태 비의존 표.
+개별 토큰은 `token/Component-token.json`의 최상위 그룹 `{Component}` 하나. 구성은 규범 문서 §3.4와 `token/README.md`:
+① 그룹 `$extensions.tgds.axes`에 축 선언 → ② 이름 세그먼트를 중첩 그룹으로, leaf `$value`는 Semantic alias 하나. 상태 분기 표·상태 비의존 표는 JSON에서 도출되는 검토 뷰다.
 
 작성 후 CMP-L06~L11(문법·서로소·Default 예약·Element 강제·Target 일치·축 선언 일치)을 자가 점검한다. 린트는 아직 스크립트화되지 않았으므로 손으로 검사한다.

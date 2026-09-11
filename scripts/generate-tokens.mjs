@@ -1,7 +1,7 @@
 /**
  * Generates the Foundation token layer from the value registry.
  *
- * Source of truth is tokens/foundation.tokens.json (W3C DTCG shape). Rules live
+ * Source of truth is token/Foundation.json (W3C DTCG shape, one file per Figma collection — TKN-09). Rules live
  * in docs/A-token/foundation.md; values live only in the registry (TKN-03 ·
  * FND-12). What is not in the registry does not exist — there is no TBD state.
  *
@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const REGISTRY = 'tokens/foundation.tokens.json';
+const REGISTRY = 'token/Foundation.json';
 
 // ------------------------------------------------------------------ helpers
 

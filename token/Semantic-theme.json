@@ -1,0 +1,13 @@
+{
+  "$description": "Semantic theme collection — Figma variable collection 'Semantic theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Empty until the registry is written.",
+  "$extensions": {
+    "tgds": {
+      "collection": "Semantic theme",
+      "tier": "semantic",
+      "modes": [
+        "Light",
+        "Dark"
+      ]
+    }
+  }
+}

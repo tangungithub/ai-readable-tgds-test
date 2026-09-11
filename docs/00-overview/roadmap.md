@@ -7,19 +7,19 @@
 
 ---
 
-## W1 — 어휘와 집합 확정 🟡 진행 중
+## W1 — 어휘와 집합 확정 🟡 진행 중 (4 / 7)
 
 > **끝나면**: 이름을 보고 규칙 위반 여부를 판정할 수 있다.
 
 지금 여러 칸을 동시에 막고 있는 6개를 푸는 차수입니다. **전부 "목록을 닫는" 작업**입니다.
 
-- [ ] **계층 간 어휘 통일** — Primary vs Brand 정리, `Text Muted` 정의 → [A2](../A-token/A2-semantic-theme.md)
-- [ ] **Semantic Target / Role / Variant enum 닫기** — "등" 제거 → [A2](../A-token/A2-semantic-theme.md)
-- [ ] **State 닫힌 목록** 확정 → B3
-- [ ] **컴포넌트 이름 기준 집합** 정본 위치 결정 → D2
-- [ ] **Breakpoint 목록** 확정 → C2
+- [x] **계층 간 어휘 통일** — 유채 브랜드 Role은 `Accent` 하나, `Text Muted`는 `Text/Neutral/Subtle` → [A2](../A-token/A2-semantic-theme.md)
+- [x] **Semantic Target / Role / Variant enum 닫기** — Target별 닫힌 집합 `SEM-06` → [A2](../A-token/A2-semantic-theme.md)
+- [x] **State 닫힌 목록** 확정 — `CMP-N1` 6종 → B3
+- [ ] **컴포넌트 이름 기준 집합** 정본 위치 결정 → D2. 토큰 측은 `component-token.md` §3.3 인덱스로 확정(`CMP-A5`). Figma 컴포넌트 이름이 이를 따르는지의 규칙이 남았다
+- [ ] **Breakpoint 목록** 확정 → C2. 이름(Mobile / Tablet / Desktop)은 확정, px 경계값이 남았다
 - [ ] **DS 프로젝트 경계** 정의 → D3
-- [ ] **Duration · Easing · Shadow** — Semantic을 만들 것인가 예외를 인정할 것인가 결정 → [A5](../A-token/A5-collection-structure.md)
+- [x] **Duration · Easing · Shadow** — Motion은 범위 밖 선언(`TKN-07`·`SEM-09`), Shadow는 보류 → [A5](../A-token/A5-collection-structure.md)
 
 > ⚠️ 이 차수는 **새로 만드는 작업이 아니라 결정하는 작업**입니다. 문서 분량이 늘지 않아도 진행률은 크게 오릅니다.
 
@@ -30,10 +30,11 @@
 > **끝나면**: AI가 정의서만 읽고 신규 Component Token을 만들 수 있다.
 
 - [ ] A1 사용 규칙 · 확장 규칙 마무리
-- [ ] A2 사용 규칙 — Background 스텝 매핑 기준 확정
-- [ ] A3 값 매핑 규칙 전체 (현재 공백)
-- [ ] A4 상태 비의존 속성(Radius 등) 예외 규칙
-- [ ] A4 Component Token **생성 조건** — 언제 Semantic으로 충분한가
+- [x] A2 사용 규칙 — Background 스텝 매핑 기준 확정 (`SEM-T03`·`T09`·`T10`)
+- [ ] A3 값 매핑 규칙 전체 (현재 공백) — Scale·Constant의 Role×Variant → Foundation 등록표
+- [x] A4 상태 비의존 속성(Radius 등) 예외 규칙 — State 축 생략 (`CMP-N2`·`N5`)
+- [x] A4 Component Token **생성 조건** — 기본값 재선언 금지·3회 반복 시 승격 (`CMP-A2`·`A4`)
+- [ ] `token/Semantic-theme.json` · `Component-token.json` 작성 + 커버리지 테스트 6종
 - [ ] A1~A5 확장 규칙 — AI가 따라 할 수 있는 형태로 작성
 - [ ] `_` 접두사의 지위 결정
 
@@ -107,7 +108,7 @@
 
 | 차수 | 완료 시 예상 진행률 |
 |---|---|
-| 현재 | 8% |
+| 현재 (2026-09-10) | 20% |
 | W1 | ~25% |
 | W2 | ~40% |
 | W3 | ~60% |

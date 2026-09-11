@@ -10,7 +10,7 @@ budget: 150 lines
 > 본 파일은 **라우터이자 헌법**이다. 어떤 파일을 읽어야 하는지와, 전 계층에 공통으로 적용되는 규칙만 담는다.
 > 계층별 규칙과 토큰 등록부는 각 파일이 소유한다. **필요한 파일만 읽는다.**
 
-- 문서 버전: v0.5 (2026-09-09)
+- 문서 버전: v0.6 (2026-09-11)
 - 변경 이력은 §5
 
 ---
@@ -23,8 +23,19 @@ budget: 150 lines
 | **[foundation.md](foundation.md)** | `FND-*` | 원시값의 절대 규칙, 스케일·예외 대장, 값 등록부, 린트 | 300줄 |
 | **[semantic.md](semantic.md)** | `SEM-*` | 의도 네이밍, 3컬렉션의 닫힌 집합과 모드 스키마, 린트 | 400줄 |
 | **[component-token.md](component-token.md)** | `CMP-*` | 컴포넌트 네이밍 문법, 입장 규칙, 컴포넌트 인덱스, 린트 | 200줄 |
-| **components/{Component}.md** | — | 개별 컴포넌트의 토큰 등록부(표만) | 각 100줄 |
-| **[tokens/*.tokens.json](../../tokens/)** | — | **모든 토큰 값의 정본**(DTCG 형식). 규칙은 md, 값은 여기 | — |
+| **[token/*.json](../../token/)** | — | **모든 토큰 값의 정본**(DTCG 형식). Figma 컬렉션당 파일 하나(§1.1). 규칙은 md, 값은 여기 | — |
+
+### 1.1 컬렉션 ↔ 파일 대응 (TKN-09)
+
+| Figma 컬렉션 | 파일 | 티어 | 모드 | 규칙 파일 |
+|---|---|---|---|---|
+| `Foundation` | [token/Foundation.json](../../token/Foundation.json) | Foundation | 없음 | foundation.md |
+| `Semantic theme` | [token/Semantic-theme.json](../../token/Semantic-theme.json) | Semantic | Light / Dark | semantic.md §2.2 |
+| `Semantic scale` | [token/Semantic-scale.json](../../token/Semantic-scale.json) | Semantic | Mobile / Tablet / Desktop | semantic.md §2.3 |
+| `Semantic constant` | [token/Semantic-constant.json](../../token/Semantic-constant.json) | Semantic | 없음 | semantic.md §2.4 |
+| `Component token` | [token/Component-token.json](../../token/Component-token.json) | Component | 없음 | component-token.md |
+
+컴포넌트별 토큰은 별도 파일이 아니라 `Component-token.json` 안의 **컴포넌트당 최상위 그룹 하나**로 둔다(CMP-A5). 파일 형식은 [token/README.md](../../token/README.md).
 
 **규칙 ID의 접두는 곧 소유 파일이다.** `SEM-C02`를 보면 `semantic.md`를 열면 된다. 린트 규칙은 `*-L**` 형식을 쓴다(`FND-L01`, `SEM-L04`, `CMP-L02`).
 
@@ -33,10 +44,11 @@ budget: 150 lines
 | 작업 | 읽을 파일 |
 |---|---|
 | 원시값의 **규칙**을 바꾼다 (스케일 성질, 예외 등록) | [token.md](token.md) + **[foundation.md](foundation.md)** |
-| 원시값의 **값**을 바꾼다 | **[tokens/foundation.tokens.json](../../tokens/foundation.tokens.json)**만 |
+| 원시값의 **값**을 바꾼다 | **[token/Foundation.json](../../token/Foundation.json)**만 |
 | 의도 토큰을 추가한다 (색 역할, 간격 역할, 타이포 역할) | [token.md](token.md) + **[semantic.md](semantic.md)** |
 | 컴포넌트를 새로 만든다 | [token.md](token.md) + **[component-token.md](component-token.md)** + semantic.md |
-| 기존 컴포넌트의 토큰을 고친다 | [token.md](token.md) + component-token.md + **components/{해당}.md** |
+| Semantic 토큰의 **값**을 바꾼다 (모드별 매핑) | **[token/Semantic-theme.json](../../token/Semantic-theme.json)** 등 해당 컬렉션 파일만 |
+| 기존 컴포넌트의 토큰을 고친다 | [token.md](token.md) + component-token.md + **[token/Component-token.json](../../token/Component-token.json)의 해당 그룹** |
 | 토큰 이름을 코드로 변환한다 | [token.md](token.md) (TKN-04)만 |
 | 시스템 전체 구조를 파악한다 | [token.md](token.md)만 |
 
@@ -54,12 +66,15 @@ budget: 150 lines
 | TKN-06 | **예외는 사전 등록제다.** 각 파일의 등록 대장에 없는 예외는 존재하지 않는 것으로 취급한다. |
 | TKN-07 | **시스템 범위**는 §4에 선언한다. 범위 밖 속성은 토큰으로 만들지 않으며, 이는 참조 규칙(TKN-01)의 위반이 아니라 범위 밖 선언이다. |
 | TKN-08 | 폐기(deprecation)는 토큰 `$description`에 `[DEPRECATED - use {대체 토큰}]`을 표기하고 유예 기간 후 제거한다. **폐기 표기는 TKN-04의 명명 규칙에서 제외되는 유일한 예외다.** |
+| TKN-09 | **컬렉션 = 파일.** Figma 변수 컬렉션 5개와 `token/` 아래 json 5개는 §1.1의 표로 1:1 대응하며, 파일 루트의 `$extensions.tgds.collection`이 그 신원이다. 컬렉션·파일을 추가하거나 나누는 것은 본 헌법의 개정이다. 컴포넌트는 파일을 늘리지 않고 `Component-token.json`의 최상위 그룹으로 추가한다. |
+| TKN-10 | **루트 그룹 이름은 다섯 파일을 통틀어 전역 유일하다.** 참조 `{Root.Group.Leaf}`는 파일을 지정하지 않고 병합된 하나의 이름공간에서 해석된다. 따라서 컴포넌트 이름은 Foundation Category, Semantic Target과 겹칠 수 없다(예: `Icon`·`Text`·`Color`는 컴포넌트명이 될 수 없다). |
+| TKN-11 | **모드는 파일 루트가 선언하고 값이 따른다.** `$extensions.tgds.modes`가 2개 이상이면 그 파일의 모든 `$value`(와 SEM-11의 `opacity`)는 모드명을 키로 한 객체이고, 선언된 모드 전부를 키로 가져야 한다. 모드가 없는 파일은 단일값이다. 모드는 컬렉션 단위 속성이므로 토큰마다 모드를 달리 가질 수 없다(SEM-01·SEM-08). |
 
 ## 4. 시스템 범위
 
 | 영역 | 상태 | 비고 |
 |---|---|---|
-| Color | 정의됨 | 6 hue × 13단계. Gray만 순백·순흑 앵커 `0000`·`1300`을 더해 14단계(FND-16). **알파 Set은 없다** — 반투명은 Semantic이 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). 값은 `../../tokens/foundation.tokens.json` |
+| Color | 정의됨 | 6 hue × 13단계. Gray만 순백·순흑 앵커 `0000`·`1300`을 더해 14단계(FND-16). **알파 Set은 없다** — 반투명은 Semantic이 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). 값은 `../../token/Foundation.json` |
 | Typography, Layout, Shape, Effect(Opacity) | 정의됨 | `foundation.md` §1.4 |
 | **Shadow / Blur** | **보류** | Semantic Theme의 `Shadow` Target도 함께 주석 처리 상태 |
 | **Motion (Duration · Easing)** | **범위 밖** | 인터랙션으로 확장할 때 Foundation Category와 함께 재도입한다. 근거 자료는 [easing-token-rule.md](../99-reference/easing-token-rule.md)에 보존 |
@@ -71,9 +86,10 @@ Figma 변수로 바인딩할 수 없는 속성(레이어 x·y 위치, 회전, �
 
 | 버전 | 날짜 | 변경 |
 |---|---|---|
+| v0.6 | 2026-09-11 | **등록부를 Figma 컬렉션 단위로 재편** — `tokens/foundation.tokens.json` → `token/Foundation.json`, 컬렉션당 파일 하나(TKN-09: `Foundation` · `Semantic-theme` · `Semantic-scale` · `Semantic-constant` · `Component-token`). 루트 그룹 전역 유일(TKN-10), 모드별 값 표기(TKN-11). 컴포넌트 토큰은 `components/{Component}.md` 대신 `Component-token.json`의 컴포넌트 그룹으로(CMP-A5·§3.4 개정). Semantic·Component 파일은 루트 메타데이터만 있는 스켈레톤으로 생성 |
 | v0.5 | 2026-09-09 | **On-color · Inverse · 불투명도 조합 확정** — Semantic Theme의 `Background`를 캔버스 전용으로 좁히고 `Fill` Target 신설, `On {Role}` 7종·`Inverse` Role 추가, 표면·전경 짝 규칙(SEM-T05), 유채 스텝 상한(SEM-T08), 솔리드 Fill 앵커(SEM-T09), 불투명도 조합(SEM-11), 린트 SEM-L07~L12. Foundation은 `Color/White`·`Color/Black` 알파 Set을 폐지하고 `Color/Gray`에 순백·순흑 앵커 `0000`·`1300`을 등록(FND-16). 근거: Figma 2026-09-03 변수 업데이트(색 변수의 불투명도를 number 변수로 alias) |
 | v0.4 | 2026-08-27 | **Component 네이밍 문법 작성** — ComponentToken §3.1 확정(가변 축 문법 CMP-N1~N8, 문법 스키마), §3.4 컴포넌트 파일 형식(축 선언·상태 분기 표·상태 비의존 표) 신설, 린트 CMP-L06~L11 추가. Element 판별 기준·상태 매핑 표 형식의 미결 해소 |
-| v0.4 | 2026-08-26 | **값 외부화** — 모든 원시값을 `../../tokens/foundation.tokens.json`으로 이전하고 foundation.md는 규칙만 보유(346→160줄). Color Set 확정(6 hue×13단계 + White·Black 11단계). **색 램프를 OKLCH 명도 등간격으로 재배치**(FND-13~15, FND-L11). SEM-T03·T04 신설 |
+| v0.4 | 2026-08-26 | **값 외부화** — 모든 원시값을 `../../token/Foundation.json`으로 이전하고 foundation.md는 규칙만 보유(346→160줄). Color Set 확정(6 hue×13단계 + White·Black 11단계). **색 램프를 OKLCH 명도 등간격으로 재배치**(FND-13~15, FND-L11). SEM-T03·T04 신설 |
 | v0.3 | 2026-08-26 | **4파일 분리** — 본 파일을 라우터+헌법으로 축소하고 Foundation / Semantic / ComponentToken 분리. FND-08을 TKN-04로 승격. Radius·Stroke에서 0 스텝 제거(FND-11). Space vs Size 판별 기준 확정. Shadow Target 주석 처리 |
 | v0.2 | 2026-08-26 | `Typography/Letter Spacing` Set 신설. Line Height·Letter Spacing의 둘째 요소를 순수 서수로 통일. Motion Category 제외(6종→5종). Semantic 3컬렉션(Theme/Scale/Constant) 성문화 |
 | v0.1 | 2026-08-18 | Foundation 파트 최초 작성 |

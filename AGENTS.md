@@ -15,7 +15,7 @@
 | 무엇 | 정본 | 비고 |
 |---|---|---|
 | 토큰 **규칙** | `docs/A-token/{token,foundation,semantic,component-token}.md` | 파일명이 평문 슬러그 |
-| 토큰 **값** | `tokens/*.tokens.json` | **md에 값을 쓰지 않는다** |
+| 토큰 **값** | `token/*.json` | **md에 값을 쓰지 않는다.** Figma 컬렉션당 파일 1개(TKN-09), 컴포넌트는 `Component-token.json`의 그룹 |
 | 진행 현황 | 루트 `README.md` 대시보드 + 각 영역 `README.md` | |
 | 생성물 | `src/tokens/*` | **손으로 고치지 않는다** |
 
@@ -41,7 +41,7 @@ md와 json이 어긋나면 **json이 맞다.**
 `docs/A-token/token.md` §2에 로드 트리거 표가 있다. 요약하면:
 
 - 원시값의 **규칙**을 바꾼다 → `token.md` + `foundation.md`
-- 원시값의 **값**을 바꾼다 → `tokens/foundation.tokens.json`만
+- 원시값의 **값**을 바꾼다 → `token/Foundation.json`만
 - 의도 토큰을 추가한다 → `token.md` + `semantic.md`
 - 컴포넌트를 만든다 → `token.md` + `component-token.md` + `semantic.md`
 
@@ -66,7 +66,7 @@ md와 json이 어긋나면 **json이 맞다.**
 
 ## 하지 말아야 할 것
 
-- **`src/tokens/*`를 손으로 고치지 말 것.** 생성물이다. 생성기의 입력은 `tokens/foundation.tokens.json`이다
+- **`src/tokens/*`를 손으로 고치지 말 것.** 생성물이다. 생성기의 입력은 `token/Foundation.json`이다
 - **md에 토큰 값을 쓰지 말 것** (FND-12)
 - **`docs/99-reference/research.md`의 `⛔ 절대 쓰면 안 되는 것` 목록에 있는 수치를 인용하지 말 것**
 - **새 규칙 ID 네임스페이스를 발명하지 말 것.** F1에서 아직 논의 중이다

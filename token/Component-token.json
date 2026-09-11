@@ -1,0 +1,10 @@
+{
+  "$description": "Component token collection — Figma variable collection 'Component token' (TKN-09). Values only; rules live in docs/A-token/component-token.md. Empty until the registry is written.",
+  "$extensions": {
+    "tgds": {
+      "collection": "Component token",
+      "tier": "component",
+      "modes": []
+    }
+  }
+}

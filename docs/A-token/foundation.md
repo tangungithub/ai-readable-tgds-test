@@ -64,7 +64,7 @@ Option   = Set의 kind에 따라 결정 (아래 표 참조)
 
 ## 1.4 Set 선언
 
-**값은 이 문서에 두지 않는다.** 모든 원시값의 정본은 `../../tokens/foundation.tokens.json`이다(FND-12, §1.6). 본 절은 Set의 **성질**만 선언한다.
+**값은 이 문서에 두지 않는다.** 모든 원시값의 정본은 `../../token/Foundation.json`이다(FND-12, §1.6). 본 절은 Set의 **성질**만 선언한다.
 
 | Set | kind | 스텝 | 예외 | 스텝 번호의 의미 (FND-09) |
 |---|---|---|---|---|
@@ -126,7 +126,7 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
 
 | 규칙 ID | 규칙 |
 |---|---|
-| FND-12 | **원시값의 정본은 `../../tokens/foundation.tokens.json`이다.** 본 문서에는 값을 기재하지 않는다. 문서와 등록부가 어긋나면 등록부가 정본이다(TKN-03). |
+| FND-12 | **원시값의 정본은 `../../token/Foundation.json`이다.** 본 문서에는 값을 기재하지 않는다. 문서와 등록부가 어긋나면 등록부가 정본이다(TKN-03). |
 
 - 형식: W3C DTCG(Design Tokens Format Module) — `$value` / `$type` / `$description`. 길이 값은 `{ "value": n, "unit": "px" }` 객체다.
 - 경로 구조는 본 문서의 네이밍 문법과 1:1로 대응한다: `Color` → `Blue` → `0700` = `Color/Blue/0700`.
@@ -138,7 +138,7 @@ FND-07에 따라, 예외 스텝은 아래 대장에 등록된 것만 유효하�
 | 규칙 ID | 검증 내용 |
 |---|---|
 | FND-L01 | 모든 Foundation 토큰 이름은 정규식 `^(Color|Typography|Layout|Shape|Effect)\/[A-Z][A-Za-z]*( [A-Z][A-Za-z]*)*\/(\d{4}(-\d{4})?|\d{3}|[A-Z][A-Za-z]*)$` 을 통과해야 한다 |
-| FND-L02 | Category·Set·Option은 각각 §1.4 선언과 값 등록부(`../../tokens/foundation.tokens.json`)에 동시에 존재해야 한다. 한쪽에만 있으면 위반이다 |
+| FND-L02 | Category·Set·Option은 각각 §1.4 선언과 값 등록부(`../../token/Foundation.json`)에 동시에 존재해야 한다. 한쪽에만 있으면 위반이다 |
 | FND-L03 | 4자리 Option의 십의 자리는 0 또는 5만 허용한다. 5인 경우 해당 Set의 `exceptions.registered`에 존재해야 한다 |
 | FND-L04 | `exceptions.allowed = false`인 Set에 표준 스텝 외 Option이 존재하면 위반이다 |
 | FND-L05 | Line Height Option의 첫 요소는 Font Size의 유효 스텝(예외 포함)이어야 하고, 둘째 요소는 {0100, 0200, 0300, 0400}이어야 한다 |

@@ -26,13 +26,15 @@ Semantic은 **Theme / Scale / Constant 세 컬렉션**으로 운용한다.
 | SEM-08 | 모드 간 토큰 집합은 완전히 동일해야 한다. 모드 추가는 값만 추가하며 토큰 이름은 불변이다. |
 | SEM-10 | **세그먼트 값이 현재 동일하더라도 토큰을 통합하거나 세그먼트를 생략하지 않는다.** 동일 값의 중복은 허용되며, 이는 향후 값이 분기할 가능성을 확보하기 위한 의도된 설계다. 중복을 근거로 한 토큰 통합·세그먼트 축소는 위반이다. |
 | SEM-09 | Motion(Duration·Easing)은 현 시스템 범위 밖이다. Component 토큰은 모션을 정의하지 않는다. 인터랙션으로 범위를 확장할 때 Foundation Motion Category와 함께 재도입한다. |
-| SEM-11 | **불투명도 조합.** Semantic 색 토큰은 **색 참조 1개 + 선택적 불투명도 참조 1개**로 구성한다. 불투명도는 `Effect/Opacity` 스텝만 참조하며, 알파가 섞인 원시값을 값에 직접 적지 않는다. 두 참조 모두 Foundation이므로 TKN-01(1단계 하향)과 SEM-03 안에 있다. Foundation에는 알파 Set이 없다(FND-16). 등록부 표기는 `tokens/README.md`, Figma에서는 색 변수 alias + 불투명도 number 변수 alias로 대응한다. |
+| SEM-11 | **불투명도 조합.** Semantic 색 토큰은 **색 참조 1개 + 선택적 불투명도 참조 1개**로 구성한다. 불투명도는 `Effect/Opacity` 스텝만 참조하며, 알파가 섞인 원시값을 값에 직접 적지 않는다. 두 참조 모두 Foundation이므로 TKN-01(1단계 하향)과 SEM-03 안에 있다. Foundation에는 알파 Set이 없다(FND-16). 등록부 표기는 `token/README.md`, Figma에서는 색 변수 alias + 불투명도 number 변수 alias로 대응한다. |
 
-| 컬렉션 | 모드 축 | Target |
-|---|---|---|
-| **Theme** | Light / Dark | Background, Fill, Text, Icon, Border, Overlay, Opacity ~~Shadow~~ |
-| **Scale** | Mobile / Tablet / Desktop | Padding, Gap, Size, Font Size, Line Height, Letter Spacing |
-| **Constant** | 없음(모드 1개) | Radius, Stroke, Font Weight, Font Family |
+| 컬렉션 | Figma 컬렉션 · 파일 (TKN-09) | 모드 축 | Target |
+|---|---|---|---|
+| **Theme** | `Semantic theme` · `token/Semantic-theme.json` | Light / Dark | Background, Fill, Text, Icon, Border, Overlay, Opacity ~~Shadow~~ |
+| **Scale** | `Semantic scale` · `token/Semantic-scale.json` | Mobile / Tablet / Desktop | Padding, Gap, Size, Font Size, Line Height, Letter Spacing |
+| **Constant** | `Semantic constant` · `token/Semantic-constant.json` | 없음(모드 1개) | Radius, Stroke, Font Weight, Font Family |
+
+세 컬렉션의 Target은 Foundation Category·컴포넌트명과 겹칠 수 없다(TKN-10). 모드별 값의 표기는 TKN-11과 `token/README.md`를 따른다.
 
 ## 2.2 Theme 컬렉션
 
@@ -143,7 +145,7 @@ Variant  (Target별 닫힌 집합)
 
 ## 2.6 검토 노트 (Open Issues)
 
-1. **닫힌 집합의 실제 열거 미완** — Theme의 모드별 값 매핑, 각 Target의 등록 조합 목록이 아직 없다(`tokens/semantic.tokens.json` 미작성). 커버리지 테스트(Button 5variant×4state / Input / Alert / Card / Table / Modal) 후 확정한다.
+1. **닫힌 집합의 실제 열거 미완** — Theme의 모드별 값 매핑, 각 Target의 등록 조합 목록이 아직 없다(`token/Semantic-theme.json` 미작성). 커버리지 테스트(Button 5variant×4state / Input / Alert / Card / Table / Modal) 후 확정한다.
 2. **3세그먼트 예외 후보 — 잔여분** — On-color(→ SEM-T05·T06)와 Inverse(→ SEM-T07)는 2026-09-09 확정해 목록에서 뺐다. 남은 후보: Focus ring, Selected 표면, Disabled는 **State**이므로 Component 티어의 상태 분기 표(CMP-A6)가 기존 Emphasis를 참조하는 것으로 충분한지 커버리지 테스트로 확인한다. Transparent는 `Color/Gray/0000` + `Effect/Opacity/0000` 조합으로 표현 가능하므로(SEM-11) 별도 어휘가 필요 없다.
 3. **Display·Subtext의 사용처 검증** — Display 사용처가 0이면 Heading으로 흡수 가능한지, Subtext 하나가 Caption·Helper text·Overline·Badge label의 크기 폭을 5단계로 감당하는지 확인이 필요하다.
 4. ~~**선행 미결(Foundation)**~~ — 2026-09-09 종결. 다크 모드 캔버스는 `Color/Gray/1200`으로 확정했다(SEM-T10). 순흑 앵커 `1300`은 `On {Role}`의 기준색과 Overlay 전용이다.
