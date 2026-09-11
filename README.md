@@ -86,7 +86,7 @@
 
 | # | 막고 있는 것 | 어디서 | 무엇이 막혀 있는가 |
 |---|---|---|---|
-| 1 | **Semantic 값 등록부 미작성** — 어휘는 닫혔으나 `token/Semantic-theme.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
+| 1 | **Semantic 값 등록부 일부 미작성** — `token/Semantic-theme.json`은 등록·린트 통과(2026-09-11), `Semantic-scale.json`·`Semantic-constant.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
 | 2 | **커버리지 테스트 미실시** — Button · Input · Alert · Card · Table · Modal | [A4](docs/A-token/A4-component-token.md) | 컴포넌트 인덱스 0개 → A4 코드 동기화. 복합 State(B3)·Display/Subtext 존치·Warning On 기준색이 여기서 닫힌다 |
 | 3 | **DS 프로젝트 경계 미정의** | [D3](docs/D-naming/) | `DENY-03` — "외부에서 제작"을 판정하려면 외부가 어디인지 정의돼야 함 |
 | 4 | **Figma 컴포넌트 이름 ↔ 토큰 인덱스 일치 규칙 부재** — 토큰 측 기준 집합은 생겼다(`CMP-A5` 인덱스, `CMP-L06`). Figma 측 이름이 이를 따르는지 판정할 규칙이 없다 | [D2](docs/D-naming/) | `DENY-01`의 Figma 측 판정, B1 분류 체계 |

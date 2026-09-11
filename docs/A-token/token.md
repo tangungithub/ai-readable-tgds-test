@@ -10,7 +10,7 @@ budget: 150 lines
 > 본 파일은 **라우터이자 헌법**이다. 어떤 파일을 읽어야 하는지와, 전 계층에 공통으로 적용되는 규칙만 담는다.
 > 계층별 규칙과 토큰 등록부는 각 파일이 소유한다. **필요한 파일만 읽는다.**
 
-- 문서 버전: v0.6 (2026-09-11)
+- 문서 버전: v0.7 (2026-09-11)
 - 변경 이력은 §5
 
 ---
@@ -86,6 +86,7 @@ Figma 변수로 바인딩할 수 없는 속성(레이어 x·y 위치, 회전, �
 
 | 버전 | 날짜 | 변경 |
 |---|---|---|
+| v0.7 | 2026-09-11 | **Semantic theme 등록표 작성** — `token/Semantic-theme.json`에 Theme 269 토큰 등록(Background·Fill·Text·Icon·Border·Overlay·Opacity × 14 Role × Light/Dark). 실행 린트 `scripts/lint-semantic-theme.mjs`(`SEM-L01~L03·L07~L12`, 빌드 체인에 포함) 신설. 규칙 보정: SEM-T04(대비는 린트가 계산, Border 틴트 단계 제외), SEM-T05(캔버스 위 유채 전경·틴트 위 Neutral 전경 허용, 전 단계 검사), SEM-T09(Strong·Strongest는 어두운 방향, 모드 간 솔리드 스텝 동일). 검토 노트 6·7 종결, 8 신설 |
 | v0.6 | 2026-09-11 | **등록부를 Figma 컬렉션 단위로 재편** — `tokens/foundation.tokens.json` → `token/Foundation.json`, 컬렉션당 파일 하나(TKN-09: `Foundation` · `Semantic-theme` · `Semantic-scale` · `Semantic-constant` · `Component-token`). 루트 그룹 전역 유일(TKN-10), 모드별 값 표기(TKN-11). 컴포넌트 토큰은 `components/{Component}.md` 대신 `Component-token.json`의 컴포넌트 그룹으로(CMP-A5·§3.4 개정). Semantic·Component 파일은 루트 메타데이터만 있는 스켈레톤으로 생성 |
 | v0.5 | 2026-09-09 | **On-color · Inverse · 불투명도 조합 확정** — Semantic Theme의 `Background`를 캔버스 전용으로 좁히고 `Fill` Target 신설, `On {Role}` 7종·`Inverse` Role 추가, 표면·전경 짝 규칙(SEM-T05), 유채 스텝 상한(SEM-T08), 솔리드 Fill 앵커(SEM-T09), 불투명도 조합(SEM-11), 린트 SEM-L07~L12. Foundation은 `Color/White`·`Color/Black` 알파 Set을 폐지하고 `Color/Gray`에 순백·순흑 앵커 `0000`·`1300`을 등록(FND-16). 근거: Figma 2026-09-03 변수 업데이트(색 변수의 불투명도를 number 변수로 alias) |
 | v0.4 | 2026-08-27 | **Component 네이밍 문법 작성** — ComponentToken §3.1 확정(가변 축 문법 CMP-N1~N8, 문법 스키마), §3.4 컴포넌트 파일 형식(축 선언·상태 분기 표·상태 비의존 표) 신설, 린트 CMP-L06~L11 추가. Element 판별 기준·상태 매핑 표 형식의 미결 해소 |

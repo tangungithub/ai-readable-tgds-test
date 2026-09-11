@@ -6,10 +6,11 @@
   "description": "AI Readable Design System (TGDS) — pilot component implementation",
   "scripts": {
     "dev": "npm run tokens:build && vite",
-    "build": "npm run tokens:build && tsc --build && vite build",
+    "build": "npm run tokens:build && npm run lint:semantic && tsc --build && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --build --force",
-    "tokens:build": "node scripts/generate-tokens.mjs"
+    "tokens:build": "node scripts/generate-tokens.mjs",
+    "lint:semantic": "node scripts/lint-semantic-theme.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",

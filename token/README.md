@@ -15,7 +15,7 @@ Figma 변수 컬렉션 하나가 json 파일 하나다. 대응은 고정이며, 
 | `Semantic constant` | `Semantic-constant.json` | Semantic | 없음 | [semantic.md](../docs/A-token/semantic.md) §2.4 |
 | `Component token` | `Component-token.json` | Component | 없음 | [component-token.md](../docs/A-token/component-token.md) |
 
-파일명은 Figma 컬렉션명의 띄어쓰기를 `-`로 바꾼 것이며 대소문자를 보존한다. `Foundation.json`만 값이 있고, 나머지 넷은 루트 메타데이터만 있는 스켈레톤이다(등록표 미작성).
+파일명은 Figma 컬렉션명의 띄어쓰기를 `-`로 바꾼 것이며 대소문자를 보존한다. `Foundation.json`과 `Semantic-theme.json`에 값이 있고, 나머지 셋은 루트 메타데이터만 있는 스켈레톤이다(등록표 미작성).
 
 ## 형식
 
@@ -32,6 +32,10 @@ W3C DTCG(Design Tokens Format Module) — `$value` / `$type` / `$description`, �
 ```
 
 `modes`가 빈 배열이면 단일 모드 컬렉션이다(Figma에서는 이름 무관한 모드 1개).
+
+`Semantic-theme.json`은 추가로 `roles`에 **Role → hue 매핑과 코어 색 스텝**을 선언한다. 유채 Role은 `{ "hue": "Blue", "core": "0600" }`, Neutral은 `{ "hue": "Gray" }`, Inverse는 `{ "hue": "Gray", "mirrorOf": "Neutral" }`이다. 린트가 SEM-T03(Role별 hue 고정)·SEM-L12(솔리드 앵커)를 여기서 읽는다. `Inverse`·`On Inverse` 토큰은 등록부에 명시적으로 적혀 있지만 값은 SEM-T07의 거울 규칙으로 결정되며, 린트 SEM-L09가 대조한다.
+
+검증: `npm run lint:semantic` — `scripts/lint-semantic-theme.mjs`가 `SEM-L01~L03·L07~L12`와 TKN-11을 실행한다. `--report`를 붙이면 검사한 대비 쌍 전부를 출력한다. `npm run build`에 체이닝돼 있어 위반이 있으면 빌드가 멈춘다.
 
 ### 경로와 참조
 
