@@ -72,12 +72,12 @@ Role  (Target별 닫힌 집합, SEM-06)
 | SEM-T01 | Emphasis는 **기준 표면 대비 두드러짐**의 오름차순이다. 기준 표면은 Target과 Role이 정한다(위 표). 모드 전환 시 명도는 달라지되 대비 관계는 보존된다. |
 | SEM-T02 | Emphasis는 5단계 상한이며 중간 단계 삽입을 금지한다. `Default`는 스케일의 중앙 앵커이자 미지정 시 기본 참조 대상이다. |
 | SEM-T03 | **Emphasis는 Foundation 스텝 번호가 아니라 대비 등급으로 정의된다.** Foundation Color는 hue 간 동일 스텝의 명도·대비를 보장하지 않으므로(FND-15), Emphasis → Foundation 스텝의 매핑은 **Role별 등록표**로 선언한다. `On {Role}`·`Inverse`도 등록표의 대상이다. 전 Role 공통 스텝을 쓰는 일괄 매핑(예: "Strong = 0800")을 금지한다. |
-| SEM-T04 | Role별 등록표는 Light·Dark 두 모드를 각각 명시하며, SEM-T05가 정한 **표면·전경 짝마다** 대비비를 함께 기록한다. Text·Icon은 4.5:1, Border는 3:1이 통과 기준이다. |
-| SEM-T05 | **표면·전경 짝은 이름에서 결정된다.** `Background/{R}` 위에는 `Text·Icon·Border/{R}`(R ∈ {Neutral, Inverse}), `Fill/{R}/Subtlest·Subtle`(틴트) 위에는 `Text·Icon·Border/{R}`, `Fill/{R}/Default·Strong·Strongest`(솔리드) 위에는 `Text·Icon·Border/On {R}`을 놓는다. 즉 **Fill의 Emphasis가 `Default` 이상이면 전경은 `On`이다.** 이 표 밖의 짝은 대비를 보장하지 않으며 Component 티어가 참조해서는 안 된다. |
+| SEM-T04 | Role별 등록표는 Light·Dark 두 모드를 각각 명시한다. SEM-T05가 정한 **표면·전경 짝마다**의 대비비는 등록표에 적지 않고 린트(SEM-L07, `npm run lint:semantic`)가 계산·판정한다. Text·Icon은 4.5:1, Border는 `Default` 이상만 3:1이 통과 기준이며 `Subtlest`·`Subtle` Border는 장식 구분선으로 검사에서 제외한다. |
+| SEM-T05 | **표면·전경 짝은 이름에서 결정된다.** `Background/Neutral` 위에는 `Neutral`과 유채 5종의 `Text·Icon·Border`, `Background/Inverse` 위에는 `Inverse` 전경만. `Fill/{R}/Subtlest·Subtle`(틴트) 위에는 `Text·Icon·Border/{R}`와 `Text·Icon·Border/Neutral`(Inverse 틴트는 `Inverse`만), `Fill/{R}/Default·Strong·Strongest`(솔리드) 위에는 `Text·Icon·Border/On {R}`을 놓는다. 즉 **Fill의 Emphasis가 `Default` 이상이면 전경은 `On`이다.** 등록된 전경의 **모든 Emphasis 단계**가 짝이 되는 표면의 모든 단계 위에서 SEM-T04 기준을 통과해야 한다. 이 표 밖의 짝은 대비를 보장하지 않으며 Component 티어가 참조해서는 안 된다. |
 | SEM-T06 | **`On {Role}`.** Text·Icon·Border에만 등록한다. 값은 `Color/Gray/0000`(순백) 또는 `Color/Gray/1300`(순흑)에 `Effect/Opacity`를 조합한 **무채 값만** 참조한다(SEM-11). 기준색(0000/1300)은 Role별·모드별로 등록표가 정한다 — Fill이 밝은 Role(예: Warning)이나 다크 모드에서 Fill을 밝힌 Role은 순흑 기준이 될 수 있다. Emphasis는 **불투명도의 오름차순**이며 `Default`가 불투명(`Effect/Opacity/1000`)이다. `Default` 위로는 올라갈 수 없으므로 `Strong`·`Strongest`는 `Default`와 같은 값을 등록한다(SEM-10). 틴트 Fill 위의 유채 전경은 `On`이 아니라 기본 Role(`Text/Accent/Strong` 등)로 표현한다. |
 | SEM-T07 | **`Inverse`는 Neutral의 모드 반전이다.** `{Target}/Inverse/{E}`의 Light 값은 `{Target}/Neutral/{E}`의 Dark 값, Dark 값은 Neutral의 Light 값이다. `On Inverse`는 `On Neutral`을 같은 방식으로 뒤집는다. Neutral(·On Neutral)이 등록된 **모든 Target×Emphasis 조합에 Inverse(·On Inverse)를 같은 위치에 등록**하며, 한쪽에만 있는 조합은 위반이다. 반전 표면(툴팁·토스트·다크 섹션)은 이 Role로만 표현하고, **프레임에 반대 모드를 적용하는 모드 스코핑으로 대체하지 않는다** — 한 모드 안에서 모든 토큰이 해석 가능해야 한다. |
 | SEM-T08 | **유채 스텝 상한.** 유채 Role(Accent·Success·Warning·Danger·Info)의 매핑은 Foundation `0100`~`1100`만 참조한다. `1200`·`1300`은 hue 정보가 사라진 근검정이므로 유채로 표현할 이유가 없고, 그 명도는 Neutral·Inverse(`Color/Gray`)가 담당한다. |
-| SEM-T09 | **솔리드 Fill의 앵커.** `Fill/{유채 R}/Default`는 `Text/On {R}/Default`가 4.5:1을 통과하는 스텝 중 **코어 색에 가장 가까운 스텝**이다. 브랜드 코어 색의 스텝을 Fill Default에 고정하지 않는다(FND-14). 코어 색이 통과하지 못하면 코어 색은 틴트·Text·Icon에서만 쓰인다. `Strong`·`Strongest`는 Default에서 On 전경과의 대비가 커지는 방향으로 한 스텝씩 이동하되 SEM-T08 상한 안에 있어야 한다. |
+| SEM-T09 | **솔리드 Fill의 앵커.** `Fill/{유채 R}/Default`는 `Text/On {R}/Default`가 4.5:1을 통과하는 스텝 중 **코어 색에 가장 가까운 스텝**이다. 브랜드 코어 색의 스텝을 Fill Default에 고정하지 않는다(FND-14). 코어 색이 통과하지 못하면 코어 색은 틴트·Text·Icon에서만 쓰인다. `Strong`·`Strongest`는 Default에서 **어두운 방향(스텝 번호 증가)** 으로 한 스텝씩 이동하되 SEM-T08 상한 안에 있어야 한다. 순백 기준 Role은 대비가 커지고, 순흑 기준 Role(Warning)은 대비가 줄어들되 SEM-L07을 통과해야 한다. 모드가 바뀌어도 솔리드 스텝은 동일하다 — 다크 모드에서 유채 Fill을 밝히지 않는다. |
 | SEM-T10 | **Background는 두 단계만 등록한다.** `Default`(페이지 캔버스)와 `Strong`(캔버스와 구분되는 두 번째 캔버스). 그 밖의 면 위계는 `Fill/Neutral/*`로 표현한다. Background에는 유채 Role과 `On` Role을 등록하지 않는다. **다크 모드의 `Background/Neutral/Default`는 `Color/Gray/1200`이다** — 순흑 앵커 `1300`은 캔버스로 쓰지 않는다. |
 
 ## 2.3 Scale 컬렉션
@@ -136,7 +136,7 @@ Variant  (Target별 닫힌 집합)
 | SEM-L04 | Scale과 Constant의 타이포 계열 Target은 **동일한 Role 어휘 집합**을 선언해야 한다. 단, 등록되는 Role×Variant 조합은 Target별로 달라도 된다 |
 | SEM-L05 | `Line Height/{Role}/{Variant}`와 `Letter Spacing/{Role}/{Variant}`는 동일 `{Role}/{Variant}` 조합의 `Font Size` 토큰이 존재할 때만 유효하며, 그 Font Size가 참조하는 Foundation 스텝과 짝이 맞는 값을 참조해야 한다 |
 | SEM-L06 | 등록되지 않은 Target×Role×Variant 조합이 존재하면 위반이다 (SEM-07) |
-| SEM-L07 | SEM-T05의 모든 표면·전경 짝은 Light·Dark 양 모드에서 대비 기준(Text·Icon 4.5:1, Border 3:1)을 통과해야 한다. 불투명도가 조합된 전경은 표면 위에 합성한 결과색으로 계산한다 (SEM-T04) |
+| SEM-L07 | SEM-T05의 모든 표면·전경 짝은 Light·Dark 양 모드에서 대비 기준(Text·Icon 4.5:1, Border는 `Default` 이상 3:1)을 통과해야 한다. 불투명도가 조합된 전경은 표면 위에 합성한 결과색으로 계산한다 (SEM-T04). 실행: `scripts/lint-semantic-theme.mjs` |
 | SEM-L08 | `On {Role}` 토큰의 색 참조는 `Color/Gray/0000` 또는 `Color/Gray/1300`이어야 하며, Background에 `On` Role이나 유채 Role이 등록되어 있으면 위반이다 (SEM-T06·T10) |
 | SEM-L09 | `{Target}/Inverse/{E}`의 각 모드 값은 `{Target}/Neutral/{E}`의 반대 모드 값과 같아야 한다(`On Inverse` ↔ `On Neutral` 동일). Neutral이 등록된 조합에 Inverse가 없거나 그 역이면 위반이다 (SEM-T07) |
 | SEM-L10 | 유채 Role이 Foundation `1200`·`1300`을 참조하면 위반이다 (SEM-T08) |
@@ -145,10 +145,11 @@ Variant  (Target별 닫힌 집합)
 
 ## 2.6 검토 노트 (Open Issues)
 
-1. **닫힌 집합의 실제 열거 미완** — Theme의 모드별 값 매핑, 각 Target의 등록 조합 목록이 아직 없다(`token/Semantic-theme.json` 미작성). 커버리지 테스트(Button 5variant×4state / Input / Alert / Card / Table / Modal) 후 확정한다.
+1. **닫힌 집합의 실제 열거** — Theme은 2026-09-11 `token/Semantic-theme.json`에 등록했다(269 토큰, `SEM-L01~L03·L07~L12` 린트 통과). Scale·Constant 등록표와 커버리지 테스트(Button 5variant×4state / Input / Alert / Card / Table / Modal)가 남아 있으며, 테스트 결과에 따라 Theme 값이 조정될 수 있다.
 2. **3세그먼트 예외 후보 — 잔여분** — On-color(→ SEM-T05·T06)와 Inverse(→ SEM-T07)는 2026-09-09 확정해 목록에서 뺐다. 남은 후보: Focus ring, Selected 표면, Disabled는 **State**이므로 Component 티어의 상태 분기 표(CMP-A6)가 기존 Emphasis를 참조하는 것으로 충분한지 커버리지 테스트로 확인한다. Transparent는 `Color/Gray/0000` + `Effect/Opacity/0000` 조합으로 표현 가능하므로(SEM-11) 별도 어휘가 필요 없다.
 3. **Display·Subtext의 사용처 검증** — Display 사용처가 0이면 Heading으로 흡수 가능한지, Subtext 하나가 Caption·Helper text·Overline·Badge label의 크기 폭을 5단계로 감당하는지 확인이 필요하다.
 4. ~~**선행 미결(Foundation)**~~ — 2026-09-09 종결. 다크 모드 캔버스는 `Color/Gray/1200`으로 확정했다(SEM-T10). 순흑 앵커 `1300`은 `On {Role}`의 기준색과 Overlay 전용이다.
 5. **Shadow 보류** — Target 선언을 주석 처리했다. Foundation `Effect/Shadow` Set과 함께 재개한다.
-6. **Warning의 On 기준색** — Yellow는 흰 글씨가 통과하는 스텝이 갈색에 가깝고, 코어 색은 순흑 글씨와 짝이 자연스럽다. `On Warning`을 순흑 기준으로 두고 `Fill/Warning/Default`를 밝은 쪽 앵커로 잡을지 등록표 작성 시 결정한다(SEM-T06·T09).
-7. **다크 모드의 솔리드 Fill 명도** — 다크 모드에서 유채 Fill을 밝히면 `On {Role}`의 기준색이 모드별로 갈린다. SEM-T06은 이를 허용하지만, 등록표에서 Role마다 일관되게 결정해야 한다.
+6. ~~**Warning의 On 기준색**~~ — 2026-09-11 종결. `On Warning`은 양 모드 모두 순흑(`Gray/1300`) 기준이고, `Fill/Warning/Default`는 코어 색 스텝 자체다(순흑 글씨가 통과하므로 SEM-T09의 "코어에 가장 가까운 통과 스텝" = 코어). Strong·Strongest는 어두운 방향으로 이동한다.
+7. ~~**다크 모드의 솔리드 Fill 명도**~~ — 2026-09-11 종결. 유채 솔리드 Fill은 양 모드에서 같은 스텝을 쓰고, `On {유채}`의 기준색은 모드와 무관하게 고정한다(SEM-T09 개정). Neutral만 모드별로 갈린다 — Light 솔리드는 짙은 회색 + 순백 전경, Dark 솔리드는 옅은 회색 + 순흑 전경이며, 이것이 SEM-T07로 Inverse에 그대로 거울된다.
+8. **On 전경의 Emphasis가 사실상 한 단계** — `Effect/Opacity`가 제곱 스케일이라 `0900`(81%) 다음이 `1000`(100%)인데, 81% 순백은 `Fill/Accent/Default`(Blue 0800) 위에서 4.5:1을 넘지 못한다. 그래서 `Text·Icon/On {R}`은 다섯 단계가 모두 불투명 순백·순흑으로 등록돼 있다(SEM-10). 솔리드 면 위의 보조 텍스트가 필요해지면 Opacity에 `0950`(90%) 예외 스텝을 여는 안(FND-06·07, 현재 Opacity는 예외 불가)과 AA-large(3:1)를 Subtle 이하에 허용하는 안 중 하나를 결정해야 한다.

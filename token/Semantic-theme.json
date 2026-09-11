@@ -1,5 +1,5 @@
 {
-  "$description": "Semantic theme collection — Figma variable collection 'Semantic theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Empty until the registry is written.",
+  "$description": "Semantic theme collection — Figma variable collection 'Semantic theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Inverse / On Inverse are the mode-mirror of Neutral / On Neutral (SEM-T07).",
   "$extensions": {
     "tgds": {
       "collection": "Semantic theme",
@@ -7,7 +7,2963 @@
       "modes": [
         "Light",
         "Dark"
-      ]
+      ],
+      "roles": {
+        "Accent": {
+          "hue": "Blue",
+          "core": "0600"
+        },
+        "Success": {
+          "hue": "Green",
+          "core": "0500"
+        },
+        "Warning": {
+          "hue": "Yellow",
+          "core": "0300"
+        },
+        "Danger": {
+          "hue": "Red",
+          "core": "0600"
+        },
+        "Info": {
+          "hue": "Sky",
+          "core": "0500"
+        },
+        "Neutral": {
+          "hue": "Gray"
+        },
+        "Inverse": {
+          "hue": "Gray",
+          "mirrorOf": "Neutral"
+        }
+      }
+    }
+  },
+  "Background": {
+    "Neutral": {
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1200}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0100}",
+          "Dark": "{Color.Gray.1100}"
+        }
+      }
+    },
+    "Inverse": {
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1200}",
+          "Dark": "{Color.Gray.0000}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1100}",
+          "Dark": "{Color.Gray.0100}"
+        }
+      }
+    }
+  },
+  "Fill": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0100}",
+          "Dark": "{Color.Gray.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0200}",
+          "Dark": "{Color.Gray.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0800}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0900}",
+          "Dark": "{Color.Gray.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1000}",
+          "Dark": "{Color.Gray.0100}"
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1100}",
+          "Dark": "{Color.Gray.0100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1000}",
+          "Dark": "{Color.Gray.0200}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.0800}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0200}",
+          "Dark": "{Color.Gray.0900}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0100}",
+          "Dark": "{Color.Gray.1000}"
+        }
+      }
+    },
+    "Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0100}",
+          "Dark": "{Color.Blue.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0200}",
+          "Dark": "{Color.Blue.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0800}",
+          "Dark": "{Color.Blue.0800}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0900}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1000}",
+          "Dark": "{Color.Blue.1000}"
+        }
+      }
+    },
+    "Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0100}",
+          "Dark": "{Color.Green.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0200}",
+          "Dark": "{Color.Green.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0800}",
+          "Dark": "{Color.Green.0800}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0900}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1000}",
+          "Dark": "{Color.Green.1000}"
+        }
+      }
+    },
+    "Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0100}",
+          "Dark": "{Color.Yellow.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0200}",
+          "Dark": "{Color.Yellow.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0300}",
+          "Dark": "{Color.Yellow.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0400}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0500}",
+          "Dark": "{Color.Yellow.0500}"
+        }
+      }
+    },
+    "Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0100}",
+          "Dark": "{Color.Red.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0200}",
+          "Dark": "{Color.Red.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0700}",
+          "Dark": "{Color.Red.0700}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0800}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0900}",
+          "Dark": "{Color.Red.0900}"
+        }
+      }
+    },
+    "Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0100}",
+          "Dark": "{Color.Sky.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0200}",
+          "Dark": "{Color.Sky.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0800}",
+          "Dark": "{Color.Sky.0800}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0900}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1000}",
+          "Dark": "{Color.Sky.1000}"
+        }
+      }
+    }
+  },
+  "Text": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0900}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0900}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1100}",
+          "Dark": "{Color.Gray.0200}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1200}",
+          "Dark": "{Color.Gray.0100}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.0900}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.0900}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0200}",
+          "Dark": "{Color.Gray.1100}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0100}",
+          "Dark": "{Color.Gray.1200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        }
+      }
+    },
+    "Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1000}",
+          "Dark": "{Color.Blue.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1100}",
+          "Dark": "{Color.Blue.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1100}",
+          "Dark": "{Color.Blue.0100}"
+        }
+      }
+    },
+    "Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1000}",
+          "Dark": "{Color.Green.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1100}",
+          "Dark": "{Color.Green.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1100}",
+          "Dark": "{Color.Green.0100}"
+        }
+      }
+    },
+    "Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1000}",
+          "Dark": "{Color.Sky.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1100}",
+          "Dark": "{Color.Sky.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1100}",
+          "Dark": "{Color.Sky.0100}"
+        }
+      }
+    },
+    "Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0900}",
+          "Dark": "{Color.Red.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.1000}",
+          "Dark": "{Color.Red.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.1000}",
+          "Dark": "{Color.Red.0100}"
+        }
+      }
+    },
+    "Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0900}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0900}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1000}",
+          "Dark": "{Color.Yellow.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1100}",
+          "Dark": "{Color.Yellow.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1100}",
+          "Dark": "{Color.Yellow.0100}"
+        }
+      }
+    },
+    "On Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Icon": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0900}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0900}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1100}",
+          "Dark": "{Color.Gray.0200}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1200}",
+          "Dark": "{Color.Gray.0100}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.0900}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.0900}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0200}",
+          "Dark": "{Color.Gray.1100}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0100}",
+          "Dark": "{Color.Gray.1200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        }
+      }
+    },
+    "Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1000}",
+          "Dark": "{Color.Blue.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1100}",
+          "Dark": "{Color.Blue.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.1100}",
+          "Dark": "{Color.Blue.0100}"
+        }
+      }
+    },
+    "Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1000}",
+          "Dark": "{Color.Green.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1100}",
+          "Dark": "{Color.Green.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.1100}",
+          "Dark": "{Color.Green.0100}"
+        }
+      }
+    },
+    "Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1000}",
+          "Dark": "{Color.Sky.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1100}",
+          "Dark": "{Color.Sky.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.1100}",
+          "Dark": "{Color.Sky.0100}"
+        }
+      }
+    },
+    "Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0900}",
+          "Dark": "{Color.Red.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.1000}",
+          "Dark": "{Color.Red.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.1000}",
+          "Dark": "{Color.Red.0100}"
+        }
+      }
+    },
+    "Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0900}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0900}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1000}",
+          "Dark": "{Color.Yellow.0300}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1100}",
+          "Dark": "{Color.Yellow.0200}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.1100}",
+          "Dark": "{Color.Yellow.0100}"
+        }
+      }
+    },
+    "On Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Border": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0200}",
+          "Dark": "{Color.Gray.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0700}",
+          "Dark": "{Color.Gray.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0800}",
+          "Dark": "{Color.Gray.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1000}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1100}",
+          "Dark": "{Color.Gray.0200}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1000}",
+          "Dark": "{Color.Gray.0300}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0500}",
+          "Dark": "{Color.Gray.0700}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0400}",
+          "Dark": "{Color.Gray.0800}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0300}",
+          "Dark": "{Color.Gray.1000}"
+        }
+      }
+    },
+    "Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0200}",
+          "Dark": "{Color.Blue.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0300}",
+          "Dark": "{Color.Blue.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0700}",
+          "Dark": "{Color.Blue.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0800}",
+          "Dark": "{Color.Blue.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Blue.0900}",
+          "Dark": "{Color.Blue.0300}"
+        }
+      }
+    },
+    "Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0200}",
+          "Dark": "{Color.Green.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0300}",
+          "Dark": "{Color.Green.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0700}",
+          "Dark": "{Color.Green.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0800}",
+          "Dark": "{Color.Green.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Green.0900}",
+          "Dark": "{Color.Green.0300}"
+        }
+      }
+    },
+    "Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0200}",
+          "Dark": "{Color.Yellow.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0300}",
+          "Dark": "{Color.Yellow.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0700}",
+          "Dark": "{Color.Yellow.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0800}",
+          "Dark": "{Color.Yellow.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Yellow.0900}",
+          "Dark": "{Color.Yellow.0300}"
+        }
+      }
+    },
+    "Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0200}",
+          "Dark": "{Color.Red.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0300}",
+          "Dark": "{Color.Red.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0700}",
+          "Dark": "{Color.Red.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0800}",
+          "Dark": "{Color.Red.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Red.0900}",
+          "Dark": "{Color.Red.0300}"
+        }
+      }
+    },
+    "Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0200}",
+          "Dark": "{Color.Sky.1100}"
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0300}",
+          "Dark": "{Color.Sky.1000}"
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0700}",
+          "Dark": "{Color.Sky.0500}"
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0800}",
+          "Dark": "{Color.Sky.0400}"
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Sky.0900}",
+          "Dark": "{Color.Sky.0300}"
+        }
+      }
+    },
+    "On Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Accent": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Success": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Warning": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Danger": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    },
+    "On Info": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0500}",
+              "Dark": "{Effect.Opacity.0500}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.0000}",
+          "Dark": "{Color.Gray.0000}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.1000}",
+              "Dark": "{Effect.Opacity.1000}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Overlay": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0600}",
+              "Dark": "{Effect.Opacity.0600}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0700}",
+              "Dark": "{Effect.Opacity.0700}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0800}",
+              "Dark": "{Effect.Opacity.0800}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0400}",
+              "Dark": "{Effect.Opacity.0400}"
+            }
+          }
+        }
+      },
+      "Subtle": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0600}",
+              "Dark": "{Effect.Opacity.0600}"
+            }
+          }
+        }
+      },
+      "Default": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0700}",
+              "Dark": "{Effect.Opacity.0700}"
+            }
+          }
+        }
+      },
+      "Strong": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0800}",
+              "Dark": "{Effect.Opacity.0800}"
+            }
+          }
+        }
+      },
+      "Strongest": {
+        "$type": "color",
+        "$value": {
+          "Light": "{Color.Gray.1300}",
+          "Dark": "{Color.Gray.1300}"
+        },
+        "$extensions": {
+          "tgds": {
+            "opacity": {
+              "Light": "{Effect.Opacity.0900}",
+              "Dark": "{Effect.Opacity.0900}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Opacity": {
+    "Neutral": {
+      "Subtlest": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.0500}",
+          "Dark": "{Effect.Opacity.0500}"
+        }
+      },
+      "Subtle": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.0700}",
+          "Dark": "{Effect.Opacity.0700}"
+        }
+      },
+      "Default": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      },
+      "Strong": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      },
+      "Strongest": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      }
+    },
+    "Inverse": {
+      "Subtlest": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.0500}",
+          "Dark": "{Effect.Opacity.0500}"
+        }
+      },
+      "Subtle": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.0700}",
+          "Dark": "{Effect.Opacity.0700}"
+        }
+      },
+      "Default": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      },
+      "Strong": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      },
+      "Strongest": {
+        "$type": "number",
+        "$value": {
+          "Light": "{Effect.Opacity.1000}",
+          "Dark": "{Effect.Opacity.1000}"
+        }
+      }
     }
   }
 }
