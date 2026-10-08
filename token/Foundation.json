@@ -1,480 +1,402 @@
 {
-  "$description": "AI Readable Design System — Foundation token registry. GENERATED/AUTHORITATIVE VALUE STORE. Rules live in Foundation.md; this file is the source of truth for values (TKN-03).",
+  "$description": "AI Readable Design System — Foundation token registry. AUTHORITATIVE VALUE STORE. Rules live in docs/A-token/foundation.md; values live here (TKN-03 · FND-12).",
   "$extensions": {
     "tgds": {
       "collection": "Foundation",
       "tier": "foundation",
-      "modes": []
+      "modes": [],
+      "source": {
+        "figmaBoard": "Uk9OXrTbBRW4Lfdh5jgiMP",
+        "figmaNode": "11:1109",
+        "note": "Foundation Token 네이밍 설계 워크숍"
+      }
     }
   },
   "Color": {
     "Blue": {
-      "$description": "Blue ramp. ordinal 13 steps, OKLCH-lightness even. Higher step = darker.",
-      "0100": {
-        "$value": "#f7faff",
+      "10": {
+        "$value": "#d7e6fa",
         "$type": "color"
       },
-      "0200": {
-        "$value": "#d3e6ff",
+      "20": {
+        "$value": "#b8d2f6",
         "$type": "color"
       },
-      "0300": {
-        "$value": "#aed1ff",
+      "30": {
+        "$value": "#96bef3",
         "$type": "color"
       },
-      "0400": {
-        "$value": "#88bbff",
+      "40": {
+        "$value": "#74a9f1",
         "$type": "color"
       },
-      "0500": {
-        "$value": "#60a5ff",
-        "$type": "color"
-      },
-      "0600": {
-        "$value": "#308dff",
-        "$type": "color"
-      },
-      "0700": {
+      "50": {
         "$value": "#0077ed",
         "$type": "color"
       },
-      "0800": {
-        "$value": "#0264c8",
+      "60": {
+        "$value": "#005bb8",
         "$type": "color"
       },
-      "0900": {
-        "$value": "#0653a4",
+      "70": {
+        "$value": "#024085",
         "$type": "color"
       },
-      "1000": {
-        "$value": "#094181",
+      "80": {
+        "$value": "#042854",
         "$type": "color"
       },
-      "1100": {
-        "$value": "#0a315f",
+      "90": {
+        "$value": "#031126",
         "$type": "color"
       },
-      "1200": {
-        "$value": "#0a213f",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#071222",
-        "$type": "color"
-      }
-    },
-    "Gray": {
-      "$description": "Gray ramp. ordinal 14 steps: 0000 = pure white anchor, 0100-1200 OKLCH-lightness even ramp, 1300 = pure black anchor (FND-16). Higher step = darker.",
-      "0000": {
-        "$value": "#ffffff",
-        "$type": "color"
-      },
-      "0100": {
-        "$value": "#f3f3f3",
-        "$type": "color"
-      },
-      "0200": {
-        "$value": "#dddddf",
-        "$type": "color"
-      },
-      "0300": {
-        "$value": "#c7c8cc",
-        "$type": "color"
-      },
-      "0400": {
-        "$value": "#b3b3b9",
-        "$type": "color"
-      },
-      "0500": {
-        "$value": "#9e9ea6",
-        "$type": "color"
-      },
-      "0600": {
-        "$value": "#8a8a93",
-        "$type": "color"
-      },
-      "0700": {
-        "$value": "#777780",
-        "$type": "color"
-      },
-      "0800": {
-        "$value": "#64646c",
-        "$type": "color"
-      },
-      "0900": {
-        "$value": "#525259",
-        "$type": "color"
-      },
-      "1000": {
-        "$value": "#404046",
-        "$type": "color"
-      },
-      "1100": {
-        "$value": "#303034",
-        "$type": "color"
-      },
-      "1200": {
-        "$value": "#202022",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#000000",
+      "$description": "Foundation Blue ramp. Options are visible lightness anchors: 05, 10…90.",
+      "05": {
+        "$value": "#f7faff",
         "$type": "color"
       }
     },
     "Red": {
-      "$description": "Red ramp. ordinal 13 steps, OKLCH-lightness even. Higher step = darker.",
-      "0100": {
-        "$value": "#fdf1f0",
+      "10": {
+        "$value": "#ffe0e0",
         "$type": "color"
       },
-      "0200": {
-        "$value": "#ffd3ce",
+      "20": {
+        "$value": "#ffc7c9",
         "$type": "color"
       },
-      "0300": {
-        "$value": "#ffb3ac",
+      "30": {
+        "$value": "#ffadb0",
         "$type": "color"
       },
-      "0400": {
-        "$value": "#ff9188",
+      "40": {
+        "$value": "#ff9197",
         "$type": "color"
       },
-      "0500": {
-        "$value": "#fe6a63",
+      "50": {
+        "$value": "#ff385c",
         "$type": "color"
       },
-      "0600": {
-        "$value": "#f04746",
+      "60": {
+        "$value": "#c52644",
         "$type": "color"
       },
-      "0700": {
-        "$value": "#d53436",
+      "70": {
+        "$value": "#8d192e",
         "$type": "color"
       },
-      "0800": {
-        "$value": "#b82429",
+      "80": {
+        "$value": "#570f1b",
         "$type": "color"
       },
-      "0900": {
-        "$value": "#9a191f",
+      "90": {
+        "$value": "#270609",
         "$type": "color"
       },
-      "1000": {
-        "$value": "#7a181a",
-        "$type": "color"
-      },
-      "1100": {
-        "$value": "#5a1515",
-        "$type": "color"
-      },
-      "1200": {
-        "$value": "#3d1110",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#210b0a",
+      "$description": "Foundation Red ramp. Options are visible lightness anchors: 05, 10…90.",
+      "05": {
+        "$value": "#fff8f8",
         "$type": "color"
       }
     },
     "Green": {
-      "$description": "Green ramp. ordinal 13 steps, OKLCH-lightness even. Higher step = darker.",
-      "0100": {
-        "$value": "#f1f8f2",
+      "10": {
+        "$value": "#e1f5e4",
         "$type": "color"
       },
-      "0200": {
-        "$value": "#c3edcb",
+      "20": {
+        "$value": "#c9efd0",
         "$type": "color"
       },
-      "0300": {
-        "$value": "#8ae39d",
+      "30": {
+        "$value": "#b0e9bb",
         "$type": "color"
       },
-      "0400": {
-        "$value": "#4fd575",
+      "40": {
+        "$value": "#93e3a5",
         "$type": "color"
       },
-      "0500": {
-        "$value": "#1fc15c",
+      "50": {
+        "$value": "#30d66e",
         "$type": "color"
       },
-      "0600": {
-        "$value": "#0eaa4d",
+      "60": {
+        "$value": "#19a250",
         "$type": "color"
       },
-      "0700": {
-        "$value": "#009440",
+      "70": {
+        "$value": "#0c7135",
         "$type": "color"
       },
-      "0800": {
-        "$value": "#007d36",
+      "80": {
+        "$value": "#06431e",
         "$type": "color"
       },
-      "0900": {
-        "$value": "#00682b",
+      "90": {
+        "$value": "#021a09",
         "$type": "color"
       },
-      "1000": {
-        "$value": "#025321",
-        "$type": "color"
-      },
-      "1100": {
-        "$value": "#063e19",
-        "$type": "color"
-      },
-      "1200": {
-        "$value": "#092b12",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#08180b",
+      "$description": "Foundation Green ramp. Options are visible lightness anchors: 05, 10…90.",
+      "05": {
+        "$value": "#f4fdf6",
         "$type": "color"
       }
     },
-    "Yellow": {
-      "$description": "Yellow ramp. ordinal 13 steps, OKLCH-lightness even. Higher step = darker.",
-      "0100": {
-        "$value": "#faf8f0",
+    "Purple": {
+      "10": {
+        "$value": "#f4e1fb",
         "$type": "color"
       },
-      "0200": {
-        "$value": "#ffe083",
+      "20": {
+        "$value": "#ebc9f7",
         "$type": "color"
       },
-      "0300": {
-        "$value": "#f5c813",
+      "30": {
+        "$value": "#e3aff5",
         "$type": "color"
       },
-      "0400": {
-        "$value": "#ddb409",
+      "40": {
+        "$value": "#db95f4",
         "$type": "color"
       },
-      "0500": {
-        "$value": "#c5a000",
+      "50": {
+        "$value": "#ca4af1",
         "$type": "color"
       },
-      "0600": {
-        "$value": "#ad8c00",
+      "60": {
+        "$value": "#9c35bb",
         "$type": "color"
       },
-      "0700": {
-        "$value": "#967a00",
+      "70": {
+        "$value": "#6f2485",
         "$type": "color"
       },
-      "0800": {
-        "$value": "#806700",
+      "80": {
+        "$value": "#441552",
         "$type": "color"
       },
-      "0900": {
-        "$value": "#6b5500",
+      "90": {
+        "$value": "#1d0824",
         "$type": "color"
       },
-      "1000": {
-        "$value": "#564400",
-        "$type": "color"
-      },
-      "1100": {
-        "$value": "#413301",
-        "$type": "color"
-      },
-      "1200": {
-        "$value": "#2d2404",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#1b1505",
+      "$description": "Foundation Purple ramp. Options are visible lightness anchors: 05, 10…90.",
+      "05": {
+        "$value": "#fdf8ff",
         "$type": "color"
       }
     },
-    "Sky": {
-      "$description": "Sky ramp. ordinal 13 steps, OKLCH-lightness even. Higher step = darker.",
-      "0100": {
-        "$value": "#f0f6fa",
+    "Gray": {
+      "10": {
+        "$value": "#e1e1e1",
         "$type": "color"
       },
-      "0200": {
-        "$value": "#c6e4f9",
+      "20": {
+        "$value": "#c8c8c8",
         "$type": "color"
       },
-      "0300": {
-        "$value": "#93d3fe",
+      "30": {
+        "$value": "#b0b0b0",
         "$type": "color"
       },
-      "0400": {
-        "$value": "#5ec1fb",
+      "40": {
+        "$value": "#989898",
         "$type": "color"
       },
-      "0500": {
-        "$value": "#2badef",
+      "50": {
+        "$value": "#666666",
         "$type": "color"
       },
-      "0600": {
-        "$value": "#0898d7",
+      "60": {
+        "$value": "#4f4f4f",
         "$type": "color"
       },
-      "0700": {
-        "$value": "#0083bb",
+      "70": {
+        "$value": "#383838",
         "$type": "color"
       },
-      "0800": {
-        "$value": "#006fa0",
+      "80": {
+        "$value": "#242424",
         "$type": "color"
       },
-      "0900": {
-        "$value": "#005b85",
+      "90": {
+        "$value": "#101010",
         "$type": "color"
       },
-      "1000": {
-        "$value": "#00486b",
+      "99": {
+        "$value": "#000000",
         "$type": "color"
       },
-      "1100": {
-        "$value": "#033750",
+      "$description": "Foundation gray ramp. Options are visible lightness anchors: 00, 05, 10…90, 99.",
+      "00": {
+        "$value": "#ffffff",
         "$type": "color"
       },
-      "1200": {
-        "$value": "#072536",
-        "$type": "color"
-      },
-      "1300": {
-        "$value": "#07151e",
+      "05": {
+        "$value": "#fafafa",
         "$type": "color"
       }
     }
   },
   "Typography": {
+    "Font Family": {
+      "$description": "nominal. Role-neutral family buckets; actual font names are values only.",
+      "Sans": {
+        "$value": [
+          "SUIT Variable"
+        ],
+        "$type": "fontFamily"
+      },
+      "Serif": {
+        "$value": [
+          "Noto Serif KR"
+        ],
+        "$type": "fontFamily"
+      }
+    },
     "Font Size": {
-      "$description": "ordinal 13 steps, exceptions allowed",
-      "0100": {
+      "10": {
         "$value": {
           "value": 10,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0200": {
-        "$value": {
-          "value": 12,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300": {
-        "$value": {
-          "value": 14,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400": {
-        "$value": {
-          "value": 16,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500": {
-        "$value": {
-          "value": 18,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600": {
-        "$value": {
-          "value": 20,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700": {
-        "$value": {
-          "value": 24,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800": {
-        "$value": {
-          "value": 28,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900": {
-        "$value": {
-          "value": 32,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000": {
-        "$value": {
-          "value": 40,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100": {
-        "$value": {
-          "value": 48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200": {
-        "$value": {
-          "value": 72,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050": {
-        "$value": {
-          "value": 9,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150": {
+      "11": {
         "$value": {
           "value": 11,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0650": {
+      "12": {
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "14": {
+        "$value": {
+          "value": 14,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "16": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "18": {
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "20": {
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "22": {
         "$value": {
           "value": 22,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0950": {
+      "24": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "28": {
+        "$value": {
+          "value": 28,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "32": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "36": {
         "$value": {
           "value": 36,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1150": {
+      "40": {
         "$value": {
-          "value": 60,
+          "value": 40,
           "unit": "px"
         },
         "$type": "dimension"
-      }
+      },
+      "44": {
+        "$value": {
+          "value": 44,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "48": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "56": {
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "64": {
+        "$value": {
+          "value": 64,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "72": {
+        "$value": {
+          "value": 72,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "80": {
+        "$value": {
+          "value": 80,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "96": {
+        "$value": {
+          "value": 96,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "$description": "value-based px scale. Option is the px value."
     },
     "Font Weight": {
-      "$description": "value-anchored, no exceptions",
       "300": {
         "$value": 300,
         "$type": "fontWeight"
@@ -495,1559 +417,1594 @@
         "$value": 700,
         "$type": "fontWeight"
       },
-      "800": {
-        "$value": 800,
-        "$type": "fontWeight"
-      }
-    },
-    "Font Family": {
-      "$description": "nominal, no exceptions",
-      "Sans": {
-        "$value": [
-          "Suit Variable"
-        ],
-        "$type": "fontFamily"
-      },
-      "Serif": {
-        "$value": [
-          "Noto Serif KR"
-        ],
-        "$type": "fontFamily"
-      }
+      "$description": "value-based CSS font-weight scale. Option is the numeric weight."
     },
     "Line Height": {
-      "$description": "composite {Font Size Step}-{Line Height Step}. generated.",
-      "0100-0100": {
+      "$description": "composite option. Typography/Line Height/{Font Size}-{Ratio}; value = Font Size × Ratio.",
+      "10-110": {
         "$value": {
-          "value": 10.0,
+          "value": 11,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × 110%"
       },
-      "0100-0200": {
+      "10-120": {
         "$value": {
-          "value": 12.0,
+          "value": 12,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × 120%"
       },
-      "0100-0300": {
+      "10-130": {
         "$value": {
-          "value": 14.0,
+          "value": 13,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × 130%"
       },
-      "0100-0400": {
+      "10-140": {
         "$value": {
-          "value": 15.0,
+          "value": 14,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × 140%"
       },
-      "0200-0100": {
+      "10-150": {
         "$value": {
-          "value": 12.0,
+          "value": 15,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × 150%"
       },
-      "0200-0200": {
+      "11-110": {
         "$value": {
-          "value": 14.4,
+          "value": 12.1,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × 110%"
       },
-      "0200-0300": {
-        "$value": {
-          "value": 16.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200-0400": {
-        "$value": {
-          "value": 18.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0100": {
-        "$value": {
-          "value": 14.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0200": {
-        "$value": {
-          "value": 16.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0300": {
-        "$value": {
-          "value": 19.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0400": {
-        "$value": {
-          "value": 21.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0100": {
-        "$value": {
-          "value": 16.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0200": {
-        "$value": {
-          "value": 19.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0300": {
-        "$value": {
-          "value": 22.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0400": {
-        "$value": {
-          "value": 24.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0100": {
-        "$value": {
-          "value": 18.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0200": {
-        "$value": {
-          "value": 21.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0300": {
-        "$value": {
-          "value": 25.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0400": {
-        "$value": {
-          "value": 27.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0100": {
-        "$value": {
-          "value": 20.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0200": {
-        "$value": {
-          "value": 24.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0300": {
-        "$value": {
-          "value": 28.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0400": {
-        "$value": {
-          "value": 30.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0100": {
-        "$value": {
-          "value": 24.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0200": {
-        "$value": {
-          "value": 28.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0300": {
-        "$value": {
-          "value": 33.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0400": {
-        "$value": {
-          "value": 36.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0100": {
-        "$value": {
-          "value": 28.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0200": {
-        "$value": {
-          "value": 33.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0300": {
-        "$value": {
-          "value": 39.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0400": {
-        "$value": {
-          "value": 42.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0100": {
-        "$value": {
-          "value": 32.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0200": {
-        "$value": {
-          "value": 38.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0300": {
-        "$value": {
-          "value": 44.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0400": {
-        "$value": {
-          "value": 48.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0100": {
-        "$value": {
-          "value": 40.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0200": {
-        "$value": {
-          "value": 48.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0300": {
-        "$value": {
-          "value": 56.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0400": {
-        "$value": {
-          "value": 60.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0100": {
-        "$value": {
-          "value": 48.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0200": {
-        "$value": {
-          "value": 57.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0300": {
-        "$value": {
-          "value": 67.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0400": {
-        "$value": {
-          "value": 72.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0100": {
-        "$value": {
-          "value": 72.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0200": {
-        "$value": {
-          "value": 86.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0300": {
-        "$value": {
-          "value": 100.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0400": {
-        "$value": {
-          "value": 108.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0100": {
-        "$value": {
-          "value": 96.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0200": {
-        "$value": {
-          "value": 115.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0300": {
-        "$value": {
-          "value": 134.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0400": {
-        "$value": {
-          "value": 144.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0100": {
-        "$value": {
-          "value": 9.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0200": {
-        "$value": {
-          "value": 10.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0300": {
-        "$value": {
-          "value": 12.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0400": {
-        "$value": {
-          "value": 13.5,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0100": {
-        "$value": {
-          "value": 11.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0200": {
+      "11-120": {
         "$value": {
           "value": 13.2,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × 120%"
       },
-      "0150-0300": {
+      "11-130": {
+        "$value": {
+          "value": 14.3,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "11px × 130%"
+      },
+      "11-140": {
         "$value": {
           "value": 15.4,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × 140%"
       },
-      "0150-0400": {
+      "11-150": {
         "$value": {
           "value": 16.5,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × 150%"
       },
-      "0650-0100": {
+      "12-110": {
         "$value": {
-          "value": 22.0,
+          "value": 13.2,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "12px × 110%"
       },
-      "0650-0200": {
+      "12-120": {
+        "$value": {
+          "value": 14.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "12px × 120%"
+      },
+      "12-130": {
+        "$value": {
+          "value": 15.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "12px × 130%"
+      },
+      "12-140": {
+        "$value": {
+          "value": 16.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "12px × 140%"
+      },
+      "12-150": {
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "12px × 150%"
+      },
+      "14-110": {
+        "$value": {
+          "value": 15.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × 110%"
+      },
+      "14-120": {
+        "$value": {
+          "value": 16.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × 120%"
+      },
+      "14-130": {
+        "$value": {
+          "value": 18.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × 130%"
+      },
+      "14-140": {
+        "$value": {
+          "value": 19.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × 140%"
+      },
+      "14-150": {
+        "$value": {
+          "value": 21,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × 150%"
+      },
+      "16-110": {
+        "$value": {
+          "value": 17.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × 110%"
+      },
+      "16-120": {
+        "$value": {
+          "value": 19.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × 120%"
+      },
+      "16-130": {
+        "$value": {
+          "value": 20.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × 130%"
+      },
+      "16-140": {
+        "$value": {
+          "value": 22.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × 140%"
+      },
+      "16-150": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × 150%"
+      },
+      "18-110": {
+        "$value": {
+          "value": 19.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × 110%"
+      },
+      "18-120": {
+        "$value": {
+          "value": 21.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × 120%"
+      },
+      "18-130": {
+        "$value": {
+          "value": 23.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × 130%"
+      },
+      "18-140": {
+        "$value": {
+          "value": 25.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × 140%"
+      },
+      "18-150": {
+        "$value": {
+          "value": 27,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × 150%"
+      },
+      "20-110": {
+        "$value": {
+          "value": 22,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "20px × 110%"
+      },
+      "20-120": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "20px × 120%"
+      },
+      "20-130": {
+        "$value": {
+          "value": 26,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "20px × 130%"
+      },
+      "20-140": {
+        "$value": {
+          "value": 28,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "20px × 140%"
+      },
+      "20-150": {
+        "$value": {
+          "value": 30,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "20px × 150%"
+      },
+      "22-110": {
+        "$value": {
+          "value": 24.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "22px × 110%"
+      },
+      "22-120": {
         "$value": {
           "value": 26.4,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "22px × 120%"
       },
-      "0650-0300": {
+      "22-130": {
+        "$value": {
+          "value": 28.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "22px × 130%"
+      },
+      "22-140": {
         "$value": {
           "value": 30.8,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "22px × 140%"
       },
-      "0650-0400": {
+      "22-150": {
         "$value": {
-          "value": 33.0,
+          "value": 33,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "22px × 150%"
       },
-      "0950-0100": {
+      "24-110": {
         "$value": {
-          "value": 36.0,
+          "value": 26.4,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "24px × 110%"
       },
-      "0950-0200": {
+      "24-120": {
+        "$value": {
+          "value": 28.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × 120%"
+      },
+      "24-130": {
+        "$value": {
+          "value": 31.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × 130%"
+      },
+      "24-140": {
+        "$value": {
+          "value": 33.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × 140%"
+      },
+      "24-150": {
+        "$value": {
+          "value": 36,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × 150%"
+      },
+      "28-110": {
+        "$value": {
+          "value": 30.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × 110%"
+      },
+      "28-120": {
+        "$value": {
+          "value": 33.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × 120%"
+      },
+      "28-130": {
+        "$value": {
+          "value": 36.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × 130%"
+      },
+      "28-140": {
+        "$value": {
+          "value": 39.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × 140%"
+      },
+      "28-150": {
+        "$value": {
+          "value": 42,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × 150%"
+      },
+      "32-110": {
+        "$value": {
+          "value": 35.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × 110%"
+      },
+      "32-120": {
+        "$value": {
+          "value": 38.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × 120%"
+      },
+      "32-130": {
+        "$value": {
+          "value": 41.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × 130%"
+      },
+      "32-140": {
+        "$value": {
+          "value": 44.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × 140%"
+      },
+      "32-150": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × 150%"
+      },
+      "36-110": {
+        "$value": {
+          "value": 39.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "36px × 110%"
+      },
+      "36-120": {
         "$value": {
           "value": 43.2,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "36px × 120%"
       },
-      "0950-0300": {
+      "36-130": {
+        "$value": {
+          "value": 46.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "36px × 130%"
+      },
+      "36-140": {
         "$value": {
           "value": 50.4,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "36px × 140%"
       },
-      "0950-0400": {
+      "36-150": {
         "$value": {
-          "value": 54.0,
+          "value": 54,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "36px × 150%"
       },
-      "1150-0100": {
+      "40-110": {
         "$value": {
-          "value": 60.0,
+          "value": 44,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "40px × 110%"
       },
-      "1150-0200": {
+      "40-120": {
         "$value": {
-          "value": 72.0,
+          "value": 48,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "40px × 120%"
       },
-      "1150-0300": {
+      "40-130": {
         "$value": {
-          "value": 84.0,
+          "value": 52,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "40px × 130%"
       },
-      "1150-0400": {
+      "40-140": {
         "$value": {
-          "value": 90.0,
+          "value": 56,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "40px × 140%"
+      },
+      "40-150": {
+        "$value": {
+          "value": 60,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "40px × 150%"
+      },
+      "44-110": {
+        "$value": {
+          "value": 48.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × 110%"
+      },
+      "44-120": {
+        "$value": {
+          "value": 52.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × 120%"
+      },
+      "44-130": {
+        "$value": {
+          "value": 57.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × 130%"
+      },
+      "44-140": {
+        "$value": {
+          "value": 61.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × 140%"
+      },
+      "44-150": {
+        "$value": {
+          "value": 66,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × 150%"
+      },
+      "48-110": {
+        "$value": {
+          "value": 52.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × 110%"
+      },
+      "48-120": {
+        "$value": {
+          "value": 57.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × 120%"
+      },
+      "48-130": {
+        "$value": {
+          "value": 62.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × 130%"
+      },
+      "48-140": {
+        "$value": {
+          "value": 67.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × 140%"
+      },
+      "48-150": {
+        "$value": {
+          "value": 72,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × 150%"
+      },
+      "56-110": {
+        "$value": {
+          "value": 61.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × 110%"
+      },
+      "56-120": {
+        "$value": {
+          "value": 67.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × 120%"
+      },
+      "56-130": {
+        "$value": {
+          "value": 72.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × 130%"
+      },
+      "56-140": {
+        "$value": {
+          "value": 78.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × 140%"
+      },
+      "56-150": {
+        "$value": {
+          "value": 84,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × 150%"
+      },
+      "64-110": {
+        "$value": {
+          "value": 70.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × 110%"
+      },
+      "64-120": {
+        "$value": {
+          "value": 76.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × 120%"
+      },
+      "64-130": {
+        "$value": {
+          "value": 83.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × 130%"
+      },
+      "64-140": {
+        "$value": {
+          "value": 89.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × 140%"
+      },
+      "64-150": {
+        "$value": {
+          "value": 96,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × 150%"
+      },
+      "72-110": {
+        "$value": {
+          "value": 79.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × 110%"
+      },
+      "72-120": {
+        "$value": {
+          "value": 86.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × 120%"
+      },
+      "72-130": {
+        "$value": {
+          "value": 93.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × 130%"
+      },
+      "72-140": {
+        "$value": {
+          "value": 100.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × 140%"
+      },
+      "72-150": {
+        "$value": {
+          "value": 108,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × 150%"
+      },
+      "80-110": {
+        "$value": {
+          "value": 88,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × 110%"
+      },
+      "80-120": {
+        "$value": {
+          "value": 96,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × 120%"
+      },
+      "80-130": {
+        "$value": {
+          "value": 104,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × 130%"
+      },
+      "80-140": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × 140%"
+      },
+      "80-150": {
+        "$value": {
+          "value": 120,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × 150%"
+      },
+      "96-110": {
+        "$value": {
+          "value": 105.6,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × 110%"
+      },
+      "96-120": {
+        "$value": {
+          "value": 115.2,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × 120%"
+      },
+      "96-130": {
+        "$value": {
+          "value": 124.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × 130%"
+      },
+      "96-140": {
+        "$value": {
+          "value": 134.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × 140%"
+      },
+      "96-150": {
+        "$value": {
+          "value": 144,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × 150%"
       }
     },
     "Letter Spacing": {
-      "$description": "composite {Font Size Step}-{Letter Spacing Step}. px, rounded to 2 decimals. generated.",
-      "0100-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0100-0200": {
+      "$description": "composite option. Typography/Letter Spacing/{Font Size}-i1 or i3; i means inverse/negative percent.",
+      "10-i1": {
         "$value": {
           "value": -0.1,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × -1%"
       },
-      "0100-0300": {
-        "$value": {
-          "value": -0.15,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0100-0400": {
-        "$value": {
-          "value": -0.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0100-0500": {
+      "10-i3": {
         "$value": {
           "value": -0.3,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "10px × -3%"
       },
-      "0200-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200-0200": {
-        "$value": {
-          "value": -0.12,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200-0300": {
-        "$value": {
-          "value": -0.18,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200-0400": {
-        "$value": {
-          "value": -0.24,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200-0500": {
-        "$value": {
-          "value": -0.36,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0200": {
-        "$value": {
-          "value": -0.14,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0300": {
-        "$value": {
-          "value": -0.21,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0400": {
-        "$value": {
-          "value": -0.28,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300-0500": {
-        "$value": {
-          "value": -0.42,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0200": {
-        "$value": {
-          "value": -0.16,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0300": {
-        "$value": {
-          "value": -0.24,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0400": {
-        "$value": {
-          "value": -0.32,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400-0500": {
-        "$value": {
-          "value": -0.48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0200": {
-        "$value": {
-          "value": -0.18,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0300": {
-        "$value": {
-          "value": -0.27,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0400": {
-        "$value": {
-          "value": -0.36,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500-0500": {
-        "$value": {
-          "value": -0.54,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0200": {
-        "$value": {
-          "value": -0.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0300": {
-        "$value": {
-          "value": -0.3,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0400": {
-        "$value": {
-          "value": -0.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600-0500": {
-        "$value": {
-          "value": -0.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0200": {
-        "$value": {
-          "value": -0.24,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0300": {
-        "$value": {
-          "value": -0.36,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0400": {
-        "$value": {
-          "value": -0.48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700-0500": {
-        "$value": {
-          "value": -0.72,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0200": {
-        "$value": {
-          "value": -0.28,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0300": {
-        "$value": {
-          "value": -0.42,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0400": {
-        "$value": {
-          "value": -0.56,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800-0500": {
-        "$value": {
-          "value": -0.84,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0200": {
-        "$value": {
-          "value": -0.32,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0300": {
-        "$value": {
-          "value": -0.48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0400": {
-        "$value": {
-          "value": -0.64,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900-0500": {
-        "$value": {
-          "value": -0.96,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0200": {
-        "$value": {
-          "value": -0.4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0300": {
-        "$value": {
-          "value": -0.6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0400": {
-        "$value": {
-          "value": -0.8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000-0500": {
-        "$value": {
-          "value": -1.2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0200": {
-        "$value": {
-          "value": -0.48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0300": {
-        "$value": {
-          "value": -0.72,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0400": {
-        "$value": {
-          "value": -0.96,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100-0500": {
-        "$value": {
-          "value": -1.44,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0200": {
-        "$value": {
-          "value": -0.72,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0300": {
-        "$value": {
-          "value": -1.08,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0400": {
-        "$value": {
-          "value": -1.44,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200-0500": {
-        "$value": {
-          "value": -2.16,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0200": {
-        "$value": {
-          "value": -0.96,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0300": {
-        "$value": {
-          "value": -1.44,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0400": {
-        "$value": {
-          "value": -1.92,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300-0500": {
-        "$value": {
-          "value": -2.88,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0200": {
-        "$value": {
-          "value": -0.09,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0300": {
-        "$value": {
-          "value": -0.14,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0400": {
-        "$value": {
-          "value": -0.18,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050-0500": {
-        "$value": {
-          "value": -0.27,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0200": {
+      "11-i1": {
         "$value": {
           "value": -0.11,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × -1%"
       },
-      "0150-0300": {
-        "$value": {
-          "value": -0.17,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0400": {
-        "$value": {
-          "value": -0.22,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0150-0500": {
+      "11-i3": {
         "$value": {
           "value": -0.33,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "11px × -3%"
       },
-      "0650-0100": {
+      "12-i1": {
         "$value": {
-          "value": 0.0,
+          "value": -0.12,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "12px × -1%"
       },
-      "0650-0200": {
-        "$value": {
-          "value": -0.22,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0650-0300": {
-        "$value": {
-          "value": -0.33,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0650-0400": {
-        "$value": {
-          "value": -0.44,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0650-0500": {
-        "$value": {
-          "value": -0.66,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0950-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0950-0200": {
+      "12-i3": {
         "$value": {
           "value": -0.36,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "12px × -3%"
       },
-      "0950-0300": {
+      "14-i1": {
+        "$value": {
+          "value": -0.14,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × -1%"
+      },
+      "14-i3": {
+        "$value": {
+          "value": -0.42,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "14px × -3%"
+      },
+      "16-i1": {
+        "$value": {
+          "value": -0.16,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × -1%"
+      },
+      "16-i3": {
+        "$value": {
+          "value": -0.48,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "16px × -3%"
+      },
+      "18-i1": {
+        "$value": {
+          "value": -0.18,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "18px × -1%"
+      },
+      "18-i3": {
         "$value": {
           "value": -0.54,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "18px × -3%"
       },
-      "0950-0400": {
+      "20-i1": {
         "$value": {
-          "value": -0.72,
+          "value": -0.2,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "20px × -1%"
       },
-      "0950-0500": {
-        "$value": {
-          "value": -1.08,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1150-0100": {
-        "$value": {
-          "value": 0.0,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1150-0200": {
+      "20-i3": {
         "$value": {
           "value": -0.6,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "20px × -3%"
       },
-      "1150-0300": {
+      "22-i1": {
         "$value": {
-          "value": -0.9,
+          "value": -0.22,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "22px × -1%"
       },
-      "1150-0400": {
+      "22-i3": {
+        "$value": {
+          "value": -0.66,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "22px × -3%"
+      },
+      "24-i1": {
+        "$value": {
+          "value": -0.24,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × -1%"
+      },
+      "24-i3": {
+        "$value": {
+          "value": -0.72,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "24px × -3%"
+      },
+      "28-i1": {
+        "$value": {
+          "value": -0.28,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × -1%"
+      },
+      "28-i3": {
+        "$value": {
+          "value": -0.84,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "28px × -3%"
+      },
+      "32-i1": {
+        "$value": {
+          "value": -0.32,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × -1%"
+      },
+      "32-i3": {
+        "$value": {
+          "value": -0.96,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "32px × -3%"
+      },
+      "36-i1": {
+        "$value": {
+          "value": -0.36,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "36px × -1%"
+      },
+      "36-i3": {
+        "$value": {
+          "value": -1.08,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "36px × -3%"
+      },
+      "40-i1": {
+        "$value": {
+          "value": -0.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "40px × -1%"
+      },
+      "40-i3": {
         "$value": {
           "value": -1.2,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "40px × -3%"
       },
-      "1150-0500": {
+      "44-i1": {
         "$value": {
-          "value": -1.8,
+          "value": -0.44,
           "unit": "px"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "$description": "44px × -1%"
+      },
+      "44-i3": {
+        "$value": {
+          "value": -1.32,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "44px × -3%"
+      },
+      "48-i1": {
+        "$value": {
+          "value": -0.48,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × -1%"
+      },
+      "48-i3": {
+        "$value": {
+          "value": -1.44,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "48px × -3%"
+      },
+      "56-i1": {
+        "$value": {
+          "value": -0.56,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × -1%"
+      },
+      "56-i3": {
+        "$value": {
+          "value": -1.68,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "56px × -3%"
+      },
+      "64-i1": {
+        "$value": {
+          "value": -0.64,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × -1%"
+      },
+      "64-i3": {
+        "$value": {
+          "value": -1.92,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "64px × -3%"
+      },
+      "72-i1": {
+        "$value": {
+          "value": -0.72,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × -1%"
+      },
+      "72-i3": {
+        "$value": {
+          "value": -2.16,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "72px × -3%"
+      },
+      "80-i1": {
+        "$value": {
+          "value": -0.8,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × -1%"
+      },
+      "80-i3": {
+        "$value": {
+          "value": -2.4,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "80px × -3%"
+      },
+      "96-i1": {
+        "$value": {
+          "value": -0.96,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × -1%"
+      },
+      "96-i3": {
+        "$value": {
+          "value": -2.88,
+          "unit": "px"
+        },
+        "$type": "dimension",
+        "$description": "96px × -3%"
       }
     }
   },
   "Layout": {
     "Space": {
-      "$description": "ordinal 13 steps, exceptions allowed",
-      "0100": {
-        "$value": {
-          "value": 2,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0200": {
-        "$value": {
-          "value": 4,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0300": {
-        "$value": {
-          "value": 6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400": {
-        "$value": {
-          "value": 8,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500": {
-        "$value": {
-          "value": 12,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0600": {
-        "$value": {
-          "value": 16,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700": {
-        "$value": {
-          "value": 20,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0800": {
-        "$value": {
-          "value": 24,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0900": {
-        "$value": {
-          "value": 32,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1000": {
-        "$value": {
-          "value": 40,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1100": {
-        "$value": {
-          "value": 48,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1200": {
-        "$value": {
-          "value": 72,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "1300": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0050": {
+      "1": {
         "$value": {
           "value": 1,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1350": {
+      "2": {
         "$value": {
-          "value": 120,
+          "value": 2,
           "unit": "px"
         },
         "$type": "dimension"
-      }
-    },
-    "Size": {
-      "$description": "ordinal 13 steps, exceptions allowed",
-      "0100": {
+      },
+      "4": {
         "$value": {
           "value": 4,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0200": {
+      "6": {
+        "$value": {
+          "value": 6,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "8": {
         "$value": {
           "value": 8,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0300": {
+      "12": {
         "$value": {
           "value": 12,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0400": {
+      "16": {
         "$value": {
           "value": 16,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0500": {
+      "20": {
         "$value": {
           "value": 20,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0600": {
+      "24": {
         "$value": {
           "value": 24,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0700": {
+      "32": {
         "$value": {
           "value": 32,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0800": {
+      "40": {
         "$value": {
           "value": 40,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0900": {
+      "48": {
         "$value": {
           "value": 48,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1000": {
+      "56": {
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "64": {
         "$value": {
           "value": 64,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1100": {
+      "72": {
+        "$value": {
+          "value": 72,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "80": {
         "$value": {
           "value": 80,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1200": {
+      "96": {
         "$value": {
           "value": 96,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1300": {
+      "112": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "128": {
         "$value": {
           "value": 128,
           "unit": "px"
         },
         "$type": "dimension"
-      }
-    }
-  },
-  "Shape": {
-    "Radius": {
-      "$description": "ordinal 13 steps, no exceptions. no 0 step (FND-11)",
-      "0100": {
+      },
+      "$description": "value-based px scale for empty space outside or between objects."
+    },
+    "Size": {
+      "1": {
         "$value": {
           "value": 1,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0200": {
+      "2": {
         "$value": {
           "value": 2,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0300": {
+      "4": {
         "$value": {
           "value": 4,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0400": {
-        "$value": {
-          "value": 6,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0500": {
+      "8": {
         "$value": {
           "value": 8,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0600": {
-        "$value": {
-          "value": 10,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0700": {
+      "12": {
         "$value": {
           "value": 12,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0800": {
+      "16": {
         "$value": {
           "value": 16,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0900": {
+      "20": {
         "$value": {
           "value": 20,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1000": {
+      "24": {
         "$value": {
           "value": 24,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1100": {
+      "32": {
         "$value": {
           "value": 32,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1200": {
+      "40": {
         "$value": {
           "value": 40,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "1300": {
+      "48": {
         "$value": {
-          "value": 9999,
+          "value": 48,
           "unit": "px"
         },
         "$type": "dimension"
-      }
-    },
-    "Stroke": {
-      "$description": "ordinal 6 steps, no exceptions. no 0 step (FND-11)",
-      "0100": {
+      },
+      "56": {
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "64": {
+        "$value": {
+          "value": 64,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "80": {
+        "$value": {
+          "value": 80,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "96": {
+        "$value": {
+          "value": 96,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "112": {
+        "$value": {
+          "value": 112,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "128": {
+        "$value": {
+          "value": 128,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "$description": "value-based px scale for object dimensions."
+    }
+  },
+  "Shape": {
+    "Radius": {
+      "1": {
         "$value": {
           "value": 1,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0200": {
+      "2": {
         "$value": {
           "value": 2,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0300": {
-        "$value": {
-          "value": 3,
-          "unit": "px"
-        },
-        "$type": "dimension"
-      },
-      "0400": {
+      "4": {
         "$value": {
           "value": 4,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0500": {
+      "6": {
         "$value": {
           "value": 6,
           "unit": "px"
         },
         "$type": "dimension"
       },
-      "0600": {
+      "8": {
         "$value": {
           "value": 8,
           "unit": "px"
         },
         "$type": "dimension"
-      }
+      },
+      "10": {
+        "$value": {
+          "value": 10,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "12": {
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "16": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "20": {
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "24": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "32": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "40": {
+        "$value": {
+          "value": 40,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "9999": {
+        "$value": {
+          "value": 9999,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "$description": "value-based px scale. 0 is omitted; token absence means no radius."
+    },
+    "Stroke": {
+      "1": {
+        "$value": {
+          "value": 1,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "2": {
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "3": {
+        "$value": {
+          "value": 3,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "4": {
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "6": {
+        "$value": {
+          "value": 6,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "8": {
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        },
+        "$type": "dimension"
+      },
+      "$description": "value-based px scale. 0 is omitted; token absence means no stroke."
     }
   },
   "Effect": {
     "Opacity": {
-      "$description": "ordinal 11 steps 0000-1000, value=(step/100)^2 %, no exceptions",
-      "0000": {
-        "$value": 0.0,
-        "$type": "number"
+      "0": {
+        "$value": 0,
+        "$type": "number",
+        "$description": "0%"
       },
-      "0100": {
-        "$value": 0.01,
-        "$type": "number"
+      "10": {
+        "$value": 10,
+        "$type": "number",
+        "$description": "10%"
       },
-      "0200": {
-        "$value": 0.04,
-        "$type": "number"
+      "20": {
+        "$value": 20,
+        "$type": "number",
+        "$description": "20%"
       },
-      "0300": {
-        "$value": 0.09,
-        "$type": "number"
+      "30": {
+        "$value": 30,
+        "$type": "number",
+        "$description": "30%"
       },
-      "0400": {
-        "$value": 0.16,
-        "$type": "number"
+      "40": {
+        "$value": 40,
+        "$type": "number",
+        "$description": "40%"
       },
-      "0500": {
-        "$value": 0.25,
-        "$type": "number"
+      "50": {
+        "$value": 50,
+        "$type": "number",
+        "$description": "50%"
       },
-      "0600": {
-        "$value": 0.36,
-        "$type": "number"
+      "60": {
+        "$value": 60,
+        "$type": "number",
+        "$description": "60%"
       },
-      "0700": {
-        "$value": 0.49,
-        "$type": "number"
+      "70": {
+        "$value": 70,
+        "$type": "number",
+        "$description": "70%"
       },
-      "0800": {
-        "$value": 0.64,
-        "$type": "number"
+      "80": {
+        "$value": 80,
+        "$type": "number",
+        "$description": "80%"
       },
-      "0900": {
-        "$value": 0.81,
-        "$type": "number"
+      "90": {
+        "$value": 90,
+        "$type": "number",
+        "$description": "90%"
       },
-      "1000": {
-        "$value": 1.0,
-        "$type": "number"
-      }
+      "100": {
+        "$value": 100,
+        "$type": "number",
+        "$description": "100%"
+      },
+      "$description": "percent-based scale. Option and value are percent values; 0 = transparent, 100 = opaque."
     }
   }
 }

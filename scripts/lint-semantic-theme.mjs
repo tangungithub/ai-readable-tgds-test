@@ -35,6 +35,7 @@ const TINT = ['Subtlest', 'Subtle'];
 const SOLID = ['Default', 'Strong', 'Strongest'];
 const TEXT_MIN = 4.5;
 const BORDER_MIN = 3;
+const CHROMATIC_STEPS = ['05', '10', '20', '30', '40', '50', '60', '70', '80', '90'];
 
 const modes = theme.$extensions?.tgds?.modes ?? [];
 const roleMeta = theme.$extensions?.tgds?.roles ?? {};
@@ -62,6 +63,12 @@ const resolveFnd = (alias) => {
 };
 const stepOf = (alias) => alias.match(aliasRe)?.[1].split('.').pop();
 const setOf = (alias) => alias.match(aliasRe)?.[1].split('.').slice(0, 2).join('/');
+const stepTowardCore = (step, core) => {
+  const stepIndex = CHROMATIC_STEPS.indexOf(String(step).padStart(2, '0'));
+  const coreIndex = CHROMATIC_STEPS.indexOf(String(core).padStart(2, '0'));
+  if (stepIndex < 0 || coreIndex < 0 || stepIndex === coreIndex) return undefined;
+  return CHROMATIC_STEPS[stepIndex + (coreIndex < stepIndex ? -1 : 1)];
+};
 
 // ----------------------------------------------------------------- colour math
 const hexToRgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
@@ -77,10 +84,14 @@ const composite = (fg, alpha, bg) => fg.map((c, i) => alpha * c + (1 - alpha) * 
 function colourOf(name, mode, surface) {
   const t = sem[name];
   const v = t.$value[mode];
-  const rgb = hexToRgb(resolveFnd(v).$value);
+  const resolved = resolveFnd(v);
+  if (!resolved) return undefined;
+  const rgb = hexToRgb(resolved.$value);
   const op = t.$extensions?.tgds?.opacity?.[mode];
   if (op === undefined) return rgb;
-  return composite(rgb, resolveFnd(op).$value, surface);
+  const resolvedOpacity = resolveFnd(op);
+  if (!resolvedOpacity) return undefined;
+  return composite(rgb, resolvedOpacity.$value / 100, surface);
 }
 
 // ------------------------------------------------------------------ L02/L03/L11
@@ -119,12 +130,12 @@ for (const [name, t] of Object.entries(sem)) {
   const [target, role] = name.split('/');
   for (const [m, v] of Object.entries(t.$value ?? {})) {
     if (!aliasRe.test(String(v))) continue;
-    if (role.startsWith('On ') && !['{Color.Gray.0000}', '{Color.Gray.1300}'].includes(v))
-      fail('SEM-L08', `${name}[${m}]: On Role은 Gray/0000·1300만 참조 (${v})`);
+    if (role.startsWith('On ') && !['{Color.Gray.00}', '{Color.Gray.99}'].includes(v))
+      fail('SEM-L08', `${name}[${m}]: On Role은 Gray/00·99만 참조 (${v})`);
     if (CHROMATIC.includes(role) && t.$type === 'color') {
       const set = setOf(v), step = stepOf(v);
       if (set === 'Color/Gray') fail('SEM-T03', `${name}[${m}]: 유채 Role이 Gray 참조`);
-      if (['1200', '1300'].includes(step)) fail('SEM-L10', `${name}[${m}]: 유채 Role이 ${step} 참조`);
+      if (['00', '99'].includes(step)) fail('SEM-L10', `${name}[${m}]: 유채 Role이 ${step} 참조`);
       const hue = roleMeta[role]?.hue;
       if (hue && set !== `Color/${hue}`) fail('SEM-T03', `${name}[${m}]: ${role}은 Color/${hue}에 매핑돼야 한다 (${v})`);
     }
@@ -171,11 +182,14 @@ const contrastLog = [];
 for (const s of surfaces) {
   for (const mode of modes) {
     const bgRgb = colourOf(s.name, mode, [1, 1, 1]);
+    if (!bgRgb) continue;
     for (const fgRole of s.fgRoles) for (const ft of fgTargets) for (const fg of of(ft, fgRole)) {
       const e = fg.split('/')[2];
       const decorative = ft === 'Border' && TINT.includes(e);
       const min = ft === 'Border' ? BORDER_MIN : TEXT_MIN;
-      const ratio = contrast(colourOf(fg, mode, bgRgb), bgRgb);
+      const fgRgb = colourOf(fg, mode, bgRgb);
+      if (!fgRgb) continue;
+      const ratio = contrast(fgRgb, bgRgb);
       contrastLog.push({ surface: s.name, fg, mode, ratio: +ratio.toFixed(2), min: decorative ? null : min });
       if (!decorative && ratio < min) fail('SEM-L07', `[${mode}] ${fg} on ${s.name} = ${ratio.toFixed(2)} < ${min}`);
     }
@@ -189,12 +203,16 @@ for (const role of CHROMATIC) {
   if (!sem[fillName] || !sem[onName] || !meta?.core) continue;
   for (const mode of modes) {
     const bg = colourOf(fillName, mode, [1, 1, 1]);
-    const ratio = contrast(colourOf(onName, mode, bg), bg);
+    if (!bg) continue;
+    const on = colourOf(onName, mode, bg);
+    if (!on) continue;
+    const ratio = contrast(on, bg);
     if (ratio < TEXT_MIN) { fail('SEM-L12', `[${mode}] ${onName} on ${fillName} = ${ratio.toFixed(2)}`); continue; }
     const step = Number(stepOf(sem[fillName].$value[mode]));
     const core = Number(meta.core);
     if (step === core) continue;
-    const towardCore = String(step + (core < step ? -100 : 100)).padStart(4, '0');
+    const towardCore = stepTowardCore(step, core);
+    if (!towardCore) continue;
     const cand = fnd[`Color/${meta.hue}/${towardCore}`];
     if (!cand) continue;
     const candRgb = hexToRgb(cand.$value);

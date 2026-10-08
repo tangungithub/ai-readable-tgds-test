@@ -5,7 +5,7 @@
 디자인 시스템 **원칙의 구현 체크리스트**입니다.
 **6개 영역 · 24개 단위 × 6개 구현 축 = 132칸.** 빈칸이 그대로 할 일 목록입니다.
 
-- **최종 업데이트**: 2026-09-10
+- **최종 업데이트**: 2026-10-08
 - **전체 진행률**: **26.0 / 132 ≈ 20%** (2026-08-26: 11.5 / 132 ≈ 9%)
 
 | | |
@@ -91,7 +91,7 @@
 | 3 | **DS 프로젝트 경계 미정의** | [D3](docs/D-naming/) | `DENY-03` — "외부에서 제작"을 판정하려면 외부가 어디인지 정의돼야 함 |
 | 4 | **Figma 컴포넌트 이름 ↔ 토큰 인덱스 일치 규칙 부재** — 토큰 측 기준 집합은 생겼다(`CMP-A5` 인덱스, `CMP-L06`). Figma 측 이름이 이를 따르는지 판정할 규칙이 없다 | [D2](docs/D-naming/) | `DENY-01`의 Figma 측 판정, B1 분류 체계 |
 | 5 | **Breakpoint px 경계값 미정의** — 모드 이름(Mobile / Tablet / Desktop)은 확정됐고 값은 토큰 범위 밖(`TKN-07`) | [C2](docs/C-layout/) | A3 코드 동기화(미디어쿼리 vs 컨테이너 쿼리), C1 Grid |
-| 6 | **린트 실행화 · Figma 변수 동기화** — 35개 린트가 표로만 있고, Figma에는 구값이 남아 있다 | [E2](docs/E-design-code/E2-token-sync.md) · [F2](docs/F-governance/) | A 영역 코드 동기화 축 6칸의 ✅, 게이트웨이 전부 |
+| 6 | **린트 실행화 · Foundation 변경의 하위 계층 반영** — 35개 린트가 표로만 있고, `Semantic-theme.json`은 구 Foundation 키(`Yellow`·`Sky`·4자리 Opacity 등)를 참조한다 | [A1](docs/A-token/foundation.md) · [A2](docs/A-token/A2-semantic-theme.md) · [E2](docs/E-design-code/E2-token-sync.md) | A 영역 코드 동기화 축 6칸의 ✅, 게이트웨이 전부 |
 
 > 이전 목록의 **계층 간 어휘 불일치**(→ `Accent` 단일화, `Text/Neutral/Subtle`), **State 닫힌 목록**(→ `CMP-N1` 6종), **Duration·Easing·Shadow 데드락**(→ Motion 범위 밖 `TKN-07`, Shadow 보류)은 v0.5로 해소됐습니다.
 > 게이트웨이 Deny 3종 중 `DENY-01`·`DENY-02`는 토큰 측 판정 규칙(`CMP-L06`·`CMP-L02`)이 생겼습니다. 남은 전제는 판정 **대상**(1·4)과 경계(3)입니다.
@@ -144,4 +144,5 @@ src/tokens/           생성물 — 손으로 고치지 않는다
 ### 생성 파이프라인
 
 `scripts/generate-tokens.mjs`는 `token/Foundation.json`을 입력으로 `src/tokens/*`를 생성합니다.
+Foundation 이름은 `Category/Set/Option` 3세그먼트 구조이며, `Line Height`·`Letter Spacing`처럼 기준 값에 종속되는 Set만 Option 내부에서 `24-150`, `24-i1` 같은 composite 표기를 씁니다.
 구 스펙(`token-system.md`)은 생성기 재연결과 함께 삭제되었습니다.

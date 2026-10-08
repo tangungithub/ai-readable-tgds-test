@@ -33,13 +33,13 @@ W3C DTCG(Design Tokens Format Module) — `$value` / `$type` / `$description`, �
 
 `modes`가 빈 배열이면 단일 모드 컬렉션이다(Figma에서는 이름 무관한 모드 1개).
 
-`Semantic-theme.json`은 추가로 `roles`에 **Role → hue 매핑과 코어 색 스텝**을 선언한다. 유채 Role은 `{ "hue": "Blue", "core": "0600" }`, Neutral은 `{ "hue": "Gray" }`, Inverse는 `{ "hue": "Gray", "mirrorOf": "Neutral" }`이다. 린트가 SEM-T03(Role별 hue 고정)·SEM-L12(솔리드 앵커)를 여기서 읽는다. `Inverse`·`On Inverse` 토큰은 등록부에 명시적으로 적혀 있지만 값은 SEM-T07의 거울 규칙으로 결정되며, 린트 SEM-L09가 대조한다.
+`Semantic-theme.json`은 추가로 `roles`에 **Role → hue 매핑과 코어 색 스텝**을 선언한다. 유채 Role은 `{ "hue": "Blue", "core": "50" }`, Neutral은 `{ "hue": "Gray" }`, Inverse는 `{ "hue": "Gray", "mirrorOf": "Neutral" }`처럼 적는다. 린트가 SEM-T03(Role별 hue 고정)·SEM-L12(솔리드 앵커)를 여기서 읽는다. `Inverse`·`On Inverse` 토큰은 등록부에 명시적으로 적혀 있지만 값은 SEM-T07의 거울 규칙으로 결정되며, 린트 SEM-L09가 대조한다.
 
 검증: `npm run lint:semantic` — `scripts/lint-semantic-theme.mjs`가 `SEM-L01~L03·L07~L12`와 TKN-11을 실행한다. `--report`를 붙이면 검사한 대비 쌍 전부를 출력한다. `npm run build`에 체이닝돼 있어 위반이 있으면 빌드가 멈춘다.
 
 ### 경로와 참조
 
-- 경로 구조는 네이밍 문법과 1:1로 대응한다: `Color` → `Blue` → `0700` = `Color/Blue/0700`. 세그먼트에 띄어쓰기가 있으면 그대로 키로 쓴다(`"Font Size"`, `"On Accent"`).
+- 경로 구조는 네이밍 문법과 1:1로 대응한다: `Color` → `Blue` → `50` = `Color/Blue/50`. 세그먼트에 띄어쓰기가 있으면 그대로 키로 쓴다(`"Font Size"`, `"On Accent"`). Foundation의 composite Set은 `Typography` → `Line Height` → `24-150`처럼 Option 내부에 하이픈을 둔다.
 - 참조는 DTCG alias `{Root.Group.Leaf}`이며 **파일을 지정하지 않는다.** 다섯 파일은 하나의 이름공간으로 병합되고, 그래서 루트 그룹 이름은 다섯 파일을 통틀어 유일해야 한다(TKN-10). 참조 방향은 TKN-01(1단계 하향)을 따른다.
 - 길이 값은 `{ "value": n, "unit": "px" }` 객체다.
 
@@ -50,7 +50,7 @@ W3C DTCG(Design Tokens Format Module) — `$value` / `$type` / `$description`, �
 ```json
 "Background": { "Neutral": { "Default": {
   "$type": "color",
-  "$value": { "Light": "{Color.Gray.0000}", "Dark": "{Color.Gray.1200}" }
+  "$value": { "Light": "{Color.Gray.00}", "Dark": "{Color.Gray.90}" }
 } } }
 ```
 
@@ -61,8 +61,8 @@ Semantic 색 토큰은 **색 참조 1개 + 선택적 불투명도 참조 1개**�
 ```json
 "Text": { "On Accent": { "Subtle": {
   "$type": "color",
-  "$value":      { "Light": "{Color.Gray.0000}",     "Dark": "{Color.Gray.0000}" },
-  "$extensions": { "tgds": { "opacity": { "Light": "{Effect.Opacity.0800}", "Dark": "{Effect.Opacity.0800}" } } }
+  "$value":      { "Light": "{Color.Gray.00}",     "Dark": "{Color.Gray.00}" },
+  "$extensions": { "tgds": { "opacity": { "Light": "{Effect.Opacity.80}", "Dark": "{Effect.Opacity.80}" } } }
 } } }
 ```
 
@@ -88,8 +88,8 @@ Semantic 색 토큰은 **색 참조 1개 + 선택적 불투명도 참조 1개**�
 
 ### Foundation 전용
 
-- `Typography/Line Height`와 `Typography/Letter Spacing`은 **생성물**이다. 손으로 고치지 않고 생성 규칙([foundation.md](../docs/A-token/foundation.md) §1.4.1)으로 재생성한다.
-- Foundation에는 알파(반투명) 값이 없다. `Color/Gray/0000`(순백)·`Color/Gray/1300`(순흑)은 램프 밖의 고정 앵커다(FND-16).
+- `Typography/Line Height`와 `Typography/Letter Spacing`은 composite Option 구조다. `24-150`, `24-i1`처럼 하나의 Option 안에서 기준 Font Size와 비율 식별자를 조합한다([foundation.md](../docs/A-token/foundation.md) §3.3).
+- Foundation에는 알파(반투명) 값이 없다. `Color/Gray/00`(흰색)·`Color/Gray/99`(검정)은 Gray에만 있는 앵커다(FND-16).
 
 ## 소비처
 

@@ -8,9 +8,25 @@ import { foundation, foundationOrder, foundationUnits } from './tokens/foundatio
  * token/Foundation.json by eye. Not part of the published surface.
  */
 
-type Options = Record<string, string | number>;
+type TokenValue = string | number | readonly string[];
+interface TokenTree {
+  [key: string]: TokenValue | TokenTree;
+}
+type LeafEntry = readonly [string, TokenValue | undefined];
 
-const withUnit = (value: string | number, unit: string | null): string => {
+const isTokenValue = (value: TokenValue | TokenTree | undefined): value is TokenValue =>
+  typeof value === 'string' || typeof value === 'number' || Array.isArray(value);
+
+const getByPath = (tree: TokenTree, path: string): TokenValue | undefined => {
+  const value = path.split('/').reduce<TokenValue | TokenTree | undefined>(
+    (node, key) => (node && !isTokenValue(node) ? node[key] : undefined),
+    tree,
+  );
+  return isTokenValue(value) ? value : undefined;
+};
+
+const withUnit = (value: TokenValue, unit: string | null): string => {
+  if (Array.isArray(value)) return value.join(', ');
   if (typeof value === 'string') return value;
   switch (unit) {
     case 'px':
@@ -25,7 +41,8 @@ const withUnit = (value: string | number, unit: string | null): string => {
 };
 
 /** Per-set visual preview. Returns null where a swatch would add nothing. */
-function preview(setPath: string, value: string | number): ReactNode {
+function preview(setPath: string, value: TokenValue): ReactNode {
+  if (Array.isArray(value)) return <span style={{ fontFamily: value.join(', '), fontSize: 16 }}>Ag 가나</span>;
   const n = typeof value === 'number' ? value : 0;
   switch (setPath) {
     case 'typography/fontSize':
@@ -49,7 +66,7 @@ function preview(setPath: string, value: string | number): ReactNode {
     case 'shape/stroke':
       return <span style={{ display: 'inline-block', width: 48, height: 0, borderTop: `${n}px solid #111` }} />;
     case 'effect/opacity':
-      return <span style={{ display: 'inline-block', width: 32, height: 16, background: '#111', opacity: n }} />;
+      return <span style={{ display: 'inline-block', width: 32, height: 16, background: '#111', opacity: n / 100 }} />;
     default:
       if (typeof value === 'string' && value.startsWith('#')) {
         return (
@@ -68,16 +85,16 @@ function preview(setPath: string, value: string | number): ReactNode {
   }
 }
 
-function SetTable({ category, setName, options }: { category: string; setName: string; options: Options }) {
+function SetTable({ category, setName, options }: { category: string; setName: string; options: TokenTree }) {
   const path = `${category}/${setName}`;
   const units = foundationUnits as unknown as Record<string, Record<string, string | null>>;
-  const unit = units[category]?.[setName] ?? null;
+  const unit = path === 'effect/opacity' ? '%' : (units[category]?.[setName] ?? null);
 
-  // Iterate foundationOrder, never Object.keys(options) — see the note on
-  // foundationOrder in the generated file.
+  // Iterate foundationOrder, never Object.keys(options) — numeric-looking keys
+  // need the generated order to stay human-readable.
   const order = foundationOrder as unknown as Record<string, Record<string, readonly string[]>>;
   const keys = order[category]?.[setName] ?? Object.keys(options);
-  const entries = keys.map((k) => [k, options[k]] as const);
+  const entries: LeafEntry[] = keys.map((k) => [k, getByPath(options, k)] as const);
 
   return (
     <section style={{ marginBottom: 40 }}>
@@ -114,10 +131,13 @@ function SetTable({ category, setName, options }: { category: string; setName: s
 }
 
 export function App() {
-  const tree = foundation as unknown as Record<string, Record<string, Options>>;
-  const total = Object.values(tree)
-    .flatMap((sets) => Object.values(sets))
-    .reduce((n, opts) => n + Object.keys(opts).length, 0);
+  const tree = foundation as unknown as Record<string, Record<string, TokenTree>>;
+  const order = foundationOrder as unknown as Record<string, Record<string, readonly string[]>>;
+  const total = Object.entries(tree)
+    .flatMap(([category, sets]) => {
+      return Object.keys(sets).map((setName) => order[category]?.[setName]?.length ?? 0);
+    })
+    .reduce((n, count) => n + count, 0);
 
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, color: '#111' }}>
