@@ -1,19 +1,28 @@
-import './tokens/foundation.css';
+import './tokens/base.css';
 
 export {
-  foundation,
-  foundationUnits,
-} from './tokens/foundation';
+  base,
+  baseLookup,
+  baseOrder,
+  baseUnits,
+} from './tokens/base';
 
 export type {
-  Foundation,
-  FoundationCategory,
-  FontSizeStep,
-  LineHeightOption,
-  LetterSpacingOption,
-  SpaceStep,
-  SizeStep,
-  RadiusStep,
-  StrokeStep,
-  OpacityStep,
-} from './tokens/foundation';
+  BlueTokenPath,
+  Base,
+  BaseCategory,
+  FontFamilyTokenPath,
+  FontSizeTokenPath,
+  FontWeightTokenPath,
+  GrayTokenPath,
+  GreenTokenPath,
+  LetterSpacingTokenPath,
+  LineHeightTokenPath,
+  OpacityTokenPath,
+  PurpleTokenPath,
+  RadiusTokenPath,
+  RedTokenPath,
+  SizeTokenPath,
+  SpaceTokenPath,
+  StrokeTokenPath,
+} from './tokens/base';

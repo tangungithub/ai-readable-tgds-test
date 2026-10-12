@@ -1,14 +1,14 @@
-# Easing Foundation 토큰 규칙
+# Easing Base 토큰 규칙
 
 작성일: 2026-08-18
-범위: Foundation 티어 `Motion/Easing/{ }` 토큰 네이밍·값 정의
+범위: Base 티어 `Motion/Easing/{ }` 토큰 네이밍·값 정의
 
 ---
 
 ## 1. 구조 원칙
 
 - 전체 경로: `Motion/Easing/{step}` — Motion은 컬렉션(그룹), 토큰 이름 자체는 `Easing/{step}` 2단 구조.
-- 기존 Foundation 컨벤션(`Scale/Step`, 예: Red/300, Radius/100)과 동일한 2단 원칙을 유지한다. Direction(Accelerate/Decelerate 등)을 별도 세그먼트로 분리하지 않는다 — 3단이 되어 컨벤션이 깨지기 때문.
+- 기존 Base 컨벤션(`Scale/Step`, 예: Red/300, Radius/100)과 동일한 2단 원칙을 유지한다. Direction(Accelerate/Decelerate 등)을 별도 세그먼트로 분리하지 않는다 — 3단이 되어 컨벤션이 깨지기 때문.
 
 ## 2. 설계 논리 — Direction을 하나의 스펙트럼으로 합친다
 
@@ -43,13 +43,13 @@
 
 200/400/600/800(각 방향 내 중간 강도)은 현재 정의하지 않는다. 50 오프셋(오버슈트 플래그)과 겹치지 않으므로, 실사용에서 5단계로 해상도가 부족하다고 확인되면 추가하는 방식으로 확장한다.
 
-## 6. Semantic 연결
+## 6. Intent 연결
 
-Duration과 Easing은 항상 짝으로 소비되는 "모션 토큰"이다. Semantic 티어에서 개별 참조 대신 세트로 묶어서 정의한다.
+Duration과 Easing은 항상 짝으로 소비되는 "모션 토큰"이다. Intent 티어에서 개별 참조 대신 세트로 묶어서 정의한다.
 
 예: `Motion/Enter = Easing/700 + Duration/Base(250ms)`
 
-이 연결로 2026-08-11 리뷰에서 지적된 "Duration·Easing Semantic 부재로 인한 참조 데드락" 항목이 해소된다.
+이 연결로 2026-08-11 리뷰에서 지적된 "Duration·Easing Intent 부재로 인한 참조 데드락" 항목이 해소된다.
 
 ## 7. 미결정 / 후속 확인 사항
 

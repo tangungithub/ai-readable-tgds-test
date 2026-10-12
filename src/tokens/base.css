@@ -1,0 +1,326 @@
+/*
+ * GENERATED FILE — do not edit by hand.
+ * Source: token/Base.json
+ * Regenerate: npm run tokens:build
+ *
+ * Naming: --{Category}-{Set}-{Option}, each segment kebab-cased.
+ * Category is not omitted — it is what keeps the segment split recoverable
+ * through the lookup table, even when the CSS name itself contains hyphens.
+ */
+
+:root {
+  /* Color/Blue */
+  --color-blue-05: #f7faff;
+  --color-blue-10: #d7e6fa;
+  --color-blue-20: #b8d2f6;
+  --color-blue-30: #96bef3;
+  --color-blue-40: #74a9f1;
+  --color-blue-50: #0077ed;
+  --color-blue-60: #005bb8;
+  --color-blue-70: #024085;
+  --color-blue-80: #042854;
+  --color-blue-90: #031126;
+
+  /* Color/Red */
+  --color-red-05: #fff8f8;
+  --color-red-10: #ffe0e0;
+  --color-red-20: #ffc7c9;
+  --color-red-30: #ffadb0;
+  --color-red-40: #ff9197;
+  --color-red-50: #ff385c;
+  --color-red-60: #c52644;
+  --color-red-70: #8d192e;
+  --color-red-80: #570f1b;
+  --color-red-90: #270609;
+
+  /* Color/Green */
+  --color-green-05: #f4fdf6;
+  --color-green-10: #e1f5e4;
+  --color-green-20: #c9efd0;
+  --color-green-30: #b0e9bb;
+  --color-green-40: #93e3a5;
+  --color-green-50: #30d66e;
+  --color-green-60: #19a250;
+  --color-green-70: #0c7135;
+  --color-green-80: #06431e;
+  --color-green-90: #021a09;
+
+  /* Color/Purple */
+  --color-purple-05: #fdf8ff;
+  --color-purple-10: #f4e1fb;
+  --color-purple-20: #ebc9f7;
+  --color-purple-30: #e3aff5;
+  --color-purple-40: #db95f4;
+  --color-purple-50: #ca4af1;
+  --color-purple-60: #9c35bb;
+  --color-purple-70: #6f2485;
+  --color-purple-80: #441552;
+  --color-purple-90: #1d0824;
+
+  /* Color/Gray */
+  --color-gray-00: #ffffff;
+  --color-gray-05: #fafafa;
+  --color-gray-10: #e1e1e1;
+  --color-gray-20: #c8c8c8;
+  --color-gray-30: #b0b0b0;
+  --color-gray-40: #989898;
+  --color-gray-50: #666666;
+  --color-gray-60: #4f4f4f;
+  --color-gray-70: #383838;
+  --color-gray-80: #242424;
+  --color-gray-90: #101010;
+  --color-gray-99: #000000;
+
+  /* Typography/Font Family */
+  --typography-font-family-sans: "SUIT Variable";
+  --typography-font-family-serif: "Noto Serif KR";
+
+  /* Typography/Font Size — px */
+  --typography-font-size-10: 10px;
+  --typography-font-size-11: 11px;
+  --typography-font-size-12: 12px;
+  --typography-font-size-14: 14px;
+  --typography-font-size-16: 16px;
+  --typography-font-size-18: 18px;
+  --typography-font-size-20: 20px;
+  --typography-font-size-22: 22px;
+  --typography-font-size-24: 24px;
+  --typography-font-size-28: 28px;
+  --typography-font-size-32: 32px;
+  --typography-font-size-36: 36px;
+  --typography-font-size-40: 40px;
+  --typography-font-size-44: 44px;
+  --typography-font-size-48: 48px;
+  --typography-font-size-56: 56px;
+  --typography-font-size-64: 64px;
+  --typography-font-size-72: 72px;
+  --typography-font-size-80: 80px;
+  --typography-font-size-96: 96px;
+
+  /* Typography/Font Weight — css-font-weight */
+  --typography-font-weight-300: 300;
+  --typography-font-weight-400: 400;
+  --typography-font-weight-500: 500;
+  --typography-font-weight-600: 600;
+  --typography-font-weight-700: 700;
+
+  /* Typography/Line Height — px */
+  --typography-line-height-10-110: 11px;
+  --typography-line-height-10-120: 12px;
+  --typography-line-height-10-130: 13px;
+  --typography-line-height-10-140: 14px;
+  --typography-line-height-10-150: 15px;
+  --typography-line-height-11-110: 12.1px;
+  --typography-line-height-11-120: 13.2px;
+  --typography-line-height-11-130: 14.3px;
+  --typography-line-height-11-140: 15.4px;
+  --typography-line-height-11-150: 16.5px;
+  --typography-line-height-12-110: 13.2px;
+  --typography-line-height-12-120: 14.4px;
+  --typography-line-height-12-130: 15.6px;
+  --typography-line-height-12-140: 16.8px;
+  --typography-line-height-12-150: 18px;
+  --typography-line-height-14-110: 15.4px;
+  --typography-line-height-14-120: 16.8px;
+  --typography-line-height-14-130: 18.2px;
+  --typography-line-height-14-140: 19.6px;
+  --typography-line-height-14-150: 21px;
+  --typography-line-height-16-110: 17.6px;
+  --typography-line-height-16-120: 19.2px;
+  --typography-line-height-16-130: 20.8px;
+  --typography-line-height-16-140: 22.4px;
+  --typography-line-height-16-150: 24px;
+  --typography-line-height-18-110: 19.8px;
+  --typography-line-height-18-120: 21.6px;
+  --typography-line-height-18-130: 23.4px;
+  --typography-line-height-18-140: 25.2px;
+  --typography-line-height-18-150: 27px;
+  --typography-line-height-20-110: 22px;
+  --typography-line-height-20-120: 24px;
+  --typography-line-height-20-130: 26px;
+  --typography-line-height-20-140: 28px;
+  --typography-line-height-20-150: 30px;
+  --typography-line-height-22-110: 24.2px;
+  --typography-line-height-22-120: 26.4px;
+  --typography-line-height-22-130: 28.6px;
+  --typography-line-height-22-140: 30.8px;
+  --typography-line-height-22-150: 33px;
+  --typography-line-height-24-110: 26.4px;
+  --typography-line-height-24-120: 28.8px;
+  --typography-line-height-24-130: 31.2px;
+  --typography-line-height-24-140: 33.6px;
+  --typography-line-height-24-150: 36px;
+  --typography-line-height-28-110: 30.8px;
+  --typography-line-height-28-120: 33.6px;
+  --typography-line-height-28-130: 36.4px;
+  --typography-line-height-28-140: 39.2px;
+  --typography-line-height-28-150: 42px;
+  --typography-line-height-32-110: 35.2px;
+  --typography-line-height-32-120: 38.4px;
+  --typography-line-height-32-130: 41.6px;
+  --typography-line-height-32-140: 44.8px;
+  --typography-line-height-32-150: 48px;
+  --typography-line-height-36-110: 39.6px;
+  --typography-line-height-36-120: 43.2px;
+  --typography-line-height-36-130: 46.8px;
+  --typography-line-height-36-140: 50.4px;
+  --typography-line-height-36-150: 54px;
+  --typography-line-height-40-110: 44px;
+  --typography-line-height-40-120: 48px;
+  --typography-line-height-40-130: 52px;
+  --typography-line-height-40-140: 56px;
+  --typography-line-height-40-150: 60px;
+  --typography-line-height-44-110: 48.4px;
+  --typography-line-height-44-120: 52.8px;
+  --typography-line-height-44-130: 57.2px;
+  --typography-line-height-44-140: 61.6px;
+  --typography-line-height-44-150: 66px;
+  --typography-line-height-48-110: 52.8px;
+  --typography-line-height-48-120: 57.6px;
+  --typography-line-height-48-130: 62.4px;
+  --typography-line-height-48-140: 67.2px;
+  --typography-line-height-48-150: 72px;
+  --typography-line-height-56-110: 61.6px;
+  --typography-line-height-56-120: 67.2px;
+  --typography-line-height-56-130: 72.8px;
+  --typography-line-height-56-140: 78.4px;
+  --typography-line-height-56-150: 84px;
+  --typography-line-height-64-110: 70.4px;
+  --typography-line-height-64-120: 76.8px;
+  --typography-line-height-64-130: 83.2px;
+  --typography-line-height-64-140: 89.6px;
+  --typography-line-height-64-150: 96px;
+  --typography-line-height-72-110: 79.2px;
+  --typography-line-height-72-120: 86.4px;
+  --typography-line-height-72-130: 93.6px;
+  --typography-line-height-72-140: 100.8px;
+  --typography-line-height-72-150: 108px;
+  --typography-line-height-80-110: 88px;
+  --typography-line-height-80-120: 96px;
+  --typography-line-height-80-130: 104px;
+  --typography-line-height-80-140: 112px;
+  --typography-line-height-80-150: 120px;
+  --typography-line-height-96-110: 105.6px;
+  --typography-line-height-96-120: 115.2px;
+  --typography-line-height-96-130: 124.8px;
+  --typography-line-height-96-140: 134.4px;
+  --typography-line-height-96-150: 144px;
+
+  /* Typography/Letter Spacing — px */
+  --typography-letter-spacing-10-i1: -0.1px;
+  --typography-letter-spacing-10-i3: -0.3px;
+  --typography-letter-spacing-11-i1: -0.11px;
+  --typography-letter-spacing-11-i3: -0.33px;
+  --typography-letter-spacing-12-i1: -0.12px;
+  --typography-letter-spacing-12-i3: -0.36px;
+  --typography-letter-spacing-14-i1: -0.14px;
+  --typography-letter-spacing-14-i3: -0.42px;
+  --typography-letter-spacing-16-i1: -0.16px;
+  --typography-letter-spacing-16-i3: -0.48px;
+  --typography-letter-spacing-18-i1: -0.18px;
+  --typography-letter-spacing-18-i3: -0.54px;
+  --typography-letter-spacing-20-i1: -0.2px;
+  --typography-letter-spacing-20-i3: -0.6px;
+  --typography-letter-spacing-22-i1: -0.22px;
+  --typography-letter-spacing-22-i3: -0.66px;
+  --typography-letter-spacing-24-i1: -0.24px;
+  --typography-letter-spacing-24-i3: -0.72px;
+  --typography-letter-spacing-28-i1: -0.28px;
+  --typography-letter-spacing-28-i3: -0.84px;
+  --typography-letter-spacing-32-i1: -0.32px;
+  --typography-letter-spacing-32-i3: -0.96px;
+  --typography-letter-spacing-36-i1: -0.36px;
+  --typography-letter-spacing-36-i3: -1.08px;
+  --typography-letter-spacing-40-i1: -0.4px;
+  --typography-letter-spacing-40-i3: -1.2px;
+  --typography-letter-spacing-44-i1: -0.44px;
+  --typography-letter-spacing-44-i3: -1.32px;
+  --typography-letter-spacing-48-i1: -0.48px;
+  --typography-letter-spacing-48-i3: -1.44px;
+  --typography-letter-spacing-56-i1: -0.56px;
+  --typography-letter-spacing-56-i3: -1.68px;
+  --typography-letter-spacing-64-i1: -0.64px;
+  --typography-letter-spacing-64-i3: -1.92px;
+  --typography-letter-spacing-72-i1: -0.72px;
+  --typography-letter-spacing-72-i3: -2.16px;
+  --typography-letter-spacing-80-i1: -0.8px;
+  --typography-letter-spacing-80-i3: -2.4px;
+  --typography-letter-spacing-96-i1: -0.96px;
+  --typography-letter-spacing-96-i3: -2.88px;
+
+  /* Layout/Space — px */
+  --layout-space-1: 1px;
+  --layout-space-2: 2px;
+  --layout-space-4: 4px;
+  --layout-space-6: 6px;
+  --layout-space-8: 8px;
+  --layout-space-12: 12px;
+  --layout-space-16: 16px;
+  --layout-space-20: 20px;
+  --layout-space-24: 24px;
+  --layout-space-32: 32px;
+  --layout-space-40: 40px;
+  --layout-space-48: 48px;
+  --layout-space-56: 56px;
+  --layout-space-64: 64px;
+  --layout-space-72: 72px;
+  --layout-space-80: 80px;
+  --layout-space-96: 96px;
+  --layout-space-112: 112px;
+  --layout-space-128: 128px;
+
+  /* Layout/Size — px */
+  --layout-size-1: 1px;
+  --layout-size-2: 2px;
+  --layout-size-4: 4px;
+  --layout-size-8: 8px;
+  --layout-size-12: 12px;
+  --layout-size-16: 16px;
+  --layout-size-20: 20px;
+  --layout-size-24: 24px;
+  --layout-size-32: 32px;
+  --layout-size-40: 40px;
+  --layout-size-48: 48px;
+  --layout-size-56: 56px;
+  --layout-size-64: 64px;
+  --layout-size-80: 80px;
+  --layout-size-96: 96px;
+  --layout-size-112: 112px;
+  --layout-size-128: 128px;
+
+  /* Shape/Radius — px */
+  --shape-radius-1: 1px;
+  --shape-radius-2: 2px;
+  --shape-radius-4: 4px;
+  --shape-radius-6: 6px;
+  --shape-radius-8: 8px;
+  --shape-radius-10: 10px;
+  --shape-radius-12: 12px;
+  --shape-radius-16: 16px;
+  --shape-radius-20: 20px;
+  --shape-radius-24: 24px;
+  --shape-radius-32: 32px;
+  --shape-radius-40: 40px;
+  --shape-radius-9999: 9999px;
+
+  /* Shape/Stroke — px */
+  --shape-stroke-1: 1px;
+  --shape-stroke-2: 2px;
+  --shape-stroke-3: 3px;
+  --shape-stroke-4: 4px;
+  --shape-stroke-6: 6px;
+  --shape-stroke-8: 8px;
+
+  /* Effect/Opacity */
+  --effect-opacity-0: 0;
+  --effect-opacity-10: 10;
+  --effect-opacity-20: 20;
+  --effect-opacity-30: 30;
+  --effect-opacity-40: 40;
+  --effect-opacity-50: 50;
+  --effect-opacity-60: 60;
+  --effect-opacity-70: 70;
+  --effect-opacity-80: 80;
+  --effect-opacity-90: 90;
+  --effect-opacity-100: 100;
+}

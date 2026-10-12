@@ -1,24 +1,24 @@
-# Semantic Target 전수조사
+# Intent Target 전수조사
 
-> 목적: Semantic 티어가 다뤄야 할 **Target(적용 속성) 축의 완전 열거**와, 현재 설계에서 누락된 항목의 탐지
-> 작성: 2026-08-26 · 대상: Token.md v0.1 이후 Semantic 파트 설계
+> 목적: Intent 티어가 다뤄야 할 **Target(적용 속성) 축의 완전 열거**와, 현재 설계에서 누락된 항목의 탐지
+> 작성: 2026-08-26 · 대상: Token.md v0.1 이후 Intent 파트 설계
 > 방법: ①Figma 변수 바인딩 가능 속성 전수(하드 제약) ②W3C DTCG dimension 타입 정의 ③주요 디자인 시스템 6종(Carbon / Material 3 / Spectrum / Polaris / Atlassian / DTCG) 토큰 taxonomy 대조
 
 ---
 
 ## 0. 요약 — 발견된 것
 
-1. **Target 누락 4건**: Letter Spacing, Radius, Stroke, Opacity — 모두 Component가 반드시 필요로 하는데 Semantic에 대응 토큰이 없다.
-2. **더 큰 문제는 Target이 아니라 컬렉션 구조**다. Foundation Set 12개 중 Semantic 대응이 있는 것은 **5개뿐**이고, 나머지 7개는 Component가 참조할 대상이 없어 **CMP-A1(Semantic만 참조) 위반이 구조적으로 강제**된다. 2026-08-11 리뷰 지적 ④(Duration·Easing·Shadow 참조 데드락)와 같은 유형이 Radius·Stroke·Opacity·Font Weight·Font Family에도 존재한다.
+1. **Target 누락 4건**: Letter Spacing, Radius, Stroke, Opacity — 모두 Component가 반드시 필요로 하는데 Intent에 대응 토큰이 없다.
+2. **더 큰 문제는 Target이 아니라 컬렉션 구조**다. Base Set 12개 중 Intent 대응이 있는 것은 **5개뿐**이고, 나머지 7개는 Component가 참조할 대상이 없어 **CMP-A1(Intent만 참조) 위반이 구조적으로 강제**된다. 2026-08-11 리뷰 지적 ④(Duration·Easing·Shadow 참조 데드락)와 같은 유형이 Radius·Stroke·Opacity·Font Weight·Font Family에도 존재한다.
 3. **원인은 컬렉션이 2개(Theme / Scale)뿐이라서**다. 두 컬렉션의 모드 축은 각각 Light·Dark와 브레이크포인트인데, **모드에 반응하지 않는 시멘틱 값들은 어느 쪽에도 자연스럽게 속하지 않는다.**
-4. **Foundation 자체의 누락 3건**: Letter Spacing, Shadow, Blur — Set이 아예 정의되어 있지 않다. Semantic 이전에 Foundation을 먼저 보완해야 한다.
-5. 권고: **컬렉션의 경계는 "값의 종류"가 아니라 "모드 축"으로 정한다.** 이 규칙을 적용하면 컬렉션 3개(Theme / Scale / Constant)로 모든 Foundation Set이 소속을 갖는다.
+4. **Base 자체의 누락 3건**: Letter Spacing, Shadow, Blur — Set이 아예 정의되어 있지 않다. Intent 이전에 Base을 먼저 보완해야 한다.
+5. 권고: **컬렉션의 경계는 "값의 종류"가 아니라 "모드 축"으로 정한다.** 이 규칙을 적용하면 컬렉션 3개(Theme / Scale / Constant)로 모든 Base Set이 소속을 갖는다.
 
 ---
 
 ## 1. 하드 제약 — Figma NUMBER 변수가 바인딩 가능한 속성 전수
 
-Semantic 토큰은 Figma 변수로 존재해야 하므로, **바인딩 불가능한 속성은 애초에 Target이 될 수 없다.** Plugin API의 타입 유니온이 정본이다.
+Intent 토큰은 Figma 변수로 존재해야 하므로, **바인딩 불가능한 속성은 애초에 Target이 될 수 없다.** Plugin API의 타입 유니온이 정본이다.
 
 ### 1.1 바인딩 가능 (NUMBER/FLOAT)
 
@@ -39,9 +39,9 @@ Semantic 토큰은 Figma 변수로 존재해야 하므로, **바인딩 불가능
 
 ### 1.2 바인딩 **불가능** (2026 기준) — Target 후보에서 제외
 
-`x` / `y` 위치, `rotation`(레이어·그라디언트), **그라디언트 스톱 위치**, ~~fill/stroke 개별 opacity~~(2026-09-03 Figma 업데이트로 **색 변수의 불투명도를 number 변수로 alias 가능**해졌다 — 결합 지점은 노드가 아니라 Semantic 색 변수이며 규칙은 `semantic.md` SEM-11), 스트로크 대시 길이·간격·오프셋, 블렌드 모드, 제약(constraints)·비율 잠금, **컴포넌트 프로퍼티 정의**, 그리드 span·자식 배치, 텍스트 truncation·max-lines, 익스포트 설정, 코너 스무딩(squircle %).
+`x` / `y` 위치, `rotation`(레이어·그라디언트), **그라디언트 스톱 위치**, ~~fill/stroke 개별 opacity~~(2026-09-03 Figma 업데이트로 **색 변수의 불투명도를 number 변수로 alias 가능**해졌다 — 결합 지점은 노드가 아니라 Intent 색 변수이며 규칙은 `semantic.md` SEM-11), 스트로크 대시 길이·간격·오프셋, 블렌드 모드, 제약(constraints)·비율 잠금, **컴포넌트 프로퍼티 정의**, 그리드 span·자식 배치, 텍스트 truncation·max-lines, 익스포트 설정, 코너 스무딩(squircle %).
 
-> **판정**: 위 목록은 Semantic Target에서 영구 제외한다. 문서에 "제외 목록"으로 명시해 두면 AI가 존재하지 않는 토큰을 만들어내는 것을 차단할 수 있다.
+> **판정**: 위 목록은 Intent Target에서 영구 제외한다. 문서에 "제외 목록"으로 명시해 두면 AI가 존재하지 않는 토큰을 만들어내는 것을 차단할 수 있다.
 
 ### 1.3 Figma가 스스로 쓰는 분류 — `VariableScope`
 
@@ -117,20 +117,20 @@ Carbon v11은 `$layout-01…07`(페이지 단위 간격)을 **완전히 제거�
 
 ---
 
-## 4. 대조 — Foundation Set ↔ Semantic 커버리지 지도
+## 4. 대조 — Base Set ↔ Intent 커버리지 지도
 
-현재 Foundation이 정의한 Set과, 현 Semantic 설계(Theme 6 Target + Scale 5 Target)의 대응 관계다.
+현재 Base이 정의한 Set과, 현 Intent 설계(Theme 6 Target + Scale 5 Target)의 대응 관계다.
 
-| Foundation Set | 상태 | Semantic 대응 | 판정 |
+| Base Set | 상태 | Intent 대응 | 판정 |
 |---|---|---|---|
-| `Color/*` | 미정의(TBD) | Theme: Background/Text/Icon/Border/Overlay | ⚠️ Foundation 먼저 확정 필요 |
+| `Color/*` | 미정의(TBD) | Theme: Background/Text/Icon/Border/Overlay | ⚠️ Base 먼저 확정 필요 |
 | `Layout/Space` | ✅ 13단계 | Scale: Padding, Gap | ✅ |
 | `Layout/Size` | ✅ 13단계 | Scale: Size | ✅ |
 | `Typography/Font Size` | ✅ 13단계 | Scale: Font Size | ✅ |
 | `Typography/Line Height` | ✅ composite | Scale: Line Height | ✅ |
 | `Typography/Font Weight` | ✅ 300~800 | **없음** | ❌ **데드락** |
 | `Typography/Font Family` | ✅ Sans/Serif | **없음** | ❌ **데드락** |
-| `Typography/Letter Spacing` | **Set 자체가 없음** | 없음 | ❌❌ **Foundation부터 누락** |
+| `Typography/Letter Spacing` | **Set 자체가 없음** | 없음 | ❌❌ **Base부터 누락** |
 | `Shape/Radius` | ✅ 13단계 | **없음** | ❌ **데드락** |
 | `Shape/Stroke` | ✅ 7단계 | **없음** | ❌ **데드락** |
 | `Effect/Opacity` | ✅ 11단계 | **없음** | ❌ **데드락** |
@@ -139,9 +139,9 @@ Carbon v11은 `$layout-01…07`(페이지 단위 간격)을 **완전히 제거�
 | `Motion/Duration` | ✅ 7단계 | **없음** | ❌ **데드락**(리뷰 지적 ④) |
 | `Motion/Easing` | ✅ 5단계 | **없음** | ❌ **데드락**(리뷰 지적 ④) |
 
-**데드락의 정의**: CMP-A1은 "컴포넌트 토큰은 Semantic만 참조한다"고 정하는데, Semantic에 대응 토큰이 없으면 컴포넌트는 ①Foundation을 직접 참조(CMP-A1 위반) ②원시값 기입(위반) ③토큰 없이 하드코딩(시스템 이탈) 중 하나를 택할 수밖에 없다. **12개 정의된 Set 중 7개가 이 상태다.**
+**데드락의 정의**: CMP-A1은 "컴포넌트 토큰은 Intent만 참조한다"고 정하는데, Intent에 대응 토큰이 없으면 컴포넌트는 ①Base을 직접 참조(CMP-A1 위반) ②원시값 기입(위반) ③토큰 없이 하드코딩(시스템 이탈) 중 하나를 택할 수밖에 없다. **12개 정의된 Set 중 7개가 이 상태다.**
 
-Theme의 `Shadow` Target은 특히 심각하다. **참조할 Foundation Set이 존재하지 않는 Semantic Target**이므로, 현 상태로는 정의가 불가능하다.
+Theme의 `Shadow` Target은 특히 심각하다. **참조할 Base Set이 존재하지 않는 Intent Target**이므로, 현 상태로는 정의가 불가능하다.
 
 ---
 
@@ -156,15 +156,15 @@ Theme의 `Shadow` Target은 특히 심각하다. **참조할 Foundation Set이 �
 | 3 | **Size** | Scale ✅ | 유지 (Role 판별 기준 확정 필요) | min/max width·height를 흡수 |
 | 4 | **Font Size** | Scale ✅ | 유지 | |
 | 5 | **Line Height** | Scale ✅ | 유지 (Font Size와 짝 린트 필수) | |
-| 6 | **Letter Spacing** | **없음** | **🔴 추가** | Figma 바인딩 가능. Carbon·M3·Spectrum·Polaris 4/5가 토큰화. **한글(SUIT)에서 자간은 가독성의 핵심 변수**이며 Foundation Set부터 신설 필요 |
-| 7 | **Radius** | **없음** | **🔴 추가** | Foundation Set 존재. 5/5 시스템 중 4개가 토큰화(Carbon만 예외이며 이는 각진 브랜드 언어 때문). 컴포넌트가 반드시 요구 |
-| 8 | **Stroke** | **없음** | **🔴 추가** | Foundation Set 존재. Border 두께는 모든 입력·카드·구분선의 필수값 |
-| 9 | **Opacity** | **없음** | **🔴 추가** | Foundation Set 존재. Disabled·Scrim·Overlay에 필수. 단 DTCG상 `number`이지 `dimension`이 아님 — 치수 컬렉션과 성격이 다름 |
-| 10 | **Font Weight** | 없음 | 🟡 추가 검토 | Foundation Set 존재. Atlassian처럼 composite 타입 스타일로 처리하면 불필요할 수 있음 |
-| 11 | **Font Family** | 없음 | 🟡 추가 검토 | 동상. Sans/Serif 2종뿐이라 Semantic 없이 Component 직접 지정도 가능하나 CMP-A1 위반 |
-| 12 | **Shadow** | Theme Target ✅ | 🔴 **Foundation Set 신설 선행** | 현재 참조 대상 없음. x/y/blur/spread 4개 하위 필드 각각 바인딩 가능 |
+| 6 | **Letter Spacing** | **없음** | **🔴 추가** | Figma 바인딩 가능. Carbon·M3·Spectrum·Polaris 4/5가 토큰화. **한글(SUIT)에서 자간은 가독성의 핵심 변수**이며 Base Set부터 신설 필요 |
+| 7 | **Radius** | **없음** | **🔴 추가** | Base Set 존재. 5/5 시스템 중 4개가 토큰화(Carbon만 예외이며 이는 각진 브랜드 언어 때문). 컴포넌트가 반드시 요구 |
+| 8 | **Stroke** | **없음** | **🔴 추가** | Base Set 존재. Border 두께는 모든 입력·카드·구분선의 필수값 |
+| 9 | **Opacity** | **없음** | **🔴 추가** | Base Set 존재. Disabled·Scrim·Overlay에 필수. 단 DTCG상 `number`이지 `dimension`이 아님 — 치수 컬렉션과 성격이 다름 |
+| 10 | **Font Weight** | 없음 | 🟡 추가 검토 | Base Set 존재. Atlassian처럼 composite 타입 스타일로 처리하면 불필요할 수 있음 |
+| 11 | **Font Family** | 없음 | 🟡 추가 검토 | 동상. Sans/Serif 2종뿐이라 Intent 없이 Component 직접 지정도 가능하나 CMP-A1 위반 |
+| 12 | **Shadow** | Theme Target ✅ | 🔴 **Base Set 신설 선행** | 현재 참조 대상 없음. x/y/blur/spread 4개 하위 필드 각각 바인딩 가능 |
 | 13 | **Blur** | 없음 | 🟡 추가 검토 | Figma `radius`(effect) 바인딩 가능. 모달 배경 블러 등에 필요. 사용 계획이 없으면 보류 |
-| 14 | **Duration** | 없음 | 🔴 추가 (Motion 소관) | Foundation Set 존재, 리뷰 지적 ④의 원 항목 |
+| 14 | **Duration** | 없음 | 🔴 추가 (Motion 소관) | Base Set 존재, 리뷰 지적 ④의 원 항목 |
 | 15 | **Easing** | 없음 | 🔴 추가 (Motion 소관) | 동상 |
 | 16 | **Paragraph Spacing** | 없음 | 🟡 보류 | Figma 바인딩 가능하나 6개 시스템 중 Spectrum만 배수로 처리. 에디토리얼/본문 콘텐츠가 있으면 필요 |
 | 17 | **Paragraph Indent** | 없음 | ⚫ 제외 | 바인딩은 가능하나 토큰화 선례 0건 |
@@ -173,7 +173,7 @@ Theme의 `Shadow` Target은 특히 심각하다. **참조할 Foundation Set이 �
 | 20 | **Focus Ring 두께·오프셋** | 없음 | 🟡 Stroke·Gap으로 흡수 | M3·Spectrum은 전용 토큰. 우리는 `Stroke/Focus` + `Gap/Focus`로 흡수 가능 |
 | 21 | 코너별 Radius | 없음 | ⚫ 제외 | 6/6 시스템 미토큰화 |
 | 22 | 텍스트 최대폭(measure) | 없음 | ⚫ 제외 → Size로 흡수 | 6/6 시스템 미토큰화. 필요 시 `Size/Layout/*` |
-| 23 | 음수 Spacing | 없음 | ⚫ 제외 | Atlassian만 보유. Foundation이 오름차순 단조(FND-05)라 음수는 스케일 가정을 깬다 |
+| 23 | 음수 Spacing | 없음 | ⚫ 제외 | Atlassian만 보유. Base이 오름차순 단조(FND-05)라 음수는 스케일 가정을 깬다 |
 | 24 | Fluid(vw 비례) 간격 | 없음 | ⚫ 제외 | Carbon만 보유. Figma 변수는 vw 단위를 표현 불가 |
 | 25 | 밀도(density) 축 | 없음 | ⚫ 제외 | Spectrum만 보유. 축이 하나 더 늘어 3세그먼트를 깬다 |
 | 26 | x/y·rotation·그라디언트 스톱·대시·블렌드모드 | — | ⚫ **영구 제외** | Figma 변수 바인딩 불가 |
@@ -201,7 +201,7 @@ Figma에서 컬렉션이 존재하는 이유는 **모드를 공유하는 토큰�
 - **Opacity를 Theme에 두는 이유**: Scrim·Disabled 불투명도는 Light/Dark에서 실제로 다른 값을 갖는다(어두운 배경 위 스크림은 더 옅어야 한다). 모드 반응이 있으므로 Theme이 맞다.
 - **Letter Spacing을 Scale에 두는 이유**: 자간은 Font Size에 종속적이며, Font Size가 브레이크포인트로 변하면 함께 변한다. Line Height와 동일한 짝 규칙을 적용한다.
 - **Constant 컬렉션의 정당성**: Spectrum 2가 신규 primitive(`corner-radius-*` `border-width-*`)를 스케일 무관 단일 값으로 되돌린 것과 같은 판단이다. 모드가 1개인 컬렉션은 Figma에서 정상이며, "이 값들은 어떤 축으로도 변하지 않는다"는 선언 자체가 정보다.
-- 이름 후보: `Constant` / `Style` / `Base`. Foundation과 혼동되지 않는 이름이 좋다 — **`Constant` 권장**.
+- 이름 후보: `Constant` / `Style` / `Base`. Base과 혼동되지 않는 이름이 좋다 — **`Constant` 권장**.
 
 ### 6.1 이 구조가 해소하는 것
 
@@ -211,17 +211,17 @@ Figma에서 컬렉션이 존재하는 이유는 **모드를 공유하는 토큰�
 
 ---
 
-## 7. Foundation에 신설이 필요한 Set
+## 7. Base에 신설이 필요한 Set
 
-Semantic 작업 이전에 선행되어야 한다.
+Intent 작업 이전에 선행되어야 한다.
 
 | Set | Category | 유형 | 비고 |
 |---|---|---|---|
 | **Letter Spacing** | Typography | ordinal 또는 value-anchored | 음수 포함 필요(M3 `-0.015625rem`, Carbon `-.64px`). FND-05의 오름차순 단조 가정과 충돌하므로 **0을 중앙에 둔 diverging 스케일**이 필요 — Easing Set과 같은 방식 적용 가능 |
-| **Shadow** | Effect | composite | x/y/blur/spread + color 참조. 색을 참조하므로 Foundation 말단(FND-10) 원칙과 충돌 가능 — **Shadow는 Foundation이 아니라 Semantic Theme에서만 조립**하는 방안 검토 |
+| **Shadow** | Effect | composite | x/y/blur/spread + color 참조. 색을 참조하므로 Base 말단(FND-10) 원칙과 충돌 가능 — **Shadow는 Base이 아니라 Intent Theme에서만 조립**하는 방안 검토 |
 | **Blur** | Effect | ordinal | 사용 계획 확인 후 |
 
-또한 기존 미결 2건이 Semantic의 전제로 남아 있다.
+또한 기존 미결 2건이 Intent의 전제로 남아 있다.
 
 - **Color Set 미정의** — Theme 전체가 여기 얹혀 있다. **대비 앵커**로 확정해야 Emphasis 축의 "모드 간 대비 보존" 규칙이 성립한다
 - **Space vs Size 판별 기준** — Scale의 `Size` Target Role 설계가 여기 종속된다
@@ -231,7 +231,7 @@ Semantic 작업 이전에 선행되어야 한다.
 ## 8. 최종 권고안
 
 ```
-Semantic 컬렉션 3종
+Intent 컬렉션 3종
 
 ┌─ Theme        모드: Light / Dark
 │  Target ∈ { Background, Text, Icon, Border, Overlay, Shadow, Opacity }
@@ -253,11 +253,11 @@ Semantic 컬렉션 3종
 
 ### 실행 순서
 
-1. Foundation: Color Set 확정(대비 앵커) → Letter Spacing Set 신설 → Space/Size 판별 기준 확정
+1. Base: Color Set 확정(대비 앵커) → Letter Spacing Set 신설 → Space/Size 판별 기준 확정
 2. Constant 컬렉션의 Role·Variant 축 설계 (Radius·Stroke는 Theme의 Emphasis 어휘 재사용이 자연스러울 수 있음)
 3. Theme / Scale / Constant 3종으로 커버리지 테스트 — Button(5 variant × 4 state), Input, Alert, Card, Table, Modal
 4. 표현 불가 케이스를 예외 등록 대장으로 확정
-5. `Semantic.md` 작성
+5. `Intent.md` 작성
 
 ---
 

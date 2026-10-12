@@ -1,9 +1,9 @@
 {
-  "$description": "Semantic theme collection — Figma variable collection 'Semantic theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Inverse / On Inverse are the mode-mirror of Neutral / On Neutral (SEM-T07).",
+  "$description": "Intent theme collection — Figma variable collection 'Intent theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Inverse / On Inverse are the mode-mirror of Neutral / On Neutral (SEM-T07).",
   "$extensions": {
     "tgds": {
-      "collection": "Semantic theme",
-      "tier": "semantic",
+      "collection": "Intent theme",
+      "tier": "intent",
       "modes": [
         "Light",
         "Dark"
@@ -11,23 +11,23 @@
       "roles": {
         "Accent": {
           "hue": "Blue",
-          "core": "0600"
+          "core": "50"
         },
         "Success": {
           "hue": "Green",
-          "core": "0500"
+          "core": "50"
         },
         "Warning": {
-          "hue": "Yellow",
-          "core": "0300"
+          "hue": "Purple",
+          "core": "50"
         },
         "Danger": {
           "hue": "Red",
-          "core": "0600"
+          "core": "50"
         },
         "Info": {
-          "hue": "Sky",
-          "core": "0500"
+          "hue": "Blue",
+          "core": "50"
         },
         "Neutral": {
           "hue": "Gray"
@@ -44,15 +44,15 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1200}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.80}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0100}",
-          "Dark": "{Color.Gray.1100}"
+          "Light": "{Color.Gray.05}",
+          "Dark": "{Color.Gray.70}"
         }
       }
     },
@@ -60,15 +60,15 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1200}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.80}",
+          "Dark": "{Color.Gray.00}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1100}",
-          "Dark": "{Color.Gray.0100}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.05}"
         }
       }
     }
@@ -78,36 +78,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0100}",
-          "Dark": "{Color.Gray.1100}"
+          "Light": "{Color.Gray.05}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0200}",
-          "Dark": "{Color.Gray.1000}"
+          "Light": "{Color.Gray.10}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0800}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.50}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0900}",
-          "Dark": "{Color.Gray.0200}"
+          "Light": "{Color.Gray.60}",
+          "Dark": "{Color.Gray.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1000}",
-          "Dark": "{Color.Gray.0100}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.05}"
         }
       }
     },
@@ -115,36 +115,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1100}",
-          "Dark": "{Color.Gray.0100}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.05}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1000}",
-          "Dark": "{Color.Gray.0200}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.10}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.0800}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.50}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0200}",
-          "Dark": "{Color.Gray.0900}"
+          "Light": "{Color.Gray.10}",
+          "Dark": "{Color.Gray.60}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0100}",
-          "Dark": "{Color.Gray.1000}"
+          "Light": "{Color.Gray.05}",
+          "Dark": "{Color.Gray.70}"
         }
       }
     },
@@ -152,36 +152,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0100}",
-          "Dark": "{Color.Blue.1100}"
+          "Light": "{Color.Blue.05}",
+          "Dark": "{Color.Blue.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0200}",
-          "Dark": "{Color.Blue.1000}"
+          "Light": "{Color.Blue.10}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0800}",
-          "Dark": "{Color.Blue.0800}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.60}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0900}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1000}",
-          "Dark": "{Color.Blue.1000}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.80}"
         }
       }
     },
@@ -189,36 +189,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0100}",
-          "Dark": "{Color.Green.1100}"
+          "Light": "{Color.Green.05}",
+          "Dark": "{Color.Green.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0200}",
-          "Dark": "{Color.Green.1000}"
+          "Light": "{Color.Green.20}",
+          "Dark": "{Color.Green.80}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0800}",
-          "Dark": "{Color.Green.0800}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.70}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0900}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.80}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1000}",
-          "Dark": "{Color.Green.1000}"
+          "Light": "{Color.Green.90}",
+          "Dark": "{Color.Green.90}"
         }
       }
     },
@@ -226,36 +226,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0100}",
-          "Dark": "{Color.Yellow.1100}"
+          "Light": "{Color.Purple.05}",
+          "Dark": "{Color.Purple.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0200}",
-          "Dark": "{Color.Yellow.1000}"
+          "Light": "{Color.Purple.10}",
+          "Dark": "{Color.Purple.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0300}",
-          "Dark": "{Color.Yellow.0300}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.60}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0400}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.70}",
+          "Dark": "{Color.Purple.70}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0500}",
-          "Dark": "{Color.Yellow.0500}"
+          "Light": "{Color.Purple.80}",
+          "Dark": "{Color.Purple.80}"
         }
       }
     },
@@ -263,36 +263,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0100}",
-          "Dark": "{Color.Red.1100}"
+          "Light": "{Color.Red.05}",
+          "Dark": "{Color.Red.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0200}",
-          "Dark": "{Color.Red.1000}"
+          "Light": "{Color.Red.20}",
+          "Dark": "{Color.Red.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0700}",
-          "Dark": "{Color.Red.0700}"
+          "Light": "{Color.Red.60}",
+          "Dark": "{Color.Red.60}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0800}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.70}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0900}",
-          "Dark": "{Color.Red.0900}"
+          "Light": "{Color.Red.80}",
+          "Dark": "{Color.Red.80}"
         }
       }
     },
@@ -300,36 +300,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0100}",
-          "Dark": "{Color.Sky.1100}"
+          "Light": "{Color.Blue.05}",
+          "Dark": "{Color.Blue.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0200}",
-          "Dark": "{Color.Sky.1000}"
+          "Light": "{Color.Blue.10}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0800}",
-          "Dark": "{Color.Sky.0800}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.60}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0900}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1000}",
-          "Dark": "{Color.Sky.1000}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.80}"
         }
       }
     }
@@ -339,36 +339,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0900}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.60}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0900}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.60}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1100}",
-          "Dark": "{Color.Gray.0200}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.10}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1200}",
-          "Dark": "{Color.Gray.0100}"
+          "Light": "{Color.Gray.80}",
+          "Dark": "{Color.Gray.05}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         }
       }
     },
@@ -376,36 +376,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.0900}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.60}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.0900}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.60}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0200}",
-          "Dark": "{Color.Gray.1100}"
+          "Light": "{Color.Gray.10}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0100}",
-          "Dark": "{Color.Gray.1200}"
+          "Light": "{Color.Gray.05}",
+          "Dark": "{Color.Gray.80}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         }
       }
     },
@@ -413,36 +413,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1000}",
-          "Dark": "{Color.Blue.0300}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1100}",
-          "Dark": "{Color.Blue.0200}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1100}",
-          "Dark": "{Color.Blue.0100}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.05}"
         }
       }
     },
@@ -450,36 +450,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0400}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0400}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1000}",
-          "Dark": "{Color.Green.0300}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1100}",
-          "Dark": "{Color.Green.0200}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.20}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1100}",
-          "Dark": "{Color.Green.0100}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.05}"
         }
       }
     },
@@ -487,36 +487,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1000}",
-          "Dark": "{Color.Sky.0300}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1100}",
-          "Dark": "{Color.Sky.0200}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1100}",
-          "Dark": "{Color.Sky.0100}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.05}"
         }
       }
     },
@@ -524,36 +524,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0400}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0400}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0900}",
-          "Dark": "{Color.Red.0300}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.1000}",
-          "Dark": "{Color.Red.0200}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.20}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.1000}",
-          "Dark": "{Color.Red.0100}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.05}"
         }
       }
     },
@@ -561,36 +561,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0900}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0900}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1000}",
-          "Dark": "{Color.Yellow.0300}"
+          "Light": "{Color.Purple.70}",
+          "Dark": "{Color.Purple.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1100}",
-          "Dark": "{Color.Yellow.0200}"
+          "Light": "{Color.Purple.80}",
+          "Dark": "{Color.Purple.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1100}",
-          "Dark": "{Color.Yellow.0100}"
+          "Light": "{Color.Purple.80}",
+          "Dark": "{Color.Purple.05}"
         }
       }
     },
@@ -598,14 +598,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -613,14 +613,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -628,14 +628,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -643,14 +643,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -658,14 +658,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -675,14 +675,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -690,14 +690,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -705,14 +705,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -720,14 +720,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -735,14 +735,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -752,14 +752,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -767,14 +767,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -782,14 +782,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -797,14 +797,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -812,14 +812,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -829,14 +829,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -844,14 +844,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -859,14 +859,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -874,14 +874,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -889,14 +889,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -906,14 +906,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -921,14 +921,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -936,14 +936,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -951,14 +951,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -966,14 +966,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -983,14 +983,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -998,14 +998,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1013,14 +1013,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1028,14 +1028,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1043,14 +1043,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1060,14 +1060,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1075,14 +1075,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1090,14 +1090,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1105,14 +1105,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1120,14 +1120,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1139,36 +1139,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0900}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.60}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0900}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.60}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1100}",
-          "Dark": "{Color.Gray.0200}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.10}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1200}",
-          "Dark": "{Color.Gray.0100}"
+          "Light": "{Color.Gray.80}",
+          "Dark": "{Color.Gray.05}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         }
       }
     },
@@ -1176,36 +1176,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.0900}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.60}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.0900}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.60}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0200}",
-          "Dark": "{Color.Gray.1100}"
+          "Light": "{Color.Gray.10}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0100}",
-          "Dark": "{Color.Gray.1200}"
+          "Light": "{Color.Gray.05}",
+          "Dark": "{Color.Gray.80}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         }
       }
     },
@@ -1213,36 +1213,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1000}",
-          "Dark": "{Color.Blue.0300}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1100}",
-          "Dark": "{Color.Blue.0200}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.1100}",
-          "Dark": "{Color.Blue.0100}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.05}"
         }
       }
     },
@@ -1250,36 +1250,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0400}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0400}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1000}",
-          "Dark": "{Color.Green.0300}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1100}",
-          "Dark": "{Color.Green.0200}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.20}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.1100}",
-          "Dark": "{Color.Green.0100}"
+          "Light": "{Color.Green.80}",
+          "Dark": "{Color.Green.05}"
         }
       }
     },
@@ -1287,36 +1287,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1000}",
-          "Dark": "{Color.Sky.0300}"
+          "Light": "{Color.Blue.70}",
+          "Dark": "{Color.Blue.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1100}",
-          "Dark": "{Color.Sky.0200}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.1100}",
-          "Dark": "{Color.Sky.0100}"
+          "Light": "{Color.Blue.80}",
+          "Dark": "{Color.Blue.05}"
         }
       }
     },
@@ -1324,36 +1324,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0400}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0400}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0900}",
-          "Dark": "{Color.Red.0300}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.1000}",
-          "Dark": "{Color.Red.0200}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.20}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.1000}",
-          "Dark": "{Color.Red.0100}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.05}"
         }
       }
     },
@@ -1361,36 +1361,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0900}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.30}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0900}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.30}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1000}",
-          "Dark": "{Color.Yellow.0300}"
+          "Light": "{Color.Purple.70}",
+          "Dark": "{Color.Purple.20}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1100}",
-          "Dark": "{Color.Yellow.0200}"
+          "Light": "{Color.Purple.80}",
+          "Dark": "{Color.Purple.10}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.1100}",
-          "Dark": "{Color.Yellow.0100}"
+          "Light": "{Color.Purple.80}",
+          "Dark": "{Color.Purple.05}"
         }
       }
     },
@@ -1398,14 +1398,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1413,14 +1413,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1428,14 +1428,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1443,14 +1443,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1458,14 +1458,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1475,14 +1475,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1490,14 +1490,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1505,14 +1505,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1520,14 +1520,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1535,14 +1535,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1552,14 +1552,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1567,14 +1567,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1582,14 +1582,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1597,14 +1597,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1612,14 +1612,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1629,14 +1629,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1644,14 +1644,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1659,14 +1659,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1674,14 +1674,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1689,14 +1689,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1706,14 +1706,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1721,14 +1721,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1736,14 +1736,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1751,14 +1751,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1766,14 +1766,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1783,14 +1783,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1798,14 +1798,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1813,14 +1813,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1828,14 +1828,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1843,14 +1843,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1860,14 +1860,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1875,14 +1875,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1890,14 +1890,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1905,14 +1905,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1920,14 +1920,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -1939,36 +1939,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0200}",
-          "Dark": "{Color.Gray.1100}"
+          "Light": "{Color.Gray.10}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.1000}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0700}",
-          "Dark": "{Color.Gray.0500}"
+          "Light": "{Color.Gray.50}",
+          "Dark": "{Color.Gray.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0800}",
-          "Dark": "{Color.Gray.0400}"
+          "Light": "{Color.Gray.50}",
+          "Dark": "{Color.Gray.30}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1000}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.20}"
         }
       }
     },
@@ -1976,36 +1976,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1100}",
-          "Dark": "{Color.Gray.0200}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.10}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1000}",
-          "Dark": "{Color.Gray.0300}"
+          "Light": "{Color.Gray.70}",
+          "Dark": "{Color.Gray.20}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0500}",
-          "Dark": "{Color.Gray.0700}"
+          "Light": "{Color.Gray.40}",
+          "Dark": "{Color.Gray.50}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0400}",
-          "Dark": "{Color.Gray.0800}"
+          "Light": "{Color.Gray.30}",
+          "Dark": "{Color.Gray.50}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0300}",
-          "Dark": "{Color.Gray.1000}"
+          "Light": "{Color.Gray.20}",
+          "Dark": "{Color.Gray.70}"
         }
       }
     },
@@ -2013,36 +2013,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0200}",
-          "Dark": "{Color.Blue.1100}"
+          "Light": "{Color.Blue.10}",
+          "Dark": "{Color.Blue.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0300}",
-          "Dark": "{Color.Blue.1000}"
+          "Light": "{Color.Blue.20}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0700}",
-          "Dark": "{Color.Blue.0500}"
+          "Light": "{Color.Blue.50}",
+          "Dark": "{Color.Blue.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0800}",
-          "Dark": "{Color.Blue.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Blue.0900}",
-          "Dark": "{Color.Blue.0300}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.20}"
         }
       }
     },
@@ -2050,36 +2050,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0200}",
-          "Dark": "{Color.Green.1100}"
+          "Light": "{Color.Green.20}",
+          "Dark": "{Color.Green.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0300}",
-          "Dark": "{Color.Green.1000}"
+          "Light": "{Color.Green.40}",
+          "Dark": "{Color.Green.80}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0700}",
-          "Dark": "{Color.Green.0500}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0800}",
-          "Dark": "{Color.Green.0400}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.50}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Green.0900}",
-          "Dark": "{Color.Green.0300}"
+          "Light": "{Color.Green.70}",
+          "Dark": "{Color.Green.40}"
         }
       }
     },
@@ -2087,36 +2087,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0200}",
-          "Dark": "{Color.Yellow.1100}"
+          "Light": "{Color.Purple.10}",
+          "Dark": "{Color.Purple.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0300}",
-          "Dark": "{Color.Yellow.1000}"
+          "Light": "{Color.Purple.20}",
+          "Dark": "{Color.Purple.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0700}",
-          "Dark": "{Color.Yellow.0500}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0800}",
-          "Dark": "{Color.Yellow.0400}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.40}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Yellow.0900}",
-          "Dark": "{Color.Yellow.0300}"
+          "Light": "{Color.Purple.60}",
+          "Dark": "{Color.Purple.20}"
         }
       }
     },
@@ -2124,36 +2124,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0200}",
-          "Dark": "{Color.Red.1100}"
+          "Light": "{Color.Red.20}",
+          "Dark": "{Color.Red.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0300}",
-          "Dark": "{Color.Red.1000}"
+          "Light": "{Color.Red.30}",
+          "Dark": "{Color.Red.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0700}",
-          "Dark": "{Color.Red.0500}"
+          "Light": "{Color.Red.60}",
+          "Dark": "{Color.Red.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0800}",
-          "Dark": "{Color.Red.0400}"
+          "Light": "{Color.Red.60}",
+          "Dark": "{Color.Red.40}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Red.0900}",
-          "Dark": "{Color.Red.0300}"
+          "Light": "{Color.Red.70}",
+          "Dark": "{Color.Red.30}"
         }
       }
     },
@@ -2161,36 +2161,36 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0200}",
-          "Dark": "{Color.Sky.1100}"
+          "Light": "{Color.Blue.10}",
+          "Dark": "{Color.Blue.80}"
         }
       },
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0300}",
-          "Dark": "{Color.Sky.1000}"
+          "Light": "{Color.Blue.20}",
+          "Dark": "{Color.Blue.70}"
         }
       },
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0700}",
-          "Dark": "{Color.Sky.0500}"
+          "Light": "{Color.Blue.50}",
+          "Dark": "{Color.Blue.40}"
         }
       },
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0800}",
-          "Dark": "{Color.Sky.0400}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.30}"
         }
       },
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Sky.0900}",
-          "Dark": "{Color.Sky.0300}"
+          "Light": "{Color.Blue.60}",
+          "Dark": "{Color.Blue.20}"
         }
       }
     },
@@ -2198,14 +2198,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2213,14 +2213,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2228,14 +2228,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2243,14 +2243,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2258,14 +2258,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2275,14 +2275,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2290,14 +2290,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2305,14 +2305,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2320,14 +2320,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2335,14 +2335,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2352,14 +2352,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2367,14 +2367,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2382,14 +2382,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2397,14 +2397,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2412,14 +2412,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2429,14 +2429,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2444,14 +2444,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2459,14 +2459,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2474,14 +2474,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2489,14 +2489,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2506,14 +2506,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2521,14 +2521,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2536,14 +2536,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2551,14 +2551,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2566,14 +2566,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2583,14 +2583,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2598,14 +2598,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2613,14 +2613,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2628,14 +2628,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2643,14 +2643,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2660,14 +2660,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2675,14 +2675,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0500}",
-              "Dark": "{Effect.Opacity.0500}"
+              "Light": "{Effect.Opacity.30}",
+              "Dark": "{Effect.Opacity.30}"
             }
           }
         }
@@ -2690,14 +2690,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2705,14 +2705,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2720,14 +2720,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.0000}",
-          "Dark": "{Color.Gray.0000}"
+          "Light": "{Color.Gray.00}",
+          "Dark": "{Color.Gray.00}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.1000}",
-              "Dark": "{Effect.Opacity.1000}"
+              "Light": "{Effect.Opacity.100}",
+              "Dark": "{Effect.Opacity.100}"
             }
           }
         }
@@ -2739,14 +2739,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2754,14 +2754,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0600}",
-              "Dark": "{Effect.Opacity.0600}"
+              "Light": "{Effect.Opacity.40}",
+              "Dark": "{Effect.Opacity.40}"
             }
           }
         }
@@ -2769,14 +2769,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0700}",
-              "Dark": "{Effect.Opacity.0700}"
+              "Light": "{Effect.Opacity.50}",
+              "Dark": "{Effect.Opacity.50}"
             }
           }
         }
@@ -2784,14 +2784,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0800}",
-              "Dark": "{Effect.Opacity.0800}"
+              "Light": "{Effect.Opacity.60}",
+              "Dark": "{Effect.Opacity.60}"
             }
           }
         }
@@ -2799,14 +2799,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2816,14 +2816,14 @@
       "Subtlest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0400}",
-              "Dark": "{Effect.Opacity.0400}"
+              "Light": "{Effect.Opacity.20}",
+              "Dark": "{Effect.Opacity.20}"
             }
           }
         }
@@ -2831,14 +2831,14 @@
       "Subtle": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0600}",
-              "Dark": "{Effect.Opacity.0600}"
+              "Light": "{Effect.Opacity.40}",
+              "Dark": "{Effect.Opacity.40}"
             }
           }
         }
@@ -2846,14 +2846,14 @@
       "Default": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0700}",
-              "Dark": "{Effect.Opacity.0700}"
+              "Light": "{Effect.Opacity.50}",
+              "Dark": "{Effect.Opacity.50}"
             }
           }
         }
@@ -2861,14 +2861,14 @@
       "Strong": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0800}",
-              "Dark": "{Effect.Opacity.0800}"
+              "Light": "{Effect.Opacity.60}",
+              "Dark": "{Effect.Opacity.60}"
             }
           }
         }
@@ -2876,14 +2876,14 @@
       "Strongest": {
         "$type": "color",
         "$value": {
-          "Light": "{Color.Gray.1300}",
-          "Dark": "{Color.Gray.1300}"
+          "Light": "{Color.Gray.99}",
+          "Dark": "{Color.Gray.99}"
         },
         "$extensions": {
           "tgds": {
             "opacity": {
-              "Light": "{Effect.Opacity.0900}",
-              "Dark": "{Effect.Opacity.0900}"
+              "Light": "{Effect.Opacity.80}",
+              "Dark": "{Effect.Opacity.80}"
             }
           }
         }
@@ -2895,36 +2895,36 @@
       "Subtlest": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.0500}",
-          "Dark": "{Effect.Opacity.0500}"
+          "Light": "{Effect.Opacity.30}",
+          "Dark": "{Effect.Opacity.30}"
         }
       },
       "Subtle": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.0700}",
-          "Dark": "{Effect.Opacity.0700}"
+          "Light": "{Effect.Opacity.50}",
+          "Dark": "{Effect.Opacity.50}"
         }
       },
       "Default": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       },
       "Strong": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       },
       "Strongest": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       }
     },
@@ -2932,36 +2932,36 @@
       "Subtlest": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.0500}",
-          "Dark": "{Effect.Opacity.0500}"
+          "Light": "{Effect.Opacity.30}",
+          "Dark": "{Effect.Opacity.30}"
         }
       },
       "Subtle": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.0700}",
-          "Dark": "{Effect.Opacity.0700}"
+          "Light": "{Effect.Opacity.50}",
+          "Dark": "{Effect.Opacity.50}"
         }
       },
       "Default": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       },
       "Strong": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       },
       "Strongest": {
         "$type": "number",
         "$value": {
-          "Light": "{Effect.Opacity.1000}",
-          "Dark": "{Effect.Opacity.1000}"
+          "Light": "{Effect.Opacity.100}",
+          "Dark": "{Effect.Opacity.100}"
         }
       }
     }
