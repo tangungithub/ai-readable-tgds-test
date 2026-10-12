@@ -88,12 +88,12 @@
 
 | # | 항목 | 막히는 축 | 왜 지금 해야 하는가 |
 |---|---|---|---|
-| 1 | **`token/Intent-scale.json`·`Intent-constant.json` 미작성** — Theme은 2026-09-11 등록했고(`scripts/lint-intent-theme.mjs` 통과), Scale·Constant의 Role별 등록표(`SEM-T03`)·등록 조합(`SEM-07`)이 없다 | A2·A3 코드 동기화 / A3 사용 규칙 | 값이 없으면 `SEM-L*` 12개를 돌릴 대상이 없고, `DENY-02`의 토큰 집합 전제가 비어 있다. Warning의 On 기준색·다크 솔리드 명도(검토 노트 6·7)도 여기서 결정된다 |
+| 1 | **`token/Intent-scale.json`·`Intent-constant.json` 미작성** — Theme은 2026-09-11 등록했고(`scripts/lint-intent-theme.mjs` 통과), Scale·Constant의 Role별 등록표(`SEM-T03`)·등록 조합(`SEM-07`)이 없다 | A2·A3 코드 동기화 / A3 사용 규칙 | 값이 없으면 `SEM-L*` 12개를 돌릴 대상이 없고, `DENY-02`의 토큰 집합 전제가 비어 있다. Warning의 On 기준색·다크 솔리드 명도(검토 노트 6·7)는 Theme 등록표에서 종결됐다 |
 | 2 | **커버리지 테스트 미실시** — Button 5variant×4state / Input / Alert / Card / Table / Modal | A4 코드 동기화 / A4 확장 규칙 | 컴포넌트 인덱스가 0개다. 복합 상태(CMP 검토 노트 1)·Display·Subtext 존치(SEM 검토 노트 3)는 실제 컴포넌트를 만들어 봐야 닫힌다 |
 | 3 | **Do / Don't 예시 부재** | A1~A5 사용 규칙 **5칸 전부** | 사용 규칙 축의 유일한 공통 잔여. 위반 사례를 규범 문서에 붙이면 5칸이 ✅로 간다 |
 | 4 | **승인자 미지정** (→ [F3](../F-governance/README.md)) | A1~A5 확장 규칙 **5칸 전부** | 확장 규칙 축의 유일한 공통 잔여. F3 결정 하나에 5칸이 걸려 있다 |
 | 5 | **린트 실행화** — 35개 린트가 표로만 있다 | A5 코드 동기화 / F2 | 입력(`Base.json`)이 생겼으므로 `FND-L*` 12개는 지금 스크립트로 만들 수 있다 |
-| 6 | **Base 변경의 하위 계층 반영** — `Intent-theme.json`이 구 Base 키(`Yellow`·`Sky`·4자리 Opacity 등)를 참조한다 | A1·A2 코드 동기화 | Base 이름 체계가 바뀌었으므로 Intent 매핑표를 새 Color/Opacity Set에 맞춰 재작성해야 한다 |
+| 6 | ~~**Base 변경의 하위 계층 반영**~~ — 2026-10-12 종결. `Intent-theme.json`이 새 Base Option만 참조하고 `npm run lint:intent`를 통과한다 | A1·A2 코드 동기화 | Warning → `Purple`, Info → `Blue` 매핑 (semantic.md 검토 노트 4·6) |
 | 7 | **Shadow 보류** — `Effect/Shadow` Set과 Intent Target 동시 보류. 색을 참조해야 해 `FND-10`(말단)과 충돌 | A1·A2 범위 | 범위 밖이 아니라 보류이므로 언젠가 결정해야 한다 |
 | 8 | 잔여 소항목 — `_` 접두사 지위(A2 네이밍), Base 값의 Figma 대상 파일 동기화 방식(foundation.md 검토 노트 2) | 각 1칸 | 결정만 하면 되는 항목 |
 

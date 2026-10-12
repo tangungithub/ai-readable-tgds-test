@@ -160,6 +160,6 @@ Typography/Letter Spacing/{Font Size}-{Inverse Ratio}
 
 ## 7. 검토 노트 (Open Issues)
 
-1. **Intent Theme 참조 마이그레이션 필요** — 기존 `token/Intent-theme.json`은 `Color/Yellow`, `Color/Sky`, `Color/Gray/1300`, `Effect/Opacity/0400` 등 구 Base 키를 참조한다. Base 기준 변경 후 Intent 매핑표를 별도 개정해야 한다.
+1. ~~**Intent Theme 참조 마이그레이션 필요**~~ — 2026-10-12 종결. `token/Intent-theme.json`이 새 Base Option만 참조하도록 재작성했다(상세는 [semantic.md](semantic.md) 검토 노트 4).
 2. **Figma 동기화 대상 분리 필요** — 이번 기준은 FigJam 워크숍 보드와 Ihwa Base 컬렉션이다. 기존 AI Readable Design System 파일에 같은 값을 주입할지, Ihwa를 새 기준 파일로 삼을지 결정이 필요하다.
 3. **FND 린트 실행화** — 생성기에는 출력 안정성 검사가 들어 있지만 `FND-L01`~`FND-L13` 전체를 독립 린트 스크립트로 실행하지는 않는다.
