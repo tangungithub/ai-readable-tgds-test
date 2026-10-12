@@ -29,13 +29,13 @@ budget: 150 lines
 
 | Figma 컬렉션 | 파일 | 티어 | 모드 | 규칙 파일 |
 |---|---|---|---|---|
-| `Foundation` | [token/Foundation.json](../../token/Foundation.json) | Foundation | 없음 | foundation.md |
-| `Semantic theme` | [token/Semantic-theme.json](../../token/Semantic-theme.json) | Semantic | Light / Dark | semantic.md §2.2 |
-| `Semantic scale` | [token/Semantic-scale.json](../../token/Semantic-scale.json) | Semantic | Mobile / Tablet / Desktop | semantic.md §2.3 |
-| `Semantic constant` | [token/Semantic-constant.json](../../token/Semantic-constant.json) | Semantic | 없음 | semantic.md §2.4 |
-| `Component token` | [token/Component-token.json](../../token/Component-token.json) | Component | 없음 | component-token.md |
+| `Base` | [token/Base.json](../../token/Base.json) | Base | 없음 | foundation.md |
+| `Intent theme` | [token/Intent-theme.json](../../token/Intent-theme.json) | Intent | Light / Dark | semantic.md §2.2 |
+| `Intent scale` | [token/Intent-scale.json](../../token/Intent-scale.json) | Intent | Mobile / Tablet / Desktop | semantic.md §2.3 |
+| `Intent constant` | [token/Intent-constant.json](../../token/Intent-constant.json) | Intent | 없음 | semantic.md §2.4 |
+| `Pattern` | [token/Pattern.json](../../token/Pattern.json) | Pattern | 없음 | component-token.md |
 
-컴포넌트별 토큰은 별도 파일이 아니라 `Component-token.json` 안의 **컴포넌트당 최상위 그룹 하나**로 둔다(CMP-A5). 파일 형식은 [token/README.md](../../token/README.md).
+컴포넌트별 토큰은 별도 파일이 아니라 `Pattern.json` 안의 **컴포넌트당 최상위 그룹 하나**로 둔다(CMP-A5). 파일 형식은 [token/README.md](../../token/README.md).
 
 **규칙 ID의 접두는 곧 소유 파일이다.** `SEM-C02`를 보면 `semantic.md`를 열면 된다. 린트 규칙은 `*-L**` 형식을 쓴다(`FND-L01`, `SEM-L04`, `CMP-L02`).
 
@@ -44,11 +44,11 @@ budget: 150 lines
 | 작업 | 읽을 파일 |
 |---|---|
 | 원시값의 **규칙**을 바꾼다 (스케일 성질, 예외 등록) | [token.md](token.md) + **[foundation.md](foundation.md)** |
-| 원시값의 **값**을 바꾼다 | **[token/Foundation.json](../../token/Foundation.json)**만 |
+| 원시값의 **값**을 바꾼다 | **[token/Base.json](../../token/Base.json)**만 |
 | 의도 토큰을 추가한다 (색 역할, 간격 역할, 타이포 역할) | [token.md](token.md) + **[semantic.md](semantic.md)** |
 | 컴포넌트를 새로 만든다 | [token.md](token.md) + **[component-token.md](component-token.md)** + semantic.md |
-| Semantic 토큰의 **값**을 바꾼다 (모드별 매핑) | **[token/Semantic-theme.json](../../token/Semantic-theme.json)** 등 해당 컬렉션 파일만 |
-| 기존 컴포넌트의 토큰을 고친다 | [token.md](token.md) + component-token.md + **[token/Component-token.json](../../token/Component-token.json)의 해당 그룹** |
+| Intent 토큰의 **값**을 바꾼다 (모드별 매핑) | **[token/Intent-theme.json](../../token/Intent-theme.json)** 등 해당 컬렉션 파일만 |
+| 기존 컴포넌트의 토큰을 고친다 | [token.md](token.md) + component-token.md + **[token/Pattern.json](../../token/Pattern.json)의 해당 그룹** |
 | 토큰 이름을 코드로 변환한다 | [token.md](token.md) (TKN-04)만 |
 | 시스템 전체 구조를 파악한다 | [token.md](token.md)만 |
 
@@ -58,7 +58,7 @@ budget: 150 lines
 
 | 규칙 ID | 규칙 |
 |---|---|
-| TKN-01 | 계층은 **Foundation → Semantic → Component** 3단이며, 참조는 **단방향 1단계 하향**만 허용한다. 계층을 건너뛰거나 역방향으로 참조할 수 없다. |
+| TKN-01 | 계층은 **Base → Intent → Pattern** 3단이며, 참조는 **단방향 1단계 하향**만 허용한다. 계층을 건너뛰거나 역방향으로 참조할 수 없다. |
 | TKN-02 | 규칙 ID의 접두는 소유 파일과 1:1로 대응한다: `TKN` / `FND` / `SEM` / `CMP`. 다른 파일의 규칙을 개정하려면 그 파일을 열어야 한다. |
 | TKN-03 | **규칙과 값의 정본을 분리한다.** 규칙은 md 파일이, **값은 `../../token/*.json`이 정본**이다. md에는 값을 기재하지 않으며, 둘이 어긋나면 등록부가 정본이다. |
 | TKN-04 | 이름의 정본(canonical form)은 **Figma 표기**다 — 단어를 띄어쓰기로 구분하고 각 단어는 대문자로 시작한다(예: `Font Size`). 계층 구분은 `/`를 사용한다. 코드 변환은 선언된 규칙으로만 수행한다: **세그먼트 경계는 중첩으로 보존**, **세그먼트 내부는 camelCase**. 축약어를 사용하지 않는다. |
@@ -66,18 +66,18 @@ budget: 150 lines
 | TKN-06 | **예외는 사전 등록제다.** 각 파일의 등록 대장에 없는 예외는 존재하지 않는 것으로 취급한다. |
 | TKN-07 | **시스템 범위**는 §4에 선언한다. 범위 밖 속성은 토큰으로 만들지 않으며, 이는 참조 규칙(TKN-01)의 위반이 아니라 범위 밖 선언이다. |
 | TKN-08 | 폐기(deprecation)는 토큰 `$description`에 `[DEPRECATED - use {대체 토큰}]`을 표기하고 유예 기간 후 제거한다. **폐기 표기는 TKN-04의 명명 규칙에서 제외되는 유일한 예외다.** |
-| TKN-09 | **컬렉션 = 파일.** Figma 변수 컬렉션 5개와 `token/` 아래 json 5개는 §1.1의 표로 1:1 대응하며, 파일 루트의 `$extensions.tgds.collection`이 그 신원이다. 컬렉션·파일을 추가하거나 나누는 것은 본 헌법의 개정이다. 컴포넌트는 파일을 늘리지 않고 `Component-token.json`의 최상위 그룹으로 추가한다. |
-| TKN-10 | **루트 그룹 이름은 다섯 파일을 통틀어 전역 유일하다.** 참조 `{Root.Group.Leaf}`는 파일을 지정하지 않고 병합된 하나의 이름공간에서 해석된다. 따라서 컴포넌트 이름은 Foundation Category, Semantic Target과 겹칠 수 없다(예: `Icon`·`Text`·`Color`는 컴포넌트명이 될 수 없다). |
+| TKN-09 | **컬렉션 = 파일.** Figma 변수 컬렉션 5개와 `token/` 아래 json 5개는 §1.1의 표로 1:1 대응하며, 파일 루트의 `$extensions.tgds.collection`이 그 신원이다. 컬렉션·파일을 추가하거나 나누는 것은 본 헌법의 개정이다. 컴포넌트는 파일을 늘리지 않고 `Pattern.json`의 최상위 그룹으로 추가한다. |
+| TKN-10 | **루트 그룹 이름은 다섯 파일을 통틀어 전역 유일하다.** 참조 `{Root.Group.Leaf}`는 파일을 지정하지 않고 병합된 하나의 이름공간에서 해석된다. 따라서 컴포넌트 이름은 Base Category, Intent Target과 겹칠 수 없다(예: `Icon`·`Text`·`Color`는 컴포넌트명이 될 수 없다). |
 | TKN-11 | **모드는 파일 루트가 선언하고 값이 따른다.** `$extensions.tgds.modes`가 2개 이상이면 그 파일의 모든 `$value`(와 SEM-11의 `opacity`)는 모드명을 키로 한 객체이고, 선언된 모드 전부를 키로 가져야 한다. 모드가 없는 파일은 단일값이다. 모드는 컬렉션 단위 속성이므로 토큰마다 모드를 달리 가질 수 없다(SEM-01·SEM-08). |
 
 ## 4. 시스템 범위
 
 | 영역 | 상태 | 비고 |
 |---|---|---|
-| Color | 정의됨 | `Blue` `Red` `Green` `Purple` `Gray`. Gray만 `00`·`99` 앵커를 가진다(FND-13~16). **알파 Set은 없다** — 반투명은 Semantic이 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). 값은 `../../token/Foundation.json` |
+| Color | 정의됨 | `Blue` `Red` `Green` `Purple` `Gray`. Gray만 `00`·`99` 앵커를 가진다(FND-13~16). **알파 Set은 없다** — 반투명은 Intent가 색 참조와 `Effect/Opacity` 참조를 조합해 만든다(SEM-11). 값은 `../../token/Base.json` |
 | Typography, Layout, Shape, Effect(Opacity) | 정의됨 | `foundation.md` §1.4 |
-| **Shadow / Blur** | **보류** | Semantic Theme의 `Shadow` Target도 함께 주석 처리 상태 |
-| **Motion (Duration · Easing)** | **범위 밖** | 인터랙션으로 확장할 때 Foundation Category와 함께 재도입한다. 근거 자료는 [easing-token-rule.md](../99-reference/easing-token-rule.md)에 보존 |
+| **Shadow / Blur** | **보류** | Intent Theme의 `Shadow` Target도 함께 주석 처리 상태 |
+| **Motion (Duration · Easing)** | **범위 밖** | 인터랙션으로 확장할 때 Base Category와 함께 재도입한다. 근거 자료는 [easing-token-rule.md](../99-reference/easing-token-rule.md)에 보존 |
 | Grid / Breakpoint 값, z-index, 밀도(density) | 범위 밖 | 토큰화하지 않는다 |
 
 Figma 변수로 바인딩할 수 없는 속성(레이어 x·y 위치, 회전, 그라디언트 스톱 위치, 스트로크 대시, 블렌드 모드, 코너 스무딩)은 **어느 계층에서도 토큰으로 만들지 않는다.** 근거는 [semantic-target-survey.md](../99-reference/semantic-target-survey.md) §1.2.
@@ -86,15 +86,15 @@ Figma 변수로 바인딩할 수 없는 속성(레이어 x·y 위치, 회전, �
 
 | 버전 | 날짜 | 변경 |
 |---|---|---|
-| v0.8 | 2026-10-08 | **Foundation 원칙을 FigJam 워크숍 기준으로 개정** — 전역 4자리 서수 스케일을 폐기하고 `{Category}/{Set}/{Option}` 3세그먼트 문법으로 변경. Color Set을 `Blue` `Red` `Green` `Purple` `Gray`로 재정의하고, Line Height·Letter Spacing은 `24-150`, `24-i1` 같은 composite Option으로 등록. |
-| v0.7 | 2026-09-11 | **Semantic theme 등록표 작성** — `token/Semantic-theme.json`에 Theme 269 토큰 등록(Background·Fill·Text·Icon·Border·Overlay·Opacity × 14 Role × Light/Dark). 실행 린트 `scripts/lint-semantic-theme.mjs`(`SEM-L01~L03·L07~L12`, 빌드 체인에 포함) 신설. 규칙 보정: SEM-T04(대비는 린트가 계산, Border 틴트 단계 제외), SEM-T05(캔버스 위 유채 전경·틴트 위 Neutral 전경 허용, 전 단계 검사), SEM-T09(Strong·Strongest는 어두운 방향, 모드 간 솔리드 스텝 동일). 검토 노트 6·7 종결, 8 신설 |
-| v0.6 | 2026-09-11 | **등록부를 Figma 컬렉션 단위로 재편** — `tokens/foundation.tokens.json` → `token/Foundation.json`, 컬렉션당 파일 하나(TKN-09: `Foundation` · `Semantic-theme` · `Semantic-scale` · `Semantic-constant` · `Component-token`). 루트 그룹 전역 유일(TKN-10), 모드별 값 표기(TKN-11). 컴포넌트 토큰은 `components/{Component}.md` 대신 `Component-token.json`의 컴포넌트 그룹으로(CMP-A5·§3.4 개정). Semantic·Component 파일은 루트 메타데이터만 있는 스켈레톤으로 생성 |
-| v0.5 | 2026-09-09 | **On-color · Inverse · 불투명도 조합 확정** — Semantic Theme의 `Background`를 캔버스 전용으로 좁히고 `Fill` Target 신설, `On {Role}` 7종·`Inverse` Role 추가, 표면·전경 짝 규칙(SEM-T05), 유채 스텝 상한(SEM-T08), 솔리드 Fill 앵커(SEM-T09), 불투명도 조합(SEM-11), 린트 SEM-L07~L12. Foundation은 `Color/White`·`Color/Black` 알파 Set을 폐지하고 `Color/Gray`에 순백·순흑 앵커 `0000`·`1300`을 등록(FND-16). 근거: Figma 2026-09-03 변수 업데이트(색 변수의 불투명도를 number 변수로 alias) |
-| v0.4 | 2026-08-27 | **Component 네이밍 문법 작성** — ComponentToken §3.1 확정(가변 축 문법 CMP-N1~N8, 문법 스키마), §3.4 컴포넌트 파일 형식(축 선언·상태 분기 표·상태 비의존 표) 신설, 린트 CMP-L06~L11 추가. Element 판별 기준·상태 매핑 표 형식의 미결 해소 |
-| v0.4 | 2026-08-26 | **값 외부화** — 모든 원시값을 `../../token/Foundation.json`으로 이전하고 foundation.md는 규칙만 보유(346→160줄). Color Set 확정(6 hue×13단계 + White·Black 11단계). **색 램프를 OKLCH 명도 등간격으로 재배치**(FND-13~15, FND-L11). SEM-T03·T04 신설 |
-| v0.3 | 2026-08-26 | **4파일 분리** — 본 파일을 라우터+헌법으로 축소하고 Foundation / Semantic / ComponentToken 분리. FND-08을 TKN-04로 승격. Radius·Stroke에서 0 스텝 제거(FND-11). Space vs Size 판별 기준 확정. Shadow Target 주석 처리 |
-| v0.2 | 2026-08-26 | `Typography/Letter Spacing` Set 신설. Line Height·Letter Spacing의 둘째 요소를 순수 서수로 통일. Motion Category 제외(6종→5종). Semantic 3컬렉션(Theme/Scale/Constant) 성문화 |
-| v0.1 | 2026-08-18 | Foundation 파트 최초 작성 |
+| v0.8 | 2026-10-08 | **Base 원칙을 FigJam 워크숍 기준으로 개정** — 전역 4자리 서수 스케일을 폐기하고 `{Category}/{Set}/{Option}` 3세그먼트 문법으로 변경. Color Set을 `Blue` `Red` `Green` `Purple` `Gray`로 재정의하고, Line Height·Letter Spacing은 `24-150`, `24-i1` 같은 composite Option으로 등록. |
+| v0.7 | 2026-09-11 | **Intent theme 등록표 작성** — `token/Intent-theme.json`에 Theme 269 토큰 등록(Background·Fill·Text·Icon·Border·Overlay·Opacity × 14 Role × Light/Dark). 실행 린트 `scripts/lint-intent-theme.mjs`(`SEM-L01~L03·L07~L12`, 빌드 체인에 포함) 신설. 규칙 보정: SEM-T04(대비는 린트가 계산, Border 틴트 단계 제외), SEM-T05(캔버스 위 유채 전경·틴트 위 Neutral 전경 허용, 전 단계 검사), SEM-T09(Strong·Strongest는 어두운 방향, 모드 간 솔리드 스텝 동일). 검토 노트 6·7 종결, 8 신설 |
+| v0.6 | 2026-09-11 | **등록부를 Figma 컬렉션 단위로 재편** — `tokens/base.tokens.json` → `token/Base.json`, 컬렉션당 파일 하나(TKN-09: `Base` · `Intent-theme` · `Intent-scale` · `Intent-constant` · `Pattern`). 루트 그룹 전역 유일(TKN-10), 모드별 값 표기(TKN-11). 컴포넌트 토큰은 `components/{Component}.md` 대신 `Pattern.json`의 컴포넌트 그룹으로(CMP-A5·§3.4 개정). Intent·Pattern 파일은 루트 메타데이터만 있는 스켈레톤으로 생성 |
+| v0.5 | 2026-09-09 | **On-color · Inverse · 불투명도 조합 확정** — Intent Theme의 `Background`를 캔버스 전용으로 좁히고 `Fill` Target 신설, `On {Role}` 7종·`Inverse` Role 추가, 표면·전경 짝 규칙(SEM-T05), 유채 스텝 상한(SEM-T08), 솔리드 Fill 앵커(SEM-T09), 불투명도 조합(SEM-11), 린트 SEM-L07~L12. Base는 `Color/White`·`Color/Black` 알파 Set을 폐지하고 `Color/Gray`에 순백·순흑 앵커 `0000`·`1300`을 등록(FND-16). 근거: Figma 2026-09-03 변수 업데이트(색 변수의 불투명도를 number 변수로 alias) |
+| v0.4 | 2026-08-27 | **Pattern 네이밍 문법 작성** — Pattern Token §3.1 확정(가변 축 문법 CMP-N1~N8, 문법 스키마), §3.4 컴포넌트 파일 형식(축 선언·상태 분기 표·상태 비의존 표) 신설, 린트 CMP-L06~L11 추가. Element 판별 기준·상태 매핑 표 형식의 미결 해소 |
+| v0.4 | 2026-08-26 | **값 외부화** — 모든 원시값을 `../../token/Base.json`으로 이전하고 foundation.md는 규칙만 보유(346→160줄). Color Set 확정(6 hue×13단계 + White·Black 11단계). **색 램프를 OKLCH 명도 등간격으로 재배치**(FND-13~15, FND-L11). SEM-T03·T04 신설 |
+| v0.3 | 2026-08-26 | **4파일 분리** — 본 파일을 라우터+헌법으로 축소하고 Base / Intent / Pattern 분리. FND-08을 TKN-04로 승격. Radius·Stroke에서 0 스텝 제거(FND-11). Space vs Size 판별 기준 확정. Shadow Target 주석 처리 |
+| v0.2 | 2026-08-26 | `Typography/Letter Spacing` Set 신설. Line Height·Letter Spacing의 둘째 요소를 순수 서수로 통일. Motion Category 제외(6종→5종). Intent 3컬렉션(Theme/Scale/Constant) 성문화 |
+| v0.1 | 2026-08-18 | Base 파트 최초 작성 |
 
 ## 6. 관련 문서
 

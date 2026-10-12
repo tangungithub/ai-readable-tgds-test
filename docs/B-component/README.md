@@ -23,7 +23,7 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 
 ## B1. 컴포넌트 분류 체계
 
-> 컴포넌트를 어떤 층으로 나누는가. 이것이 없으면 A4 Component Token의 첫 세그먼트 기준 집합도 없다.
+> 컴포넌트를 어떤 층으로 나누는가. 이것이 없으면 A4 Pattern Token의 첫 세그먼트 기준 집합도 없다.
 
 **원칙 설계**
 - [ ] 층 정의 — Primitive / Composite / Pattern / Template 등 몇 층으로 나누는가
@@ -45,7 +45,7 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 
 ## B2. Property · Variant 모델
 
-> 하나의 컴포넌트가 갖는 변형 축의 구조. A4 Component Token의 `Variant` 슬롯이 여기서 나온다.
+> 하나의 컴포넌트가 갖는 변형 축의 구조. A4 Pattern Token의 `Variant` 슬롯이 여기서 나온다.
 
 **원칙 설계**
 - [ ] 변형 축의 종류 정의 — 시각 변형(Primary/Secondary) / 크기(Size) / 형태(Shape) …
@@ -56,7 +56,7 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 **네이밍 규칙**
 - [ ] Property 이름 문법
 - [ ] Variant 값의 닫힌 집합 — 컴포넌트별 enum을 어디에 정의하는가
-- [ ] A4 Component Token의 `Variant` 슬롯과 **같은 값을 쓸 것을 강제**할 것인가 ⚠️
+- [ ] A4 Pattern Token의 `Variant` 슬롯과 **같은 값을 쓸 것을 강제**할 것인가 ⚠️
 
 **사용 규칙 / 확장 규칙 / 판별 테스트 / 코드 동기화**
 - [ ] 축을 늘리기 전 검토 순서
@@ -68,10 +68,10 @@ Figma의 **Auto Layout**은 B4의 구현 수단, **Slot**은 B5의 구현 수단
 
 ## B3. State 모델
 
-> State가 표현되는 유일한 티어는 A4 Component Token. State의 **목록**은 [component-token.md](../A-token/component-token.md) `CMP-N1`이 정본이고, 이 단위는 각 State의 **의미·조합·필수 여부**를 담당한다.
+> State가 표현되는 유일한 티어는 A4 Pattern Token. State의 **목록**은 [component-token.md](../A-token/component-token.md) `CMP-N1`이 정본이고, 이 단위는 각 State의 **의미·조합·필수 여부**를 담당한다.
 
 **원칙 설계 — 🟡**
-- [x] State는 Semantic이 아니라 **Component 티어에서만** 표현한다 (`SEM-04`·`CMP-A6`)
+- [x] State는 Intent가 아니라 **Pattern 티어에서만** 표현한다 (`SEM-04`·`CMP-A6`)
 - [x] **State의 닫힌 목록** — `Default` `Hover` `Pressed` `Focus` `Selected` `Disabled` 6종 (`CMP-N1`). Loading·Error는 목록에 없다 — 필요해지면 enum 개정
 - [ ] 각 State의 정의 — 언제 이 상태인가
 - [ ] 조합 State 허용 여부 (Hover + Selected) — component-token.md 검토 노트 1, 커버리지 테스트에서 확정

@@ -1,12 +1,12 @@
 /**
- * Lint for token/Semantic-theme.json against docs/A-token/semantic.md §2.2.
+ * Lint for token/Intent-theme.json against docs/A-token/semantic.md §2.2.
  *
  * Executes SEM-L01 · L02 · L03 · L07 · L08 · L09 · L10 · L11 · L12 and the
  * mode contract of TKN-11. Rules live in the md; this file only checks them.
  * Contrast is WCAG 2.x relative-luminance ratio; a foreground carrying an
  * opacity reference (SEM-11) is composited onto the surface before measuring.
  *
- * Run: npm run lint:semantic   (exit 1 on any violation)
+ * Run: npm run lint:intent   (exit 1 on any violation)
  */
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -14,8 +14,8 @@ import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
-const foundation = read('token/Foundation.json');
-const theme = read('token/Semantic-theme.json');
+const base = read('token/Base.json');
+const theme = read('token/Intent-theme.json');
 
 // ----------------------------------------------------------- closed sets (§2.2)
 const BASE_ROLES = ['Neutral', 'Inverse', 'Accent', 'Success', 'Warning', 'Danger', 'Info'];
@@ -52,7 +52,7 @@ function flatten(obj, path = [], out = {}) {
   }
   return out;
 }
-const fnd = flatten(foundation);
+const fnd = flatten(base);
 const sem = flatten(theme);
 
 const aliasRe = /^\{([^}]+)\}$/;
@@ -80,7 +80,7 @@ const contrast = (a, b) => {
 };
 const composite = (fg, alpha, bg) => fg.map((c, i) => alpha * c + (1 - alpha) * bg[i]);
 
-/** Resolved sRGB (0..1) of a semantic colour token in one mode, alpha applied over `surface`. */
+/** Resolved sRGB (0..1) of an intent colour token in one mode, alpha applied over `surface`. */
 function colourOf(name, mode, surface) {
   const t = sem[name];
   const v = t.$value[mode];
@@ -228,7 +228,7 @@ if (process.argv.includes('--report')) {
   for (const c of contrastLog) console.log(`${c.mode.padEnd(5)} ${c.fg.padEnd(28)} on ${c.surface.padEnd(26)} ${String(c.ratio).padStart(6)}${c.min === null ? '  (장식, 미검사)' : ''}`);
 }
 if (problems.length) {
-  console.error(`Semantic theme lint: ${problems.length} violation(s) in ${count} tokens\n  - ${problems.join('\n  - ')}`);
+  console.error(`Intent theme lint: ${problems.length} violation(s) in ${count} tokens\n  - ${problems.join('\n  - ')}`);
   process.exit(1);
 }
-console.log(`Semantic theme lint: ${count} tokens, ${surfaces.length} surfaces × ${modes.length} modes, ${contrastLog.length} contrast pairs — OK`);
+console.log(`Intent theme lint: ${count} tokens, ${surfaces.length} surfaces × ${modes.length} modes, ${contrastLog.length} contrast pairs — OK`);

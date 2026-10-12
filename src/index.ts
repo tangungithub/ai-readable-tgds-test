@@ -1,16 +1,16 @@
-import './tokens/foundation.css';
+import './tokens/base.css';
 
 export {
-  foundation,
-  foundationLookup,
-  foundationOrder,
-  foundationUnits,
-} from './tokens/foundation';
+  base,
+  baseLookup,
+  baseOrder,
+  baseUnits,
+} from './tokens/base';
 
 export type {
   BlueTokenPath,
-  Foundation,
-  FoundationCategory,
+  Base,
+  BaseCategory,
   FontFamilyTokenPath,
   FontSizeTokenPath,
   FontWeightTokenPath,
@@ -25,4 +25,4 @@ export type {
   SizeTokenPath,
   SpaceTokenPath,
   StrokeTokenPath,
-} from './tokens/foundation';
+} from './tokens/base';

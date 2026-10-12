@@ -1,14 +1,14 @@
 {
-  "$description": "AI Readable Design System — Foundation token registry. AUTHORITATIVE VALUE STORE. Rules live in docs/A-token/foundation.md; values live here (TKN-03 · FND-12).",
+  "$description": "AI Readable Design System — Base token registry. AUTHORITATIVE VALUE STORE. Rules live in docs/A-token/foundation.md; values live here (TKN-03 · FND-12).",
   "$extensions": {
     "tgds": {
-      "collection": "Foundation",
-      "tier": "foundation",
+      "collection": "Base",
+      "tier": "base",
       "modes": [],
       "source": {
         "figmaBoard": "Uk9OXrTbBRW4Lfdh5jgiMP",
         "figmaNode": "11:1109",
-        "note": "Foundation Token 네이밍 설계 워크숍"
+        "note": "Base Token 네이밍 설계 워크숍"
       }
     }
   },
@@ -50,7 +50,7 @@
         "$value": "#031126",
         "$type": "color"
       },
-      "$description": "Foundation Blue ramp. Options are visible lightness anchors: 05, 10…90.",
+      "$description": "Base Blue ramp. Options are visible lightness anchors: 05, 10…90.",
       "05": {
         "$value": "#f7faff",
         "$type": "color"
@@ -93,7 +93,7 @@
         "$value": "#270609",
         "$type": "color"
       },
-      "$description": "Foundation Red ramp. Options are visible lightness anchors: 05, 10…90.",
+      "$description": "Base Red ramp. Options are visible lightness anchors: 05, 10…90.",
       "05": {
         "$value": "#fff8f8",
         "$type": "color"
@@ -136,7 +136,7 @@
         "$value": "#021a09",
         "$type": "color"
       },
-      "$description": "Foundation Green ramp. Options are visible lightness anchors: 05, 10…90.",
+      "$description": "Base Green ramp. Options are visible lightness anchors: 05, 10…90.",
       "05": {
         "$value": "#f4fdf6",
         "$type": "color"
@@ -179,7 +179,7 @@
         "$value": "#1d0824",
         "$type": "color"
       },
-      "$description": "Foundation Purple ramp. Options are visible lightness anchors: 05, 10…90.",
+      "$description": "Base Purple ramp. Options are visible lightness anchors: 05, 10…90.",
       "05": {
         "$value": "#fdf8ff",
         "$type": "color"
@@ -226,7 +226,7 @@
         "$value": "#000000",
         "$type": "color"
       },
-      "$description": "Foundation gray ramp. Options are visible lightness anchors: 00, 05, 10…90, 99.",
+      "$description": "Base gray ramp. Options are visible lightness anchors: 00, 05, 10…90, 99.",
       "00": {
         "$value": "#ffffff",
         "$type": "color"

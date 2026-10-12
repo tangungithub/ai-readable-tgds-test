@@ -27,10 +27,10 @@
 
 | 단위 | 원칙 설계 | 네이밍 규칙 | 사용 규칙 | 확장 규칙 | 판별 테스트 | 코드 동기화 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| [A1 Foundation](docs/A-token/foundation.md) | 🟡 | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
-| [A2 Semantic — Theme](docs/A-token/A2-semantic-theme.md) | ✅ | 🟡 | 🟡 | 🟡 | ✅ | 🟡 |
-| [A3 Semantic — Scale · Constant](docs/A-token/A3-semantic-responsive.md) | ✅ | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
-| [A4 Component Token](docs/A-token/A4-component-token.md) | ✅ | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
+| [A1 Base](docs/A-token/foundation.md) | 🟡 | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
+| [A2 Intent — Theme](docs/A-token/A2-semantic-theme.md) | ✅ | 🟡 | 🟡 | 🟡 | ✅ | 🟡 |
+| [A3 Intent — Scale · Constant](docs/A-token/A3-semantic-responsive.md) | ✅ | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
+| [A4 Pattern Token](docs/A-token/A4-component-token.md) | ✅ | ✅ | 🟡 | 🟡 | ✅ | 🟡 |
 | [A5 컬렉션 구조·참조·Mode](docs/A-token/A5-collection-structure.md) | ✅ | — | 🟡 | 🟡 | ✅ | 🟡 |
 
 ### [B. Component 아키텍처](docs/B-component/) — 2.0 / 30 ≈ **7%**
@@ -86,12 +86,12 @@
 
 | # | 막고 있는 것 | 어디서 | 무엇이 막혀 있는가 |
 |---|---|---|---|
-| 1 | **Semantic 값 등록부 일부 미작성** — `token/Semantic-theme.json`은 등록·린트 통과(2026-09-11), `Semantic-scale.json`·`Semantic-constant.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
+| 1 | **Intent 값 등록부 일부 미작성** — `token/Intent-theme.json`은 등록·린트 통과(2026-09-11), `Intent-scale.json`·`Intent-constant.json`(Role별 등록표 `SEM-T03`·등록 조합 `SEM-07`)이 없다 | [A2](docs/A-token/A2-semantic-theme.md) · [A3](docs/A-token/A3-semantic-responsive.md) | A2·A3 코드 동기화, `SEM-L*` 12개 실행, `DENY-02`의 토큰 집합 전제 |
 | 2 | **커버리지 테스트 미실시** — Button · Input · Alert · Card · Table · Modal | [A4](docs/A-token/A4-component-token.md) | 컴포넌트 인덱스 0개 → A4 코드 동기화. 복합 State(B3)·Display/Subtext 존치·Warning On 기준색이 여기서 닫힌다 |
 | 3 | **DS 프로젝트 경계 미정의** | [D3](docs/D-naming/) | `DENY-03` — "외부에서 제작"을 판정하려면 외부가 어디인지 정의돼야 함 |
 | 4 | **Figma 컴포넌트 이름 ↔ 토큰 인덱스 일치 규칙 부재** — 토큰 측 기준 집합은 생겼다(`CMP-A5` 인덱스, `CMP-L06`). Figma 측 이름이 이를 따르는지 판정할 규칙이 없다 | [D2](docs/D-naming/) | `DENY-01`의 Figma 측 판정, B1 분류 체계 |
 | 5 | **Breakpoint px 경계값 미정의** — 모드 이름(Mobile / Tablet / Desktop)은 확정됐고 값은 토큰 범위 밖(`TKN-07`) | [C2](docs/C-layout/) | A3 코드 동기화(미디어쿼리 vs 컨테이너 쿼리), C1 Grid |
-| 6 | **린트 실행화 · Foundation 변경의 하위 계층 반영** — 35개 린트가 표로만 있고, `Semantic-theme.json`은 구 Foundation 키(`Yellow`·`Sky`·4자리 Opacity 등)를 참조한다 | [A1](docs/A-token/foundation.md) · [A2](docs/A-token/A2-semantic-theme.md) · [E2](docs/E-design-code/E2-token-sync.md) | A 영역 코드 동기화 축 6칸의 ✅, 게이트웨이 전부 |
+| 6 | **린트 실행화 · Base 변경의 하위 계층 반영** — 35개 린트가 표로만 있고, `Intent-theme.json`은 구 Base 키(`Yellow`·`Sky`·4자리 Opacity 등)를 참조한다 | [A1](docs/A-token/foundation.md) · [A2](docs/A-token/A2-semantic-theme.md) · [E2](docs/E-design-code/E2-token-sync.md) | A 영역 코드 동기화 축 6칸의 ✅, 게이트웨이 전부 |
 
 > 이전 목록의 **계층 간 어휘 불일치**(→ `Accent` 단일화, `Text/Neutral/Subtle`), **State 닫힌 목록**(→ `CMP-N1` 6종), **Duration·Easing·Shadow 데드락**(→ Motion 범위 밖 `TKN-07`, Shadow 보류)은 v0.5로 해소됐습니다.
 > 게이트웨이 Deny 3종 중 `DENY-01`·`DENY-02`는 토큰 측 판정 규칙(`CMP-L06`·`CMP-L02`)이 생겼습니다. 남은 전제는 판정 **대상**(1·4)과 경계(3)입니다.
@@ -112,7 +112,7 @@
 ```
 docs/
 ├── 00-overview/      정의 · 구현 축 · 5요소 대조 · 로드맵
-├── A-token/          규범 문서(token/foundation/semantic/component-token) · 단위 트래커 A2~A5
+├── A-token/          규범 문서(token/foundation/semantic/component-token) · 단위 트래커 A1~A5
 ├── B-component/      B1~B5
 ├── C-layout/         C1~C3
 ├── D-naming/         D1~D3
@@ -122,7 +122,7 @@ docs/
 └── 99-reference/     근거 리서치
 
 CLAUDE.md             레포 작업 규약 (AI 에이전트용 지도)
-token/                모든 토큰 값의 정본 (DTCG 형식) — Figma 컬렉션당 1파일: Foundation · Semantic-theme · Semantic-scale · Semantic-constant · Component-token
+token/                모든 토큰 값의 정본 (DTCG 형식) — Figma 컬렉션당 1파일: Base · Intent-theme · Intent-scale · Intent-constant · Pattern
 scripts/              생성기
 src/tokens/           생성물 — 손으로 고치지 않는다
 ```
@@ -143,6 +143,6 @@ src/tokens/           생성물 — 손으로 고치지 않는다
 
 ### 생성 파이프라인
 
-`scripts/generate-tokens.mjs`는 `token/Foundation.json`을 입력으로 `src/tokens/*`를 생성합니다.
-Foundation 이름은 `Category/Set/Option` 3세그먼트 구조이며, `Line Height`·`Letter Spacing`처럼 기준 값에 종속되는 Set만 Option 내부에서 `24-150`, `24-i1` 같은 composite 표기를 씁니다.
+`scripts/generate-tokens.mjs`는 `token/Base.json`을 입력으로 `src/tokens/*`를 생성합니다.
+Base 이름은 `Category/Set/Option` 3세그먼트 구조이며, `Line Height`·`Letter Spacing`처럼 기준 값에 종속되는 Set만 Option 내부에서 `24-150`, `24-i1` 같은 composite 표기를 씁니다.
 구 스펙(`token-system.md`)은 생성기 재연결과 함께 삭제되었습니다.

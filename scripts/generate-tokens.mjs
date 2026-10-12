@@ -1,15 +1,15 @@
 /**
- * Generates the Foundation token layer from the value registry.
+ * Generates the Base token layer from the value registry.
  *
- * Source of truth is token/Foundation.json (W3C DTCG shape, one file per Figma
+ * Source of truth is token/Base.json (W3C DTCG shape, one file per Figma
  * collection — TKN-09). Rules live in docs/A-token/foundation.md; values live
  * only in the registry (TKN-03 · FND-12). What is not in the registry does not
  * exist — there is no TBD state.
  *
  * Emits:
- *   src/tokens/foundation.css          — custom properties, kebab-cased
- *   src/tokens/foundation.ts           — typed values, scale order, lookup table
- *   src/tokens/foundation.tokens.json  — mapping table (Figma name ↔ CSS var ↔ TS path)
+ *   src/tokens/base.css          — custom properties, kebab-cased
+ *   src/tokens/base.ts           — typed values, scale order, lookup table
+ *   src/tokens/base.tokens.json  — mapping table (Figma name ↔ CSS var ↔ TS path)
  *
  * Run: npm run tokens:build
  */
@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const REGISTRY = 'token/Foundation.json';
+const REGISTRY = 'token/Base.json';
 
 // ------------------------------------------------------------------ helpers
 
@@ -164,7 +164,7 @@ function collect(registry) {
 
   for (const [category, groups] of Object.entries(registry)) {
     if (isMeta(category)) continue;
-    if (!CATEGORIES.has(category)) throw new Error(`${category}: unknown Foundation Category`);
+    if (!CATEGORIES.has(category)) throw new Error(`${category}: unknown Base Category`);
 
     for (const setName of dataKeys(groups)) {
       const group = groups[setName];
@@ -175,7 +175,7 @@ function collect(registry) {
       let dtcgType = null;
       const options = leaves.map((leaf) => {
         if (leaf.optionPath.length > MAX_OPTION_SEGMENTS) {
-          throw new Error(`${category}/${setName}: Foundation names must stay in Category/Set/Option form`);
+          throw new Error(`${category}/${setName}: Base names must stay in Category/Set/Option form`);
         }
         dtcgType ??= leaf.token.$type;
         if (leaf.token.$type !== dtcgType) {
@@ -224,7 +224,7 @@ function assertIntegrity(sets) {
   for (const { fullName, category, setName, unit, dtcgType, options } of sets) {
     for (const o of options) {
       if (containsAlias(o.token.$value)) {
-        problems.push(`${canonicalName(category, setName, o.optionPath)}: Foundation cannot contain aliases`);
+        problems.push(`${canonicalName(category, setName, o.optionPath)}: Base cannot contain aliases`);
       }
 
       const css = cssProperty(category, setName, o.codePath).toLowerCase();
@@ -271,7 +271,7 @@ function assertIntegrity(sets) {
     }
 
     if (dtcgType === 'dimension' && unit !== 'px') {
-      problems.push(`${fullName}: Foundation dimensions currently support px only (${unit})`);
+      problems.push(`${fullName}: Base dimensions currently support px only (${unit})`);
     }
   }
 
@@ -287,7 +287,7 @@ const cssProperty = (category, setName, optionCodePath) =>
   `--${[category, setName, ...optionCodePath].map((segment) => kebab(segment)).join('-')}`;
 
 function tsPath(category, setName, optionCodePath) {
-  const parts = ['foundation', camel(category), camel(setName), ...optionCodePath];
+  const parts = ['base', camel(category), camel(setName), ...optionCodePath];
   return parts
     .map((part, index) => {
       if (index === 0) return part;
@@ -365,7 +365,7 @@ function emitTs(sets) {
       throw new Error(`Type name collision: ${name} (from ${category}/${setName})`);
     }
     seenTypeNames.add(name);
-    typeLines.push(`export type ${name} = (typeof foundationOrder)['${camel(category)}']['${camel(setName)}'][number];`);
+    typeLines.push(`export type ${name} = (typeof baseOrder)['${camel(category)}']['${camel(setName)}'][number];`);
   }
 
   return [
@@ -376,17 +376,17 @@ function emitTs(sets) {
     ' *',
     ' * Shape follows TKN-04: segment boundaries become object nesting, words',
     ' * inside a segment become camelCase, numeric options stay bracket-accessed.',
-    " *   Typography/Line Height/24-150 -> foundation.typography.lineHeight['24-150']",
+    " *   Typography/Line Height/24-150 -> base.typography.lineHeight['24-150']",
     ' */',
     '',
-    '/** Raw values. Units are carried separately in `foundationUnits`. */',
-    `export const foundation = ${JSON.stringify(tree, null, 2)} as const;`,
+    '/** Raw values. Units are carried separately in `baseUnits`. */',
+    `export const base = ${JSON.stringify(tree, null, 2)} as const;`,
     '',
     '/** Unit for each Set. `null` = unitless (colors, ratios, nominal values). */',
-    `export const foundationUnits = ${JSON.stringify(units, null, 2)} as const;`,
+    `export const baseUnits = ${JSON.stringify(units, null, 2)} as const;`,
     '',
     '/** Leaf token options in scale order. */',
-    `export const foundationOrder = ${JSON.stringify(order, null, 2)} as const;`,
+    `export const baseOrder = ${JSON.stringify(order, null, 2)} as const;`,
     '',
     '/**',
     ' * Reverse mapping, CSS custom property -> canonical Figma name + TS path.',
@@ -396,14 +396,14 @@ function emitTs(sets) {
     ' * from the space inside "Line Height", or from a composite Option. Look it up here instead of taking',
     ' * the name apart.',
     ' */',
-    `export const foundationLookup: Readonly<Record<string, { canonical: string; ts: string }>> = ${JSON.stringify(
+    `export const baseLookup: Readonly<Record<string, { canonical: string; ts: string }>> = ${JSON.stringify(
       lookup,
       null,
       2,
     )};`,
     '',
-    'export type Foundation = typeof foundation;',
-    'export type FoundationCategory = keyof Foundation;',
+    'export type Base = typeof base;',
+    'export type BaseCategory = keyof Base;',
     '',
     ...typeLines,
     '',
@@ -414,7 +414,7 @@ function emitTs(sets) {
 function emitTokensJson(sets) {
   const doc = {
     $description:
-      'Foundation token mapping table for the AI Readable Design System (TGDS). ' +
+      'Base token mapping table for the AI Readable Design System (TGDS). ' +
       `Generated from ${REGISTRY} — do not edit by hand. Values are authoritative ` +
       'in the registry (TKN-03); this file adds the code-name mapping.',
     $extensions: {
@@ -474,9 +474,9 @@ for (const s of sets) {
   }
 }
 
-writeFileSync(resolve(root, 'src/tokens/foundation.css'), emitCss(sets));
-writeFileSync(resolve(root, 'src/tokens/foundation.ts'), emitTs(sets));
-writeFileSync(resolve(root, 'src/tokens/foundation.tokens.json'), emitTokensJson(sets));
+writeFileSync(resolve(root, 'src/tokens/base.css'), emitCss(sets));
+writeFileSync(resolve(root, 'src/tokens/base.ts'), emitTs(sets));
+writeFileSync(resolve(root, 'src/tokens/base.tokens.json'), emitTokensJson(sets));
 
 const total = sets.reduce((n, s) => n + s.options.length, 0);
 console.log(`Generated ${total} tokens across ${sets.length} sets from ${REGISTRY}`);

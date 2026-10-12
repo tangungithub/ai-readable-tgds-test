@@ -1,9 +1,9 @@
 {
-  "$description": "Semantic theme collection — Figma variable collection 'Semantic theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Inverse / On Inverse are the mode-mirror of Neutral / On Neutral (SEM-T07).",
+  "$description": "Intent theme collection — Figma variable collection 'Intent theme' (TKN-09). Values only; rules live in docs/A-token/semantic.md §2.2. Inverse / On Inverse are the mode-mirror of Neutral / On Neutral (SEM-T07).",
   "$extensions": {
     "tgds": {
-      "collection": "Semantic theme",
-      "tier": "semantic",
+      "collection": "Intent theme",
+      "tier": "intent",
       "modes": [
         "Light",
         "Dark"

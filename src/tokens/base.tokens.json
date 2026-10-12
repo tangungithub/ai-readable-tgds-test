@@ -1,8 +1,8 @@
 {
-  "$description": "Foundation token mapping table for the AI Readable Design System (TGDS). Generated from token/Foundation.json — do not edit by hand. Values are authoritative in the registry (TKN-03); this file adds the code-name mapping.",
+  "$description": "Base token mapping table for the AI Readable Design System (TGDS). Generated from token/Base.json — do not edit by hand. Values are authoritative in the registry (TKN-03); this file adds the code-name mapping.",
   "$extensions": {
     "com.tgds": {
-      "source": "token/Foundation.json",
+      "source": "token/Base.json",
       "cssPropertyGrammar": "--{Category}-{Set}-{Option}, kebab-cased",
       "reverseTransform": "lookup only; parsing the code name is prohibited"
     }
@@ -21,7 +21,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-10",
-            "tsPath": "foundation.color.blue['10']",
+            "tsPath": "base.color.blue['10']",
             "setKind": "scale",
             "rawValue": "#d7e6fa",
             "unit": null
@@ -40,7 +40,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-20",
-            "tsPath": "foundation.color.blue['20']",
+            "tsPath": "base.color.blue['20']",
             "setKind": "scale",
             "rawValue": "#b8d2f6",
             "unit": null
@@ -59,7 +59,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-30",
-            "tsPath": "foundation.color.blue['30']",
+            "tsPath": "base.color.blue['30']",
             "setKind": "scale",
             "rawValue": "#96bef3",
             "unit": null
@@ -78,7 +78,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-40",
-            "tsPath": "foundation.color.blue['40']",
+            "tsPath": "base.color.blue['40']",
             "setKind": "scale",
             "rawValue": "#74a9f1",
             "unit": null
@@ -97,7 +97,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-50",
-            "tsPath": "foundation.color.blue['50']",
+            "tsPath": "base.color.blue['50']",
             "setKind": "scale",
             "rawValue": "#0077ed",
             "unit": null
@@ -116,7 +116,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-60",
-            "tsPath": "foundation.color.blue['60']",
+            "tsPath": "base.color.blue['60']",
             "setKind": "scale",
             "rawValue": "#005bb8",
             "unit": null
@@ -135,7 +135,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-70",
-            "tsPath": "foundation.color.blue['70']",
+            "tsPath": "base.color.blue['70']",
             "setKind": "scale",
             "rawValue": "#024085",
             "unit": null
@@ -154,7 +154,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-80",
-            "tsPath": "foundation.color.blue['80']",
+            "tsPath": "base.color.blue['80']",
             "setKind": "scale",
             "rawValue": "#042854",
             "unit": null
@@ -173,7 +173,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-90",
-            "tsPath": "foundation.color.blue['90']",
+            "tsPath": "base.color.blue['90']",
             "setKind": "scale",
             "rawValue": "#031126",
             "unit": null
@@ -192,7 +192,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-blue-05",
-            "tsPath": "foundation.color.blue['05']",
+            "tsPath": "base.color.blue['05']",
             "setKind": "scale",
             "rawValue": "#f7faff",
             "unit": null
@@ -213,7 +213,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-10",
-            "tsPath": "foundation.color.red['10']",
+            "tsPath": "base.color.red['10']",
             "setKind": "scale",
             "rawValue": "#ffe0e0",
             "unit": null
@@ -232,7 +232,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-20",
-            "tsPath": "foundation.color.red['20']",
+            "tsPath": "base.color.red['20']",
             "setKind": "scale",
             "rawValue": "#ffc7c9",
             "unit": null
@@ -251,7 +251,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-30",
-            "tsPath": "foundation.color.red['30']",
+            "tsPath": "base.color.red['30']",
             "setKind": "scale",
             "rawValue": "#ffadb0",
             "unit": null
@@ -270,7 +270,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-40",
-            "tsPath": "foundation.color.red['40']",
+            "tsPath": "base.color.red['40']",
             "setKind": "scale",
             "rawValue": "#ff9197",
             "unit": null
@@ -289,7 +289,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-50",
-            "tsPath": "foundation.color.red['50']",
+            "tsPath": "base.color.red['50']",
             "setKind": "scale",
             "rawValue": "#ff385c",
             "unit": null
@@ -308,7 +308,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-60",
-            "tsPath": "foundation.color.red['60']",
+            "tsPath": "base.color.red['60']",
             "setKind": "scale",
             "rawValue": "#c52644",
             "unit": null
@@ -327,7 +327,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-70",
-            "tsPath": "foundation.color.red['70']",
+            "tsPath": "base.color.red['70']",
             "setKind": "scale",
             "rawValue": "#8d192e",
             "unit": null
@@ -346,7 +346,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-80",
-            "tsPath": "foundation.color.red['80']",
+            "tsPath": "base.color.red['80']",
             "setKind": "scale",
             "rawValue": "#570f1b",
             "unit": null
@@ -365,7 +365,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-90",
-            "tsPath": "foundation.color.red['90']",
+            "tsPath": "base.color.red['90']",
             "setKind": "scale",
             "rawValue": "#270609",
             "unit": null
@@ -384,7 +384,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-red-05",
-            "tsPath": "foundation.color.red['05']",
+            "tsPath": "base.color.red['05']",
             "setKind": "scale",
             "rawValue": "#fff8f8",
             "unit": null
@@ -405,7 +405,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-10",
-            "tsPath": "foundation.color.green['10']",
+            "tsPath": "base.color.green['10']",
             "setKind": "scale",
             "rawValue": "#e1f5e4",
             "unit": null
@@ -424,7 +424,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-20",
-            "tsPath": "foundation.color.green['20']",
+            "tsPath": "base.color.green['20']",
             "setKind": "scale",
             "rawValue": "#c9efd0",
             "unit": null
@@ -443,7 +443,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-30",
-            "tsPath": "foundation.color.green['30']",
+            "tsPath": "base.color.green['30']",
             "setKind": "scale",
             "rawValue": "#b0e9bb",
             "unit": null
@@ -462,7 +462,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-40",
-            "tsPath": "foundation.color.green['40']",
+            "tsPath": "base.color.green['40']",
             "setKind": "scale",
             "rawValue": "#93e3a5",
             "unit": null
@@ -481,7 +481,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-50",
-            "tsPath": "foundation.color.green['50']",
+            "tsPath": "base.color.green['50']",
             "setKind": "scale",
             "rawValue": "#30d66e",
             "unit": null
@@ -500,7 +500,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-60",
-            "tsPath": "foundation.color.green['60']",
+            "tsPath": "base.color.green['60']",
             "setKind": "scale",
             "rawValue": "#19a250",
             "unit": null
@@ -519,7 +519,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-70",
-            "tsPath": "foundation.color.green['70']",
+            "tsPath": "base.color.green['70']",
             "setKind": "scale",
             "rawValue": "#0c7135",
             "unit": null
@@ -538,7 +538,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-80",
-            "tsPath": "foundation.color.green['80']",
+            "tsPath": "base.color.green['80']",
             "setKind": "scale",
             "rawValue": "#06431e",
             "unit": null
@@ -557,7 +557,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-90",
-            "tsPath": "foundation.color.green['90']",
+            "tsPath": "base.color.green['90']",
             "setKind": "scale",
             "rawValue": "#021a09",
             "unit": null
@@ -576,7 +576,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-green-05",
-            "tsPath": "foundation.color.green['05']",
+            "tsPath": "base.color.green['05']",
             "setKind": "scale",
             "rawValue": "#f4fdf6",
             "unit": null
@@ -597,7 +597,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-10",
-            "tsPath": "foundation.color.purple['10']",
+            "tsPath": "base.color.purple['10']",
             "setKind": "scale",
             "rawValue": "#f4e1fb",
             "unit": null
@@ -616,7 +616,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-20",
-            "tsPath": "foundation.color.purple['20']",
+            "tsPath": "base.color.purple['20']",
             "setKind": "scale",
             "rawValue": "#ebc9f7",
             "unit": null
@@ -635,7 +635,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-30",
-            "tsPath": "foundation.color.purple['30']",
+            "tsPath": "base.color.purple['30']",
             "setKind": "scale",
             "rawValue": "#e3aff5",
             "unit": null
@@ -654,7 +654,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-40",
-            "tsPath": "foundation.color.purple['40']",
+            "tsPath": "base.color.purple['40']",
             "setKind": "scale",
             "rawValue": "#db95f4",
             "unit": null
@@ -673,7 +673,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-50",
-            "tsPath": "foundation.color.purple['50']",
+            "tsPath": "base.color.purple['50']",
             "setKind": "scale",
             "rawValue": "#ca4af1",
             "unit": null
@@ -692,7 +692,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-60",
-            "tsPath": "foundation.color.purple['60']",
+            "tsPath": "base.color.purple['60']",
             "setKind": "scale",
             "rawValue": "#9c35bb",
             "unit": null
@@ -711,7 +711,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-70",
-            "tsPath": "foundation.color.purple['70']",
+            "tsPath": "base.color.purple['70']",
             "setKind": "scale",
             "rawValue": "#6f2485",
             "unit": null
@@ -730,7 +730,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-80",
-            "tsPath": "foundation.color.purple['80']",
+            "tsPath": "base.color.purple['80']",
             "setKind": "scale",
             "rawValue": "#441552",
             "unit": null
@@ -749,7 +749,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-90",
-            "tsPath": "foundation.color.purple['90']",
+            "tsPath": "base.color.purple['90']",
             "setKind": "scale",
             "rawValue": "#1d0824",
             "unit": null
@@ -768,7 +768,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-purple-05",
-            "tsPath": "foundation.color.purple['05']",
+            "tsPath": "base.color.purple['05']",
             "setKind": "scale",
             "rawValue": "#fdf8ff",
             "unit": null
@@ -789,7 +789,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-10",
-            "tsPath": "foundation.color.gray['10']",
+            "tsPath": "base.color.gray['10']",
             "setKind": "scale",
             "rawValue": "#e1e1e1",
             "unit": null
@@ -808,7 +808,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-20",
-            "tsPath": "foundation.color.gray['20']",
+            "tsPath": "base.color.gray['20']",
             "setKind": "scale",
             "rawValue": "#c8c8c8",
             "unit": null
@@ -827,7 +827,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-30",
-            "tsPath": "foundation.color.gray['30']",
+            "tsPath": "base.color.gray['30']",
             "setKind": "scale",
             "rawValue": "#b0b0b0",
             "unit": null
@@ -846,7 +846,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-40",
-            "tsPath": "foundation.color.gray['40']",
+            "tsPath": "base.color.gray['40']",
             "setKind": "scale",
             "rawValue": "#989898",
             "unit": null
@@ -865,7 +865,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-50",
-            "tsPath": "foundation.color.gray['50']",
+            "tsPath": "base.color.gray['50']",
             "setKind": "scale",
             "rawValue": "#666666",
             "unit": null
@@ -884,7 +884,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-60",
-            "tsPath": "foundation.color.gray['60']",
+            "tsPath": "base.color.gray['60']",
             "setKind": "scale",
             "rawValue": "#4f4f4f",
             "unit": null
@@ -903,7 +903,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-70",
-            "tsPath": "foundation.color.gray['70']",
+            "tsPath": "base.color.gray['70']",
             "setKind": "scale",
             "rawValue": "#383838",
             "unit": null
@@ -922,7 +922,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-80",
-            "tsPath": "foundation.color.gray['80']",
+            "tsPath": "base.color.gray['80']",
             "setKind": "scale",
             "rawValue": "#242424",
             "unit": null
@@ -941,7 +941,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-90",
-            "tsPath": "foundation.color.gray['90']",
+            "tsPath": "base.color.gray['90']",
             "setKind": "scale",
             "rawValue": "#101010",
             "unit": null
@@ -960,7 +960,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-99",
-            "tsPath": "foundation.color.gray['99']",
+            "tsPath": "base.color.gray['99']",
             "setKind": "scale",
             "rawValue": "#000000",
             "unit": null
@@ -979,7 +979,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-00",
-            "tsPath": "foundation.color.gray['00']",
+            "tsPath": "base.color.gray['00']",
             "setKind": "scale",
             "rawValue": "#ffffff",
             "unit": null
@@ -998,7 +998,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--color-gray-05",
-            "tsPath": "foundation.color.gray['05']",
+            "tsPath": "base.color.gray['05']",
             "setKind": "scale",
             "rawValue": "#fafafa",
             "unit": null
@@ -1023,7 +1023,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-family-sans",
-            "tsPath": "foundation.typography.fontFamily.sans",
+            "tsPath": "base.typography.fontFamily.sans",
             "setKind": "nominal",
             "rawValue": [
               "SUIT Variable"
@@ -1046,7 +1046,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-family-serif",
-            "tsPath": "foundation.typography.fontFamily.serif",
+            "tsPath": "base.typography.fontFamily.serif",
             "setKind": "nominal",
             "rawValue": [
               "Noto Serif KR"
@@ -1072,7 +1072,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-10",
-            "tsPath": "foundation.typography.fontSize['10']",
+            "tsPath": "base.typography.fontSize['10']",
             "setKind": "scale",
             "rawValue": 10,
             "unit": "px"
@@ -1094,7 +1094,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-11",
-            "tsPath": "foundation.typography.fontSize['11']",
+            "tsPath": "base.typography.fontSize['11']",
             "setKind": "scale",
             "rawValue": 11,
             "unit": "px"
@@ -1116,7 +1116,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-12",
-            "tsPath": "foundation.typography.fontSize['12']",
+            "tsPath": "base.typography.fontSize['12']",
             "setKind": "scale",
             "rawValue": 12,
             "unit": "px"
@@ -1138,7 +1138,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-14",
-            "tsPath": "foundation.typography.fontSize['14']",
+            "tsPath": "base.typography.fontSize['14']",
             "setKind": "scale",
             "rawValue": 14,
             "unit": "px"
@@ -1160,7 +1160,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-16",
-            "tsPath": "foundation.typography.fontSize['16']",
+            "tsPath": "base.typography.fontSize['16']",
             "setKind": "scale",
             "rawValue": 16,
             "unit": "px"
@@ -1182,7 +1182,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-18",
-            "tsPath": "foundation.typography.fontSize['18']",
+            "tsPath": "base.typography.fontSize['18']",
             "setKind": "scale",
             "rawValue": 18,
             "unit": "px"
@@ -1204,7 +1204,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-20",
-            "tsPath": "foundation.typography.fontSize['20']",
+            "tsPath": "base.typography.fontSize['20']",
             "setKind": "scale",
             "rawValue": 20,
             "unit": "px"
@@ -1226,7 +1226,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-22",
-            "tsPath": "foundation.typography.fontSize['22']",
+            "tsPath": "base.typography.fontSize['22']",
             "setKind": "scale",
             "rawValue": 22,
             "unit": "px"
@@ -1248,7 +1248,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-24",
-            "tsPath": "foundation.typography.fontSize['24']",
+            "tsPath": "base.typography.fontSize['24']",
             "setKind": "scale",
             "rawValue": 24,
             "unit": "px"
@@ -1270,7 +1270,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-28",
-            "tsPath": "foundation.typography.fontSize['28']",
+            "tsPath": "base.typography.fontSize['28']",
             "setKind": "scale",
             "rawValue": 28,
             "unit": "px"
@@ -1292,7 +1292,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-32",
-            "tsPath": "foundation.typography.fontSize['32']",
+            "tsPath": "base.typography.fontSize['32']",
             "setKind": "scale",
             "rawValue": 32,
             "unit": "px"
@@ -1314,7 +1314,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-36",
-            "tsPath": "foundation.typography.fontSize['36']",
+            "tsPath": "base.typography.fontSize['36']",
             "setKind": "scale",
             "rawValue": 36,
             "unit": "px"
@@ -1336,7 +1336,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-40",
-            "tsPath": "foundation.typography.fontSize['40']",
+            "tsPath": "base.typography.fontSize['40']",
             "setKind": "scale",
             "rawValue": 40,
             "unit": "px"
@@ -1358,7 +1358,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-44",
-            "tsPath": "foundation.typography.fontSize['44']",
+            "tsPath": "base.typography.fontSize['44']",
             "setKind": "scale",
             "rawValue": 44,
             "unit": "px"
@@ -1380,7 +1380,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-48",
-            "tsPath": "foundation.typography.fontSize['48']",
+            "tsPath": "base.typography.fontSize['48']",
             "setKind": "scale",
             "rawValue": 48,
             "unit": "px"
@@ -1402,7 +1402,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-56",
-            "tsPath": "foundation.typography.fontSize['56']",
+            "tsPath": "base.typography.fontSize['56']",
             "setKind": "scale",
             "rawValue": 56,
             "unit": "px"
@@ -1424,7 +1424,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-64",
-            "tsPath": "foundation.typography.fontSize['64']",
+            "tsPath": "base.typography.fontSize['64']",
             "setKind": "scale",
             "rawValue": 64,
             "unit": "px"
@@ -1446,7 +1446,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-72",
-            "tsPath": "foundation.typography.fontSize['72']",
+            "tsPath": "base.typography.fontSize['72']",
             "setKind": "scale",
             "rawValue": 72,
             "unit": "px"
@@ -1468,7 +1468,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-80",
-            "tsPath": "foundation.typography.fontSize['80']",
+            "tsPath": "base.typography.fontSize['80']",
             "setKind": "scale",
             "rawValue": 80,
             "unit": "px"
@@ -1490,7 +1490,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-size-96",
-            "tsPath": "foundation.typography.fontSize['96']",
+            "tsPath": "base.typography.fontSize['96']",
             "setKind": "scale",
             "rawValue": 96,
             "unit": "px"
@@ -1511,7 +1511,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-weight-300",
-            "tsPath": "foundation.typography.fontWeight['300']",
+            "tsPath": "base.typography.fontWeight['300']",
             "setKind": "scale",
             "rawValue": 300,
             "unit": "css-font-weight"
@@ -1530,7 +1530,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-weight-400",
-            "tsPath": "foundation.typography.fontWeight['400']",
+            "tsPath": "base.typography.fontWeight['400']",
             "setKind": "scale",
             "rawValue": 400,
             "unit": "css-font-weight"
@@ -1549,7 +1549,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-weight-500",
-            "tsPath": "foundation.typography.fontWeight['500']",
+            "tsPath": "base.typography.fontWeight['500']",
             "setKind": "scale",
             "rawValue": 500,
             "unit": "css-font-weight"
@@ -1568,7 +1568,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-weight-600",
-            "tsPath": "foundation.typography.fontWeight['600']",
+            "tsPath": "base.typography.fontWeight['600']",
             "setKind": "scale",
             "rawValue": 600,
             "unit": "css-font-weight"
@@ -1587,7 +1587,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-font-weight-700",
-            "tsPath": "foundation.typography.fontWeight['700']",
+            "tsPath": "base.typography.fontWeight['700']",
             "setKind": "scale",
             "rawValue": 700,
             "unit": "css-font-weight"
@@ -1611,7 +1611,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-10-110",
-            "tsPath": "foundation.typography.lineHeight['10-110']",
+            "tsPath": "base.typography.lineHeight['10-110']",
             "setKind": "composite",
             "rawValue": 11,
             "unit": "px"
@@ -1633,7 +1633,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-10-120",
-            "tsPath": "foundation.typography.lineHeight['10-120']",
+            "tsPath": "base.typography.lineHeight['10-120']",
             "setKind": "composite",
             "rawValue": 12,
             "unit": "px"
@@ -1655,7 +1655,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-10-130",
-            "tsPath": "foundation.typography.lineHeight['10-130']",
+            "tsPath": "base.typography.lineHeight['10-130']",
             "setKind": "composite",
             "rawValue": 13,
             "unit": "px"
@@ -1677,7 +1677,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-10-140",
-            "tsPath": "foundation.typography.lineHeight['10-140']",
+            "tsPath": "base.typography.lineHeight['10-140']",
             "setKind": "composite",
             "rawValue": 14,
             "unit": "px"
@@ -1699,7 +1699,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-10-150",
-            "tsPath": "foundation.typography.lineHeight['10-150']",
+            "tsPath": "base.typography.lineHeight['10-150']",
             "setKind": "composite",
             "rawValue": 15,
             "unit": "px"
@@ -1721,7 +1721,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-11-110",
-            "tsPath": "foundation.typography.lineHeight['11-110']",
+            "tsPath": "base.typography.lineHeight['11-110']",
             "setKind": "composite",
             "rawValue": 12.1,
             "unit": "px"
@@ -1743,7 +1743,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-11-120",
-            "tsPath": "foundation.typography.lineHeight['11-120']",
+            "tsPath": "base.typography.lineHeight['11-120']",
             "setKind": "composite",
             "rawValue": 13.2,
             "unit": "px"
@@ -1765,7 +1765,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-11-130",
-            "tsPath": "foundation.typography.lineHeight['11-130']",
+            "tsPath": "base.typography.lineHeight['11-130']",
             "setKind": "composite",
             "rawValue": 14.3,
             "unit": "px"
@@ -1787,7 +1787,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-11-140",
-            "tsPath": "foundation.typography.lineHeight['11-140']",
+            "tsPath": "base.typography.lineHeight['11-140']",
             "setKind": "composite",
             "rawValue": 15.4,
             "unit": "px"
@@ -1809,7 +1809,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-11-150",
-            "tsPath": "foundation.typography.lineHeight['11-150']",
+            "tsPath": "base.typography.lineHeight['11-150']",
             "setKind": "composite",
             "rawValue": 16.5,
             "unit": "px"
@@ -1831,7 +1831,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-12-110",
-            "tsPath": "foundation.typography.lineHeight['12-110']",
+            "tsPath": "base.typography.lineHeight['12-110']",
             "setKind": "composite",
             "rawValue": 13.2,
             "unit": "px"
@@ -1853,7 +1853,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-12-120",
-            "tsPath": "foundation.typography.lineHeight['12-120']",
+            "tsPath": "base.typography.lineHeight['12-120']",
             "setKind": "composite",
             "rawValue": 14.4,
             "unit": "px"
@@ -1875,7 +1875,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-12-130",
-            "tsPath": "foundation.typography.lineHeight['12-130']",
+            "tsPath": "base.typography.lineHeight['12-130']",
             "setKind": "composite",
             "rawValue": 15.6,
             "unit": "px"
@@ -1897,7 +1897,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-12-140",
-            "tsPath": "foundation.typography.lineHeight['12-140']",
+            "tsPath": "base.typography.lineHeight['12-140']",
             "setKind": "composite",
             "rawValue": 16.8,
             "unit": "px"
@@ -1919,7 +1919,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-12-150",
-            "tsPath": "foundation.typography.lineHeight['12-150']",
+            "tsPath": "base.typography.lineHeight['12-150']",
             "setKind": "composite",
             "rawValue": 18,
             "unit": "px"
@@ -1941,7 +1941,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-14-110",
-            "tsPath": "foundation.typography.lineHeight['14-110']",
+            "tsPath": "base.typography.lineHeight['14-110']",
             "setKind": "composite",
             "rawValue": 15.4,
             "unit": "px"
@@ -1963,7 +1963,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-14-120",
-            "tsPath": "foundation.typography.lineHeight['14-120']",
+            "tsPath": "base.typography.lineHeight['14-120']",
             "setKind": "composite",
             "rawValue": 16.8,
             "unit": "px"
@@ -1985,7 +1985,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-14-130",
-            "tsPath": "foundation.typography.lineHeight['14-130']",
+            "tsPath": "base.typography.lineHeight['14-130']",
             "setKind": "composite",
             "rawValue": 18.2,
             "unit": "px"
@@ -2007,7 +2007,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-14-140",
-            "tsPath": "foundation.typography.lineHeight['14-140']",
+            "tsPath": "base.typography.lineHeight['14-140']",
             "setKind": "composite",
             "rawValue": 19.6,
             "unit": "px"
@@ -2029,7 +2029,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-14-150",
-            "tsPath": "foundation.typography.lineHeight['14-150']",
+            "tsPath": "base.typography.lineHeight['14-150']",
             "setKind": "composite",
             "rawValue": 21,
             "unit": "px"
@@ -2051,7 +2051,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-16-110",
-            "tsPath": "foundation.typography.lineHeight['16-110']",
+            "tsPath": "base.typography.lineHeight['16-110']",
             "setKind": "composite",
             "rawValue": 17.6,
             "unit": "px"
@@ -2073,7 +2073,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-16-120",
-            "tsPath": "foundation.typography.lineHeight['16-120']",
+            "tsPath": "base.typography.lineHeight['16-120']",
             "setKind": "composite",
             "rawValue": 19.2,
             "unit": "px"
@@ -2095,7 +2095,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-16-130",
-            "tsPath": "foundation.typography.lineHeight['16-130']",
+            "tsPath": "base.typography.lineHeight['16-130']",
             "setKind": "composite",
             "rawValue": 20.8,
             "unit": "px"
@@ -2117,7 +2117,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-16-140",
-            "tsPath": "foundation.typography.lineHeight['16-140']",
+            "tsPath": "base.typography.lineHeight['16-140']",
             "setKind": "composite",
             "rawValue": 22.4,
             "unit": "px"
@@ -2139,7 +2139,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-16-150",
-            "tsPath": "foundation.typography.lineHeight['16-150']",
+            "tsPath": "base.typography.lineHeight['16-150']",
             "setKind": "composite",
             "rawValue": 24,
             "unit": "px"
@@ -2161,7 +2161,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-18-110",
-            "tsPath": "foundation.typography.lineHeight['18-110']",
+            "tsPath": "base.typography.lineHeight['18-110']",
             "setKind": "composite",
             "rawValue": 19.8,
             "unit": "px"
@@ -2183,7 +2183,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-18-120",
-            "tsPath": "foundation.typography.lineHeight['18-120']",
+            "tsPath": "base.typography.lineHeight['18-120']",
             "setKind": "composite",
             "rawValue": 21.6,
             "unit": "px"
@@ -2205,7 +2205,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-18-130",
-            "tsPath": "foundation.typography.lineHeight['18-130']",
+            "tsPath": "base.typography.lineHeight['18-130']",
             "setKind": "composite",
             "rawValue": 23.4,
             "unit": "px"
@@ -2227,7 +2227,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-18-140",
-            "tsPath": "foundation.typography.lineHeight['18-140']",
+            "tsPath": "base.typography.lineHeight['18-140']",
             "setKind": "composite",
             "rawValue": 25.2,
             "unit": "px"
@@ -2249,7 +2249,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-18-150",
-            "tsPath": "foundation.typography.lineHeight['18-150']",
+            "tsPath": "base.typography.lineHeight['18-150']",
             "setKind": "composite",
             "rawValue": 27,
             "unit": "px"
@@ -2271,7 +2271,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-20-110",
-            "tsPath": "foundation.typography.lineHeight['20-110']",
+            "tsPath": "base.typography.lineHeight['20-110']",
             "setKind": "composite",
             "rawValue": 22,
             "unit": "px"
@@ -2293,7 +2293,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-20-120",
-            "tsPath": "foundation.typography.lineHeight['20-120']",
+            "tsPath": "base.typography.lineHeight['20-120']",
             "setKind": "composite",
             "rawValue": 24,
             "unit": "px"
@@ -2315,7 +2315,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-20-130",
-            "tsPath": "foundation.typography.lineHeight['20-130']",
+            "tsPath": "base.typography.lineHeight['20-130']",
             "setKind": "composite",
             "rawValue": 26,
             "unit": "px"
@@ -2337,7 +2337,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-20-140",
-            "tsPath": "foundation.typography.lineHeight['20-140']",
+            "tsPath": "base.typography.lineHeight['20-140']",
             "setKind": "composite",
             "rawValue": 28,
             "unit": "px"
@@ -2359,7 +2359,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-20-150",
-            "tsPath": "foundation.typography.lineHeight['20-150']",
+            "tsPath": "base.typography.lineHeight['20-150']",
             "setKind": "composite",
             "rawValue": 30,
             "unit": "px"
@@ -2381,7 +2381,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-22-110",
-            "tsPath": "foundation.typography.lineHeight['22-110']",
+            "tsPath": "base.typography.lineHeight['22-110']",
             "setKind": "composite",
             "rawValue": 24.2,
             "unit": "px"
@@ -2403,7 +2403,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-22-120",
-            "tsPath": "foundation.typography.lineHeight['22-120']",
+            "tsPath": "base.typography.lineHeight['22-120']",
             "setKind": "composite",
             "rawValue": 26.4,
             "unit": "px"
@@ -2425,7 +2425,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-22-130",
-            "tsPath": "foundation.typography.lineHeight['22-130']",
+            "tsPath": "base.typography.lineHeight['22-130']",
             "setKind": "composite",
             "rawValue": 28.6,
             "unit": "px"
@@ -2447,7 +2447,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-22-140",
-            "tsPath": "foundation.typography.lineHeight['22-140']",
+            "tsPath": "base.typography.lineHeight['22-140']",
             "setKind": "composite",
             "rawValue": 30.8,
             "unit": "px"
@@ -2469,7 +2469,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-22-150",
-            "tsPath": "foundation.typography.lineHeight['22-150']",
+            "tsPath": "base.typography.lineHeight['22-150']",
             "setKind": "composite",
             "rawValue": 33,
             "unit": "px"
@@ -2491,7 +2491,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-24-110",
-            "tsPath": "foundation.typography.lineHeight['24-110']",
+            "tsPath": "base.typography.lineHeight['24-110']",
             "setKind": "composite",
             "rawValue": 26.4,
             "unit": "px"
@@ -2513,7 +2513,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-24-120",
-            "tsPath": "foundation.typography.lineHeight['24-120']",
+            "tsPath": "base.typography.lineHeight['24-120']",
             "setKind": "composite",
             "rawValue": 28.8,
             "unit": "px"
@@ -2535,7 +2535,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-24-130",
-            "tsPath": "foundation.typography.lineHeight['24-130']",
+            "tsPath": "base.typography.lineHeight['24-130']",
             "setKind": "composite",
             "rawValue": 31.2,
             "unit": "px"
@@ -2557,7 +2557,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-24-140",
-            "tsPath": "foundation.typography.lineHeight['24-140']",
+            "tsPath": "base.typography.lineHeight['24-140']",
             "setKind": "composite",
             "rawValue": 33.6,
             "unit": "px"
@@ -2579,7 +2579,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-24-150",
-            "tsPath": "foundation.typography.lineHeight['24-150']",
+            "tsPath": "base.typography.lineHeight['24-150']",
             "setKind": "composite",
             "rawValue": 36,
             "unit": "px"
@@ -2601,7 +2601,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-28-110",
-            "tsPath": "foundation.typography.lineHeight['28-110']",
+            "tsPath": "base.typography.lineHeight['28-110']",
             "setKind": "composite",
             "rawValue": 30.8,
             "unit": "px"
@@ -2623,7 +2623,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-28-120",
-            "tsPath": "foundation.typography.lineHeight['28-120']",
+            "tsPath": "base.typography.lineHeight['28-120']",
             "setKind": "composite",
             "rawValue": 33.6,
             "unit": "px"
@@ -2645,7 +2645,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-28-130",
-            "tsPath": "foundation.typography.lineHeight['28-130']",
+            "tsPath": "base.typography.lineHeight['28-130']",
             "setKind": "composite",
             "rawValue": 36.4,
             "unit": "px"
@@ -2667,7 +2667,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-28-140",
-            "tsPath": "foundation.typography.lineHeight['28-140']",
+            "tsPath": "base.typography.lineHeight['28-140']",
             "setKind": "composite",
             "rawValue": 39.2,
             "unit": "px"
@@ -2689,7 +2689,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-28-150",
-            "tsPath": "foundation.typography.lineHeight['28-150']",
+            "tsPath": "base.typography.lineHeight['28-150']",
             "setKind": "composite",
             "rawValue": 42,
             "unit": "px"
@@ -2711,7 +2711,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-32-110",
-            "tsPath": "foundation.typography.lineHeight['32-110']",
+            "tsPath": "base.typography.lineHeight['32-110']",
             "setKind": "composite",
             "rawValue": 35.2,
             "unit": "px"
@@ -2733,7 +2733,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-32-120",
-            "tsPath": "foundation.typography.lineHeight['32-120']",
+            "tsPath": "base.typography.lineHeight['32-120']",
             "setKind": "composite",
             "rawValue": 38.4,
             "unit": "px"
@@ -2755,7 +2755,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-32-130",
-            "tsPath": "foundation.typography.lineHeight['32-130']",
+            "tsPath": "base.typography.lineHeight['32-130']",
             "setKind": "composite",
             "rawValue": 41.6,
             "unit": "px"
@@ -2777,7 +2777,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-32-140",
-            "tsPath": "foundation.typography.lineHeight['32-140']",
+            "tsPath": "base.typography.lineHeight['32-140']",
             "setKind": "composite",
             "rawValue": 44.8,
             "unit": "px"
@@ -2799,7 +2799,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-32-150",
-            "tsPath": "foundation.typography.lineHeight['32-150']",
+            "tsPath": "base.typography.lineHeight['32-150']",
             "setKind": "composite",
             "rawValue": 48,
             "unit": "px"
@@ -2821,7 +2821,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-36-110",
-            "tsPath": "foundation.typography.lineHeight['36-110']",
+            "tsPath": "base.typography.lineHeight['36-110']",
             "setKind": "composite",
             "rawValue": 39.6,
             "unit": "px"
@@ -2843,7 +2843,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-36-120",
-            "tsPath": "foundation.typography.lineHeight['36-120']",
+            "tsPath": "base.typography.lineHeight['36-120']",
             "setKind": "composite",
             "rawValue": 43.2,
             "unit": "px"
@@ -2865,7 +2865,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-36-130",
-            "tsPath": "foundation.typography.lineHeight['36-130']",
+            "tsPath": "base.typography.lineHeight['36-130']",
             "setKind": "composite",
             "rawValue": 46.8,
             "unit": "px"
@@ -2887,7 +2887,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-36-140",
-            "tsPath": "foundation.typography.lineHeight['36-140']",
+            "tsPath": "base.typography.lineHeight['36-140']",
             "setKind": "composite",
             "rawValue": 50.4,
             "unit": "px"
@@ -2909,7 +2909,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-36-150",
-            "tsPath": "foundation.typography.lineHeight['36-150']",
+            "tsPath": "base.typography.lineHeight['36-150']",
             "setKind": "composite",
             "rawValue": 54,
             "unit": "px"
@@ -2931,7 +2931,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-40-110",
-            "tsPath": "foundation.typography.lineHeight['40-110']",
+            "tsPath": "base.typography.lineHeight['40-110']",
             "setKind": "composite",
             "rawValue": 44,
             "unit": "px"
@@ -2953,7 +2953,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-40-120",
-            "tsPath": "foundation.typography.lineHeight['40-120']",
+            "tsPath": "base.typography.lineHeight['40-120']",
             "setKind": "composite",
             "rawValue": 48,
             "unit": "px"
@@ -2975,7 +2975,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-40-130",
-            "tsPath": "foundation.typography.lineHeight['40-130']",
+            "tsPath": "base.typography.lineHeight['40-130']",
             "setKind": "composite",
             "rawValue": 52,
             "unit": "px"
@@ -2997,7 +2997,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-40-140",
-            "tsPath": "foundation.typography.lineHeight['40-140']",
+            "tsPath": "base.typography.lineHeight['40-140']",
             "setKind": "composite",
             "rawValue": 56,
             "unit": "px"
@@ -3019,7 +3019,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-40-150",
-            "tsPath": "foundation.typography.lineHeight['40-150']",
+            "tsPath": "base.typography.lineHeight['40-150']",
             "setKind": "composite",
             "rawValue": 60,
             "unit": "px"
@@ -3041,7 +3041,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-44-110",
-            "tsPath": "foundation.typography.lineHeight['44-110']",
+            "tsPath": "base.typography.lineHeight['44-110']",
             "setKind": "composite",
             "rawValue": 48.4,
             "unit": "px"
@@ -3063,7 +3063,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-44-120",
-            "tsPath": "foundation.typography.lineHeight['44-120']",
+            "tsPath": "base.typography.lineHeight['44-120']",
             "setKind": "composite",
             "rawValue": 52.8,
             "unit": "px"
@@ -3085,7 +3085,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-44-130",
-            "tsPath": "foundation.typography.lineHeight['44-130']",
+            "tsPath": "base.typography.lineHeight['44-130']",
             "setKind": "composite",
             "rawValue": 57.2,
             "unit": "px"
@@ -3107,7 +3107,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-44-140",
-            "tsPath": "foundation.typography.lineHeight['44-140']",
+            "tsPath": "base.typography.lineHeight['44-140']",
             "setKind": "composite",
             "rawValue": 61.6,
             "unit": "px"
@@ -3129,7 +3129,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-44-150",
-            "tsPath": "foundation.typography.lineHeight['44-150']",
+            "tsPath": "base.typography.lineHeight['44-150']",
             "setKind": "composite",
             "rawValue": 66,
             "unit": "px"
@@ -3151,7 +3151,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-48-110",
-            "tsPath": "foundation.typography.lineHeight['48-110']",
+            "tsPath": "base.typography.lineHeight['48-110']",
             "setKind": "composite",
             "rawValue": 52.8,
             "unit": "px"
@@ -3173,7 +3173,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-48-120",
-            "tsPath": "foundation.typography.lineHeight['48-120']",
+            "tsPath": "base.typography.lineHeight['48-120']",
             "setKind": "composite",
             "rawValue": 57.6,
             "unit": "px"
@@ -3195,7 +3195,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-48-130",
-            "tsPath": "foundation.typography.lineHeight['48-130']",
+            "tsPath": "base.typography.lineHeight['48-130']",
             "setKind": "composite",
             "rawValue": 62.4,
             "unit": "px"
@@ -3217,7 +3217,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-48-140",
-            "tsPath": "foundation.typography.lineHeight['48-140']",
+            "tsPath": "base.typography.lineHeight['48-140']",
             "setKind": "composite",
             "rawValue": 67.2,
             "unit": "px"
@@ -3239,7 +3239,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-48-150",
-            "tsPath": "foundation.typography.lineHeight['48-150']",
+            "tsPath": "base.typography.lineHeight['48-150']",
             "setKind": "composite",
             "rawValue": 72,
             "unit": "px"
@@ -3261,7 +3261,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-56-110",
-            "tsPath": "foundation.typography.lineHeight['56-110']",
+            "tsPath": "base.typography.lineHeight['56-110']",
             "setKind": "composite",
             "rawValue": 61.6,
             "unit": "px"
@@ -3283,7 +3283,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-56-120",
-            "tsPath": "foundation.typography.lineHeight['56-120']",
+            "tsPath": "base.typography.lineHeight['56-120']",
             "setKind": "composite",
             "rawValue": 67.2,
             "unit": "px"
@@ -3305,7 +3305,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-56-130",
-            "tsPath": "foundation.typography.lineHeight['56-130']",
+            "tsPath": "base.typography.lineHeight['56-130']",
             "setKind": "composite",
             "rawValue": 72.8,
             "unit": "px"
@@ -3327,7 +3327,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-56-140",
-            "tsPath": "foundation.typography.lineHeight['56-140']",
+            "tsPath": "base.typography.lineHeight['56-140']",
             "setKind": "composite",
             "rawValue": 78.4,
             "unit": "px"
@@ -3349,7 +3349,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-56-150",
-            "tsPath": "foundation.typography.lineHeight['56-150']",
+            "tsPath": "base.typography.lineHeight['56-150']",
             "setKind": "composite",
             "rawValue": 84,
             "unit": "px"
@@ -3371,7 +3371,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-64-110",
-            "tsPath": "foundation.typography.lineHeight['64-110']",
+            "tsPath": "base.typography.lineHeight['64-110']",
             "setKind": "composite",
             "rawValue": 70.4,
             "unit": "px"
@@ -3393,7 +3393,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-64-120",
-            "tsPath": "foundation.typography.lineHeight['64-120']",
+            "tsPath": "base.typography.lineHeight['64-120']",
             "setKind": "composite",
             "rawValue": 76.8,
             "unit": "px"
@@ -3415,7 +3415,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-64-130",
-            "tsPath": "foundation.typography.lineHeight['64-130']",
+            "tsPath": "base.typography.lineHeight['64-130']",
             "setKind": "composite",
             "rawValue": 83.2,
             "unit": "px"
@@ -3437,7 +3437,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-64-140",
-            "tsPath": "foundation.typography.lineHeight['64-140']",
+            "tsPath": "base.typography.lineHeight['64-140']",
             "setKind": "composite",
             "rawValue": 89.6,
             "unit": "px"
@@ -3459,7 +3459,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-64-150",
-            "tsPath": "foundation.typography.lineHeight['64-150']",
+            "tsPath": "base.typography.lineHeight['64-150']",
             "setKind": "composite",
             "rawValue": 96,
             "unit": "px"
@@ -3481,7 +3481,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-72-110",
-            "tsPath": "foundation.typography.lineHeight['72-110']",
+            "tsPath": "base.typography.lineHeight['72-110']",
             "setKind": "composite",
             "rawValue": 79.2,
             "unit": "px"
@@ -3503,7 +3503,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-72-120",
-            "tsPath": "foundation.typography.lineHeight['72-120']",
+            "tsPath": "base.typography.lineHeight['72-120']",
             "setKind": "composite",
             "rawValue": 86.4,
             "unit": "px"
@@ -3525,7 +3525,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-72-130",
-            "tsPath": "foundation.typography.lineHeight['72-130']",
+            "tsPath": "base.typography.lineHeight['72-130']",
             "setKind": "composite",
             "rawValue": 93.6,
             "unit": "px"
@@ -3547,7 +3547,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-72-140",
-            "tsPath": "foundation.typography.lineHeight['72-140']",
+            "tsPath": "base.typography.lineHeight['72-140']",
             "setKind": "composite",
             "rawValue": 100.8,
             "unit": "px"
@@ -3569,7 +3569,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-72-150",
-            "tsPath": "foundation.typography.lineHeight['72-150']",
+            "tsPath": "base.typography.lineHeight['72-150']",
             "setKind": "composite",
             "rawValue": 108,
             "unit": "px"
@@ -3591,7 +3591,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-80-110",
-            "tsPath": "foundation.typography.lineHeight['80-110']",
+            "tsPath": "base.typography.lineHeight['80-110']",
             "setKind": "composite",
             "rawValue": 88,
             "unit": "px"
@@ -3613,7 +3613,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-80-120",
-            "tsPath": "foundation.typography.lineHeight['80-120']",
+            "tsPath": "base.typography.lineHeight['80-120']",
             "setKind": "composite",
             "rawValue": 96,
             "unit": "px"
@@ -3635,7 +3635,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-80-130",
-            "tsPath": "foundation.typography.lineHeight['80-130']",
+            "tsPath": "base.typography.lineHeight['80-130']",
             "setKind": "composite",
             "rawValue": 104,
             "unit": "px"
@@ -3657,7 +3657,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-80-140",
-            "tsPath": "foundation.typography.lineHeight['80-140']",
+            "tsPath": "base.typography.lineHeight['80-140']",
             "setKind": "composite",
             "rawValue": 112,
             "unit": "px"
@@ -3679,7 +3679,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-80-150",
-            "tsPath": "foundation.typography.lineHeight['80-150']",
+            "tsPath": "base.typography.lineHeight['80-150']",
             "setKind": "composite",
             "rawValue": 120,
             "unit": "px"
@@ -3701,7 +3701,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-96-110",
-            "tsPath": "foundation.typography.lineHeight['96-110']",
+            "tsPath": "base.typography.lineHeight['96-110']",
             "setKind": "composite",
             "rawValue": 105.6,
             "unit": "px"
@@ -3723,7 +3723,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-96-120",
-            "tsPath": "foundation.typography.lineHeight['96-120']",
+            "tsPath": "base.typography.lineHeight['96-120']",
             "setKind": "composite",
             "rawValue": 115.2,
             "unit": "px"
@@ -3745,7 +3745,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-96-130",
-            "tsPath": "foundation.typography.lineHeight['96-130']",
+            "tsPath": "base.typography.lineHeight['96-130']",
             "setKind": "composite",
             "rawValue": 124.8,
             "unit": "px"
@@ -3767,7 +3767,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-96-140",
-            "tsPath": "foundation.typography.lineHeight['96-140']",
+            "tsPath": "base.typography.lineHeight['96-140']",
             "setKind": "composite",
             "rawValue": 134.4,
             "unit": "px"
@@ -3789,7 +3789,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-line-height-96-150",
-            "tsPath": "foundation.typography.lineHeight['96-150']",
+            "tsPath": "base.typography.lineHeight['96-150']",
             "setKind": "composite",
             "rawValue": 144,
             "unit": "px"
@@ -3813,7 +3813,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-10-i1",
-            "tsPath": "foundation.typography.letterSpacing['10-i1']",
+            "tsPath": "base.typography.letterSpacing['10-i1']",
             "setKind": "composite",
             "rawValue": -0.1,
             "unit": "px"
@@ -3835,7 +3835,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-10-i3",
-            "tsPath": "foundation.typography.letterSpacing['10-i3']",
+            "tsPath": "base.typography.letterSpacing['10-i3']",
             "setKind": "composite",
             "rawValue": -0.3,
             "unit": "px"
@@ -3857,7 +3857,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-11-i1",
-            "tsPath": "foundation.typography.letterSpacing['11-i1']",
+            "tsPath": "base.typography.letterSpacing['11-i1']",
             "setKind": "composite",
             "rawValue": -0.11,
             "unit": "px"
@@ -3879,7 +3879,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-11-i3",
-            "tsPath": "foundation.typography.letterSpacing['11-i3']",
+            "tsPath": "base.typography.letterSpacing['11-i3']",
             "setKind": "composite",
             "rawValue": -0.33,
             "unit": "px"
@@ -3901,7 +3901,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-12-i1",
-            "tsPath": "foundation.typography.letterSpacing['12-i1']",
+            "tsPath": "base.typography.letterSpacing['12-i1']",
             "setKind": "composite",
             "rawValue": -0.12,
             "unit": "px"
@@ -3923,7 +3923,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-12-i3",
-            "tsPath": "foundation.typography.letterSpacing['12-i3']",
+            "tsPath": "base.typography.letterSpacing['12-i3']",
             "setKind": "composite",
             "rawValue": -0.36,
             "unit": "px"
@@ -3945,7 +3945,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-14-i1",
-            "tsPath": "foundation.typography.letterSpacing['14-i1']",
+            "tsPath": "base.typography.letterSpacing['14-i1']",
             "setKind": "composite",
             "rawValue": -0.14,
             "unit": "px"
@@ -3967,7 +3967,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-14-i3",
-            "tsPath": "foundation.typography.letterSpacing['14-i3']",
+            "tsPath": "base.typography.letterSpacing['14-i3']",
             "setKind": "composite",
             "rawValue": -0.42,
             "unit": "px"
@@ -3989,7 +3989,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-16-i1",
-            "tsPath": "foundation.typography.letterSpacing['16-i1']",
+            "tsPath": "base.typography.letterSpacing['16-i1']",
             "setKind": "composite",
             "rawValue": -0.16,
             "unit": "px"
@@ -4011,7 +4011,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-16-i3",
-            "tsPath": "foundation.typography.letterSpacing['16-i3']",
+            "tsPath": "base.typography.letterSpacing['16-i3']",
             "setKind": "composite",
             "rawValue": -0.48,
             "unit": "px"
@@ -4033,7 +4033,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-18-i1",
-            "tsPath": "foundation.typography.letterSpacing['18-i1']",
+            "tsPath": "base.typography.letterSpacing['18-i1']",
             "setKind": "composite",
             "rawValue": -0.18,
             "unit": "px"
@@ -4055,7 +4055,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-18-i3",
-            "tsPath": "foundation.typography.letterSpacing['18-i3']",
+            "tsPath": "base.typography.letterSpacing['18-i3']",
             "setKind": "composite",
             "rawValue": -0.54,
             "unit": "px"
@@ -4077,7 +4077,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-20-i1",
-            "tsPath": "foundation.typography.letterSpacing['20-i1']",
+            "tsPath": "base.typography.letterSpacing['20-i1']",
             "setKind": "composite",
             "rawValue": -0.2,
             "unit": "px"
@@ -4099,7 +4099,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-20-i3",
-            "tsPath": "foundation.typography.letterSpacing['20-i3']",
+            "tsPath": "base.typography.letterSpacing['20-i3']",
             "setKind": "composite",
             "rawValue": -0.6,
             "unit": "px"
@@ -4121,7 +4121,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-22-i1",
-            "tsPath": "foundation.typography.letterSpacing['22-i1']",
+            "tsPath": "base.typography.letterSpacing['22-i1']",
             "setKind": "composite",
             "rawValue": -0.22,
             "unit": "px"
@@ -4143,7 +4143,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-22-i3",
-            "tsPath": "foundation.typography.letterSpacing['22-i3']",
+            "tsPath": "base.typography.letterSpacing['22-i3']",
             "setKind": "composite",
             "rawValue": -0.66,
             "unit": "px"
@@ -4165,7 +4165,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-24-i1",
-            "tsPath": "foundation.typography.letterSpacing['24-i1']",
+            "tsPath": "base.typography.letterSpacing['24-i1']",
             "setKind": "composite",
             "rawValue": -0.24,
             "unit": "px"
@@ -4187,7 +4187,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-24-i3",
-            "tsPath": "foundation.typography.letterSpacing['24-i3']",
+            "tsPath": "base.typography.letterSpacing['24-i3']",
             "setKind": "composite",
             "rawValue": -0.72,
             "unit": "px"
@@ -4209,7 +4209,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-28-i1",
-            "tsPath": "foundation.typography.letterSpacing['28-i1']",
+            "tsPath": "base.typography.letterSpacing['28-i1']",
             "setKind": "composite",
             "rawValue": -0.28,
             "unit": "px"
@@ -4231,7 +4231,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-28-i3",
-            "tsPath": "foundation.typography.letterSpacing['28-i3']",
+            "tsPath": "base.typography.letterSpacing['28-i3']",
             "setKind": "composite",
             "rawValue": -0.84,
             "unit": "px"
@@ -4253,7 +4253,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-32-i1",
-            "tsPath": "foundation.typography.letterSpacing['32-i1']",
+            "tsPath": "base.typography.letterSpacing['32-i1']",
             "setKind": "composite",
             "rawValue": -0.32,
             "unit": "px"
@@ -4275,7 +4275,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-32-i3",
-            "tsPath": "foundation.typography.letterSpacing['32-i3']",
+            "tsPath": "base.typography.letterSpacing['32-i3']",
             "setKind": "composite",
             "rawValue": -0.96,
             "unit": "px"
@@ -4297,7 +4297,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-36-i1",
-            "tsPath": "foundation.typography.letterSpacing['36-i1']",
+            "tsPath": "base.typography.letterSpacing['36-i1']",
             "setKind": "composite",
             "rawValue": -0.36,
             "unit": "px"
@@ -4319,7 +4319,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-36-i3",
-            "tsPath": "foundation.typography.letterSpacing['36-i3']",
+            "tsPath": "base.typography.letterSpacing['36-i3']",
             "setKind": "composite",
             "rawValue": -1.08,
             "unit": "px"
@@ -4341,7 +4341,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-40-i1",
-            "tsPath": "foundation.typography.letterSpacing['40-i1']",
+            "tsPath": "base.typography.letterSpacing['40-i1']",
             "setKind": "composite",
             "rawValue": -0.4,
             "unit": "px"
@@ -4363,7 +4363,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-40-i3",
-            "tsPath": "foundation.typography.letterSpacing['40-i3']",
+            "tsPath": "base.typography.letterSpacing['40-i3']",
             "setKind": "composite",
             "rawValue": -1.2,
             "unit": "px"
@@ -4385,7 +4385,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-44-i1",
-            "tsPath": "foundation.typography.letterSpacing['44-i1']",
+            "tsPath": "base.typography.letterSpacing['44-i1']",
             "setKind": "composite",
             "rawValue": -0.44,
             "unit": "px"
@@ -4407,7 +4407,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-44-i3",
-            "tsPath": "foundation.typography.letterSpacing['44-i3']",
+            "tsPath": "base.typography.letterSpacing['44-i3']",
             "setKind": "composite",
             "rawValue": -1.32,
             "unit": "px"
@@ -4429,7 +4429,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-48-i1",
-            "tsPath": "foundation.typography.letterSpacing['48-i1']",
+            "tsPath": "base.typography.letterSpacing['48-i1']",
             "setKind": "composite",
             "rawValue": -0.48,
             "unit": "px"
@@ -4451,7 +4451,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-48-i3",
-            "tsPath": "foundation.typography.letterSpacing['48-i3']",
+            "tsPath": "base.typography.letterSpacing['48-i3']",
             "setKind": "composite",
             "rawValue": -1.44,
             "unit": "px"
@@ -4473,7 +4473,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-56-i1",
-            "tsPath": "foundation.typography.letterSpacing['56-i1']",
+            "tsPath": "base.typography.letterSpacing['56-i1']",
             "setKind": "composite",
             "rawValue": -0.56,
             "unit": "px"
@@ -4495,7 +4495,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-56-i3",
-            "tsPath": "foundation.typography.letterSpacing['56-i3']",
+            "tsPath": "base.typography.letterSpacing['56-i3']",
             "setKind": "composite",
             "rawValue": -1.68,
             "unit": "px"
@@ -4517,7 +4517,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-64-i1",
-            "tsPath": "foundation.typography.letterSpacing['64-i1']",
+            "tsPath": "base.typography.letterSpacing['64-i1']",
             "setKind": "composite",
             "rawValue": -0.64,
             "unit": "px"
@@ -4539,7 +4539,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-64-i3",
-            "tsPath": "foundation.typography.letterSpacing['64-i3']",
+            "tsPath": "base.typography.letterSpacing['64-i3']",
             "setKind": "composite",
             "rawValue": -1.92,
             "unit": "px"
@@ -4561,7 +4561,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-72-i1",
-            "tsPath": "foundation.typography.letterSpacing['72-i1']",
+            "tsPath": "base.typography.letterSpacing['72-i1']",
             "setKind": "composite",
             "rawValue": -0.72,
             "unit": "px"
@@ -4583,7 +4583,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-72-i3",
-            "tsPath": "foundation.typography.letterSpacing['72-i3']",
+            "tsPath": "base.typography.letterSpacing['72-i3']",
             "setKind": "composite",
             "rawValue": -2.16,
             "unit": "px"
@@ -4605,7 +4605,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-80-i1",
-            "tsPath": "foundation.typography.letterSpacing['80-i1']",
+            "tsPath": "base.typography.letterSpacing['80-i1']",
             "setKind": "composite",
             "rawValue": -0.8,
             "unit": "px"
@@ -4627,7 +4627,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-80-i3",
-            "tsPath": "foundation.typography.letterSpacing['80-i3']",
+            "tsPath": "base.typography.letterSpacing['80-i3']",
             "setKind": "composite",
             "rawValue": -2.4,
             "unit": "px"
@@ -4649,7 +4649,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-96-i1",
-            "tsPath": "foundation.typography.letterSpacing['96-i1']",
+            "tsPath": "base.typography.letterSpacing['96-i1']",
             "setKind": "composite",
             "rawValue": -0.96,
             "unit": "px"
@@ -4671,7 +4671,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--typography-letter-spacing-96-i3",
-            "tsPath": "foundation.typography.letterSpacing['96-i3']",
+            "tsPath": "base.typography.letterSpacing['96-i3']",
             "setKind": "composite",
             "rawValue": -2.88,
             "unit": "px"
@@ -4697,7 +4697,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-1",
-            "tsPath": "foundation.layout.space['1']",
+            "tsPath": "base.layout.space['1']",
             "setKind": "scale",
             "rawValue": 1,
             "unit": "px"
@@ -4719,7 +4719,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-2",
-            "tsPath": "foundation.layout.space['2']",
+            "tsPath": "base.layout.space['2']",
             "setKind": "scale",
             "rawValue": 2,
             "unit": "px"
@@ -4741,7 +4741,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-4",
-            "tsPath": "foundation.layout.space['4']",
+            "tsPath": "base.layout.space['4']",
             "setKind": "scale",
             "rawValue": 4,
             "unit": "px"
@@ -4763,7 +4763,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-6",
-            "tsPath": "foundation.layout.space['6']",
+            "tsPath": "base.layout.space['6']",
             "setKind": "scale",
             "rawValue": 6,
             "unit": "px"
@@ -4785,7 +4785,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-8",
-            "tsPath": "foundation.layout.space['8']",
+            "tsPath": "base.layout.space['8']",
             "setKind": "scale",
             "rawValue": 8,
             "unit": "px"
@@ -4807,7 +4807,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-12",
-            "tsPath": "foundation.layout.space['12']",
+            "tsPath": "base.layout.space['12']",
             "setKind": "scale",
             "rawValue": 12,
             "unit": "px"
@@ -4829,7 +4829,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-16",
-            "tsPath": "foundation.layout.space['16']",
+            "tsPath": "base.layout.space['16']",
             "setKind": "scale",
             "rawValue": 16,
             "unit": "px"
@@ -4851,7 +4851,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-20",
-            "tsPath": "foundation.layout.space['20']",
+            "tsPath": "base.layout.space['20']",
             "setKind": "scale",
             "rawValue": 20,
             "unit": "px"
@@ -4873,7 +4873,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-24",
-            "tsPath": "foundation.layout.space['24']",
+            "tsPath": "base.layout.space['24']",
             "setKind": "scale",
             "rawValue": 24,
             "unit": "px"
@@ -4895,7 +4895,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-32",
-            "tsPath": "foundation.layout.space['32']",
+            "tsPath": "base.layout.space['32']",
             "setKind": "scale",
             "rawValue": 32,
             "unit": "px"
@@ -4917,7 +4917,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-40",
-            "tsPath": "foundation.layout.space['40']",
+            "tsPath": "base.layout.space['40']",
             "setKind": "scale",
             "rawValue": 40,
             "unit": "px"
@@ -4939,7 +4939,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-48",
-            "tsPath": "foundation.layout.space['48']",
+            "tsPath": "base.layout.space['48']",
             "setKind": "scale",
             "rawValue": 48,
             "unit": "px"
@@ -4961,7 +4961,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-56",
-            "tsPath": "foundation.layout.space['56']",
+            "tsPath": "base.layout.space['56']",
             "setKind": "scale",
             "rawValue": 56,
             "unit": "px"
@@ -4983,7 +4983,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-64",
-            "tsPath": "foundation.layout.space['64']",
+            "tsPath": "base.layout.space['64']",
             "setKind": "scale",
             "rawValue": 64,
             "unit": "px"
@@ -5005,7 +5005,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-72",
-            "tsPath": "foundation.layout.space['72']",
+            "tsPath": "base.layout.space['72']",
             "setKind": "scale",
             "rawValue": 72,
             "unit": "px"
@@ -5027,7 +5027,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-80",
-            "tsPath": "foundation.layout.space['80']",
+            "tsPath": "base.layout.space['80']",
             "setKind": "scale",
             "rawValue": 80,
             "unit": "px"
@@ -5049,7 +5049,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-96",
-            "tsPath": "foundation.layout.space['96']",
+            "tsPath": "base.layout.space['96']",
             "setKind": "scale",
             "rawValue": 96,
             "unit": "px"
@@ -5071,7 +5071,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-112",
-            "tsPath": "foundation.layout.space['112']",
+            "tsPath": "base.layout.space['112']",
             "setKind": "scale",
             "rawValue": 112,
             "unit": "px"
@@ -5093,7 +5093,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-space-128",
-            "tsPath": "foundation.layout.space['128']",
+            "tsPath": "base.layout.space['128']",
             "setKind": "scale",
             "rawValue": 128,
             "unit": "px"
@@ -5117,7 +5117,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-1",
-            "tsPath": "foundation.layout.size['1']",
+            "tsPath": "base.layout.size['1']",
             "setKind": "scale",
             "rawValue": 1,
             "unit": "px"
@@ -5139,7 +5139,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-2",
-            "tsPath": "foundation.layout.size['2']",
+            "tsPath": "base.layout.size['2']",
             "setKind": "scale",
             "rawValue": 2,
             "unit": "px"
@@ -5161,7 +5161,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-4",
-            "tsPath": "foundation.layout.size['4']",
+            "tsPath": "base.layout.size['4']",
             "setKind": "scale",
             "rawValue": 4,
             "unit": "px"
@@ -5183,7 +5183,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-8",
-            "tsPath": "foundation.layout.size['8']",
+            "tsPath": "base.layout.size['8']",
             "setKind": "scale",
             "rawValue": 8,
             "unit": "px"
@@ -5205,7 +5205,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-12",
-            "tsPath": "foundation.layout.size['12']",
+            "tsPath": "base.layout.size['12']",
             "setKind": "scale",
             "rawValue": 12,
             "unit": "px"
@@ -5227,7 +5227,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-16",
-            "tsPath": "foundation.layout.size['16']",
+            "tsPath": "base.layout.size['16']",
             "setKind": "scale",
             "rawValue": 16,
             "unit": "px"
@@ -5249,7 +5249,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-20",
-            "tsPath": "foundation.layout.size['20']",
+            "tsPath": "base.layout.size['20']",
             "setKind": "scale",
             "rawValue": 20,
             "unit": "px"
@@ -5271,7 +5271,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-24",
-            "tsPath": "foundation.layout.size['24']",
+            "tsPath": "base.layout.size['24']",
             "setKind": "scale",
             "rawValue": 24,
             "unit": "px"
@@ -5293,7 +5293,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-32",
-            "tsPath": "foundation.layout.size['32']",
+            "tsPath": "base.layout.size['32']",
             "setKind": "scale",
             "rawValue": 32,
             "unit": "px"
@@ -5315,7 +5315,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-40",
-            "tsPath": "foundation.layout.size['40']",
+            "tsPath": "base.layout.size['40']",
             "setKind": "scale",
             "rawValue": 40,
             "unit": "px"
@@ -5337,7 +5337,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-48",
-            "tsPath": "foundation.layout.size['48']",
+            "tsPath": "base.layout.size['48']",
             "setKind": "scale",
             "rawValue": 48,
             "unit": "px"
@@ -5359,7 +5359,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-56",
-            "tsPath": "foundation.layout.size['56']",
+            "tsPath": "base.layout.size['56']",
             "setKind": "scale",
             "rawValue": 56,
             "unit": "px"
@@ -5381,7 +5381,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-64",
-            "tsPath": "foundation.layout.size['64']",
+            "tsPath": "base.layout.size['64']",
             "setKind": "scale",
             "rawValue": 64,
             "unit": "px"
@@ -5403,7 +5403,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-80",
-            "tsPath": "foundation.layout.size['80']",
+            "tsPath": "base.layout.size['80']",
             "setKind": "scale",
             "rawValue": 80,
             "unit": "px"
@@ -5425,7 +5425,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-96",
-            "tsPath": "foundation.layout.size['96']",
+            "tsPath": "base.layout.size['96']",
             "setKind": "scale",
             "rawValue": 96,
             "unit": "px"
@@ -5447,7 +5447,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-112",
-            "tsPath": "foundation.layout.size['112']",
+            "tsPath": "base.layout.size['112']",
             "setKind": "scale",
             "rawValue": 112,
             "unit": "px"
@@ -5469,7 +5469,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--layout-size-128",
-            "tsPath": "foundation.layout.size['128']",
+            "tsPath": "base.layout.size['128']",
             "setKind": "scale",
             "rawValue": 128,
             "unit": "px"
@@ -5495,7 +5495,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-1",
-            "tsPath": "foundation.shape.radius['1']",
+            "tsPath": "base.shape.radius['1']",
             "setKind": "scale",
             "rawValue": 1,
             "unit": "px"
@@ -5517,7 +5517,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-2",
-            "tsPath": "foundation.shape.radius['2']",
+            "tsPath": "base.shape.radius['2']",
             "setKind": "scale",
             "rawValue": 2,
             "unit": "px"
@@ -5539,7 +5539,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-4",
-            "tsPath": "foundation.shape.radius['4']",
+            "tsPath": "base.shape.radius['4']",
             "setKind": "scale",
             "rawValue": 4,
             "unit": "px"
@@ -5561,7 +5561,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-6",
-            "tsPath": "foundation.shape.radius['6']",
+            "tsPath": "base.shape.radius['6']",
             "setKind": "scale",
             "rawValue": 6,
             "unit": "px"
@@ -5583,7 +5583,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-8",
-            "tsPath": "foundation.shape.radius['8']",
+            "tsPath": "base.shape.radius['8']",
             "setKind": "scale",
             "rawValue": 8,
             "unit": "px"
@@ -5605,7 +5605,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-10",
-            "tsPath": "foundation.shape.radius['10']",
+            "tsPath": "base.shape.radius['10']",
             "setKind": "scale",
             "rawValue": 10,
             "unit": "px"
@@ -5627,7 +5627,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-12",
-            "tsPath": "foundation.shape.radius['12']",
+            "tsPath": "base.shape.radius['12']",
             "setKind": "scale",
             "rawValue": 12,
             "unit": "px"
@@ -5649,7 +5649,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-16",
-            "tsPath": "foundation.shape.radius['16']",
+            "tsPath": "base.shape.radius['16']",
             "setKind": "scale",
             "rawValue": 16,
             "unit": "px"
@@ -5671,7 +5671,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-20",
-            "tsPath": "foundation.shape.radius['20']",
+            "tsPath": "base.shape.radius['20']",
             "setKind": "scale",
             "rawValue": 20,
             "unit": "px"
@@ -5693,7 +5693,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-24",
-            "tsPath": "foundation.shape.radius['24']",
+            "tsPath": "base.shape.radius['24']",
             "setKind": "scale",
             "rawValue": 24,
             "unit": "px"
@@ -5715,7 +5715,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-32",
-            "tsPath": "foundation.shape.radius['32']",
+            "tsPath": "base.shape.radius['32']",
             "setKind": "scale",
             "rawValue": 32,
             "unit": "px"
@@ -5737,7 +5737,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-40",
-            "tsPath": "foundation.shape.radius['40']",
+            "tsPath": "base.shape.radius['40']",
             "setKind": "scale",
             "rawValue": 40,
             "unit": "px"
@@ -5759,7 +5759,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-radius-9999",
-            "tsPath": "foundation.shape.radius['9999']",
+            "tsPath": "base.shape.radius['9999']",
             "setKind": "scale",
             "rawValue": 9999,
             "unit": "px"
@@ -5783,7 +5783,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-1",
-            "tsPath": "foundation.shape.stroke['1']",
+            "tsPath": "base.shape.stroke['1']",
             "setKind": "scale",
             "rawValue": 1,
             "unit": "px"
@@ -5805,7 +5805,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-2",
-            "tsPath": "foundation.shape.stroke['2']",
+            "tsPath": "base.shape.stroke['2']",
             "setKind": "scale",
             "rawValue": 2,
             "unit": "px"
@@ -5827,7 +5827,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-3",
-            "tsPath": "foundation.shape.stroke['3']",
+            "tsPath": "base.shape.stroke['3']",
             "setKind": "scale",
             "rawValue": 3,
             "unit": "px"
@@ -5849,7 +5849,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-4",
-            "tsPath": "foundation.shape.stroke['4']",
+            "tsPath": "base.shape.stroke['4']",
             "setKind": "scale",
             "rawValue": 4,
             "unit": "px"
@@ -5871,7 +5871,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-6",
-            "tsPath": "foundation.shape.stroke['6']",
+            "tsPath": "base.shape.stroke['6']",
             "setKind": "scale",
             "rawValue": 6,
             "unit": "px"
@@ -5893,7 +5893,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--shape-stroke-8",
-            "tsPath": "foundation.shape.stroke['8']",
+            "tsPath": "base.shape.stroke['8']",
             "setKind": "scale",
             "rawValue": 8,
             "unit": "px"
@@ -5916,7 +5916,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-0",
-            "tsPath": "foundation.effect.opacity['0']",
+            "tsPath": "base.effect.opacity['0']",
             "setKind": "scale",
             "rawValue": 0,
             "unit": null
@@ -5935,7 +5935,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-10",
-            "tsPath": "foundation.effect.opacity['10']",
+            "tsPath": "base.effect.opacity['10']",
             "setKind": "scale",
             "rawValue": 10,
             "unit": null
@@ -5954,7 +5954,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-20",
-            "tsPath": "foundation.effect.opacity['20']",
+            "tsPath": "base.effect.opacity['20']",
             "setKind": "scale",
             "rawValue": 20,
             "unit": null
@@ -5973,7 +5973,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-30",
-            "tsPath": "foundation.effect.opacity['30']",
+            "tsPath": "base.effect.opacity['30']",
             "setKind": "scale",
             "rawValue": 30,
             "unit": null
@@ -5992,7 +5992,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-40",
-            "tsPath": "foundation.effect.opacity['40']",
+            "tsPath": "base.effect.opacity['40']",
             "setKind": "scale",
             "rawValue": 40,
             "unit": null
@@ -6011,7 +6011,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-50",
-            "tsPath": "foundation.effect.opacity['50']",
+            "tsPath": "base.effect.opacity['50']",
             "setKind": "scale",
             "rawValue": 50,
             "unit": null
@@ -6030,7 +6030,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-60",
-            "tsPath": "foundation.effect.opacity['60']",
+            "tsPath": "base.effect.opacity['60']",
             "setKind": "scale",
             "rawValue": 60,
             "unit": null
@@ -6049,7 +6049,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-70",
-            "tsPath": "foundation.effect.opacity['70']",
+            "tsPath": "base.effect.opacity['70']",
             "setKind": "scale",
             "rawValue": 70,
             "unit": null
@@ -6068,7 +6068,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-80",
-            "tsPath": "foundation.effect.opacity['80']",
+            "tsPath": "base.effect.opacity['80']",
             "setKind": "scale",
             "rawValue": 80,
             "unit": null
@@ -6087,7 +6087,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-90",
-            "tsPath": "foundation.effect.opacity['90']",
+            "tsPath": "base.effect.opacity['90']",
             "setKind": "scale",
             "rawValue": 90,
             "unit": null
@@ -6106,7 +6106,7 @@
           },
           "com.tgds": {
             "cssCustomProperty": "--effect-opacity-100",
-            "tsPath": "foundation.effect.opacity['100']",
+            "tsPath": "base.effect.opacity['100']",
             "setKind": "scale",
             "rawValue": 100,
             "unit": null

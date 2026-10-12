@@ -44,7 +44,7 @@
 ## C2. Breakpoint · Responsive
 
 **원칙 설계 — 🟡**
-- [x] Responsive를 별도 Semantic 컬렉션(Scale)으로 분리 운용한다는 결정 (`SEM-01`)
+- [x] Responsive를 별도 Intent 컬렉션(Scale)으로 분리 운용한다는 결정 (`SEM-01`)
 - [ ] ⚠️ **각 Breakpoint의 정의(px 경계)** — 이름은 확정됐으므로 A3의 Mode 축은 더 이상 막히지 않는다. 값이 없으면 A3 코드 동기화(미디어쿼리·컨테이너 쿼리)가 막힌다
 - [ ] Breakpoint 기준 — 뷰포트 폭인가 컨테이너 폭인가
 - [ ] 플랫폼 범위 — Web만인가, 앱도 포함인가

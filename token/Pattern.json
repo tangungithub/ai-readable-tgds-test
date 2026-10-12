@@ -1,0 +1,10 @@
+{
+  "$description": "Pattern collection — Figma variable collection 'Pattern' (TKN-09). Values only; rules live in docs/A-token/component-token.md. Empty until the registry is written.",
+  "$extensions": {
+    "tgds": {
+      "collection": "Pattern",
+      "tier": "pattern",
+      "modes": []
+    }
+  }
+}

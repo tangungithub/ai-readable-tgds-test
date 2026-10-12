@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
-import { foundation, foundationOrder, foundationUnits } from './tokens/foundation';
+import { base, baseOrder, baseUnits } from './tokens/base';
 
 /**
- * Foundation token specimen sheet.
+ * Base token specimen sheet.
  *
  * Renders every generated token so the scales can be checked against
- * token/Foundation.json by eye. Not part of the published surface.
+ * token/Base.json by eye. Not part of the published surface.
  */
 
 type TokenValue = string | number | readonly string[];
@@ -87,12 +87,12 @@ function preview(setPath: string, value: TokenValue): ReactNode {
 
 function SetTable({ category, setName, options }: { category: string; setName: string; options: TokenTree }) {
   const path = `${category}/${setName}`;
-  const units = foundationUnits as unknown as Record<string, Record<string, string | null>>;
+  const units = baseUnits as unknown as Record<string, Record<string, string | null>>;
   const unit = path === 'effect/opacity' ? '%' : (units[category]?.[setName] ?? null);
 
-  // Iterate foundationOrder, never Object.keys(options) — numeric-looking keys
+  // Iterate baseOrder, never Object.keys(options) — numeric-looking keys
   // need the generated order to stay human-readable.
-  const order = foundationOrder as unknown as Record<string, Record<string, readonly string[]>>;
+  const order = baseOrder as unknown as Record<string, Record<string, readonly string[]>>;
   const keys = order[category]?.[setName] ?? Object.keys(options);
   const entries: LeafEntry[] = keys.map((k) => [k, getByPath(options, k)] as const);
 
@@ -131,8 +131,8 @@ function SetTable({ category, setName, options }: { category: string; setName: s
 }
 
 export function App() {
-  const tree = foundation as unknown as Record<string, Record<string, TokenTree>>;
-  const order = foundationOrder as unknown as Record<string, Record<string, readonly string[]>>;
+  const tree = base as unknown as Record<string, Record<string, TokenTree>>;
+  const order = baseOrder as unknown as Record<string, Record<string, readonly string[]>>;
   const total = Object.entries(tree)
     .flatMap(([category, sets]) => {
       return Object.keys(sets).map((setName) => order[category]?.[setName]?.length ?? 0);
@@ -141,9 +141,9 @@ export function App() {
 
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, color: '#111' }}>
-      <h1 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px' }}>Foundation Tokens</h1>
+      <h1 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 4px' }}>Base Tokens</h1>
       <p style={{ fontSize: 12, color: '#666', margin: '0 0 32px' }}>
-        {total} tokens generated from <code>token/Foundation.json</code>
+        {total} tokens generated from <code>token/Base.json</code>
       </p>
 
       {Object.entries(tree).map(([category, sets]) =>
